@@ -1,37 +1,133 @@
 # Daily Synthesizer Agent
 
 ## Purpose
-Generate morning, midday, and evening briefs. Critical items always first.
 
-## Schedule
+Generate on-demand and scheduled briefs. Critical items always first. Adapts to time of day.
 
-| Brief | Time | Focus |
-|-------|------|-------|
+**This is an orchestrator agent** - it scans all trackers across the system.
+
+---
+
+## Commands
+
+| Command    | When to Use                                  |
+| ---------- | -------------------------------------------- |
+| `#morning` | Start of day brief                           |
+| `#lunch`   | Midday check-in                              |
+| `#eod`     | End of day wrap-up                           |
+| `#day`     | **On-demand brief** - adapts to current time |
+| `#weekly`  | → Routes to Weekly Synthesizer               |
+| `#monthly` | → Routes to Weekly Synthesizer               |
+
+---
+
+## `#day` Command - Time-Adaptive Brief
+
+The `#day` command generates a brief appropriate for the current time:
+
+| Current Time  | Brief Style | Focus                                                     |
+| ------------- | ----------- | --------------------------------------------------------- |
+| Before 10:00  | Morning     | Critical + calendar + overnight sync + today's priorities |
+| 10:00 - 14:00 | Midday      | Progress so far + inbox + afternoon priorities            |
+| 14:00 - 17:00 | Afternoon   | Status check + blockers + EOD prep                        |
+| After 17:00   | Evening     | Wrap-up + accomplishments + tomorrow prep                 |
+
+**User can say `#day` anytime and get a relevant brief.**
+
+---
+
+## Scheduled Briefs
+
+| Brief   | Time  | Focus                                |
+| ------- | ----- | ------------------------------------ |
 | Morning | 06:00 | Critical + calendar + overnight sync |
-| Midday | 12:00 | Progress + inbox + afternoon |
-| Evening | 17:00 | Wrap + accomplishments + tomorrow |
+| Midday  | 12:00 | Progress + inbox + afternoon         |
+| Evening | 17:00 | Wrap + accomplishments + tomorrow    |
+
+---
+
+## What This Agent Scans (Parallel)
+
+To generate a brief, scan ALL of these simultaneously:
+
+```
+PARALLEL SCAN:
+├── CRITICAL/boss-requests.md     → Boss items due/overdue
+├── CRITICAL/escalations.md       → Active escalations
+├── BUGS/bugs-master.md           → Bugs by SLA status
+├── PEOPLE/engineering-items.md   → Eng items waiting
+├── PEOPLE/ux-tasks.md            → UX items waiting
+├── PEOPLE/stakeholders.md        → Updates due
+├── PROJECTS/projects-master.md   → Project status
+├── _QUEUE/needs-clarification.md → Items needing input
+├── _INBOX/*                      → Unprocessed items
+└── SETTINGS.md                   → Calendar, working hours
+```
+
+---
 
 ## Priority Order (Always)
 
-1. 🔥 Boss requests
+1. 🔥 Boss requests (open, approaching deadline)
 2. 🔥 Critical bugs
 3. ⚡ Now bugs approaching escalation
-4. 🔴 Stale items (48+ hrs)
+4. 🔴 Stale items (48+ hrs no update)
 5. 🚧 Blocked items
 6. 📤 Stakeholder updates due
-7. 🔧 Engineering items waiting
-8. 🎨 UX items waiting
-9. 📅 Calendar
-10. 📥 External tool sync (Notion/Obsidian/Trello)
-11. ✅ Progress
+7. 🔧 Engineering items waiting for input
+8. 🎨 UX items waiting for input
+9. 📅 Calendar events (from SETTINGS.md)
+10. 📥 Unprocessed inbox items
+11. ✅ Recent progress/wins
+
+---
+
+## Brief Output Format
+
+```markdown
+# [Morning/Midday/Afternoon/Evening] Brief - [Date]
+
+## 🔥 Critical (Act Now)
+
+- [item with context and action needed]
+
+## ⚡ Priority (Today)
+
+- [items needing attention today]
+
+## 📋 Status
+
+- [progress on active items]
+
+## 📅 Calendar
+
+- [upcoming meetings/deadlines]
+
+## 📥 Inbox
+
+- [X unprocessed items in _INBOX]
+
+## ✅ Wins
+
+- [completed items, progress made]
+
+## 🎯 Focus for [Next Period]
+
+- [what to prioritize next]
+```
+
+---
 
 ## External Tool Sync
 
-At each brief, pull from:
-- _INBOX/notion/ (Notion exports)
-- _INBOX/obsidian/ (Obsidian sync)
-- _INBOX/trello/ (Trello exports)
+At each brief, check for new items in:
 
-## Output
+- `_INBOX/notion/` (Notion exports)
+- `_INBOX/obsidian/` (Obsidian sync)
+- `_INBOX/trello/` (Trello exports)
 
-MEETINGS/daily-briefs/[YYYY-MM-DD]-[morning|midday|evening].md
+---
+
+## Output Location
+
+`MEETINGS/daily-briefs/[YYYY-MM-DD]-[morning|midday|afternoon|evening].md`
