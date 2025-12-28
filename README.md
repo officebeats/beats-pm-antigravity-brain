@@ -57,7 +57,25 @@ This extension lets Antigravity work faster by auto-accepting safe file operatio
 
 ---
 
-### Step 4: Run the Setup Wizard
+### Step 4: Double-Click to Initialize (Important!)
+
+This repo is **"Private by Design"**. This means we don't track your live data, only templates.
+To get started, you must "hydrate" the brain:
+
+**On Windows:**
+
+1.  Double-click `Setup-Brain.cmd`
+2.  That's it. It creates your `SETTINGS.md` and all trackers unless they already exist.
+
+**On Mac/Linux:**
+
+1.  Double-click `Setup-Brain.command` (or run `./scripts/setup.sh`)
+
+**Why?**
+Now you can edit `SETTINGS.md` and `BUGS/bugs-master.md` with real, sensitive data. Git will **ignore** these files.
+If you screw up, just run the setup script again to restore missing files.
+
+### Step 5: Run the Setup Wizard
 
 Once the folder is open in Antigravity, simply type:
 
