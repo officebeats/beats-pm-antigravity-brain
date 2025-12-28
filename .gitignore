@@ -1,0 +1,12 @@
+MEETINGS/daily-briefs/
+MEETINGS/weekly-digests/
+PEOPLE/stakeholder-updates/
+DATA/raw/
+_INBOX/notion/
+_INBOX/obsidian/
+_INBOX/trello/
+_INBOX/screenshots/
+.DS_Store
+*.swp
+.idea/
+.vscode/
