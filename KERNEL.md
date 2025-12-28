@@ -11,7 +11,7 @@
 | **Boss Tracker**            | Critical Request Manager | Boss/VIP is mentioned or asks for something             |
 | **Bug Chaser**              | Quality Manager          | Bugs, errors, outages, or "it's broken" detected        |
 | **Strategy Synthesizer**    | Pattern Recognizer       | Deep insights, trends, or strategic questions arise     |
-| **Visual Processor**        | Image Analyst            | **Screenshots**, mockups, or diagrams are provided      |
+| **Visual Processor**        | The Eyes (OCR + Scene)   | **Screenshots**, images, or diagrams are provided       |
 | **Product Context**         | Knowledge Base           | Input is vague; checks `PRODUCTS/*.md` to infer product |
 
 ---
@@ -31,9 +31,12 @@
 
 When handling images/screenshots (`_INBOX/screenshots/` or pasted):
 
-1.  **Analyze**: Describe the image (UI, error message, diagram).
-2.  **Contextualize**: Match visual elements to `Context DNA` in `PRODUCTS/*.md`.
-3.  **Route**: Send the text description to the appropriate agent (Bug Chaser for errors, UX Collab for new designs).
+1.  **Trigger**: Activate the **Visual Processor** agent.
+2.  **Analyze**: Determine if it's **Text** (Slack/Email) or **Visual** (UI/Design).
+3.  **Route**:
+    - **Text Scenes**: Extract text and route to `Boss Tracker` or `Requirement Translator`.
+    - **Visual Scenes**: Route to `UX Collaborator` or `Bug Chaser`.
+    - **Data Scenes**: Route to `Strategy Synthesizer`.
 
 ---
 

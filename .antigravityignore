@@ -1,0 +1,16 @@
+# Antigravity Ignore
+# Prevent the AI from indexing/reading these files to avoid polluting context window with huge data dumps
+# unless explicitly asked.
+
+node_modules/
+.git/
+.ds_store
+Thumbs.db
+
+# Ignore raw data dumps if they get huge
+DATA/
+_INBOX/
+
+# We generally WANT Antigravity to read SETTINGS.md and Trackers to function.
+# So we DO NOT ignore the active tracker files here.
+# This file is mostly for system junk.

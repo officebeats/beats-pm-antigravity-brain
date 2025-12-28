@@ -100,7 +100,23 @@ Unlike standard bots, these agents:
 
 ---
 
-## 💬 Commands Reference
+## � Privacy Mode (100% Secure)
+
+This repo is configured to be **safe for real-world work**.
+
+1.  **Git Ignore**: `SETTINGS.md` and all active trackers (`BUGS/*.md`, `PEOPLE/*.md`) are ignored.
+2.  **Antigravity Ignore**: Large data folders are hidden from the AI context unless asked.
+3.  **Templates**: The repo only tracks `*_TEMPLATE.md` files.
+
+**How to sync between computers (Mac <-> PC):**
+
+1.  `git pull` on the new machine.
+2.  Run `Setup-Brain` (cmd or command).
+3.  It downloads new templates but **keeps your local data private**.
+
+---
+
+## �💬 Commands Reference
 
 ### Universal Capture (Any Agent can handle these)
 

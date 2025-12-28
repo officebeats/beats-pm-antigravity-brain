@@ -15,12 +15,9 @@ Transform chaotic input into structured, routed artifacts. Zero friction capture
 
 **Trigger**: User pastes an image or `#screenshot`
 
-1. **Analyze**: Identify the screen, error message, or feature area.
-2. **Context Match**: Scan `PRODUCTS/*.md` to match UI elements/keywords to a Product.
-3. **Route**:
-   - Error/Crash → **Bug Chaser** (with Product tag)
-   - UI Update/Mockup → **UX Collaborator**
-   - Data/Chart → **Strategy Synthesizer**
+→ **ACTIVATE AGENT**: `Visual Processor` (See KERNEL.md)
+
+_The Visual Processor will analyze the scene (Text vs UI) and route accordingly._
 
 ---
 
@@ -44,7 +41,7 @@ Transform chaotic input into structured, routed artifacts. Zero friction capture
 | `#feature [text]` | FEEDBACK/feature-requests/  | Direct                   |
 | `#ux [text]`      | PEOPLE/ux-tasks.md          | UX Collaborator          |
 | `#eng [text]`     | PEOPLE/engineering-items.md | Engineering Collaborator |
-| `#screenshot`     | (Visual Analysis)           | **Auto-Router**          |
+| `#screenshot`     | (Delegate)                  | **Visual Processor**     |
 
 ---
 

@@ -1,0 +1,18 @@
+# Claude Ignore
+# Prevent Claude Code from reading these files
+
+node_modules/
+.git/
+.ds_store
+Thumbs.db
+
+# If you want Claude to be purely structural and not see your private data:
+# Uncomment the below lines.
+# But usually, you want the AI to see your bugs/tasks to help you managed them.
+
+# SETTINGS.md
+# BUGS/
+# CRITICAL/
+# PROJECTS/
+# PEOPLE/
+# PRODUCTS/

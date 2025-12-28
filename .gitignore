@@ -1,12 +1,38 @@
-MEETINGS/daily-briefs/
-MEETINGS/weekly-digests/
-PEOPLE/stakeholder-updates/
-DATA/raw/
-_INBOX/notion/
-_INBOX/obsidian/
-_INBOX/trello/
-_INBOX/screenshots/
+# Git Ignore
+# Block everything by default in sensitive folders, except templates
+
+# 1. Settings
+SETTINGS.md
+
+# 2. Trackers (Ignore active, keep templates)
+BUGS/*.md
+!BUGS/*_TEMPLATE.md
+
+CRITICAL/*.md
+!CRITICAL/*_TEMPLATE.md
+
+PROJECTS/*.md
+!PROJECTS/*_TEMPLATE.md
+
+PEOPLE/*.md
+!PEOPLE/*_TEMPLATE.md
+
+# 3. Products (Ignore context files, keep readme/templates)
+PRODUCTS/*.md
+!PRODUCTS/README.md
+!PRODUCTS/*_TEMPLATE.md
+# Keep examples if explicitly tracked (git handles this, but good to be explicit if we wanted)
+
+# 4. Data / Inbox / Meetings
+_INBOX/**/*
+!_INBOX/.gitkeep
+
+MEETINGS/**/*.md
+!MEETINGS/**/.gitkeep
+
+DATA/
+RESEARCH/
+
+# 5. System
 .DS_Store
-*.swp
-.idea/
-.vscode/
+Thumbs.db
