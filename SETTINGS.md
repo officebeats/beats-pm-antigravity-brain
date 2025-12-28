@@ -7,8 +7,22 @@
 ## System
 
 - **Owner**: [Your Name]
+- **Role**: [Principal PM / Director / Group PM]
 - **Timezone**: America/Chicago
-- **Version**: 1.0.0
+- **Version**: 2.0.0 (Director Mode)
+
+---
+
+## 📂 Product Portfolio
+
+> Define your products here. Antigravity uses this to route items automatically.
+
+| Product Name       | Alias   | Description / Keywords                       |
+| ------------------ | ------- | -------------------------------------------- |
+| **Mobile App**     | `app`   | iOS, Android, checkout, mobile, react native |
+| **Web Portal**     | `web`   | Dashboard, admin panel, reporting, analytics |
+| **Data Platform**  | `data`  | API, backend, ingestion, pipeline, aws       |
+| **Internal Tools** | `tools` | CLI, scripts, support portal                 |
 
 ---
 

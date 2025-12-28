@@ -76,105 +76,69 @@ Antigravity will:
 
 ---
 
-## 🚀 The Power of Parallel Agents
+## 🚀 Antigravity Director Mode (v2.0)
 
-**This is what makes Antigravity + PM Brain special.**
+**This system is now powered by a Neural Mesh of agents.**
 
-When you paste a meeting transcript or raw notes, Antigravity doesn't just file it away—it **runs multiple specialized agents in parallel**:
+Unlike standard bots, these agents:
 
-```
-📝 You paste: "Meeting notes - boss wants metrics by Friday, checkout is broken,
-              Jake will spike the API, Lisa doing mockups..."
-
-                              ⬇️
-
-┌─────────────────────────────────────────────────────────────────┐
-│                   MEETING SYNTHESIZER                           │
-│                   (parses everything)                           │
-└─────────────────────────────────────────────────────────────────┘
-              ⬇️           ⬇️           ⬇️           ⬇️
-        ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐
-        │   Boss   │ │   Bug    │ │   Eng    │ │   UX     │
-        │ Tracker  │ │  Chaser  │ │  Collab  │ │  Collab  │
-        └──────────┘ └──────────┘ └──────────┘ └──────────┘
-              ⬇️           ⬇️           ⬇️           ⬇️
-        Creates      Creates      Creates      Creates
-        boss req     bug entry    eng item     UX task
-
-✅ All in parallel. 10-minute task → 10 seconds.
-```
-
-**One input. Multiple organized outputs. Zero manual routing.**
+1.  **Talk to Each Other**: The `Meeting Synthesizer` can trigger the `Bug Chaser` who triggers the `Strategy Synthesizer`.
+2.  **Understand Context**: Paste a screenshot. The system checks your `PRODUCTS/` folder, identifies it's your "Mobile App", and routes the bug accordingly.
+3.  **Run in Parallel**: One raw dump → 5 organized outputs instantly.
 
 ---
 
 ## 🎯 What Can It Do?
 
-| Say This to Antigravity                               | What Happens                                   |
-| ----------------------------------------------------- | ---------------------------------------------- |
-| _"My boss just asked for a metrics report by Friday"_ | Creates a tracked boss request with deadline   |
-| _"Bug: checkout page is broken on mobile"_            | Logs bug with SLA tracking                     |
-| `#day`                                                | Get a brief right now (adapts to time of day)  |
-| `#transcript` + paste a call                          | **Parallel agents** extract & route everything |
-| `#meeting` + paste notes                              | Same as above, for hand-written notes          |
-| _"What's on my plate this week?"_                     | Shows all active items by priority             |
-| _"Draft an update for Sarah on Project X"_            | Generates stakeholder update email             |
+| Say This to Antigravity         | What Happens (Orchestration)                                                                |
+| ------------------------------- | ------------------------------------------------------------------------------------------- |
+| `#transcript` + paste call      | **Parallel Execution**: Routes boss asks, bugs, eng items, and design tasks simultaneously. |
+| `#screenshot` + paste image     | **Visual Analysis**: Identifies product, logs bug/task based on what it sees.               |
+| `#day`                          | **Adaptive Brief**: Gives you exactly what you need for this specific time of day.          |
+| _"My boss just asked for..."_   | **Boss Tracker**: Logs critical request with SLA monitoring.                                |
+| _"Bug: checkout failed on iOS"_ | **Context Routing**: Detects "iOS" → logs to "Mobile App" product tracker.                  |
 
 ---
 
 ## 💬 Commands Reference
 
-### Capture Commands
+### Universal Capture (Any Agent can handle these)
 
-| Command               | What It Does                                   |
-| --------------------- | ---------------------------------------------- |
-| `#boss [request]`     | Track a boss request (auto-Critical)           |
-| `#bug [description]`  | Log a bug with SLA tracking                    |
-| `#task [description]` | Create a task                                  |
-| `#feature [idea]`     | Log a feature request                          |
-| `#ux [task]`          | UX design task                                 |
-| `#eng [item]`         | Engineering item                               |
-| `#note [anything]`    | Quick note                                     |
-| `#transcript`         | Paste a meeting/call transcript for processing |
+| Command               | Action                |
+| --------------------- | --------------------- |
+| `#boss [request]`     | Track a boss request  |
+| `#bug [description]`  | Log a bug             |
+| `#task [description]` | Create a task         |
+| `#feature [idea]`     | Log a feature request |
+| `#ux [task]`          | UX design task        |
+| `#eng [item]`         | Engineering item      |
+| `#note [anything]`    | Quick note            |
+| `#screenshot`         | process pasted image  |
 
-### Meeting/Notes Commands (Triggers Parallel Agents)
+### Orchestrators (The Heavy Lifters)
 
-| Command           | What It Does                         |
-| ----------------- | ------------------------------------ |
-| `#transcript`     | Paste call transcripts or recordings |
-| `#meeting`        | Paste hand-crafted meeting notes     |
-| `#notes`          | Raw notes dump                       |
-| `#call [subject]` | Quick call capture                   |
-| `#1on1 [person]`  | 1:1 meeting notes                    |
-| `#standup`        | Standup notes                        |
-
-### Brief Commands
-
-| Command    | What It Does                                               |
-| ---------- | ---------------------------------------------------------- |
-| `#day`     | **On-demand brief** - adapts to current time of day        |
-| `#morning` | Morning brief - critical items + calendar + overnight sync |
-| `#lunch`   | Midday brief - progress + inbox + afternoon priorities     |
-| `#eod`     | End of day - wrap up + accomplishments + tomorrow prep     |
-| `#weekly`  | Weekly summary - metrics + strategy pulse                  |
-| `#monthly` | Monthly rollup - trends + achievements + next month focus  |
+| Command       | What It Does                                     |
+| ------------- | ------------------------------------------------ |
+| `#transcript` | **Meeting Synthesizer**: Parses calls/recordings |
+| `#meeting`    | **Meeting Synthesizer**: Parses raw notes        |
+| `#day`        | **Daily Synthesizer**: Time-adaptive brief       |
+| `#weekly`     | **Weekly Synthesizer**: Portfolio rollup         |
 
 ---
 
-## 📁 What's Inside
+## � Director-Level Organization
 
 ```
 your-pm-brain/
-├── 📄 SETTINGS.md          ← Your personalized config (auto-generated)
-├── 📥 _INBOX/              ← Drop anything here - AI organizes it
-├── 🔥 CRITICAL/            ← Boss requests & escalations
-├── 🐛 BUGS/                ← Bug tracking with SLAs
-├── 💬 FEEDBACK/            ← Feature requests & user feedback
-├── 👥 PEOPLE/              ← Stakeholders & team collaboration
-├── 📊 PROJECTS/            ← Active project tracking
-├── 🎯 STRATEGY/            ← Opportunities & decisions
-├── 📅 MEETINGS/            ← Briefs & meeting notes
-└── 🤖 _AGENTS/             ← AI prompts (the magic behind it all)
+├── KERNEL.md               ← The "System Prompt" connecting all agents
+├── PRODUCTS/               ← 🧠 Your Portfolio Context (New!)
+│   ├── mobile-app.md       ← Detects "iOS", "Android", "Checkout"
+│   └── data-platform.md    ← Detects "API", "AWS", "Pipeline"
+├── SETTINGS.md             ← Config
+├── _AGENTS/                ← The Neural Mesh
+├── CRITICAL/               ← Global Authority (Boss/Escalations)
+├── BUGS/                   ← Global Quality (All Products)
+└── ...
 ```
 
 ---
@@ -237,9 +201,9 @@ If you cloned with git: `git pull`. If you downloaded the ZIP: download again an
 </details>
 
 <details>
-<summary><strong>What is the #transcript command?</strong></summary>
+<summary><strong>How do I manage multiple products? (Director Mode)</strong></summary>
 
-Paste any meeting transcript, call recording text, or raw notes after `#transcript` and the AI will extract action items, decisions, follow-ups, and route them to the appropriate places in your brain.
+Easy. Just add a new file to the `PRODUCTS/` folder for each product (e.g. `mobile-app.md`). Antigravity will auto-detect which product you're talking about based on keywords you define in that file.
 
 </details>
 
