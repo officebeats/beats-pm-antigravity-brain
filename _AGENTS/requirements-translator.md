@@ -67,4 +67,4 @@ Transform chaotic input into structured, routed artifacts. Zero friction capture
 
 ---
 
-_Connected to the Beats PM Brain Mesh v2.0_
+_Connected to the Beats PM Brain Mesh v1.0_

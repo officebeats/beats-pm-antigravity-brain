@@ -9,7 +9,7 @@
 - **Owner**: [Your Name]
 - **Role**: [Principal PM / Director / Group PM]
 - **Timezone**: America/Chicago
-- **Version**: 2.0.0 (Director Mode)
+- **Version**: 1.0.0 (Director Mode)
 
 ---
 
