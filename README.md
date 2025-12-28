@@ -29,27 +29,9 @@ git clone https://github.com/officebeats/beats-pm-antigravity-brain.git
 
 ---
 
-### Step 2: Install the Auto-Accept Extension (Recommended)
-
-This extension lets Antigravity work faster by auto-accepting safe file operations. Here's how to install it:
-
-1. **Open Antigravity**
-2. **Open the Extensions panel** (`Ctrl+Shift+X` on Windows/Linux, `Cmd+Shift+X` on Mac)
-3. **Click the three dots (⋯)** in the top-right of the Extensions panel
-4. **Select "Install from VSIX..."** → No wait, easier method:
-5. **Go to the extension page**: [Antigravity Auto Accept](https://open-vsx.org/extension/pesosz/antigravity-auto-accept)
-6. **Click "Download"** to get the `.vsix` file
-7. **In Antigravity**, drag the `.vsix` file into the window, or:
-   - Open Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`)
-   - Type: `Extensions: Install from VSIX...`
-   - Select the downloaded file
-8. **Reload Antigravity** when prompted
-
-✅ Now Antigravity can work autonomously without constant approval clicks!
-
 ---
 
-### Step 3: Open in Antigravity
+### Step 2: Open in Antigravity
 
 1. Open **Google Antigravity**
 2. Click **"Open Folder"** (or drag your folder onto Antigravity)
@@ -205,6 +187,16 @@ While **Antigravity is the recommended way** to use this brain, it works with an
 ---
 
 ## ❓ FAQ
+
+<details>
+<summary><strong>Any tips for power users?</strong></summary>
+
+**Install the Auto-Accept Extension**: This lets Antigravity work faster by auto-accepting safe file operations.
+
+1. Download from [Open VSX](https://open-vsx.org/extension/pesosz/antigravity-auto-accept)
+2. Drag the `.vsix` file into Antigravity.
+3. Reload.
+</details>
 
 <details>
 <summary><strong>Do I need to know how to code?</strong></summary>
