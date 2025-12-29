@@ -8,7 +8,8 @@ node_modules/
 Thumbs.db
 
 # Ignore raw data dumps if they get huge
-00-drop-files-here-00/
+00-drop-files-here-00/*
+!00-drop-files-here-00/.gitkeep
 # _INBOX/
 
 # We generally WANT Antigravity to read SETTINGS.md and Trackers to function.
