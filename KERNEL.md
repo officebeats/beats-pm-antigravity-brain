@@ -4,15 +4,16 @@
 
 ## 🕸️ The Mesh
 
-| Agent                       | Capability               | Trigger When...                                         |
-| --------------------------- | ------------------------ | ------------------------------------------------------- |
-| **Requirements Translator** | Input Router             | New raw info arrives (text, images, files)              |
-| **Meeting Synthesizer**     | Meeting Parser           | Transcripts, notes, or recordings are provided          |
-| **Boss Tracker**            | Critical Request Manager | Boss/VIP is mentioned or asks for something             |
-| **Bug Chaser**              | Quality Manager          | Bugs, errors, outages, or "it's broken" detected        |
-| **Strategy Synthesizer**    | Pattern Recognizer       | Deep insights, trends, or strategic questions arise     |
-| **Visual Processor**        | The Eyes (OCR + Scene)   | **Screenshots**, images, or diagrams are provided       |
-| **Product Context**         | Knowledge Base           | Input is vague; checks `PRODUCTS/*.md` to infer product |
+| Agent                       | Capability               | Trigger When...                                          |
+| --------------------------- | ------------------------ | -------------------------------------------------------- |
+| **Task Manager**            | Task Lifecycle Owner     | Tasks need tracking, brain dump triage, or clarification |
+| **Requirements Translator** | Input Router             | New raw info arrives (text, images, files)               |
+| **Meeting Synthesizer**     | Meeting Parser           | Transcripts, notes, or recordings are provided           |
+| **Boss Tracker**            | Critical Request Manager | Boss/VIP is mentioned or asks for something              |
+| **Bug Chaser**              | Quality Manager          | Bugs, errors, outages, or "it's broken" detected         |
+| **Strategy Synthesizer**    | Pattern Recognizer       | Deep insights, trends, or strategic questions arise      |
+| **Visual Processor**        | The Eyes (OCR + Scene)   | **Screenshots**, images, or diagrams are provided        |
+| **Product Context**         | Knowledge Base           | Input is vague; checks `PRODUCTS/*.md` to infer product  |
 
 ---
 
