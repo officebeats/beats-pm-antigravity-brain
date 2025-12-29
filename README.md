@@ -72,7 +72,7 @@ Antigravity will:
 
 ---
 
-## 🚀 Antigravity Director Mode (v1.0.5)
+## 🚀 Antigravity Director Mode (v1.0.6)
 
 **This system is now powered by a Neural Mesh of agents.**
 
@@ -205,7 +205,7 @@ Nope! Just type naturally to Antigravity. It handles everything.
 <details>
 <summary><strong>Where is my data stored?</strong></summary>
 
-Everything stays in local markdown files on your computer. Nothing is uploaded anywhere unless you choose to sync with GitHub or cloud storage.
+Everything stays in local markdown files on your computer. Nothing is uploaded anywhere.
 
 </details>
 
