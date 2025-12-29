@@ -43,6 +43,7 @@ _The Visual Processor will analyze the scene (Text vs UI) and route accordingly.
 | `#eng [text]`     | PEOPLE/engineering-items.md | Engineering Collaborator |
 | `#screenshot`     | (Delegate)                  | **Visual Processor**     |
 | `#help`           | (Display)                   | **System Guide**         |
+| `#update`         | (Execute)                   | **System Maintenance**   |
 
 2. **Route & Preserve**:
    - **Features**: Create `FEEDBACK/feature-requests/FR-[name].md`. **MUST** include the raw input in the "Source Truth" section.
@@ -71,4 +72,4 @@ _The Visual Processor will analyze the scene (Text vs UI) and route accordingly.
 
 ---
 
-_Connected to the Beats PM Brain Mesh v1.0.6_
+_Connected to the Beats PM Brain Mesh v1.0.7_

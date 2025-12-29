@@ -72,7 +72,7 @@ Antigravity will:
 
 ---
 
-## 🚀 Antigravity Director Mode (v1.0.6)
+## 🚀 Antigravity Director Mode (v1.0.7)
 
 **This system is now powered by a Neural Mesh of agents.**
 
@@ -127,6 +127,7 @@ This repo is configured to be **safe for real-world work**.
 | `#note [anything]`    | Quick note            |
 | `#screenshot`         | process pasted image  |
 | `#help`               | Show commands & tasks |
+| `#update`             | Pull latest version   |
 
 ### Orchestrators (The Heavy Lifters)
 

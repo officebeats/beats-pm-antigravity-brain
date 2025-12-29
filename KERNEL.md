@@ -26,6 +26,7 @@
 4.  **Escalation**: Any agent detecting "Urgent", "Production Down", or Boss Asks must **immediately** fan out to `Boss Tracker` and `Bug Chaser` (Critical).
 5.  **Data Integrity (Source Truth)**: When extracting a feature or protection logic from a conversation, **YOU MUST PRESERVE THE RAW TEXT**. Never summarize away the original context. Always append the verbatim source to the final artifact.
 6.  **Guidance**: If input is `#help`, "what can I do?", or user seems lost, route to `Requirements Translator` to display the **Command Menu** and read out the Next Steps from `ACTION_PLAN.md`.
+7.  **System Updates**: If input is `#update` or "update the system", execute `git pull` to fetch the latest brain mesh improvements and report the outcome.
 
 ---
 
