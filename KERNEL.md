@@ -16,6 +16,20 @@
 
 ---
 
+## ⚡ Lazy-Load Protocol (Performance)
+
+**DO NOT read all agent files on startup.** Only load an agent's full prompt when it is triggered.
+
+| Phase          | What to Load                                                         |
+| -------------- | -------------------------------------------------------------------- |
+| **Startup**    | `KERNEL.md`, `SETTINGS.md`, `STATUS.md` only                         |
+| **On Trigger** | Read the specific `_AGENTS/*.md` file when that agent is invoked     |
+| **On Demand**  | Read `_INBOX/`, `DATA/`, `MEETINGS/` only when explicitly referenced |
+
+This keeps the initial context window lean and fast.
+
+---
+
 ## 🔄 Universal Routing Rules
 
 1.  **Direct the specific to the expert**: Don't try to parse a bug in the Meeting Synthesizer; extract it and hand it to the `Bug Chaser`.

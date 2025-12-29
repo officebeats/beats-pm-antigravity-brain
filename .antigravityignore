@@ -7,11 +7,25 @@ node_modules/
 .ds_store
 Thumbs.db
 
-# Ignore raw data dumps if they get huge
+# ========================================
+# PERFORMANCE OPTIMIZATION
+# These folders are excluded from initial indexing to speed up hydration.
+# The AI will read them on-demand when you explicitly reference them.
+# ========================================
+
+# Raw data drops (can be 100KB+)
 00-drop-files-here-00/*
 !00-drop-files-here-00/.gitkeep
-# _INBOX/
+
+# Inbox contains large CSV/text dumps
+_INBOX/
+
+# Data folder for exports and backups
+DATA/
+
+# Old meeting briefs can pile up
+MEETINGS/
 
 # We generally WANT Antigravity to read SETTINGS.md and Trackers to function.
 # So we DO NOT ignore the active tracker files here.
-# This file is mostly for system junk.
+
