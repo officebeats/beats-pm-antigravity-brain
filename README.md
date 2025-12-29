@@ -39,40 +39,25 @@ git clone https://github.com/officebeats/beats-pm-antigravity-brain.git
 
 ---
 
-### Step 4: Double-Click to Initialize (Important!)
+### Step 3: Run the Setup Wizard
 
-This repo is **"Private by Design"**. This means we don't track your live data, only templates.
-To get started, you must "hydrate" the brain:
-
-**On Windows:**
-
-1.  Double-click `Setup-Brain.cmd`
-2.  That's it. It creates your `SETTINGS.md` and all trackers unless they already exist.
-
-**On Mac/Linux:**
-
-1.  Double-click `Setup-Brain.command` (or run `./scripts/setup.sh`)
-
-### Step 5: Run the Setup Wizard
-
-Once the folder is open in Antigravity, simply type:
+Once the folder is open, simply type:
 
 ```
-Help me set up my PM brain. Walk me through the first-time setup.
+Help me set up my PM brain.
 ```
 
-Antigravity will:
+**Antigravity will:**
 
-- ✅ Ask you simple questions about your role, team, and schedule
-- ✅ Generate your personalized settings
-- ✅ Create your first week action plan
-- ✅ Show you how to capture your first items
+- ✅ **Initialize your files** (runs the setup scripts for you)
+- ✅ **Customize your settings** (asks about your role/team)
+- ✅ **Secure your privacy** (configures git-ignore rules)
 
 **That's it! You're ready to go.** 🎉
 
 ---
 
-## 🚀 Antigravity Director Mode (v1.1.0)
+## 🚀 Antigravity Director Mode (v1.1.1)
 
 **This system is now powered by a Neural Mesh of agents.**
 
@@ -135,18 +120,46 @@ Drag files into **`00-DROP-FILES-HERE-00/`** and say "Check [filename]". The sys
 
 **Note**: All status/briefing commands (`#day`, `#status`, etc.) generate **succinct, table-based outputs** optimized for fast scanning.
 
-### Orchestrators (The Heavy Lifters)
+## ⚡ The Workflow: Chaos vs. Order
 
-| Command       | What It Does                                     |
-| ------------- | ------------------------------------------------ |
-| `#transcript` | **Meeting Synthesizer**: Parses calls/recordings |
-| `#meeting`    | **Meeting Synthesizer**: Parses raw notes        |
-| `#day`        | **Daily Synthesizer**: Time-adaptive brief       |
-| `#weekly`     | **Weekly Synthesizer**: Portfolio rollup         |
+This system is designed for **low-friction capture** and **high-focus execution**.
+
+### 1. 🌪️ Chaos Mode (Capture)
+
+- **Thoughts?** Open **`BRAIN_DUMP.md`** and just type.
+- **Chat?** Just tell Antigravity random things.
+  - _Actionable:_ "Fix the bug" → **I do it.**
+  - _Random:_ "We should explore dark mode" → **I park it in Brain Dump.**
+- **Files?** Drag them into **`00-drop-files-here-00/`**.
+- **Screenshots?** Paste them into chat and say `#screenshot`.
+
+### 2. ⚖️ Order Mode (Organize)
+
+When you're ready to make sense of the chaos:
+
+- **What happens:** The AI scans your brain dump and file drops, then organizes actionable items into your **`ACTION_PLAN.md`**.
+
+### 3. 🎯 Focus Mode (Execute)
+
+- **Open:** **`ACTION_PLAN.md`**
+- This is your single source of truth for the day. Execute the checklist. Ignore everything else.
 
 ---
 
-## � Director-Level Organization
+## 🚦 Quick Commands
+
+| Command       | Action                                                              |
+| :------------ | :------------------------------------------------------------------ |
+| **`#day`**    | **Start/Update Day**. Processes brain dump & file drops.            |
+| **`#b`**      | **Log Bug**. Example: `#b login failed on iOS`                      |
+| **`#t`**      | **Log Task**. Example: `#t email boss re: budget`                   |
+| **`#update`** | **Refresh**. Pulls all latest changes if you edited files manually. |
+
+> **Pro Tip:** You don't need to memorize commands. Just talk naturally. "Here is a file", "Note this down", "What's next?".
+
+---
+
+## Director-Level Organization
 
 ```
 your-pm-brain/

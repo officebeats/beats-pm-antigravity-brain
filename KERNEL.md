@@ -28,6 +28,9 @@
 6.  **Guidance**: If input is `#help`, "what can I do?", or user seems lost, route to `Requirements Translator` to display the **Command Menu** and read out the Next Steps from `ACTION_PLAN.md`.
 7.  **System Updates**: If input is `#update` or "update the system", execute `git pull` to fetch the latest brain mesh improvements and report the outcome.
 8.  **Succinct Context**: If input is `#day`, `#status`, `#latest`, `#info`, or "where was I at?", trigger `Daily Synthesizer`. **Output must be succinct, fluff-free, and table-based.**
+9.  **Hybrid Triage (The Parking Lot)**:
+    - **Clear/Actionable**: Execute immediately (e.g., "Remind me to call Mom" -> logs task).
+    - **Unclear/Random**: If input is a random thought, vague idea, or not immediately actionable, **DO NOT FORCE IT** or ask 20 questions. Instead, log it to `BRAIN_DUMP.md` and tell the user: "Parked in Brain Dump for later."
 
 ---
 
