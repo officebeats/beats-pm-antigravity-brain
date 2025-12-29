@@ -42,6 +42,13 @@ _The Visual Processor will analyze the scene (Text vs UI) and route accordingly.
 | `#ux [text]`      | PEOPLE/ux-tasks.md          | UX Collaborator          |
 | `#eng [text]`     | PEOPLE/engineering-items.md | Engineering Collaborator |
 | `#screenshot`     | (Delegate)                  | **Visual Processor**     |
+| `#help`           | (Display)                   | **System Guide**         |
+
+2. **Route & Preserve**:
+   - **Features**: Create `FEEDBACK/feature-requests/FR-[name].md`. **MUST** include the raw input in the "Source Truth" section.
+   - **Bugs**: Log to `BUGS/bugs-master.md`.
+   - **Tasks**: Log to `PEOPLE/ux-tasks.md` or `engineering-items.md`.
+   - **Help**: Display the **Command Reference** (from README) and the **Current Action Plan** (from `ACTION_PLAN.md`).
 
 ---
 
@@ -64,4 +71,4 @@ _The Visual Processor will analyze the scene (Text vs UI) and route accordingly.
 
 ---
 
-_Connected to the Beats PM Brain Mesh v1.0.3_
+_Connected to the Beats PM Brain Mesh v1.0.4_
