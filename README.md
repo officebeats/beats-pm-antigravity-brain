@@ -57,7 +57,7 @@ Help me set up my PM brain.
 
 ---
 
-## 🚀 Antigravity Director Mode (v1.1.1)
+## 🚀 Antigravity Director Mode (v1.1.2)
 
 **This system is now powered by a Neural Mesh of agents.**
 
@@ -148,12 +148,13 @@ When you're ready to make sense of the chaos:
 
 ## 🚦 Quick Commands
 
-| Command       | Action                                                              |
-| :------------ | :------------------------------------------------------------------ |
-| **`#day`**    | **Start/Update Day**. Processes brain dump & file drops.            |
-| **`#b`**      | **Log Bug**. Example: `#b login failed on iOS`                      |
-| **`#t`**      | **Log Task**. Example: `#t email boss re: budget`                   |
-| **`#update`** | **Refresh**. Pulls all latest changes if you edited files manually. |
+| Command          | Action                                                                   |
+| :--------------- | :----------------------------------------------------------------------- |
+| **`#day`**       | **Start/Update Day**. Processes brain dump & file drops.                 |
+| **`#b`**         | **Log Bug**. Example: `#b login failed on iOS`                           |
+| **`#t`**         | **Log Task**. Example: `#t email boss re: budget`                        |
+| **`#braindump`** | **Append/Process**. `#braindump [text]` to add, `#braindump` to process. |
+| **`#update`**    | **Refresh**. Pulls all latest changes if you edited files manually.      |
 
 > **Pro Tip:** You don't need to memorize commands. Just talk naturally. "Here is a file", "Note this down", "What's next?".
 
