@@ -53,10 +53,6 @@ To get started, you must "hydrate" the brain:
 
 1.  Double-click `Setup-Brain.command` (or run `./scripts/setup.sh`)
 
-**Why?**
-Now you can edit `SETTINGS.md` and `BUGS/bugs-master.md` with real, sensitive data. Git will **ignore** these files.
-If you screw up, just run the setup script again to restore missing files.
-
 ### Step 5: Run the Setup Wizard
 
 Once the folder is open in Antigravity, simply type:
@@ -76,7 +72,7 @@ Antigravity will:
 
 ---
 
-## 🚀 Antigravity Director Mode (v1.0.4)
+## 🚀 Antigravity Director Mode (v1.0.5)
 
 **This system is now powered by a Neural Mesh of agents.**
 
