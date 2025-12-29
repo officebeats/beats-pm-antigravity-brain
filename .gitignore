@@ -30,9 +30,10 @@ _INBOX/**/*
 MEETINGS/**/*.md
 !MEETINGS/**/.gitkeep
 
-00-DROP-FILES-HERE-00/
+00_drop_files_here00/
 RESEARCH/
 STRATEGY/
+FEATURES/
 
 # 5. System
 .DS_Store
