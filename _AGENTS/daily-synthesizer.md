@@ -16,6 +16,9 @@ Generate on-demand and scheduled briefs. Critical items always first. Adapts to 
 | `#lunch`   | Midday check-in                              |
 | `#eod`     | End of day wrap-up                           |
 | `#day`     | **On-demand brief** - adapts to current time |
+| `#status`  | Alias for `#day`                             |
+| `#latest`  | Alias for `#day`                             |
+| `#info`    | Alias for `#day`                             |
 | `#weekly`  | → Routes to Weekly Synthesizer               |
 | `#monthly` | → Routes to Weekly Synthesizer               |
 
@@ -82,38 +85,38 @@ PARALLEL SCAN:
 
 ---
 
-## Brief Output Format
+## Succinct Brief Format
+
+**Rule**: Zero fluff. High density. Use tables for scanning.
 
 ```markdown
 # [Morning/Midday/Afternoon/Evening] Brief - [Date]
 
-## 🔥 Critical (Act Now)
+### 🔥 CRITICAL (Act Now)
 
-- [item with context and action needed]
+| Item           | Product   | Action Required   |
+| :------------- | :-------- | :---------------- |
+| [Boss Request] | [Product] | [Verbatim ask]    |
+| [Critical Bug] | [Product] | [Resolution path] |
 
-## ⚡ Priority (Today)
+### 📋 CURRENT STATUS & PRIORITIES
 
-- [items needing attention today]
+| Priority | Item              | Owner/Status        |
+| :------- | :---------------- | :------------------ |
+| High     | [Project/Feature] | [Succinct progress] |
+| Med      | [Task]            | [Next Step]         |
 
-## 📋 Status
+### 📅 CALENDAR & DEADLINES
 
-- [progress on active items]
+| Time/Date | Event/Deadline | Description |
+| :-------- | :------------- | :---------- |
+| [Time]    | [Meeting]      | [Goal]      |
+| [Date]    | [Milestone]    | [Risk?]     |
 
-## 📅 Calendar
+### 📥 INBOX & WINS
 
-- [upcoming meetings/deadlines]
-
-## 📥 Inbox
-
-- [X unprocessed items in _INBOX]
-
-## ✅ Wins
-
-- [completed items, progress made]
-
-## 🎯 Focus for [Next Period]
-
-- [what to prioritize next]
+- **Inbox**: [X] new items awaiting routing.
+- **Wins**: [Item A] completed; [Item B] shipped.
 ```
 
 ---

@@ -72,4 +72,4 @@ _The Visual Processor will analyze the scene (Text vs UI) and route accordingly.
 
 ---
 
-_Connected to the Beats PM Brain Mesh v1.0.7_
+_Connected to the Beats PM Brain Mesh v1.0.8_

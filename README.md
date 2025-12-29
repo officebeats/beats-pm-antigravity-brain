@@ -72,7 +72,7 @@ Antigravity will:
 
 ---
 
-## 🚀 Antigravity Director Mode (v1.0.7)
+## 🚀 Antigravity Director Mode (v1.0.8)
 
 **This system is now powered by a Neural Mesh of agents.**
 
@@ -116,18 +116,20 @@ This repo is configured to be **safe for real-world work**.
 
 ### Universal Capture (Any Agent can handle these)
 
-| Command               | Action                |
-| --------------------- | --------------------- |
-| `#boss [request]`     | Track a boss request  |
-| `#bug [description]`  | Log a bug             |
-| `#task [description]` | Create a task         |
-| `#feature [idea]`     | Log a feature request |
-| `#ux [task]`          | UX design task        |
-| `#eng [item]`         | Engineering item      |
-| `#note [anything]`    | Quick note            |
-| `#screenshot`         | process pasted image  |
-| `#help`               | Show commands & tasks |
-| `#update`             | Pull latest version   |
+| Command               | Action                    |
+| --------------------- | ------------------------- |
+| `#boss [request]`     | Track a boss request      |
+| `#bug [description]`  | Log a bug                 |
+| `#task [description]` | Create a task             |
+| `#feature [idea]`     | Log a feature request     |
+| `#ux [task]`          | UX design task            |
+| `#eng [item]`         | Engineering item          |
+| `#note [anything]`    | Quick note                |
+| `#screenshot`         | process pasted image      |
+| `#latest` / `#status` | Succinct time-aware brief |
+| `#update`             | Pull latest version       |
+
+**Note**: All status/briefing commands (`#day`, `#status`, etc.) generate **succinct, table-based outputs** optimized for fast scanning.
 
 ### Orchestrators (The Heavy Lifters)
 
