@@ -33,22 +33,26 @@ _The Visual Processor will analyze the scene (Text vs UI) and route accordingly.
 
 ## Quick Capture Commands
 
-| Command           | Routes To                   | Agent                    |
-| ----------------- | --------------------------- | ------------------------ |
-| `#boss [text]`    | CRITICAL/boss-requests.md   | Boss Tracker             |
-| `#bug [text]`     | BUGS/bugs-master.md         | Bug Chaser               |
-| `#task [text]`    | PROJECTS/                   | Direct                   |
-| `#feature [text]` | FEEDBACK/feature-requests/  | Direct                   |
-| `#ux [text]`      | PEOPLE/ux-tasks.md          | UX Collaborator          |
-| `#eng [text]`     | PEOPLE/engineering-items.md | Engineering Collaborator |
-| `#screenshot`     | (Delegate)                  | **Visual Processor**     |
-| `#help`           | (Display)                   | **System Guide**         |
-| `#update`         | (Execute)                   | **System Maintenance**   |
+| Command            | Routes To                   | Agent                    |
+| ------------------ | --------------------------- | ------------------------ |
+| `#boss [text]`     | CRITICAL/boss-requests.md   | Boss Tracker             |
+| `#bug [text]`      | BUGS/bugs-master.md         | Bug Chaser               |
+| `#task [text]`     | PROJECTS/                   | Direct                   |
+| `#feature [text]`  | FEEDBACK/feature-requests/  | Direct                   |
+| `#ux [text]`       | PEOPLE/ux-tasks.md          | UX Collaborator          |
+| `#eng [text]`      | PEOPLE/engineering-items.md | Engineering Collaborator |
+| `#braindump [txt]` | BRAIN_DUMP.md               | **Daily Synthesizer**    |
+| `#screenshot`      | (Delegate)                  | **Visual Processor**     |
+| `#help`            | (Display)                   | **System Guide**         |
+| `#update`          | (Execute)                   | **System Maintenance**   |
 
 2. **Route & Preserve**:
    - **Features**: Create `FEEDBACK/feature-requests/FR-[name].md`. **MUST** include the raw input in the "Source Truth" section.
    - **Bugs**: Log to `BUGS/bugs-master.md`.
    - **Tasks**: Log to `PEOPLE/ux-tasks.md` or `engineering-items.md`.
+   - **Brain Dump**:
+     - `#braindump [text]` → Append text to `BRAIN_DUMP.md`.
+     - `#braindump` (no args) → Trigger **Daily Synthesizer** (treat as `#day`).
    - **Help**: Display the **Command Reference** and **Hybrid Triage Logic** (Action vs. Brain Dump) from README.
 
 ---
@@ -73,4 +77,4 @@ _The Visual Processor will analyze the scene (Text vs UI) and route accordingly.
 
 ---
 
-_Connected to the Beats PM Brain Mesh v1.1.1_
+_Connected to the Beats PM Brain Mesh v1.1.2_

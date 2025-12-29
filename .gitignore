@@ -29,12 +29,19 @@ _INBOX/**/*
 
 MEETINGS/**/*.md
 !MEETINGS/**/.gitkeep
+!MEETINGS/**/*_TEMPLATE.md
 
 00-drop-files-here-00/*
 !00-drop-files-here-00/.gitkeep
-RESEARCH/
-STRATEGY/
-FEATURES/
+RESEARCH/*
+!RESEARCH/.gitkeep
+!RESEARCH/*_TEMPLATE.md
+STRATEGY/*
+!STRATEGY/.gitkeep
+!STRATEGY/*_TEMPLATE.md
+FEATURES/*
+!FEATURES/.gitkeep
+!FEATURES/*_TEMPLATE.md
 
 # 5. System
 .DS_Store
