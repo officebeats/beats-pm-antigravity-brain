@@ -104,7 +104,7 @@ Since web-based LLMs can't access your local files directly:
 
 For a more seamless experience where the AI can directly read/write your files, consider:
 
-- **[Antigravity](https://deepmind.google/antigravity/)** - Recommended, full folder access
+- **[Antigravity](https://antigravity.google/)** - Recommended, full folder access
 - **Claude Code** - Terminal-based, full file access
 - **Cursor** - IDE-based, great for file management
 - **Gemini CLI** - Terminal-based, file access
