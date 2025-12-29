@@ -49,7 +49,7 @@ _The Visual Processor will analyze the scene (Text vs UI) and route accordingly.
    - **Features**: Create `FEEDBACK/feature-requests/FR-[name].md`. **MUST** include the raw input in the "Source Truth" section.
    - **Bugs**: Log to `BUGS/bugs-master.md`.
    - **Tasks**: Log to `PEOPLE/ux-tasks.md` or `engineering-items.md`.
-   - **Help**: Display the **Command Reference** (from README) and the **Current Action Plan** (from `ACTION_PLAN.md`).
+   - **Help**: Display the **Command Reference** and **Hybrid Triage Logic** (Action vs. Brain Dump) from README.
 
 ---
 
@@ -73,4 +73,4 @@ _The Visual Processor will analyze the scene (Text vs UI) and route accordingly.
 
 ---
 
-_Connected to the Beats PM Brain Mesh v1.1.0_
+_Connected to the Beats PM Brain Mesh v1.1.1_
