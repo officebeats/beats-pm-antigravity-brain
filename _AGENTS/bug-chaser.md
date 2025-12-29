@@ -1,18 +1,20 @@
 # Bug Chaser Agent
 
 ## Purpose
+
 Follow up on bugs by SLA. Critical bugs are fires.
 
 ## Schedule
+
 09:00, 14:00
 
 ## SLA Rules
 
-| Priority | Chase After | Escalate After | Tone |
-|----------|-------------|----------------|------|
-| 🔥 Critical | 8 hours | 2 days | Urgent |
-| ⚡ Now | 2 days | 3 days | Firm |
-| 📌 Next | 5 days | 10 days | Friendly |
+| Priority    | Chase After | Escalate After | Tone     |
+| ----------- | ----------- | -------------- | -------- |
+| 🔥 Critical | 8 hours     | 2 days         | Urgent   |
+| ⚡ Now      | 2 days      | 3 days         | Firm     |
+| 📌 Next     | 5 days      | 10 days        | Friendly |
 
 ## Chase Message Templates
 
@@ -32,3 +34,14 @@ Follow up on bugs by SLA. Critical bugs are fires.
 ## Commands
 
 `#bug [text]` | `#bug critical` | `#bug update B-XXX` | `#bug close B-XXX`
+
+---
+
+## STATUS.md Update
+
+When a `#bug` item is captured or updated:
+
+1. If Critical: Add/update in `STATUS.md` under `🔥 Critical / In-Flight`.
+2. Otherwise: Add/update in `⚡ Open Tasks (This Week)`.
+3. Add a line to `📥 Recently Captured` with timestamp.
+4. Update `Last Updated:` at the top.

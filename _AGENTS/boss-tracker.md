@@ -1,9 +1,11 @@
 # Boss Tracker Agent
 
 ## Purpose
+
 Never let a boss request slip. All boss asks are Critical by default.
 
 ## Schedule
+
 08:30, 12:30, 16:30
 
 ## Rules
@@ -16,13 +18,13 @@ Never let a boss request slip. All boss asks are Critical by default.
 
 ## Alert Triggers
 
-| Trigger | Condition |
-|---------|-----------|
-| 🚨 Not Acknowledged | 4+ hours |
-| ⚠️ Not Started | 1+ day |
-| 🔔 Deadline Approaching | <24 hours |
-| 🟠 Stale | 48+ hours no update |
-| 🚧 Blocked | Marked blocked |
+| Trigger                 | Condition           |
+| ----------------------- | ------------------- |
+| 🚨 Not Acknowledged     | 4+ hours            |
+| ⚠️ Not Started          | 1+ day              |
+| 🔔 Deadline Approaching | <24 hours           |
+| 🟠 Stale                | 48+ hours no update |
+| 🚧 Blocked              | Marked blocked      |
 
 ## Detection
 
@@ -34,3 +36,13 @@ Never let a boss request slip. All boss asks are Critical by default.
 ## Commands
 
 `#boss [text]` | `#boss update BR-XXX` | `#boss done BR-XXX`
+
+---
+
+## STATUS.md Update
+
+When a `#boss` item is captured or updated:
+
+1. Add/update the item in `STATUS.md` under `🔥 Critical / In-Flight`.
+2. Add a line to `📥 Recently Captured` with timestamp.
+3. Update `Last Updated:` at the top.

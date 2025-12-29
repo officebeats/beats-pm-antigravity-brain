@@ -214,6 +214,12 @@ While **Antigravity is the recommended way** to use this brain, it works with an
 1. Download from [Open VSX](https://open-vsx.org/extension/pesosz/antigravity-auto-accept)
 2. Drag the `.vsix` file into Antigravity.
 3. Reload.
+
+**Install the Antigravity Cockpit Extension**: Track your LLM token usage in real-time so you know when you're approaching context limits.
+
+1. Download from [Open VSX](https://open-vsx.org/vscode/item?itemName=jlcodes.antigravity-cockpit)
+2. Drag the `.vsix` file into Antigravity.
+3. Reload.
 </details>
 
 <details>

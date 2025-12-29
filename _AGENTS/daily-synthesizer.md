@@ -134,3 +134,19 @@ At each brief, check for new items in:
 ## Output Location
 
 `MEETINGS/daily-briefs/[YYYY-MM-DD]-[morning|midday|afternoon|evening].md`
+
+---
+
+## STATUS.md Maintenance
+
+**On every brief generation (`#day`, `#status`, `#morning`, `#lunch`, `#eod`):**
+
+1. **Read** `STATUS.md` at the brain root.
+2. **Update** the following sections based on current scan results:
+   - `🔥 Critical / In-Flight` — Refresh from CRITICAL/ and boss-requests
+   - `⚡ Open Tasks (This Week)` — Refresh from projects, bugs, and queued items
+   - `📥 Recently Captured (Last 24-48h)` — Add any newly processed items
+3. **Update** the `Last Updated:` timestamp at the top.
+4. **Write** the updated `STATUS.md` back to disk.
+
+This ensures the dashboard is always current when the user asks for a brief.
