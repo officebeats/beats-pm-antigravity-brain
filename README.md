@@ -76,7 +76,7 @@ Antigravity will:
 
 ---
 
-## 🚀 Antigravity Director Mode (v1.0.1)
+## 🚀 Antigravity Director Mode (v1.0.2)
 
 **This system is now powered by a Neural Mesh of agents.**
 

@@ -65,6 +65,10 @@ A **folder structure + markdown files + AI agent prompts** that work together to
 ```
 I just downloaded Beats Product Management Antigravity Brain and need help setting it up.
 
+## Privacy & Context
+Before we begin: I understand that you (the AI) will use the information below to **build referencing context** for my stakeholders, tasks, and transcripts.
+**Crucially: All files are stored LOCALLY in Antigravity/my machine. None of this data is sent or stored externally outside of our immediate interaction.**
+
 Please walk me through the first-time setup by asking me questions one at a time.
 After I answer all the questions, generate my personalized SETTINGS.md file and
 give me my first week action plan.
