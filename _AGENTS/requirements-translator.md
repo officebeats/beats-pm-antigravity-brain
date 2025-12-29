@@ -55,13 +55,14 @@ _The Visual Processor will analyze the scene (Text vs UI) and route accordingly.
 
 ## Auto-Detection & Neural Routing
 
-| Input Signal                    | Detection Logic    | Orchestrates To...           |
-| ------------------------------- | ------------------ | ---------------------------- |
-| "It's broken", [Image of Error] | Quality Issue      | **Bug Chaser**               |
-| "[Boss] wants..."               | Critical Authority | **Boss Tracker**             |
-| "Can we do X?", [Arch Diagram]  | Feasibility        | **Engineering Collaborator** |
-| "Trends show...", [Data Table]  | Strategy           | **Strategy Synthesizer**     |
-| "Transcript", "Meeting notes"   | Conversation       | **Meeting Synthesizer**      |
+| Input Signal                    | Detection Logic    | Orchestrates To...                              |
+| ------------------------------- | ------------------ | ----------------------------------------------- |
+| "It's broken", [Image of Error] | Quality Issue      | **Bug Chaser**                                  |
+| "[Boss] wants..."               | Critical Authority | **Boss Tracker**                                |
+| "Can we do X?", [Arch Diagram]  | Feasibility        | **Engineering Collaborator**                    |
+| "Trends show...", [Data Table]  | Strategy           | **Strategy Synthesizer**                        |
+| "Transcript", "Meeting notes"   | Conversation       | **Meeting Synthesizer**                         |
+| "Check [file]", [File Name]     | File Analysis      | **Direct Read** (from `00-DROP-FILES-HERE-00/`) |
 
 ---
 
@@ -72,4 +73,4 @@ _The Visual Processor will analyze the scene (Text vs UI) and route accordingly.
 
 ---
 
-_Connected to the Beats PM Brain Mesh v1.0.8_
+_Connected to the Beats PM Brain Mesh v1.0.9_

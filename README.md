@@ -72,7 +72,7 @@ Antigravity will:
 
 ---
 
-## 🚀 Antigravity Director Mode (v1.0.8)
+## 🚀 Antigravity Director Mode (v1.0.9)
 
 **This system is now powered by a Neural Mesh of agents.**
 
@@ -128,6 +128,10 @@ This repo is configured to be **safe for real-world work**.
 | `#screenshot`         | process pasted image      |
 | `#latest` / `#status` | Succinct time-aware brief |
 | `#update`             | Pull latest version       |
+
+### 📂 File Drop Zone
+
+Drag files into **`00-DROP-FILES-HERE-00/`** and say "Check [filename]". The system will read it.
 
 **Note**: All status/briefing commands (`#day`, `#status`, etc.) generate **succinct, table-based outputs** optimized for fast scanning.
 
