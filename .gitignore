@@ -30,7 +30,7 @@ _INBOX/**/*
 MEETINGS/**/*.md
 !MEETINGS/**/.gitkeep
 
-00_drop_files_here00/
+00-drop-files-here-00/
 RESEARCH/
 STRATEGY/
 FEATURES/
