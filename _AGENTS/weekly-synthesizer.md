@@ -64,8 +64,14 @@ Generate weekly and monthly rollups with accomplishments, metrics, strategy puls
 
 ## What This Agent Scans (Parallel)
 
+**Before scanning, call Task Manager for cleanup:**
+
+- Archive all `[x]` tasks older than 7 days
+- Flag `[ ]` tasks older than 14 days as stale
+
 ```
 PARALLEL SCAN:
+├── ACTION_PLAN.md                → Task velocity (via Task Manager)
 ├── CRITICAL/boss-requests.md     → Boss request status
 ├── BUGS/bugs-master.md           → Bug metrics
 ├── PEOPLE/engineering-items.md   → Eng collaboration

@@ -57,15 +57,48 @@ Help me set up my PM brain.
 
 ---
 
-## 🚀 Antigravity Director Mode (v1.1.2)
+## 🚀 Why Antigravity? Built for PMs, Not Devs
 
-**This system is now powered by a Neural Mesh of agents.**
+**This PM Brain works with any AI coding tool** (see [docs/claude-code.md](docs/claude-code.md)), but Antigravity is the **recommended experience** — especially if you're not a developer.
 
-Unlike standard bots, these agents:
+### 🎯 The Killer Feature: Screenshot → Task
 
-1.  **Talk to Each Other**: The `Meeting Synthesizer` can trigger the `Bug Chaser` who triggers the `Strategy Synthesizer`.
-2.  **Understand Context**: Paste a screenshot. The system checks your `PRODUCTS/` folder, identifies it's your "Mobile App", and routes the bug accordingly.
-3.  **Run in Parallel**: One raw dump → 5 organized outputs instantly.
+Antigravity is powered by **Gemini** — Google's multimodal AI with world-class image understanding. This means:
+
+- 📸 **Paste a screenshot** of a bug → Antigravity reads the UI, identifies the product, and logs it to the right tracker
+- 📊 **Drop a slide deck** → Key decisions get extracted and routed
+- 🎨 **Share a design mock** → UX feedback gets captured with visual context
+
+This isn't just "image support" — it's **native vision** that understands what it's looking at. Claude Code can process images, but Gemini's multimodal architecture was built for this from day one.
+
+### The Real Difference
+
+| What Matters for PMs    | Antigravity                                 | Claude Code                     |
+| ----------------------- | ------------------------------------------- | ------------------------------- |
+| **Interface**           | ✅ Visual editor (VS Code-based)            | Terminal-only                   |
+| **Setup**               | ✅ Drag folder → start talking              | Requires CLI comfort            |
+| **Learning Curve**      | ✅ Click buttons, paste screenshots         | Commands, flags, config files   |
+| **File Drop Zone**      | ✅ Drag files into `00-DROP-FILES-HERE-00/` | Manual `cat` or path references |
+| **Screenshot Analysis** | ✅ Paste image → instant routing            | Works, but less seamless        |
+| **Built-in Browser**    | ✅ Visual testing & demos included          | Requires MCP setup              |
+| **Image Generation**    | ✅ Native support                           | Requires external tools         |
+
+### What About Claude Code's Agents?
+
+**Technically, Claude Code can do most of what Antigravity does.** You can configure custom agents via `CLAUDE.md`, add skills, and set up MCP tools. Power users can achieve similar orchestration.
+
+**But here's the catch**: Claude Code is built for developers who live in the terminal. If you're comfortable with `git`, `npx`, and YAML configs, it's excellent.
+
+For PMs who just want to:
+
+- 📂 **Drag a folder** and start talking
+- 📸 **Paste a screenshot** and have it auto-triaged
+- 📝 **Edit markdown** in a visual editor
+- 🚀 **Skip the terminal** entirely
+
+...Antigravity is the path of least resistance.
+
+> **Bottom Line**: Claude Code is a power tool. Antigravity is the power tool with training wheels pre-installed — and for most PMs, that's exactly what you want.
 
 ---
 
