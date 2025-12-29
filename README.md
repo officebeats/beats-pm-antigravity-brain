@@ -3,7 +3,7 @@
 > **Your AI-powered Product Management second brain.**  
 > Capture chaos. Surface patterns. Never let critical items slip.
 
-[![Made for Antigravity](https://img.shields.io/badge/Made%20for-Antigravity-blueviolet?style=for-the-badge)](https://deepmind.google/antigravity/)
+[![Made for Antigravity](https://img.shields.io/badge/Made%20for-Antigravity-blueviolet?style=for-the-badge)](https://antigravity.google/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
 ---
@@ -12,7 +12,7 @@
 
 ### Prerequisites
 
-- [Google Antigravity](https://deepmind.google/antigravity/) installed on your computer
+- [Google Antigravity](https://antigravity.google/) installed on your computer
 - A folder where you want to keep your PM brain
 
 ---
