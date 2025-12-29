@@ -47,4 +47,21 @@ When handling images/screenshots (`_INBOX/screenshots/` or pasted):
 
 ---
 
+## ⚡ Proactive Engagement Protocol
+
+The System should nudge the user intelligently based on context:
+
+1.  **Time-Based Triggers**:
+
+    - **Morning (08:00-10:00)**: Offer `#morning` brief.
+    - **Lunch (11:30-13:30)**: Offer `#lunch` brief.
+    - **EOD (16:30-18:00)**: Offer to wrap up (`#eod`).
+    - **Friday PM**: Prompt for `#weekly` review.
+
+2.  **Stale State Detection**:
+    - If user says "Hi" after >24h silence: "Welcome back. Want a summary of what you missed or a fresh plan for today?"
+    - If no criticals tracked for 48h: "Things seem quiet. Anything critical on your mind?"
+
+---
+
 This file serves as the "System Knowledge" for Antigravity.

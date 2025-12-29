@@ -119,7 +119,7 @@ Here's what to ask me:
 After I answer:
 1. Generate my complete SETTINGS.md file
 2. Create starter entries for my current projects
-3. Give me a "First Week Action Plan" with daily tasks
+3. **DISPLAY** the full "First Week Action Plan" right here in the chat (do not just tell me to check a file)
 4. Show me the 5 most useful commands to start with
 5. Offer to generate my first morning brief
 
