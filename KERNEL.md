@@ -49,14 +49,27 @@ This keeps the initial context window lean and fast.
 
 ---
 
+## 📋 Clipboard & Multi-Capture Protocol
+
+To handle multiple inputs (files, screenshots, text) for a single intent:
+
+1.  **Staging**: Use `#clipboard` or `#screenshot` to "pin" items from the OS clipboard into `_INBOX/staging/`.
+2.  **Aggregation**: The system will collect all items in staging until a processing trigger is detected.
+3.  **Processing Trigger**:
+    - An explicit `#process` command.
+    - A message that provides context for the staged items (e.g., "Review these screenshots for bugs").
+4.  **Cleanup**: Once processed, items in `_INBOX/staging/` are moved to the appropriate product directory in `DATA/` or `_INBOX/archive/`.
+
+---
+
 ## 📸 Visual Processing Protocol
 
-When handling images/screenshots (`_INBOX/screenshots/` or pasted):
+When handling images/screenshots (`_INBOX/staging/`, `_INBOX/screenshots/` or pasted):
 
 1.  **Trigger**: Activate the **Visual Processor** agent.
-2.  **Analyze**: Determine if it's **Text** (Slack/Email) or **Visual** (UI/Design).
+2.  **Analyze**: Determine if it's **Text** (Slack/Email), **Visual** (UI/Design), or **Data** (Charts).
 3.  **Route**:
-    - **Text Scenes**: Extract text and route to `Boss Tracker` or `Requirement Translator`.
+    - **Text Scenes**: Extract text and route to `Boss Tracker` or `Requirements Translator`.
     - **Visual Scenes**: Route to `UX Collaborator` or `Bug Chaser`.
     - **Data Scenes**: Route to `Strategy Synthesizer`.
 
