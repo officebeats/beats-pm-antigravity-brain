@@ -1,6 +1,6 @@
-# 🧠 Beats PM Antigravity Brain (v1.4.0)
+# 🧠 Beats PM Antigravity Brain
 
-> **The Professional Second Brain for Product Managers.**  
+> **The Professional Second Brain for Product Managers.**
 > Stop drowning in chaos. Capture everything. Let AI organize the rest.
 
 [![Made for Antigravity](https://img.shields.io/badge/Made%20for-Antigravity-blueviolet?style=for-the-badge)](https://antigravity.google/)
@@ -51,8 +51,8 @@ The Beats Brain is optimized for **Gemini** (Google’s AI), which has the best 
 The AI will autonomously reach out, grab your clipboard, and start analyzing:
 
 - 🐞 **Capture a Bug**: Paste a screenshot of a crash → The AI logs it to the Bug Tracker.
+- 📁 **Instant File Upload**: Press **Ctrl+C** on any **PDF, Excel, or Word doc** in your File Explorer, then type **`#paste`** → The AI pulls the actual file into your brain.
 - 💬 **Meeting Notes**: Paste a call transcript → The AI extracts action items for your team.
-- 📂 **Spreadsheets**: Copy a column from Excel → The AI turns it into professional specs.
 
 ---
 
