@@ -77,7 +77,7 @@ Create these pages/databases in Notion:
 
 ### Step 2: Copy Agent Prompts
 
-Create a page called "Agents" and paste the contents of each file from `_AGENTS/`
+Create a page called "Agents" and paste the contents of each file from `system/agents/`
 
 ### Step 3: Use with Notion AI
 
@@ -118,7 +118,7 @@ Create a page called "Agents" and paste the contents of each file from `_AGENTS/
 
 ### Load an Agent
 
-1. Copy contents of an agent file (e.g., `_AGENTS/daily-synthesizer.md`)
+1. Copy contents of an agent file (e.g., `system/agents/daily-synthesizer.md`)
 2. Create a new Notion page
 3. Paste the agent prompt
 4. Then ask Notion AI to follow those instructions

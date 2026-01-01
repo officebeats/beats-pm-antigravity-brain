@@ -46,13 +46,13 @@ You can use individual agent files as system prompts for focused sessions:
 
 ```bash
 # For a daily brief session
-gemini --system-instruction "_AGENTS/daily-synthesizer.md"
+gemini --system-instruction "system/agents/daily-synthesizer.md"
 
 # For bug triage
-gemini --system-instruction "_AGENTS/bug-chaser.md"
+gemini --system-instruction "system/agents/bug-chaser.md"
 
 # For stakeholder management
-gemini --system-instruction "_AGENTS/stakeholder-manager.md"
+gemini --system-instruction "system/agents/stakeholder-manager.md"
 ```
 
 ---
@@ -118,7 +118,7 @@ gemini --system-instruction "_AGENTS/stakeholder-manager.md"
 
 3. **Use @ mentions** to reference specific files:
    ```
-   @CRITICAL/boss-requests.md show me open items
+   @tracking/critical/boss-requests.md show me open items
    ```
 
 ---

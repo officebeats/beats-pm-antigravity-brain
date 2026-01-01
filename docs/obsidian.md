@@ -54,7 +54,7 @@ Install these community plugins for the best experience:
 If you install the **Obsidian Copilot** plugin:
 
 1. Configure it with your API key (OpenAI, Anthropic, etc.)
-2. Open any agent file from `_AGENTS/`
+2. Open any agent file from `system/agents/`
 3. Use the AI chat to interact with your PM brain
 
 Example prompts:
@@ -62,7 +62,7 @@ Example prompts:
 ```
 Based on the daily-synthesizer agent, generate my morning brief
 
-Look at CRITICAL/boss-requests.md and tell me what's overdue
+Look at tracking/critical/boss-requests.md and tell me what's overdue
 
 Process this transcript and extract action items:
 [paste transcript]
