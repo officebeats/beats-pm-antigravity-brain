@@ -1,321 +1,118 @@
-# 🧠 Beats PM Antigravity Brain
+# 🧠 Beats PM Antigravity Brain (v1.4.0)
 
-> **Your AI-powered Product Management second brain.**  
-> Capture chaos. Surface patterns. Never let critical items slip.
+> **The Professional Second Brain for Product Managers.**  
+> Stop drowning in chaos. Capture everything. Let AI organize the rest.
 
 [![Made for Antigravity](https://img.shields.io/badge/Made%20for-Antigravity-blueviolet?style=for-the-badge)](https://antigravity.google/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
 ---
 
-## ⚡ Get Started in 60 Seconds
+## 👋 Welcome to Your New OS
 
-### Prerequisites
+As a Product Manager, you are constantly bombarded with information: Slack messages, meeting transcripts, screenshots of bugs, and "quick asks" from your boss.
 
-- [Google Antigravity](https://antigravity.google/) installed on your computer
-- A folder where you want to keep your PM brain
+The **Antigravity Brain** is a local-first system designed to catch all that noise and turn it into professional artifacts (Product Specs, Bug Trackers, and Daily Briefs) automatically.
 
----
-
-### Step 1: Download This Brain
-
-Click the green **"Code"** button above → **"Download ZIP"** → Extract to a folder you'll remember (e.g., `Documents/my-pm-brain`)
-
-_Or if you're comfortable with git:_
-
-```bash
-git clone https://github.com/officebeats/beats-pm-antigravity-brain.git
-```
+**No more manual entry. No more lost notes.**
 
 ---
 
----
+## ⚡ Start Here (60 Seconds)
 
-### Step 2: Open in Antigravity
+### 1. Prerequisites
 
-1. Open **Google Antigravity**
-2. Click **"Open Folder"** (or drag your folder onto Antigravity)
-3. Select the folder you just downloaded
+- Download [Google Antigravity](https://antigravity.google/) (It's free).
+- Create a folder on your computer (e.g., `My PM Brain`).
 
----
+### 2. Download & Open
 
-### Step 3: Run the Setup Wizard
+- Download the **ZIP** file of this project and extract it into your folder.
+- Drag that folder directly into the **Antigravity** app.
 
-Once the folder is open, simply type:
+### 3. Run the Wizard
 
-```
+Once open, just type this into the chat:
+
+```text
 Help me set up my PM brain.
 ```
 
-**Antigravity will:**
-
-- ✅ **Initialize your files** (runs the setup scripts for you)
-- ✅ **Customize your settings** (asks about your role/team)
-- ✅ **Secure your privacy** (configures git-ignore rules)
-
-**That's it! You're ready to go.** 🎉
+**Antigravity will handle the rest**, setting up your team profile and securing your privacy permissions.
 
 ---
 
-## 🚀 Why Antigravity? Built for PMs, Not Devs
+## 📸 The Secret Sauce: Screenshot → Action
 
-**This PM Brain works with any AI coding tool** (see [docs/claude-code.md](docs/claude-code.md)), but Antigravity is the **recommended experience** — especially if you're not a developer.
+The Beats Brain is optimized for **Gemini** (Google’s AI), which has the best "eyes" in the world.
 
-### 🎯 The Killer Feature: Screenshot → Task
+**The Workaround:** Since Antigravity doesn't have a "File Upload" button yet, we built a pro workaround. Just **Copy** (Ctrl+C) any image or file, then type **`#paste`** in the chat.
 
-Antigravity is powered by **Gemini** — Google's multimodal AI with world-class image understanding. This means:
+The AI will autonomously reach out, grab your clipboard, and start analyzing:
 
-- 📸 **Paste a screenshot** of a bug → Antigravity reads the UI, identifies the product, and logs it to the right tracker
-- 📊 **Drop a slide deck** → Key decisions get extracted and routed
-- 🎨 **Share a design mock** → UX feedback gets captured with visual context
-
-This isn't just "image support" — it's **native vision** that understands what it's looking at. Claude Code can process images, but Gemini's multimodal architecture was built for this from day one.
-
-### The Real Difference
-
-| What Matters for PMs    | Antigravity                                 | Claude Code                     |
-| ----------------------- | ------------------------------------------- | ------------------------------- |
-| **Interface**           | ✅ Visual editor (VS Code-based)            | Terminal-only                   |
-| **Setup**               | ✅ Drag folder → start talking              | Requires CLI comfort            |
-| **Learning Curve**      | ✅ Click buttons, paste screenshots         | Commands, flags, config files   |
-| **File Drop Zone**      | ✅ Drag files into `00-DROP-FILES-HERE-00/` | Manual `cat` or path references |
-| **Screenshot Analysis** | ✅ Paste image → instant routing            | Works, but less seamless        |
-| **Built-in Browser**    | ✅ Visual testing & demos included          | Requires MCP setup              |
-| **Image Generation**    | ✅ Native support                           | Requires external tools         |
-
-### What About Claude Code's Agents?
-
-**Technically, Claude Code can do most of what Antigravity does.** You can configure custom agents via `CLAUDE.md`, add skills, and set up MCP tools. Power users can achieve similar orchestration.
-
-**But here's the catch**: Claude Code is built for developers who live in the terminal. If you're comfortable with `git`, `npx`, and YAML configs, it's excellent.
-
-For PMs who just want to:
-
-- 📂 **Drag a folder** and start talking
-- 📸 **Paste a screenshot** and have it auto-triaged
-- 📝 **Edit markdown** in a visual editor
-- 🚀 **Skip the terminal** entirely
-
-...Antigravity is the path of least resistance.
-
-> **Bottom Line**: Claude Code is a power tool. Antigravity is the power tool with training wheels pre-installed — and for most PMs, that's exactly what you want.
+- 🐞 **Capture a Bug**: Paste a screenshot of a crash → The AI logs it to the Bug Tracker.
+- 💬 **Meeting Notes**: Paste a call transcript → The AI extracts action items for your team.
+- 📂 **Spreadsheets**: Copy a column from Excel → The AI turns it into professional specs.
 
 ---
 
-## 🎯 What Can It Do?
+## 👥 Your "Expert Team" (Automated Agents)
 
-| Say This to Antigravity         | What Happens (Orchestration)                                                                |
-| ------------------------------- | ------------------------------------------------------------------------------------------- |
-| `#transcript` + paste call      | **Parallel Execution**: Routes boss asks, bugs, eng items, and design tasks simultaneously. |
-| `#screenshot` + paste image     | **Visual Analysis**: Identifies product, logs bug/task based on what it sees.               |
-| `#day`                          | **Adaptive Brief**: Gives you exactly what you need for this specific time of day.          |
-| _"My boss just asked for..."_   | **Boss Tracker**: Logs critical request with SLA monitoring.                                |
-| _"Bug: checkout failed on iOS"_ | **Context Routing**: Detects "iOS" → logs to "Mobile App" product tracker.                  |
+You aren't just talking to one AI. You have a mesh of specialized "experts" working for you in the background:
 
----
-
-## � Privacy Mode (100% Secure)
-
-This repo is configured to be **safe for real-world work**.
-
-1.  **Git Ignore**: `SETTINGS.md` and all active trackers (`tracking/bugs/*.md`, `tracking/people/*.md`) are ignored.
-2.  **Antigravity Ignore**: Large data folders are hidden from the AI context unless asked.
-3.  **Templates**: The repo only tracks `*_TEMPLATE.md` files.
-
-**How to sync between computers (Mac <-> PC):**
-
-1.  `git pull` on the new machine.
-2.  Run `Setup-Brain` (cmd or command).
-3.  It downloads new templates but **keeps your local data private**.
+- **The Boss Tracker**: Monitors every time your VIPs make a request and puts it on a priority list.
+- **The Bug Chaser**: Automatically triages issues into "Red", "Yellow", and "Green" priority levels.
+- **The Visual Processor**: The "Eyes" of the system. It reads screenshots of Slack, Figma, or your App to understand context.
+- **The Daily Synthesizer**: Your personal assistant who prepares your `#morning` and `#eod` briefs so you always know what's next.
 
 ---
 
-## �💬 Commands Reference
+## 📂 Simplified Organization (v1.4.0)
 
-### Universal Capture (Any Agent can handle these)
+We've tidied up the brain so you only see what matters. Everything is organized into four main areas:
 
-| Command                 | Action                       |
-| ----------------------- | ---------------------------- |
-| `#boss [request]`       | Track a boss request         |
-| `#bug [description]`    | Log a bug                    |
-| `#task [description]`   | Create a task                |
-| `#feature [idea]`       | Log a feature request        |
-| `#ux [task]`            | UX design task               |
-| `#eng [item]`           | Engineering item             |
-| `#note [anything]`      | Quick note                   |
-| `#screenshot`           | Capture image from clipboard |
-| `#clipboard` / `#paste` | Capture ALL from clipboard   |
-| `#process`              | Process staged batch         |
-| `#latest` / `#status`   | Succinct time-aware brief    |
-| `#update`               | Pull latest version          |
-
-### 📂 File Drop Zone & Clipboard (The Workaround)
-
-Antigravity does not natively support "file uploads" or "image pasting" directly into the chat box like some web apps. To work around this, the Beats Brain provides two primary ingestion methods:
-
-1.  **Direct Drop**: Drag files into the **`00-DROP-FILES-HERE-00/`** folder and say "Check [filename]".
-2.  **Clipboard Ingestion (Recommended)**:
-    - **Step 1**: Copy any file(s), screenshot, or text to your OS clipboard (Ctrl+C).
-    - **Step 2**: Type **`#clipboard`**, **`#paste`**, or **`#screenshot`** in the chat.
-    * **Step 3**: The AI will autonomously reach out, grab your clipboard contents, and save them to **`00-DROP-FILES-HERE-00/`**.
-    * **Step 4**: Provide context (e.g., "Analyze this") or type **`#process`** to commit the data.
-
-**Note**: All status/briefing commands (`#day`, `#status`, etc.) generate **succinct, table-based outputs** optimized for fast scanning.
-
-## ⚡ The Workflow: Chaos vs. Order
-
-This system is designed for **low-friction capture** and **high-focus execution**.
-
-### 1. 🌪️ Chaos Mode (Capture)
-
-- **Thoughts?** Open **`BRAIN_DUMP.md`** and just type.
-- **Chat?** Just tell Antigravity random things.
-  - _Actionable:_ "Fix the bug" → **I do it.**
-  - _Random:_ "We should explore dark mode" → **I park it in Brain Dump.**
-- **Files?** Drag them into **`00-drop-files-here-00/`**.
-- **Screenshots?** Paste them into chat and say `#screenshot`.
-
-### 2. ⚖️ Order Mode (Organize)
-
-When you're ready to make sense of the chaos:
-
-- **What happens:** The AI scans your brain dump and file drops, then organizes actionable items into your **`ACTION_PLAN.md`**.
-
-### 3. 🎯 Focus Mode (Execute)
-
-- **Open:** **`ACTION_PLAN.md`**
-- This is your single source of truth for the day. Execute the checklist. Ignore everything else.
+- **`00-DROP-FILES-HERE-00`**: Your digital front door. Throw anything in here to have the AI process it.
+- **`🚀 tracking/`**: Your active lists. This is where your Bugs, Project Tasks, and Boss Requests live.
+- **`📚 vault/`**: Your long-term memory. Completed meeting notes, product research, and historical data.
+- **`🛠️ system/`**: The "engine under the hood." You rarely need to go in here; it's where the AI's logic lives.
 
 ---
 
-## 🚦 Quick Commands
+## 📝 Everyday Shortcuts
 
-| Command          | Action                                                                   |
-| :--------------- | :----------------------------------------------------------------------- |
-| **`#day`**       | **Start/Update Day**. Processes brain dump & file drops.                 |
-| **`#b`**         | **Log Bug**. Example: `#b login failed on iOS`                           |
-| **`#t`**         | **Log Task**. Example: `#t email boss re: budget`                        |
-| **`#braindump`** | **Append/Process**. `#braindump [text]` to add, `#braindump` to process. |
-| **`#update`**    | **Refresh**. Pulls all latest changes if you edited files manually.      |
+You can talk to the Brain naturally, but these "hashtags" help you move fast:
 
-> **Pro Tip:** You don't need to memorize commands. Just talk naturally. "Here is a file", "Note this down", "What's next?".
+### ⚡ Daily Briefings
 
----
+- **`#morning`**: Your "Start of Day" punch list (Criticals + Calendar).
+- **`#lunch`**: A quick check-in on what's left for the afternoon.
+- **`#eod`**: Your "End of Day" wrap-up and tomorrow's preview.
+- **`#day`**: **The Smart Brief**. It looks at the clock and gives you the right list for right now.
 
-## Director-Level Organization
+### 📥 Capture Anything (Fast)
 
-```
-your-pm-brain/
-├── KERNEL.md               ← The "System Prompt" connecting all agents
-├── vault/products/               ← 🧠 Your Portfolio Context (New!)
-│   ├── mobile-app.md       ← Detects "iOS", "Android", "Checkout"
-│   └── data-platform.md    ← Detects "API", "AWS", "Pipeline"
-├── SETTINGS.md             ← Config
-├── system/agents/                ← The Neural Mesh
-├── tracking/critical/               ← Global Authority (Boss/Escalations)
-├── tracking/bugs/                   ← Global Quality (All Products)
-└── ...
-```
+- **`#paste`**: **The Magic Shortcut**. Pulls whatever you have "Copied" (Files/Images/Text) into the system.
+- **`#boss`**: Logs a critical request that you _cannot_ forget.
+- **`#bug`**: Quickly logs a bug to the master list.
+- **`#notes`**: Appends a thought to your `BRAIN_DUMP.md` for later triage.
+- **`#status`**: Refreshes your high-level dashboard (`STATUS.md`).
+- **`#process`**: Tells the AI to look at everything in your drop zone and organize it.
 
 ---
 
-## 🏷️ Priority System
+## 🔒 Privacy First
 
-| Priority     | Emoji | When to Use                          |
-| ------------ | ----- | ------------------------------------ |
-| **Critical** | 🔥    | Production down, boss deadline TODAY |
-| **Now**      | ⚡    | Needs attention this week            |
-| **Next**     | 📌    | Planned for next sprint              |
-| **Later**    | 📋    | Backlog, will do eventually          |
-| **Sometime** | 💭    | Ideas to explore                     |
+Your data **never leaves your computer**.
 
----
-
-## 🔧 Works With Other Tools Too
-
-While **Antigravity is the recommended way** to use this brain, it works with any AI tool:
-
-| Tool            | Setup Guide                                |
-| --------------- | ------------------------------------------ |
-| **Claude Code** | [docs/claude-code.md](docs/claude-code.md) |
-| **Gemini CLI**  | [docs/gemini-cli.md](docs/gemini-cli.md)   |
-| **Cursor**      | [docs/cursor.md](docs/cursor.md)           |
-| **Obsidian**    | [docs/obsidian.md](docs/obsidian.md)       |
-| **Notion**      | [docs/notion.md](docs/notion.md)           |
-| **Any LLM**     | [docs/anyllm.md](docs/anyllm.md)           |
-
----
-
-## ❓ FAQ
-
-<details>
-<summary><strong>Any tips for power users?</strong></summary>
-
-**Install the Auto-Accept Extension**: This lets Antigravity work faster by auto-accepting safe file operations.
-
-1. Download from [Open VSX](https://open-vsx.org/extension/pesosz/antigravity-auto-accept)
-2. Drag the `.vsix` file into Antigravity.
-3. Reload.
-
-**Install the Antigravity Cockpit Extension**: Track your LLM token usage in real-time so you know when you're approaching context limits.
-
-1. Download from [Open VSX](https://open-vsx.org/vscode/item?itemName=jlcodes.antigravity-cockpit)
-2. Drag the `.vsix` file into Antigravity.
-3. Reload.
-</details>
-
-<details>
-<summary><strong>Do I need to know how to code?</strong></summary>
-
-Nope! Just type naturally to Antigravity. It handles everything.
-
-</details>
-
-<details>
-<summary><strong>Where is my data stored?</strong></summary>
-
-Everything stays in local markdown files on your computer. Nothing is uploaded anywhere.
-
-</details>
-
-<details>
-<summary><strong>Can I customize it?</strong></summary>
-
-Absolutely. Edit `SETTINGS.md` or ask Antigravity to help you customize anything.
-
-</details>
-
-<details>
-<summary><strong>How do I update to the latest version?</strong></summary>
-
-If you cloned with git: `git pull`. If you downloaded the ZIP: download again and copy over (your data in the folders is safe).
-
-</details>
-
-<details>
-<summary><strong>How do I manage multiple products? (Director Mode)</strong></summary>
-
-Easy. Just add a new file to the `vault/products/` folder for each product (e.g. `mobile-app.md`). Antigravity will auto-detect which product you're talking about based on keywords you define in that file.
-
-</details>
-
----
-
-## 🤝 Contributing
-
-Contributions welcome! Submit PRs or open issues.
-
----
-
-## 📄 License
-
-MIT - Use it, modify it, share it.
+- All your notes, bugs, and plans are stored as simple text files on your hard drive.
+- You own the data.
+- No cloud subscription required.
 
 ---
 
 ## 👤 Created By
 
-**Ernesto** — Product Management leader & AI enthusiast
+**Ernesto Rodriguez** — Product Management leader & AI enthusiast.
 
 <p>
   <a href="https://www.linkedin.com/in/productmg/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
@@ -327,5 +124,5 @@ MIT - Use it, modify it, share it.
 
 <p align="center">
   <strong>Built by PMs, for PMs.</strong><br>
-  <em>Stop drowning in chaos. Start surfacing what matters.</em>
+  <em>Stop chasing status updates. Start driving strategy.</em>
 </p>
