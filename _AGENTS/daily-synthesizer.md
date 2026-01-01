@@ -63,7 +63,7 @@ PARALLEL SCAN:
 ├── PEOPLE/stakeholders.md        → Updates due
 ├── PROJECTS/projects-master.md   → Project status
 ├── _QUEUE/needs-clarification.md → Items needing input
-├── _INBOX/staging/*              → Items pinned via #clipboard (Pending Process)
+├── 00-DROP-FILES-HERE-00/        → New drops & items pinned via #clipboard
 ├── _INBOX/*                      → Unprocessed items
 └── SETTINGS.md                   → Calendar, working hours
 ```

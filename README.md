@@ -157,8 +157,8 @@ Antigravity does not natively support "file uploads" or "image pasting" directly
 2.  **Clipboard Ingestion (Recommended)**:
     - **Step 1**: Copy any file(s), screenshot, or text to your OS clipboard (Ctrl+C).
     - **Step 2**: Type **`#clipboard`**, **`#paste`**, or **`#screenshot`** in the chat.
-    - **Step 3**: The AI will autonomously reach out, grab your clipboard contents, and save them to `_INBOX/staging/`.
-    - **Step 4**: Provide context (e.g., "Analyze this") or type **`#process`** to commit the data.
+    * **Step 3**: The AI will autonomously reach out, grab your clipboard contents, and save them to **`00-DROP-FILES-HERE-00/`**.
+    * **Step 4**: Provide context (e.g., "Analyze this") or type **`#process`** to commit the data.
 
 **Note**: All status/briefing commands (`#day`, `#status`, etc.) generate **succinct, table-based outputs** optimized for fast scanning.
 
