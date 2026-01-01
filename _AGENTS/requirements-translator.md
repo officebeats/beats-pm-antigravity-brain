@@ -15,8 +15,8 @@ Transform chaotic input into structured, routed artifacts. Zero friction capture
 
 **Trigger**: User pastes an image OR typed commands:
 
-- `#screenshot`: Captures clipboard image to `_INBOX/staging/`.
-- `#clipboard` / `#paste`: Captures files/images/text to `_INBOX/staging/`.
+- `#screenshot`: Captures clipboard image to `00-DROP-FILES-HERE-00/`.
+- `#clipboard` / `#paste`: Captures files/images/text to `00-DROP-FILES-HERE-00/`.
 
 **MANDATORY ACTION**: You MUST immediately execute:
 `powershell -ExecutionPolicy Bypass -File scripts/capture-clipboard.ps1`

@@ -53,19 +53,19 @@ This keeps the initial context window lean and fast.
 
 To handle multiple inputs (files, screenshots, text) for a single intent:
 
-1.  **Staging**: Use `#clipboard`, `#screenshot`, or `#paste` to "pin" items from your OS clipboard into `_INBOX/staging/`.
-2.  **Aggregation**: The system will collect all items in staging until a processing trigger is detected.
+1.  **Staging**: Use `#clipboard`, `#screenshot`, or `#paste` to "pin" items from your OS clipboard into `00-DROP-FILES-HERE-00/`.
+2.  **Aggregation**: The system will collect all items in the drop zone until a processing trigger is detected.
 3.  **Processing Trigger**:
     - An explicit `#process` command.
     - A message that provides context for the staged items (e.g., "Review these screenshots for bugs").
 4.  **Action**: Upon receiving these commands, the **Requirements Translator** MUST execute the `capture-clipboard.ps1` script to ingest the data.
-5.  **Cleanup**: Once processed, items in `_INBOX/staging/` are moved to the appropriate product directory in `DATA/` or `_INBOX/archive/`.
+5.  **Cleanup**: Once processed, items in `00-DROP-FILES-HERE-00/` are moved to the appropriate product directory in `DATA/` or `_INBOX/archive/`.
 
 ---
 
 ## 📸 Visual Processing Protocol
 
-When handling images/screenshots (`_INBOX/staging/`, `_INBOX/screenshots/` or pasted):
+When handling images/screenshots (`00-DROP-FILES-HERE-00/`, `_INBOX/screenshots/` or pasted):
 
 1.  **Trigger**: Activate the **Visual Processor** agent.
 2.  **Analyze**: Determine if it's **Text** (Slack/Email), **Visual** (UI/Design), or **Data** (Charts).

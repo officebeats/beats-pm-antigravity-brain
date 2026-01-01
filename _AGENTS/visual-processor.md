@@ -5,7 +5,7 @@
 
 ## Purpose
 
-Analyze visual inputs (screenshots, images, diagrams) captured in `_INBOX/staging/` to extract content and context, then route to the correct agent.
+Analyze visual inputs (screenshots, images, diagrams) captured in `00-DROP-FILES-HERE-00/` to extract content and context, then route to the correct agent.
 
 **Visual Orchestrator**: DOES NOT just do "UX". It reads the image to decide if it's a Bug, a Boss Request, or a Design Task.
 
@@ -15,9 +15,9 @@ Analyze visual inputs (screenshots, images, diagrams) captured in `_INBOX/stagin
 
 ### Step 0: Retrieval
 
-**Trigger**: `#screenshot`, `#clipboard`, or manual drop in `_INBOX/staging/`.
+**Trigger**: `#screenshot`, `#clipboard`, or manual drop in `00-DROP-FILES-HERE-00/`.
 
-1.  **Scan**: Check `_INBOX/staging/` for new images.
+1.  **Scan**: Check `00-DROP-FILES-HERE-00/` for new images.
 2.  **Associate**: Group with any accompanying text or files in the staging area.
 
 ### Step 1: Scene Analysis

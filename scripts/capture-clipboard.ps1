@@ -1,4 +1,4 @@
-$stagingDir = "_INBOX\staging"
+$stagingDir = "00-DROP-FILES-HERE-00"
 if (!(Test-Path $stagingDir)) { New-Item -ItemType Directory -Path $stagingDir }
 
 $timestamp = Get-Date -Format "yyyyMMdd_HHmmss"
