@@ -8,3 +8,4 @@
 |------|------|---------|--------|-------------|----------|
 
 **Commands**: `#stakeholder add [name]` | `#stakeholder update [name]`
+| Sarah | Meeting Request | ? | 2026-01-01 | [ ] | Follow up with Sarah |
