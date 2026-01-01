@@ -1,2 +1,2 @@
 @echo off
-powershell -ExecutionPolicy Bypass -File "scripts/setup.ps1"
+powershell -ExecutionPolicy Bypass -File "system/scripts/setup.ps1"

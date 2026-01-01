@@ -118,7 +118,7 @@ For PMs who just want to:
 
 This repo is configured to be **safe for real-world work**.
 
-1.  **Git Ignore**: `SETTINGS.md` and all active trackers (`BUGS/*.md`, `PEOPLE/*.md`) are ignored.
+1.  **Git Ignore**: `SETTINGS.md` and all active trackers (`tracking/bugs/*.md`, `tracking/people/*.md`) are ignored.
 2.  **Antigravity Ignore**: Large data folders are hidden from the AI context unless asked.
 3.  **Templates**: The repo only tracks `*_TEMPLATE.md` files.
 
@@ -207,13 +207,13 @@ When you're ready to make sense of the chaos:
 ```
 your-pm-brain/
 ├── KERNEL.md               ← The "System Prompt" connecting all agents
-├── PRODUCTS/               ← 🧠 Your Portfolio Context (New!)
+├── vault/products/               ← 🧠 Your Portfolio Context (New!)
 │   ├── mobile-app.md       ← Detects "iOS", "Android", "Checkout"
 │   └── data-platform.md    ← Detects "API", "AWS", "Pipeline"
 ├── SETTINGS.md             ← Config
-├── _AGENTS/                ← The Neural Mesh
-├── CRITICAL/               ← Global Authority (Boss/Escalations)
-├── BUGS/                   ← Global Quality (All Products)
+├── system/agents/                ← The Neural Mesh
+├── tracking/critical/               ← Global Authority (Boss/Escalations)
+├── tracking/bugs/                   ← Global Quality (All Products)
 └── ...
 ```
 
@@ -295,7 +295,7 @@ If you cloned with git: `git pull`. If you downloaded the ZIP: download again an
 <details>
 <summary><strong>How do I manage multiple products? (Director Mode)</strong></summary>
 
-Easy. Just add a new file to the `PRODUCTS/` folder for each product (e.g. `mobile-app.md`). Antigravity will auto-detect which product you're talking about based on keywords you define in that file.
+Easy. Just add a new file to the `vault/products/` folder for each product (e.g. `mobile-app.md`). Antigravity will auto-detect which product you're talking about based on keywords you define in that file.
 
 </details>
 

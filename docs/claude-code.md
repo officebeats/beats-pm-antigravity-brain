@@ -57,13 +57,13 @@ Give me my morning brief
 For best results, you can explicitly load agents:
 
 ```
-Please read _AGENTS/daily-synthesizer.md and generate my morning brief
+Please read system/agents/daily-synthesizer.md and generate my morning brief
 ```
 
 Or load multiple:
 
 ```
-Read _AGENTS/boss-tracker.md and _AGENTS/bug-chaser.md,
+Read system/agents/boss-tracker.md and system/agents/bug-chaser.md,
 then show me all critical items I need to follow up on today
 ```
 

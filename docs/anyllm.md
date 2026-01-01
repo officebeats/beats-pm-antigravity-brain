@@ -6,7 +6,7 @@
 
 ## The Agents Are Portable Markdown
 
-The magic of this system is that the agents in `_AGENTS/` are just markdown files with detailed prompts. You can copy-paste them into **any** LLM.
+The magic of this system is that the agents in `system/agents/` are just markdown files with detailed prompts. You can copy-paste them into **any** LLM.
 
 ---
 
@@ -26,7 +26,7 @@ Download this repository to your computer
 
 ### Step 3: Paste an Agent Prompt
 
-1. Open the agent file you want to use from `_AGENTS/`
+1. Open the agent file you want to use from `system/agents/`
 2. Copy the entire contents
 3. Paste it into your LLM chat
 4. Start interacting!
@@ -51,7 +51,7 @@ Download this repository to your computer
 
 ## Example: Using Daily Synthesizer
 
-1. Open `_AGENTS/daily-synthesizer.md`
+1. Open `system/agents/daily-synthesizer.md`
 2. Copy entire contents
 3. Paste into ChatGPT/Claude/etc
 4. Then say: "Generate my morning brief"

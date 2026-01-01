@@ -13,7 +13,7 @@
 | **Bug Chaser**              | Quality Manager          | Bugs, errors, outages, or "it's broken" detected         |
 | **Strategy Synthesizer**    | Pattern Recognizer       | Deep insights, trends, or strategic questions arise      |
 | **Visual Processor**        | The Eyes (OCR + Scene)   | **Screenshots**, images, or diagrams are provided        |
-| **Product Context**         | Knowledge Base           | Input is vague; checks `PRODUCTS/*.md` to infer product  |
+| **Product Context**         | Knowledge Base           | Input is vague; checks `vault/products/*.md` to infer product  |
 
 ---
 
@@ -24,8 +24,8 @@
 | Phase          | What to Load                                                         |
 | -------------- | -------------------------------------------------------------------- |
 | **Startup**    | `KERNEL.md`, `SETTINGS.md`, `STATUS.md` only                         |
-| **On Trigger** | Read the specific `_AGENTS/*.md` file when that agent is invoked     |
-| **On Demand**  | Read `_INBOX/`, `DATA/`, `MEETINGS/` only when explicitly referenced |
+| **On Trigger** | Read the specific `system/agents/*.md` file when that agent is invoked     |
+| **On Demand**  | Read `system/inbox/`, `vault/data/`, `vault/meetings/` only when explicitly referenced |
 
 This keeps the initial context window lean and fast.
 
@@ -36,7 +36,7 @@ This keeps the initial context window lean and fast.
 1.  **Direct the specific to the expert**: Don't try to parse a bug in the Meeting Synthesizer; extract it and hand it to the `Bug Chaser`.
 2.  **Parallel Execution**: If multiple intents are found, trigger all relevant agents simultaneously.
 3.  **Context Resolution**:
-    - If input is "#bug checkout failed" → Check `PRODUCTS/*.md` for "checkout" keyword.
+    - If input is "#bug checkout failed" → Check `vault/products/*.md` for "checkout" keyword.
     - If found in "Mobile App", route to Bug Chaser with context: `Product: Mobile App`.
 4.  **Escalation**: Any agent detecting "Urgent", "Production Down", or Boss Asks must **immediately** fan out to `Boss Tracker` and `Bug Chaser` (Critical).
 5.  **Data Integrity (Source Truth)**: When extracting a feature or protection logic from a conversation, **YOU MUST PRESERVE THE RAW TEXT**. Never summarize away the original context. Always append the verbatim source to the final artifact.
@@ -59,13 +59,13 @@ To handle multiple inputs (files, screenshots, text) for a single intent:
     - An explicit `#process` command.
     - A message that provides context for the staged items (e.g., "Review these screenshots for bugs").
 4.  **Action**: Upon receiving these commands, the **Requirements Translator** MUST execute the `capture-clipboard.ps1` script to ingest the data.
-5.  **Cleanup**: Once processed, items in `00-DROP-FILES-HERE-00/` are moved to the appropriate product directory in `DATA/` or `_INBOX/archive/`.
+5.  **Cleanup**: Once processed, items in `00-DROP-FILES-HERE-00/` are moved to the appropriate product directory in `vault/data/` or `system/inbox/archive/`.
 
 ---
 
 ## 📸 Visual Processing Protocol
 
-When handling images/screenshots (`00-DROP-FILES-HERE-00/`, `_INBOX/screenshots/` or pasted):
+When handling images/screenshots (`00-DROP-FILES-HERE-00/`, `system/inbox/screenshots/` or pasted):
 
 1.  **Trigger**: Activate the **Visual Processor** agent.
 2.  **Analyze**: Determine if it's **Text** (Slack/Email), **Visual** (UI/Design), or **Data** (Charts).

@@ -1,6 +1,6 @@
 # Product Context Template
 
-> Copy this file for each product you manage. Save as `PRODUCTS/[product-name].md`.
+> Copy this file for each product you manage. Save as `vault/products/[product-name].md`.
 
 ## 📦 Product: [Product Name]
 
