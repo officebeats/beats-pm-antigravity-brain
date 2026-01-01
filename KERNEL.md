@@ -53,12 +53,13 @@ This keeps the initial context window lean and fast.
 
 To handle multiple inputs (files, screenshots, text) for a single intent:
 
-1.  **Staging**: Use `#clipboard` or `#screenshot` to "pin" items from the OS clipboard into `_INBOX/staging/`.
+1.  **Staging**: Use `#clipboard`, `#screenshot`, or `#paste` to "pin" items from your OS clipboard into `_INBOX/staging/`.
 2.  **Aggregation**: The system will collect all items in staging until a processing trigger is detected.
 3.  **Processing Trigger**:
     - An explicit `#process` command.
     - A message that provides context for the staged items (e.g., "Review these screenshots for bugs").
-4.  **Cleanup**: Once processed, items in `_INBOX/staging/` are moved to the appropriate product directory in `DATA/` or `_INBOX/archive/`.
+4.  **Action**: Upon receiving these commands, the **Requirements Translator** MUST execute the `capture-clipboard.ps1` script to ingest the data.
+5.  **Cleanup**: Once processed, items in `_INBOX/staging/` are moved to the appropriate product directory in `DATA/` or `_INBOX/archive/`.
 
 ---
 

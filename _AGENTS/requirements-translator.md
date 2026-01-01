@@ -16,7 +16,11 @@ Transform chaotic input into structured, routed artifacts. Zero friction capture
 **Trigger**: User pastes an image OR typed commands:
 
 - `#screenshot`: Captures clipboard image to `_INBOX/staging/`.
-- `#clipboard`: Captures files/images/text to `_INBOX/staging/`.
+- `#clipboard` / `#paste`: Captures files/images/text to `_INBOX/staging/`.
+
+**MANDATORY ACTION**: You MUST immediately execute:
+`powershell -ExecutionPolicy Bypass -File scripts/capture-clipboard.ps1`
+whenever these commands are detected.
 
 → **ACTIVATE AGENT**: `Visual Processor` (See KERNEL.md)
 
@@ -47,6 +51,7 @@ _The Visual Processor will analyze the scene (Text vs UI) and route accordingly.
 | `#braindump [txt]` | BRAIN_DUMP.md               | **Daily Synthesizer**    |
 | `#screenshot`      | (Staging: Image)            | **Visual Processor**     |
 | `#clipboard`       | (Staging: All)              | **Requirements Router**  |
+| `#paste`           | (Alias for #clipboard)      | **Requirements Router**  |
 | `#process`         | (Commit Staging)            | **Orchestrator**         |
 | `#help`            | (Display)                   | **System Guide**         |
 | `#update`          | (Execute)                   | **System Maintenance**   |
