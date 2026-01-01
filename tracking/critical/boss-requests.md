@@ -1,15 +1,3 @@
-# Boss Requests Tracker
-
-> All boss requests - Critical by default. Nothing slips.
-
-## 🔥 Active Requests
-
-| ID | Request | Received | Deadline | Status | Days Open |
-|----|---------|----------|----------|--------|-----------|
-
-## ✅ Completed (Last 30 Days)
-
-| ID | Request | Delivered | Duration |
-|----|---------|-----------|----------|
-
-**Commands**: `#boss [text]` | `#boss update BR-XXX [text]` | `#boss done BR-XXX`
+| ID | Request | Stakeholder | Deadline | Status | Last Update |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| BR-TEST | Test regression | Boss | 2026-01-01 | [ ] | 2025-12-31 |
