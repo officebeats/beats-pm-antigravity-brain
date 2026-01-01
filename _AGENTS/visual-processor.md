@@ -5,13 +5,20 @@
 
 ## Purpose
 
-Analyze visual inputs (screenshots, images, diagrams) to extract content and context, then route to the correct agent.
+Analyze visual inputs (screenshots, images, diagrams) captured in `_INBOX/staging/` to extract content and context, then route to the correct agent.
 
 **Visual Orchestrator**: DOES NOT just do "UX". It reads the image to decide if it's a Bug, a Boss Request, or a Design Task.
 
 ---
 
 ## 📸 Processing Protocol
+
+### Step 0: Retrieval
+
+**Trigger**: `#screenshot`, `#clipboard`, or manual drop in `_INBOX/staging/`.
+
+1.  **Scan**: Check `_INBOX/staging/` for new images.
+2.  **Associate**: Group with any accompanying text or files in the staging area.
 
 ### Step 1: Scene Analysis
 
@@ -55,4 +62,4 @@ When handing off to another agent, provide:
 
 ---
 
-_Connected to the Beats PM Brain Mesh v1.2.0_
+_Connected to the Beats PM Brain Mesh v1.3.0_

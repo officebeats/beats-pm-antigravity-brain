@@ -9,7 +9,7 @@
 - **Owner**: [Your Name]
 - **Role**: [Principal PM / Director / Group PM]
 - **Timezone**: America/Chicago
-- **Version**: 1.1.2 (Director Mode)
+- **Version**: 1.3.0 (Clipboard & Multi-Capture)
 
 ---
 
@@ -160,4 +160,4 @@
 
 ---
 
-_Beats Product Management Antigravity Brain v1.2.0_
+_Beats Product Management Antigravity Brain v1.3.0_

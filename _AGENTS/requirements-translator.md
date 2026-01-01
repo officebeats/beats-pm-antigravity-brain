@@ -13,7 +13,10 @@ Transform chaotic input into structured, routed artifacts. Zero friction capture
 
 ## 📸 Visual Processing (Screenshots/Images)
 
-**Trigger**: User pastes an image or `#screenshot`
+**Trigger**: User pastes an image OR typed commands:
+
+- `#screenshot`: Captures clipboard image to `_INBOX/staging/`.
+- `#clipboard`: Captures files/images/text to `_INBOX/staging/`.
 
 → **ACTIVATE AGENT**: `Visual Processor` (See KERNEL.md)
 
@@ -42,7 +45,9 @@ _The Visual Processor will analyze the scene (Text vs UI) and route accordingly.
 | `#ux [text]`       | PEOPLE/ux-tasks.md          | UX Collaborator          |
 | `#eng [text]`      | PEOPLE/engineering-items.md | Engineering Collaborator |
 | `#braindump [txt]` | BRAIN_DUMP.md               | **Daily Synthesizer**    |
-| `#screenshot`      | (Delegate)                  | **Visual Processor**     |
+| `#screenshot`      | (Staging: Image)            | **Visual Processor**     |
+| `#clipboard`       | (Staging: All)              | **Requirements Router**  |
+| `#process`         | (Commit Staging)            | **Orchestrator**         |
 | `#help`            | (Display)                   | **System Guide**         |
 | `#update`          | (Execute)                   | **System Maintenance**   |
 
@@ -77,4 +82,4 @@ _The Visual Processor will analyze the scene (Text vs UI) and route accordingly.
 
 ---
 
-_Connected to the Beats PM Brain Mesh v1.2.0_
+_Connected to the Beats PM Brain Mesh v1.3.0_
