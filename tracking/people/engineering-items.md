@@ -18,3 +18,4 @@
 |----|------|------------|
 
 **Commands**: `#eng [text]` | `#eng spike` | `#eng question` | `#eng standup`
+| DB-Task | DB Query Optimization | Mark | ?? | 2026-01-01 | [ ] | Baseline: Mark's DB inquiry |
