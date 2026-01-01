@@ -134,22 +134,31 @@ This repo is configured to be **safe for real-world work**.
 
 ### Universal Capture (Any Agent can handle these)
 
-| Command               | Action                    |
-| --------------------- | ------------------------- |
-| `#boss [request]`     | Track a boss request      |
-| `#bug [description]`  | Log a bug                 |
-| `#task [description]` | Create a task             |
-| `#feature [idea]`     | Log a feature request     |
-| `#ux [task]`          | UX design task            |
-| `#eng [item]`         | Engineering item          |
-| `#note [anything]`    | Quick note                |
-| `#screenshot`         | process pasted image      |
-| `#latest` / `#status` | Succinct time-aware brief |
-| `#update`             | Pull latest version       |
+| Command                 | Action                       |
+| ----------------------- | ---------------------------- |
+| `#boss [request]`       | Track a boss request         |
+| `#bug [description]`    | Log a bug                    |
+| `#task [description]`   | Create a task                |
+| `#feature [idea]`       | Log a feature request        |
+| `#ux [task]`            | UX design task               |
+| `#eng [item]`           | Engineering item             |
+| `#note [anything]`      | Quick note                   |
+| `#screenshot`           | Capture image from clipboard |
+| `#clipboard` / `#paste` | Capture ALL from clipboard   |
+| `#process`              | Process staged batch         |
+| `#latest` / `#status`   | Succinct time-aware brief    |
+| `#update`               | Pull latest version          |
 
-### 📂 File Drop Zone
+### 📂 File Drop Zone & Clipboard (The Workaround)
 
-Drag files into **`00-DROP-FILES-HERE-00/`** and say "Check [filename]". The system will read it.
+Antigravity does not natively support "file uploads" or "image pasting" directly into the chat box like some web apps. To work around this, the Beats Brain provides two primary ingestion methods:
+
+1.  **Direct Drop**: Drag files into the **`00-DROP-FILES-HERE-00/`** folder and say "Check [filename]".
+2.  **Clipboard Ingestion (Recommended)**:
+    - **Step 1**: Copy any file(s), screenshot, or text to your OS clipboard (Ctrl+C).
+    - **Step 2**: Type **`#clipboard`**, **`#paste`**, or **`#screenshot`** in the chat.
+    - **Step 3**: The AI will autonomously reach out, grab your clipboard contents, and save them to `_INBOX/staging/`.
+    - **Step 4**: Provide context (e.g., "Analyze this") or type **`#process`** to commit the data.
 
 **Note**: All status/briefing commands (`#day`, `#status`, etc.) generate **succinct, table-based outputs** optimized for fast scanning.
 
