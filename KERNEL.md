@@ -38,6 +38,7 @@ This keeps the initial context window lean and fast.
 3.  **Context Resolution**:
     - If input is "#bug checkout failed" → Check `vault/products/*.md` for "checkout" keyword.
     - If found in "Mobile App", route to Bug Chaser with context: `Product: Mobile App`.
+    - **Strategic Extraction Protocol**: If input mentions "Roadmap", "Strategy", or "Features", the agents MUST use the standardized **"Concept / Requirements / User Journey / Questions & Tasks"** framework for all documentation. This is a system-wide standard for all products.
 4.  **Escalation**: Any agent detecting "Urgent", "Production Down", or Boss Asks must **immediately** fan out to `Boss Tracker` and `Bug Chaser` (Critical).
 5.  **Data Integrity (Source Truth)**: When extracting a feature or protection logic from a conversation, **YOU MUST PRESERVE THE RAW TEXT**. Never summarize away the original context. Always append the verbatim source to the final artifact.
 6.  **Guidance**: If input is `#help`, "what can I do?", or user seems lost, route to `Requirements Translator` to display the **Command Menu** and read out the Next Steps from `ACTION_PLAN.md`.

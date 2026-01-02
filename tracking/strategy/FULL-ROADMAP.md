@@ -11,15 +11,16 @@ _Critical items identified for unblocking activation and trust._
 
 | Linear ID | Feature Name                     | Theme           | Core Feature   | Priority    |
 | :-------- | :------------------------------- | :-------------- | :------------- | :---------- |
+| **NEW**   | **Leads Module (Flipping Leads)**| Expansion       | Post           | 🔥 Critical |
+| **NEW**   | **Contractor Network MVP**       | Infrastructure  | Strategy       | 🔥 Critical |
 | ROUTE-588 | Workforce Definition (W2/1099)   | Profile Details | Registration   | 🔥 Critical |
 | ROUTE-557 | Chat Functionality Feedback      | Chat            | Communications | 🔥 Critical |
 | ROUTE-550 | 24-Hour Bidding Tool             | Profile Details | Urgency        | 🔥 Critical |
+| ROUTE-602 | HubSpot Sync & Segmentation      | Data, HubSpot   | Search         | ⚡ Now      |
 | ROUTE-631 | Profile - EMR Rating             | COI, Profile    | Vet            | ⚡ Now      |
 | ROUTE-607 | COI Compliance & AI Scanning     | Ai, COI         | Profile        | ⚡ Now      |
 | ROUTE-619 | Loop Invitation Template Updates | Notifications   | Chat           | ⚡ Now      |
 | -         | Anonymous Posting                | Post            | Post           | ⚡ Now      |
-| -         | Search map by Name               | Search          | Search         | ⚡ Now      |
-| -         | Chat: Date/Time Stamp            | Chat            | Chat           | ⚡ Now      |
 
 ---
 
@@ -29,6 +30,9 @@ _Focus on automation, trust-at-scale, and expansion._
 
 | Linear ID | Feature Name                          | Theme           | Core Feature | Value         |
 | :-------- | :------------------------------------ | :-------------- | :----------- | :------------ |
+| **NEW**   | **Property Manager Prospect Search**  | Expansion       | Lead Gen     | Strategy      |
+| **NEW**   | **Profile 2.0 (Federal/Video)**       | Profile         | Vet          | Trust         |
+| **NEW**   | **Bid Pro & $49.99 Promo**            | Sales           | Revenue      | Growth        |
 | ROUTE-618 | AI Call Bots (autogenz.ai)            | Ai, Scheduling  | Post         | Automation    |
 | ROUTE-606 | Contractor Network Management         | Expansion       | Strategy     | Private Data  |
 | ROUTE-590 | Subcontractor Background Checks       | Credentialing   | Profile      | Trust         |
