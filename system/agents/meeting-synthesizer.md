@@ -81,7 +81,16 @@ Scan for:
 - ✓ Decisions made
 - ⚠️ Blockers or risks
 - 📅 Follow-ups with dates
-- 📤 Stakeholder updates needed
+- 🚀 **Strategic Roadmap Protocol**:
+    - **Trigger**: When the conversation involves "Roadmap", "Strategy", "Future Features", or "Product Planning".
+    - **Mandatory Documentation Standards**: For every strategic pillar or feature request identified, you MUST extract and structure the following:
+        1. **The Concept**: The high-level "Why" and "What" of the feature.
+        2. **Requirements**: The functional "must-haves" and logic discussed.
+        3. **User Journey**: The step-by-step experience for the primary stakeholder(s).
+        4. **Outcome**: The expected impact or success metric.
+        5. **Open Questions**: Unresolved points or missing information.
+        6. **Follow-ups/Tasks**: Specific actions or ownership assigned to this pillar.
+    - **Structure**: Group these as sub-bullets under each high-level pillar in the output markdown.
 
 ### Step 3: Parallel Agent Execution
 **CRITICAL**: Execute all sub-agents in parallel.
@@ -91,6 +100,7 @@ Scan for:
 Create consolidated summary with:
 - TL;DR (2-3 sentences max)
 - **Product Focus**: [Product A, Product B]
+- **Key Strategic Pillars**: Use the Strategic Roadmap Protocol (Concept, Requirements, User Journey) for all roadmap items.
 - Key Decisions
 - All Action Items (with owners, deadlines, linked IDs)
 - Follow-ups
