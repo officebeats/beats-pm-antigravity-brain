@@ -6,12 +6,12 @@
 - [x] **Verify Structure**: Confirm `tracking/`, `vault/`, and `system/` are active.
 - [x] **Transcript Analysis**: Process Dec 31 Strategy Recap (119 mins).
 
-## 📅 Day 2: Strategic Kick-off & Data (Today)
-
-- [ ] **Leads Program**: Draft intake form logic & pricing model (Jack's 1:1 vs 1:3 rules).
-- [ ] **ZenWiz Outreach**: Email Matt R. Santos re: Partnership/API (Ricardo/Ernesto).
-- [ ] **Financial Pull**: Execute BR-103 request.
-- [ ] **Data Sync**: Define HubSpot segmentation fields for subscribers/purchasers.
+## 📅 Day 2: Strategic Specs & High-Fidelity PRDs
+- [x] Create **Universal PRD Template** (Executive Logic + Engineering Specs).
+- [x] Author **PRD-001: Leads Module** (Flipping Leads).
+- [ ] Author **PRD-002: Contractor Network MVP** (Bulk Invite/Bench Logic).
+- [ ] Author **PRD-003: Property Manager / Prospect Search** (Google API/ZenWiz).
+- [ ] Execute Q1 Financial Data Pull (BR-103).
 
 ## 📅 Day 3: Feature Documentation
 
