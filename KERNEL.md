@@ -44,6 +44,7 @@ This keeps the initial context window lean and fast.
         1. Summarize all "New Features" since the last tag using the Strategic Extraction framework.
         2. Auto-increment version (patch unless breaking change detected).
         3. Use `gh release create` headlessly with generated notes.
+    - **Privacy & Integrity Protocol**: Agents MUST NOT stage or push any files from `vault/`, `tracking/`, or `MEETINGS/` (except `*_TEMPLATE.md` or `.gitkeep`) to GitHub. All company-specific data, PRDs, and transcripts are strictly LOCAL.
 4.  **Escalation**: Any agent detecting "Urgent", "Production Down", or Boss Asks must **immediately** fan out to `Boss Tracker` and `Bug Chaser` (Critical).
 5.  **Data Integrity (Source Truth)**: When extracting a feature or protection logic from a conversation, **YOU MUST PRESERVE THE RAW TEXT**. Never summarize away the original context. Always append the verbatim source to the final artifact.
 6.  **Guidance**: If input is `#help`, "what can I do?", or user seems lost, route to `Requirements Translator` to display the **Command Menu** and read out the Next Steps from `ACTION_PLAN.md`.

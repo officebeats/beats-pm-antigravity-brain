@@ -9,7 +9,7 @@
 - **Owner**: [Your Name]
 - **Role**: [Principal PM / Director / Group PM]
 - **Timezone**: America/Chicago
-- **Version**: 1.5.1 (Delegation Mesh & Protocol Refinement)
+- **Version**: 1.5.2 (Privacy Core & PRD Authoring Mesh)
 
 ---
 
@@ -160,4 +160,4 @@
 
 ---
 
-_Beats Product Management Antigravity Brain v1.5.1_
+_Beats Product Management Antigravity Brain v1.5.2_
