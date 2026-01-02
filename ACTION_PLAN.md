@@ -1,29 +1,37 @@
 # ⚡ 5-Day Action Plan
 
-## 📅 Day 1: Foundation & System Setup (Complete)
+## 📅 Day 1: System V2 & Reorganization (Complete)
 
-- [x] **Consolidate Backlog**: Merge Linear & Excel data.
-- [x] **Refine Feature Names**: Rewrite 51 items for clarity.
-- [x] **Secure Workspace**: Setup `00-drop-files-here-00`, `.gitignore`, and Privacy Rules.
-- [x] **System V2**: Release v1.1.2 with Templates, Hybrid Triage (`#braindump`), and simplified Setup.
+- [x] **Update Brain**: Pull v1.4.2 from origin.
+- [x] **Verify Structure**: Confirm `tracking/`, `vault/`, and `system/` are active.
+- [x] **Transcript Analysis**: Process Dec 31 Strategy Recap (119 mins).
 
-## 📅 Day 2: Enterprise Scale Specs (Tomorrow)
+## 📅 Day 2: Strategic Kick-off & Data (Today)
 
-- [ ] **Spec**: Chat Alerts & Unread Counts (ROUTE-557). **[Critical]**
-- [ ] **Spec**: Bulk Opportunity Import (ROUTE-615). **[Blocker]**
-- [ ] **Spec**: Prime Contractor Dashboard (ROUTE-552).
+- [ ] **Leads Program**: Draft intake form logic & pricing model (Jack's 1:1 vs 1:3 rules).
+- [ ] **ZenWiz Outreach**: Email Matt R. Santos re: Partnership/API (Ricardo/Ernesto).
+- [ ] **Financial Pull**: Execute BR-103 request.
+- [ ] **Data Sync**: Define HubSpot segmentation fields for subscribers/purchasers.
 
-## 📅 Day 3: UX & Design Alignment
+## 📅 Day 3: Feature Documentation
 
-- [ ] **Wireframes**: Prime Dashboard (Command Center).
-- [ ] **Mockups**: Mobile App Chat Interface.
+- [ ] **Network MVP**: Spec out Bulk Invite & Filter logic (Blacklisted, Under Review).
+- [ ] **Profile 2.0**: Update fields list (NAICS, SAM.gov, Security Clearance, Video).
+- [ ] **Bid $49.99**: Create coupon flow and Alejandro Flores "Bid Pro" space in Circle.
 
-## 📅 Day 4: Technical Planning
+## 📅 Day 4: UX & Design Alignment
 
-- [ ] **Architecture**: Database schema for "Organization" vs "Branch" (Enterprise model).
-- [ ] **API**: Bulk Import validation logic.
+- [ ] **Chat/Doc Hub**: Design company-level folder structure vs. chat documents.
+- [ ] **Search API**: Research Google Places API vs. ZenWiz for PM Search.
+- [ ] **Mockups**: Mobile App Chat Interface (ROUTE-557).
 
-## 📅 Day 5: Sprint Prep
+## 📅 Day 5: Prioritized Roadmap
 
-- [ ] **Ticket Creation**: Push finalized specs to Linear.
-- [ ] **Sprint Planning**: Assign tasks to dev team.
+- [ ] **Bucket Selection**: Selection of 2-3 items per area (Search/Profile/Communication).
+- [ ] **Final Roadmap**: Draft the official 90-120 day "Pre-Award" plan.
+
+---
+
+## 📅 Day 6: Post-Audit Verification
+
+- [ ] **Verify**: Cockpit functionality tests passed.
