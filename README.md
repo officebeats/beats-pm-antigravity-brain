@@ -87,41 +87,41 @@ The brain is organized into a human-centric numbered hierarchy, designed for cle
 
 The Brain uses **Zero-Friction Routing**. You don't need to know which agent is which; just use the hashtags. The system's **Universal Orchestration Protocol** will automatically identify the intent and trigger the correct expert agent to handle your request.
 
-| Command | Focus | What it does |
-| :--- | :--- | :--- |
-| **📅 The Daily Synthesizer** | | |
-| `#day` | **The Master Brief** | Context-aware summary (Morning/Lunch/EOD) of what matters most *right now*. |
-| `#morning` | Morning Routine | Your start-of-day punch list including Critical Boss requests and Calendar. |
-| `#lunch` | Mid-day Pivot | A quick pulse check on what's left for the afternoon. |
-| `#eod` | Wrap Up | "End of Day" summary and a preview of tomorrow's priorities. |
-| **📥 The Requirements Translator** | | |
-| `#paste` | **Magic Import** | Pulls whatever is on your Clipboard (Files, Images, or Text) into the system. |
-| `#process` | Logic Commit | Tells agents to analyze, move, and organize everything currently in your "Drop Zone". |
-| `#prd` | Document Author | Translates strategy into a high-fidelity PRD (Executive Logic + Eng Specs). |
-| `#feature` | Strategic Asks | Documents a new feature request or strategic improvement with Source Truth. |
-| `#task` | General Action | Captures a general task or action item for project tracking. |
-| `#braindump` | Random Thoughts | Parks unstructured thoughts in `BRAIN_DUMP.md` for later triage. |
-| **🎙️ The Meeting Synthesizer** | | |
-| `#transcript` | Call Audio/Text | Extracts action items, decisions, and roadmap concepts from raw transcripts. |
-| `#meeting` | Hand-written Notes | Converts raw notes into structured artifacts with owners and deadlines. |
-| `#call` | Sync Capture | Quick capture protocol for phone calls or unscheduled sync messages. |
-| `#1on1` | People Sync | Templated sync for performance tracking and feedback loops. |
-| `#standup` | Team Pulse | Optimized capture for daily engineering or pod standups. |
-| **🔥 The Boss Tracker** | | |
-| `#boss` | Critical Priority | Logs absolute "Must Do" requests from leadership that require high-visibility tracking. |
-| **� The Delegation Manager** | | |
-| `#delegate` | Task Offloading | Tracks tasks assigned to others across projects. High priority for briefing alerts. |
-| **�🐛 The Bug Chaser** | | |
-| `#bug` | Quality Control | Logs technical issues, defects, or outages and calculates "Red/Yellow" priority levels. |
-| **🧠 The Strategy Synthesizer** | | |
-| `#strategy` | Insights | Generates a high-fidelity brief using current "signals" from bugs and user feedback. |
-| `#strategy pulse`| Pattern Check | Weekly check for recurring themes across all project and bug trackers. |
-| **🎨 Specialized Collaborators** | | |
-| `#ux` | Design Tasks | Routes UI/UX experiments, mockups, or design debt to the UX tracker. |
-| `#eng` | Tech Tasks | Routes architecture questions, tech debt, or dev-ops items to the Engineering tracker. |
-| **⚙️ System Maintenance** | | |
-| `#update` | Logic Sync | Fetches the latest "AI Brain Mesh" logic and agent prompts from the remote repository. |
-| `#help` | User Guide | Displays the full Command Menu and provides an onboarding assist. |
+| Command           | Focus                | What it does                                                                            |
+| :---------------- | :------------------- | :-------------------------------------------------------------------------------------- |
+|                   |                      |                                                                                         |
+| `#day`            | **The Master Brief** | Context-aware summary (Morning/Lunch/EOD) of what matters most*right now*.              |
+| `#morning`        | Morning Routine      | Your start-of-day punch list including Critical Boss requests and Calendar.             |
+| `#lunch`          | Mid-day Pivot        | A quick pulse check on what's left for the afternoon.                                   |
+| `#eod`            | Wrap Up              | "End of Day" summary and a preview of tomorrow's priorities.                            |
+|                   |                      |                                                                                         |
+| `#paste`          | **Magic Import**     | Pulls whatever is on your Clipboard (Files, Images, or Text) into the system.           |
+| `#process`        | Logic Commit         | Tells agents to analyze, move, and organize everything currently in your "Drop Zone".   |
+| `#prd`            | Document Author      | Translates strategy into a high-fidelity PRD (Executive Logic + Eng Specs).             |
+| `#feature`        | Strategic Asks       | Documents a new feature request or strategic improvement with Source Truth.             |
+| `#task`           | General Action       | Captures a general task or action item for project tracking.                            |
+| `#braindump`      | Random Thoughts      | Parks unstructured thoughts in `BRAIN_DUMP.md` for later triage.                        |
+|                   |                      |                                                                                         |
+| `#transcript`     | Call Audio/Text      | Extracts action items, decisions, and roadmap concepts from raw transcripts.            |
+| `#meeting`        | Hand-written Notes   | Converts raw notes into structured artifacts with owners and deadlines.                 |
+| `#call`           | Sync Capture         | Quick capture protocol for phone calls or unscheduled sync messages.                    |
+| `#1on1`           | People Sync          | Templated sync for performance tracking and feedback loops.                             |
+| `#standup`        | Team Pulse           | Optimized capture for daily engineering or pod standups.                                |
+|                   |                      |                                                                                         |
+| `#boss`           | Critical Priority    | Logs absolute "Must Do" requests from leadership that require high-visibility tracking. |
+|                   |                      |                                                                                         |
+| `#delegate`       | Task Offloading      | Tracks tasks assigned to others across projects. High priority for briefing alerts.     |
+|                   |                      |                                                                                         |
+| `#bug`            | Quality Control      | Logs technical issues, defects, or outages and calculates "Red/Yellow" priority levels. |
+|                   |                      |                                                                                         |
+| `#strategy`       | Insights             | Generates a high-fidelity brief using current "signals" from bugs and user feedback.    |
+| `#strategy pulse` | Pattern Check        | Weekly check for recurring themes across all project and bug trackers.                  |
+|                   |                      |                                                                                         |
+| `#ux`             | Design Tasks         | Routes UI/UX experiments, mockups, or design debt to the UX tracker.                    |
+| `#eng`            | Tech Tasks           | Routes architecture questions, tech debt, or dev-ops items to the Engineering tracker.  |
+|                   |                      |                                                                                         |
+| `#update`         | Logic Sync           | Fetches the latest "AI Brain Mesh" logic and agent prompts from the remote repository.  |
+| `#help`           | User Guide           | Displays the full Command Menu and provides an onboarding assist.                       |
 
 ---
 
