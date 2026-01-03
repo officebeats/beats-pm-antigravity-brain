@@ -8,20 +8,30 @@ node_modules/
 package-lock.json
 *.log
 
-# 2. Privacy Lockdown: Data & Active Work
-# Numbered folders (User Data) - Protect .md files, preserve hierarchy
-/0. Incoming/**/*.md
+# 2. Privacy Lockdown: User Data Folders (FULL PROTECTION)
+# Ignore EVERYTHING in numbered folders except .gitkeep placeholders
+/0. Incoming/*
 !/0. Incoming/.gitkeep
-/1. Company/**/*.md
+/1. Company/*
 !/1. Company/.gitkeep
-/2. Products/**/*.md
+/2. Products/*
 !/2. Products/.gitkeep
-/3. Meetings/**/*.md
+/3. Meetings/*
 !/3. Meetings/.gitkeep
-/4. People/**/*.md
+/4. People/*
 !/4. People/.gitkeep
-/5. Trackers/**/*.md
+/5. Trackers/*
 !/5. Trackers/.gitkeep
+
+# Also protect legacy/alternate named folders
+/_INBOX/*
+!/_INBOX/.gitkeep
+/DATA/*
+!/DATA/.gitkeep
+/RESEARCH/*
+!/RESEARCH/.gitkeep
+/MEETINGS/*
+!/MEETINGS/.gitkeep
 
 # 3. User Identity & Config
 SETTINGS.md
