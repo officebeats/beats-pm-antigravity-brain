@@ -128,9 +128,9 @@ PARALLEL SCAN:
 
 At each brief, check for new items in:
 
-- `system/inbox/notion/` (Notion exports)
-- `system/inbox/obsidian/` (Obsidian sync)
-- `system/inbox/trello/` (Trello exports)
+- `0. Incoming/notion/` (Notion exports)
+- `0. Incoming/obsidian/` (Obsidian sync)
+- `0. Incoming/trello/` (Trello exports)
 
 ---
 
