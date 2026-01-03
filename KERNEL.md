@@ -4,18 +4,18 @@ zs# System Kernel (Universal Orchestration Protocol)
 
 ## 🕸️ The Mesh
 
-| Agent                       | Capability               | Trigger When...                                          |
-| --------------------------- | ------------------------ | -------------------------------------------------------- |
-| **Task Manager**            | Task Lifecycle Owner     | Tasks need tracking, brain dump triage, or clarification |
-| **Requirements Translator** | Input Router             | New raw info arrives (text, images, files)               |
-| **Daily Synthesizer**     | The Pulse (Briefs)       | User asks for current status or `#day` / `#eod`          |
-| **Reqs Translator**      | The Filter (Intake)      | Any new unstructured input or `#paste` in `0. Incoming/` |
-| **Meeting Synthesizer**   | The Scribe (Strategy)    | Large text/transcripts pasted into `3. Meetings/`        |
-| **Bug Chaser**              | Quality Manager          | Bugs, errors, or "it's broken" in `5. Trackers/`         |
-| **Strategy Synthesizer**    | Pattern Recognizer       | Strategy items in `1. Company/` or `2. Products/`        |
-| **Visual Processor**        | The Eyes (OCR + Scene)   | Images/diagrams in `0. Incoming/`                        |
-| **Delegation Manager**     | Accountability Expert    | Tasks assigned in `5. Trackers/delegated-tasks.md`       |
-| **Product Context**         | Knowledge Base           | Input is vague; checks `2. Products/[alias]/*.md`       |
+| Agent                       | Capability             | Trigger When...                                          |
+| --------------------------- | ---------------------- | -------------------------------------------------------- |
+| **Task Manager**            | Task Lifecycle Owner   | Tasks need tracking, brain dump triage, or clarification |
+| **Requirements Translator** | Input Router           | New raw info arrives (text, images, files)               |
+| **Daily Synthesizer**       | The Pulse (Briefs)     | User asks for current status or `#day` / `#eod`          |
+| **Reqs Translator**         | The Filter (Intake)    | Any new unstructured input or `#paste` in `0. Incoming/` |
+| **Meeting Synthesizer**     | The Scribe (Strategy)  | Large text/transcripts pasted into `3. Meetings/`        |
+| **Bug Chaser**              | Quality Manager        | Bugs, errors, or "it's broken" in `5. Trackers/`         |
+| **Strategy Synthesizer**    | Pattern Recognizer     | Strategy items in `1. Company/` or `2. Products/`        |
+| **Visual Processor**        | The Eyes (OCR + Scene) | Images/diagrams in `0. Incoming/`                        |
+| **Delegation Manager**      | Accountability Expert  | Tasks assigned in `5. Trackers/delegated-tasks.md`       |
+| **Product Context**         | Knowledge Base         | Input is vague; checks `2. Products/[alias]/*.md`        |
 
 ---
 
@@ -23,10 +23,10 @@ zs# System Kernel (Universal Orchestration Protocol)
 
 **DO NOT read all agent files on startup.** Only load an agent's full prompt when it is triggered.
 
-| Phase          | What to Load                                                         |
-| -------------- | -------------------------------------------------------------------- |
-| **Startup**    | `KERNEL.md`, `SETTINGS.md`, `STATUS.md` only                         |
-| **On Trigger** | Read the specific `system/agents/*.md` file when that agent is invoked     |
+| Phase          | What to Load                                                                           |
+| -------------- | -------------------------------------------------------------------------------------- |
+| **Startup**    | `KERNEL.md`, `SETTINGS.md`, `STATUS.md` only                                           |
+| **On Trigger** | Read the specific `system/agents/*.md` file when that agent is invoked                 |
 | **On Demand**  | Read `system/inbox/`, `vault/data/`, `vault/meetings/` only when explicitly referenced |
 
 This keeps the initial context window lean and fast.
@@ -42,9 +42,9 @@ This keeps the initial context window lean and fast.
     - If found in "Mobile App", route to Bug Chaser with context: `Product: Mobile App`.
     - **Strategic Extraction Protocol**: If input mentions "Roadmap", "Strategy", or "Features", the agents MUST use the standardized **"Concept / Requirements / User Journey / Questions & Tasks"** framework for all documentation. This is a system-wide standard for all products.
     - **Strategic Release Protocol**: When `#release` is triggered, the system MUST:
-        1. Summarize all "New Features" since the last tag using the Strategic Extraction framework.
-        2. Auto-increment version (patch unless breaking change detected).
-        3. Use `gh release create` headlessly with generated notes.
+      1. Summarize all "New Features" since the last tag using the Strategic Extraction framework.
+      2. Auto-increment version (patch unless breaking change detected).
+      3. Use `gh release create` headlessly with generated notes.
     - **Privacy & Integrity Protocol**: Agents MUST NOT stage or push any files from `vault/`, `5. Trackers/`, or `MEETINGS/` (except `*_TEMPLATE.md` or `.gitkeep`) to GitHub. All company-specific data, PRDs, and transcripts are strictly LOCAL.
 4.  **Escalation**: Any agent detecting "Urgent", "Production Down", or Boss Asks must **immediately** fan out to `Boss Tracker` and `Bug Chaser` (Critical).
 5.  **Data Integrity (Source Truth)**: When extracting a feature or protection logic from a conversation, **YOU MUST PRESERVE THE RAW TEXT**. Never summarize away the original context. Always append the verbatim source to the final artifact.
@@ -73,7 +73,7 @@ To handle multiple inputs (files, screenshots, text) for a single intent:
 
 ## 📸 Visual Processing Protocol
 
-When handling images/screenshots (`00-DROP-FILES-HERE-00/`, `system/inbox/screenshots/` or pasted):
+When handling images/screenshots (`00-DROP-FILES-HERE-00/`, `0. Incoming/screenshots/` or pasted):
 
 1.  **Trigger**: Activate the **Visual Processor** agent.
 2.  **Analyze**: Determine if it's **Text** (Slack/Email), **Visual** (UI/Design), or **Data** (Charts).

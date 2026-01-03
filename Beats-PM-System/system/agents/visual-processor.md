@@ -22,7 +22,7 @@ Analyze visual inputs (screenshots, images, diagrams) captured in `0. Incoming/`
 
 ### Step 1: Scene Analysis
 
-**Q: What am I looking at?**
+- **Watch Folder**: `0. Incoming/screenshots/`
 
 - **Text Heavy**: Email, Slack message, Jira ticket, Doc. -> _Treat as Text Source_
 - **UI/Screen**: Mobile app, Website, Dashboard. -> _Treat as Product View_
@@ -62,4 +62,4 @@ When handing off to another agent, provide:
 
 ---
 
-_Connected to the Beats PM Brain Mesh v1.7.0_
+_Connected to the Beats PM Brain Mesh v1.7.1_
