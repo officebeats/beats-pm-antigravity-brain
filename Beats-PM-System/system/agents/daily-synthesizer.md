@@ -55,18 +55,18 @@ To generate a brief, scan ALL of these simultaneously:
 
 ```
 PARALLEL SCAN:
-├── 5. Trackers/boss-requests.md     → Boss items due/overdue
-├── 5. Trackers/escalations.md       → Active escalations
-├── 5. Trackers/bugs-master.md           → Bugs by SLA status
-├── 5. Trackers/engineering-items.md   → Eng items waiting
-├── 5. Trackers/ux-tasks.md            → UX items waiting
-├── 4. People/*/Person.md        → Updates due
-├── 5. Trackers/delegated-tasks.md     → Handoff items to check
-├── 5. Trackers/projects-master.md   → Project status
-├── system/queue/needs-clarification.md → Items needing input
-├── 0. Incoming/        → New drops & items pinned via #clipboard
-├── system/inbox/*                      → Unprocessed items
-└── Beats-PM-System/templates/SETTINGS_TEMPLATE.md                   → Calendar, working hours
+├── 5. Trackers/critical/boss-requests.md → Boss items due/overdue
+├── 5. Trackers/critical/escalations.md   → Active escalations
+├── 5. Trackers/bugs/bugs-master.md       → Bugs by SLA status
+├── 5. Trackers/people/engineering-items.md → Eng items waiting
+├── 5. Trackers/people/ux-tasks.md        → UX items waiting
+├── 4. People/*/Person.md                 → Updates due
+├── 5. Trackers/delegated-tasks.md        → Handoff items to check
+├── 5. Trackers/projects/projects-master.md → Project status
+├── system/queue/needs-clarification.md   → Items needing input
+├── 0. Incoming/                          → New drops & items pinned via #clipboard
+├── _INBOX/*                              → Unprocessed items
+└── Beats-PM-System/TEMPLATES/SETTINGS_TEMPLATE.md → Calendar, working hours
 ```
 
 ---
@@ -80,11 +80,11 @@ PARALLEL SCAN:
 5. 🚧 Blocked items
 6. 📤 Delegated items (approaching deadline)
 7. 📤 Stakeholder updates due
-7. 🔧 Engineering items waiting for input
-8. 🎨 UX items waiting for input
-9. 📅 Calendar events (from Beats-PM-System/templates/SETTINGS_TEMPLATE.md)
-10. 📥 Unprocessed inbox items
-11. ✅ Recent progress/wins
+8. 🔧 Engineering items waiting for input
+9. 🎨 UX items waiting for input
+10. 📅 Calendar events (from Beats-PM-System/templates/SETTINGS_TEMPLATE.md)
+11. 📥 Unprocessed inbox items
+12. ✅ Recent progress/wins
 
 ---
 
