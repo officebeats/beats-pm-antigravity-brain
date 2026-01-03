@@ -12,7 +12,9 @@ package-lock.json
 # Strategy: Ignore EVERYTHING inside these folders, but recursively allow .gitkeep files.
 
 /0. Incoming/*
-!/0. Incoming/**/.gitkeep
+!/0. Incoming/*
+/0. Incoming/*/*
+!/0. Incoming/*/.gitkeep
 
 /1. Company/*
 !/1. Company/**/.gitkeep
