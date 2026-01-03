@@ -40,24 +40,24 @@ _The Visual Processor will analyze the scene (Text vs UI) and route accordingly.
 
 ## Quick Capture Commands
 
-| Command            | Routes To                   | Agent                    |
-| ------------------ | --------------------------- | ------------------------ |
-| `#boss [text]`     | 5. Trackers/boss-requests.md        | Boss Tracker             |
-| `#bug [text]`      | 5. Trackers/bugs-master.md         | Bug Chaser               |
-| `#task [text]`     | 5. Trackers/projects/              | Direct                   |
-| `#feature [text]`  | 2. Products/[alias]/Features/      | Direct                   |
-| `#prd [text]`      | 2. Products/[alias]/Features/      | **PRD Author Agent**     |
-| `#delegate [text]` | 5. Trackers/delegated-tasks.md      | Delegation Manager       |
-| `#ux [text]`       | 5. Trackers/ux-tasks.md            | UX Collaborator          |
-| `#eng [text]`      | 5. Trackers/engineering-items.md    | Engineering Collaborator |
-| `#braindump [txt]` | 0. Incoming/0. Incoming/BRAIN_DUMP.md          | **Daily Synthesizer**    |
-| `#screenshot`      | (Staging: Image)            | **Visual Processor**     |
-| `#clipboard`       | (Staging: All)              | **Requirements Router**  |
-| `#paste`           | (Alias for #clipboard)      | **Requirements Router**  |
-| `#process`         | (Commit Staging)            | **Orchestrator**         |
-| `#release`         | (Version + Tag + Notes)     | **System Maintenance**   |
-| `#help`            | (Display)                   | **System Guide**         |
-| `#update`          | (Execute)                   | **System Maintenance**   |
+| Command            | Routes To                               | Agent                    |
+| ------------------ | --------------------------------------- | ------------------------ |
+| `#boss [text]`     | 5. Trackers/critical/boss-requests.md   | Boss Tracker             |
+| `#bug [text]`      | 5. Trackers/bugs/bugs-master.md         | Bug Chaser               |
+| `#task [text]`     | 5. Trackers/projects/                   | Direct                   |
+| `#feature [text]`  | 2. Products/[alias]/Features/           | Direct                   |
+| `#prd [text]`      | 2. Products/[alias]/Features/           | **PRD Author Agent**     |
+| `#delegate [text]` | 5. Trackers/delegated-tasks.md          | Delegation Manager       |
+| `#ux [text]`       | 5. Trackers/people/ux-tasks.md          | UX Collaborator          |
+| `#eng [text]`      | 5. Trackers/people/engineering-items.md | Engineering Collaborator |
+| `#braindump [txt]` | 0. Incoming/BRAIN_DUMP.md               | **Daily Synthesizer**    |
+| `#screenshot`      | (Staging: Image)                        | **Visual Processor**     |
+| `#clipboard`       | (Staging: All)                          | **Requirements Router**  |
+| `#paste`           | (Alias for #clipboard)                  | **Requirements Router**  |
+| `#process`         | (Commit Staging)                        | **Orchestrator**         |
+| `#release`         | (Version + Tag + Notes)                 | **System Maintenance**   |
+| `#help`            | (Display)                               | **System Guide**         |
+| `#update`          | (Execute)                               | **System Maintenance**   |
 
 2. **Route & Preserve**:
    - **Features**: Create `tracking/feedback/feature-requests/FR-[name].md`. **MUST** include the raw input in the "Source Truth" section.
@@ -72,13 +72,13 @@ _The Visual Processor will analyze the scene (Text vs UI) and route accordingly.
 
 ## Auto-Detection & Neural Routing
 
-| Input Signal                    | Detection Logic    | Orchestrates To...                              |
-| ------------------------------- | ------------------ | ----------------------------------------------- |
-| "It's broken", [Image of Error] | Quality Issue      | **Bug Chaser**                                  |
-| "[Boss] wants..."               | Critical Authority | **Boss Tracker**                                |
-| "Can we do X?", [Arch Diagram]  | Feasibility        | **Engineering Collaborator**                    |
-| "Trends show...", [Data Table]  | Strategy           | **Strategy Synthesizer**                        |
-| "Transcript", "Meeting notes"   | Conversation       | **Meeting Synthesizer**                         |
+| Input Signal                    | Detection Logic    | Orchestrates To...                    |
+| ------------------------------- | ------------------ | ------------------------------------- |
+| "It's broken", [Image of Error] | Quality Issue      | **Bug Chaser**                        |
+| "[Boss] wants..."               | Critical Authority | **Boss Tracker**                      |
+| "Can we do X?", [Arch Diagram]  | Feasibility        | **Engineering Collaborator**          |
+| "Trends show...", [Data Table]  | Strategy           | **Strategy Synthesizer**              |
+| "Transcript", "Meeting notes"   | Conversation       | **Meeting Synthesizer**               |
 | "Check [file]", [File Name]     | File Analysis      | **Direct Read** (from `0. Incoming/`) |
 
 ---

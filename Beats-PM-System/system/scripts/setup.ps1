@@ -3,14 +3,11 @@
 # It ensures your local environment is ready for data without overwriting anything.
 
 $templates = @(
-    @{ Template = "templates/SETTINGS_TEMPLATE.md"; Target = "SETTINGS.md" },
-    @{ Template = "tracking/bugs/bugs-master_TEMPLATE.md"; Target = "tracking/bugs/bugs-master.md" },
-    @{ Template = "tracking/critical/boss-requests_TEMPLATE.md"; Target = "tracking/critical/boss-requests.md" },
-    @{ Template = "tracking/critical/escalations_TEMPLATE.md"; Target = "tracking/critical/escalations.md" },
-    @{ Template = "tracking/projects/projects-master_TEMPLATE.md"; Target = "tracking/projects/projects-master.md" },
-    @{ Template = "tracking/people/engineering-items_TEMPLATE.md"; Target = "tracking/people/engineering-items.md" },
-    @{ Template = "tracking/people/stakeholders_TEMPLATE.md"; Target = "tracking/people/stakeholders.md" },
-    @{ Template = "tracking/people/ux-tasks_TEMPLATE.md"; Target = "tracking/people/ux-tasks.md" }
+    @{ Template = "Beats-PM-System/TEMPLATES/SETTINGS_TEMPLATE.md"; Target = "SETTINGS.md" },
+    @{ Template = "Beats-PM-System/TEMPLATES/bug-report.md"; Target = "5. Trackers/bugs/bugs-master.md" },
+    @{ Template = "Beats-PM-System/TEMPLATES/boss-request.md"; Target = "5. Trackers/critical/boss-requests.md" },
+    @{ Template = "Beats-PM-System/TEMPLATES/meeting-notes.md"; Target = "5. Trackers/critical/escalations.md" },
+    @{ Template = "Beats-PM-System/TEMPLATES/feature-request.md"; Target = "5. Trackers/projects/projects-master.md" }
 )
 
 Write-Host "🧠 Hydrating Antigravity Brain..." -ForegroundColor Cyan
@@ -25,7 +22,7 @@ foreach ($item in $templates) {
 }
 
 # Ensure Directories Exist
-$dirs = @("MEETINGS", "system/inbox/screenshots", "DATA", "RESEARCH")
+$dirs = @("MEETINGS", "_INBOX/screenshots", "_INBOX/requests", "_INBOX/responses", "DATA", "RESEARCH", "5. Trackers/bugs", "5. Trackers/critical", "5. Trackers/projects")
 foreach ($dir in $dirs) {
     if (-not (Test-Path $dir)) {
         New-Item -ItemType Directory -Path $dir | Out-Null
