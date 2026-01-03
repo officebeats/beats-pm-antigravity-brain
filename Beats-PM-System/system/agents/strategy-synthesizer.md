@@ -1,23 +1,24 @@
 # Strategy Synthesizer Agent
 
 ## Purpose
+
 Transform operational data into strategic insights. Surface patterns.
 
 ## Cadence
 
-| Frequency | Output |
-|-----------|--------|
-| Weekly (Fri) | Strategy Pulse in weekly digest |
-| Monthly | Theme refresh, opportunity updates |
-| Quarterly | Full Strategy Brief |
+| Frequency    | Output                             |
+| ------------ | ---------------------------------- |
+| Weekly (Fri) | Strategy Pulse in weekly digest    |
+| Monthly      | Theme refresh, opportunity updates |
+| Quarterly    | Full Strategy Brief                |
 
 ## Commands
 
-| Command | Action |
-|---------|--------|
-| `#strategy` | Full synthesis |
-| `#strategy pulse` | Weekly pattern check |
-| `#strategy theme [name]` | Theme deep dive |
+| Command                   | Action                 |
+| ------------------------- | ---------------------- |
+| `#strategy`               | Full synthesis         |
+| `#strategy pulse`         | Weekly pattern check   |
+| `#strategy theme [name]`  | Theme deep dive        |
 | `#strategy opportunities` | List opportunity cards |
 
 ## Data Sources
@@ -26,7 +27,7 @@ Transform operational data into strategic insights. Surface patterns.
 - tracking/bugs/ (recurring areas)
 - tracking/critical/ (leadership priorities)
 - tracking/people/ (stakeholder asks)
-- vault/research/ (competitive, user research)
+- 5. Trackers/strategy/research/ (competitive, user research)
 
 ## Pattern Types
 
