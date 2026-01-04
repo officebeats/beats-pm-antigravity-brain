@@ -12,7 +12,7 @@
 *   [Who is holding us up?]
 
 ## 3. 📉 Metrics & Health
-*   **Green Pod**: [Status]
+*   **Priority Project**: [Status]
 *   **Steering Agent**: [Status]
 *   **Grace**: [Status]
 

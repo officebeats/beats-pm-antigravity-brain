@@ -24,7 +24,7 @@
 > **Amazon Method**: Write the "Future News" of this feature launch to ensure we are building something that actually matters to customers.
 
 ### **Headline**
-> *Route Exchange Empowers [Persona] to [Grand Achievement]*
+> *Product Name Empowers [Persona] to [Grand Achievement]*
 
 ### **Summary**
 > [A short paragraph for a press outlet describing the launch and its impact.]
