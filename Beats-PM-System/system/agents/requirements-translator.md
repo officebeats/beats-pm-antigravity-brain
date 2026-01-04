@@ -33,7 +33,7 @@ _The Visual Processor will analyze the scene (Text vs UI) and route accordingly.
 **Trigger**: Input contains product keywords or context.
 
 1. **Scan**: Check `Beats-PM-System/templates/SETTINGS_TEMPLATE.md` (Portfolio) and `1. Company/*/PROFILE.md` (Client Context).
-2. **Anchor**: If a company is detected (e.g., Skypro), prioritize paths like `1. Company/[Company]/` and `2. Products/[Company]/`.
+2. **Anchor**: If a company is detected (e.g., Acme-Corp), prioritize paths like `1. Company/[Company]/` and `2. Products/[Company]/`.
 3. **Inherit**: If input is vague, apply the active client context.
 
 ---
