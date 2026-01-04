@@ -99,8 +99,26 @@ When handling images/screenshots (`00-DROP-FILES-HERE-00/`, `0. Incoming/screens
 
 ## 🏢 Director Mode (Multi-Product)
 
-- **One List, Many Products**: Trackers (Bugs, Projects) remain global but have a `Product` column.
 - **Context Inheritance**: If a conversation starts about "Mobile App", all subsequent vague commands ("#bug login failed") inherit "Mobile App" product until changed.
+
+## 🧠 Long-Term Memory Protocol
+
+To ensure continuity across "weeks, months, years", the system uses **Immutable Logs**:
+
+1.  **`DECISION_LOG.md`** (in `5. Trackers/`):
+    *   **Trigger**: Any significant architectural or strategic pivot (e.g., "Use Single Engine for Pilot").
+    *   **Format**: Date | Decision | Context | Owner.
+    *   **Goal**: Prevent "why did we do this?" loops 6 months later.
+
+2.  **`PEOPLE.md`** (in `4. People/`):
+    *   **Trigger**: New stakeholder mentioned.
+    *   **Format**: Name | Role | Product Alignment | User Preference.
+    *   **Goal**: Zero hallucination on "Who handles Grace?".
+
+3.  **`SESSION_MEMORY.md`** (Root):
+    *   **Trigger**: End of every session.
+    *   **Format**: "Last Known State" summary.
+    *   **Goal**: Instant "Hot Start" for the next session.
 
 ---
 
