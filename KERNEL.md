@@ -139,21 +139,38 @@ The System should nudge the user intelligently based on context:
 
 ---
 
+65:     - **Action**: Save raw to `3. Meetings/transcripts/` => **MUST apply `.gemini/templates/transcript-extraction.md`** to generate the analysis.
+
+14. **Bug Chaser**: Quality Manager => **MUST apply `.gemini/templates/bug-report.md`** for any new intake.
+
 ## 🎼 Gemini CLI Conductor Integration
 
-The PM Brain leverages **Gemini CLI Conductor** for context-driven development:
+The PM Brain leverages **Gemini CLI Conductor** for context-driven development.
+**CRITICAL**: You (The Agent) must **AUTO-SELECT** these templates based on input type. Do not wait for user commands.
 
 | File | Purpose |
 | :--- | :--- |
 | `.gemini/context.md` | Full system architecture, folder structure, agent inventory |
 | `.gemini/style-guide.md` | Markdown conventions, tracker formats |
 | `.gemini/workflow-preferences.md` | Behavior settings (verbosity, confirmations, error handling) |
-| `.gemini/templates/` | Spec templates for features and bug fixes |
+| `.gemini/templates/` | Spec templates for features, bugs, and transcripts |
 
 **Commands**:
 - `/conductor:setup` — Already configured via `.gemini/context.md`
 - `/conductor:newTrack` — Create specs using templates
-- `/conductor:implement` — Execute plan with AI
+- `/conductor:transcript` — Use `.gemini/templates/transcript-extraction.md` (or `#transcript`)
+- `/conductor:bug` — Use `.gemini/templates/bug-report.md` (or `#bug` / `#email`)
+- `/conductor:feature` — Use `.gemini/templates/feature-request.md` (or `#feature`)
+- `/conductor:strategy` — Use `.gemini/templates/strategy-memo.md` (or `#strategy`)
+- `/conductor:weekly` — Use `.gemini/templates/weekly-review.md` (or `#weekly`)
+
+**Auto-Detection Protocol**:
+You do **NOT** require a hashtag. If the input matches the *intent* below, apply the template implicitly:
+- **Transcript**: Large text block with "Speakers" or "Timestamp" -> Apply `transcript-extraction.md`.
+- **Bug**: "Error", "Failure", "It's broken" -> Apply `bug-report.md`.
+- **Feature**: "I have an idea", "User Story", "We should build" -> Apply `feature-request.md`.
+- **Strategy**: "We need to pivot", "Proposal", "Architecture change" -> Apply `strategy-memo.md`.
+- **Weekly**: "Summarize the week", "Weekly review", "Status update" -> Apply `weekly-review.md`.
 
 This ensures persistent context across sessions, reduced hallucinations, and consistent style.
 
