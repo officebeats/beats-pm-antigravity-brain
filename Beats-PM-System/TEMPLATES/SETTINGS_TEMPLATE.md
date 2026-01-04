@@ -160,4 +160,4 @@
 
 ---
 
-_Beats Product Management Antigravity Brain v1.7.0_
+_Beats Product Management Antigravity Brain v1.2.0_
