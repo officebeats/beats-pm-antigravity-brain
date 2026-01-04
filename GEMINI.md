@@ -40,6 +40,9 @@ You are assisting with the **Beats PM Antigravity Brain**, a file-based knowledg
 3. **Succinct Output**: Tables over prose. No fluff.
 4. **Source Preservation**: Always preserve raw source text when extracting insights.
 5. **Parking Lot**: If input is unclear, log to BRAIN_DUMP.md instead of asking 20 questions.
+6. **Access Override**: Files in `1. Company` through `5. Trackers` and `SETTINGS.md` are gitignored for privacy but **fully readable**. If `view_file` fails due to gitignore, you MUST use `run_command` (e.g., `cat`) to read them. Do not ask for permission; just do it.
+7. **User Persona**: The user is the **"Defacto AI PM"** (Consumer Focus). Prioritize Consumer-Facing AI solutions over Backend/Infrastructure ideas unless explicitly asked for technical specs.
+8. **Formatting**: Use **sub-bullets** for detailed lists (prose) rather than comma-delimited strings/tables, unless data is strictly structured.
 
 ## Privacy
 
