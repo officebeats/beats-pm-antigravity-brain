@@ -67,7 +67,7 @@ Transform raw meeting input (transcripts, notes, call recordings, voice memos) i
 
 ### Step 1: Identify Meeting Context (Company & Product)
 - **Company Anchor**: Look for keywords matching `1. Company/[Company]/PROFILE.md`.
-- **Product Match**: Apply product tag (e.g., `[Skypro/Washer]`) to all extracted items.
+- **Product Match**: Apply product tag (e.g., `[Company/Product]`) to all extracted items.
 - **Consultant Intent**: If a new company is detected, orchestrate `Requirements Translator` to create the profile.
 
 ### Step 2: Deep Parse Content
