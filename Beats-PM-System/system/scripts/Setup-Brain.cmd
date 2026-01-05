@@ -1,2 +1,3 @@
 @echo off
-powershell -ExecutionPolicy Bypass -File "Beats-PM-System/system/scripts/setup.ps1"
+python "%~dp0core_setup.py"
+pause

@@ -88,12 +88,16 @@ give me my first week action plan.
 5. Any critical items or "fires" you're tracking today?
 6. What's your biggest pain point as a PM right now?
 
+7. Would you like to enable **Antigravity Plus**? (Adds UI enhancements and extra PM productivity features).
+
 After I answer:
 1. Generate my complete SETTINGS.md file
 2. Create starter entries for my current projects
-3. **DISPLAY** the full "First Week Action Plan" right here in the chat
-4. Show me the 5 most useful commands to start with
-5. Offer to generate my first morning brief
+3. **Handle Extensions**:
+   - If I said 'yes' to Antigravity Plus, execute: `antigravity --install-extension iml1s.antigravity-plus`.
+4. **DISPLAY** the full "First Week Action Plan" right here in the chat
+5. Show me the 5 most useful commands to start with
+6. Offer to generate my first morning brief
 
 Let's begin! Ask me question #1.
 ```

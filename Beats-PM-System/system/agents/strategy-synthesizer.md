@@ -40,6 +40,8 @@ Transform operational data into strategic insights. Surface patterns.
 
 ## Outputs
 
+**MANDATORY**: Use `.gemini/templates/strategy-memo.md` (via `/conductor:strategy`) for all high-fidelity briefs.
+
 - tracking/strategy/briefs/ (Strategy Briefs)
 - tracking/strategy/opportunities/ (Opportunity Cards)
 - tracking/strategy/themes/ (Theme Documentation)

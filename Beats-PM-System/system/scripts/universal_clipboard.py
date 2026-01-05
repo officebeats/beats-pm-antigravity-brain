@@ -6,7 +6,7 @@ import platform
 import subprocess
 
 # Configuration
-STAGING_DIR = os.path.join(os.getcwd(), "00-DROP-FILES-HERE-00")
+STAGING_DIR = os.path.join(os.getcwd(), "0. Incoming", "staging")
 TIMESTAMP = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 
 def ensure_staging():

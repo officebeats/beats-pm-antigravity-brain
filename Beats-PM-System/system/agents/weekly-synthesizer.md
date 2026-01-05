@@ -26,7 +26,9 @@ Generate weekly and monthly rollups with accomplishments, metrics, strategy puls
 
 ---
 
-## Weekly Report Sections
+## Weekly Report Sections (Conductor Template)
+
+**CRITICAL**: Always use `.gemini/templates/weekly-review.md` (via `/conductor:weekly`) for the structure of these reports.
 
 1. **Week Summary** - TL;DR of the week
 2. **Boss Requests Status** - From 5. Trackers/boss-requests.md
@@ -87,7 +89,7 @@ PARALLEL SCAN:
 
 ## Output Location
 
-| Report  | Location                                         |
-| ------- | ------------------------------------------------ |
+| Report  | Location                                            |
+| ------- | --------------------------------------------------- |
 | Weekly  | `3. Meetings/weekly-digests/[YYYY-MM-DD]-weekly.md` |
 | Monthly | `3. Meetings/monthly-digests/[YYYY-MM]-monthly.md`  |
