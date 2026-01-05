@@ -1,3 +1,3 @@
 #!/bin/bash
 cd "$(dirname "$0")"
-./system/scripts/setup.sh
+python3 core_setup.py

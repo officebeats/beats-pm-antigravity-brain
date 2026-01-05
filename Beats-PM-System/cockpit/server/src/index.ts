@@ -21,17 +21,28 @@ app.use(cors());
 app.use(express.json());
 
 // --- Configuration ---
-const BRAIN_ROOT = path.resolve(__dirname, "../../../../"); // Up 4 levels from Beats-PM-System/cockpit/server/src
-const DROP_ZONE = path.join(BRAIN_ROOT, "00-DROP-FILES-HERE-00");
+// Use process.cwd() if running from root, fallback to relative logic
+const BRAIN_ROOT = process.cwd().includes("beats-pm-antigravity-brain")
+  ? process.cwd()
+  : path.resolve(__dirname, "../../../../");
+
+const STAGING_ROOT = path.join(BRAIN_ROOT, "0. Incoming", "staging");
 const ACTION_PLAN = path.join(BRAIN_ROOT, "ACTION_PLAN.md");
-const INBOX_DIR = path.join(BRAIN_ROOT, "_INBOX");
+const KERNEL_DOC = path.join(BRAIN_ROOT, "KERNEL.md");
+
+console.log(`🧠 Neural Root: ${BRAIN_ROOT}`);
+console.log(`📂 Staging at: ${STAGING_ROOT}`);
+
+const INBOX_DIR = path.join(STAGING_ROOT, "inbox");
 const REQUESTS_DIR = path.join(INBOX_DIR, "requests");
 const RESPONSES_DIR = path.join(INBOX_DIR, "responses");
-const SCREENSHOTS_DIR = path.join(INBOX_DIR, "screenshots");
-const THINKING_LOG = path.join(INBOX_DIR, "thinking.log");
+const SCREENSHOTS_DIR = path.join(STAGING_ROOT, "screenshots");
+const THINKING_LOG = path.join(STAGING_ROOT, "thinking.log");
+const PRODUCTS_DIR = path.join(BRAIN_ROOT, "2. Products");
+const PEOPLE_DIR = path.join(BRAIN_ROOT, "4. People");
 
 // Ensure directories exist
-[DROP_ZONE, INBOX_DIR, REQUESTS_DIR, RESPONSES_DIR, SCREENSHOTS_DIR].forEach(
+[STAGING_ROOT, INBOX_DIR, REQUESTS_DIR, RESPONSES_DIR, SCREENSHOTS_DIR].forEach(
   (dir) => {
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   }
@@ -80,9 +91,22 @@ fs.watch(RESPONSES_DIR, (event, filename) => {
   }
 });
 
+// Watch Action Plan
+fs.watch(ACTION_PLAN, (event) => {
+  if (event === "change") {
+    try {
+      const content = fs.readFileSync(ACTION_PLAN, "utf-8");
+      io.emit("status-update", { content });
+      console.log("⚡ Action Plan updated and broadcasted.");
+    } catch (e) {
+      console.error("Action Plan watch error", e);
+    }
+  }
+});
+
 // --- Multer Setup ---
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, DROP_ZONE),
+  destination: (req, file, cb) => cb(null, STAGING_ROOT),
   filename: (req, file, cb) => cb(null, file.originalname),
 });
 const upload = multer({ storage });
@@ -100,6 +124,44 @@ app.get("/api/status", (req, res) => {
     }
   } catch (error) {
     res.status(500).json({ error: "Failed" });
+  }
+});
+
+// 2. System Stats
+app.get("/api/stats", (req, res) => {
+  try {
+    const peopleCount = fs.existsSync(PEOPLE_DIR)
+      ? fs.readdirSync(PEOPLE_DIR).length
+      : 0;
+    const productsCount = fs.existsSync(PRODUCTS_DIR)
+      ? fs.readdirSync(PRODUCTS_DIR).length
+      : 0;
+
+    // Simple mock for "Neural Storage" based on file count
+    const totalFiles = peopleCount + productsCount || 1;
+    const storagePercent = Math.min((totalFiles / 100) * 100, 100).toFixed(1);
+
+    res.json({
+      entities: peopleCount + productsCount,
+      storagePercent: storagePercent,
+      activeProjects: productsCount,
+    });
+  } catch (error) {
+    res.status(500).json({ error: "Stats failed" });
+  }
+});
+
+// 3. Kernel Documentation
+app.get("/api/kernel", (req, res) => {
+  try {
+    if (fs.existsSync(KERNEL_DOC)) {
+      const content = fs.readFileSync(KERNEL_DOC, "utf-8");
+      res.json({ content });
+    } else {
+      res.json({ content: "# KERNEL.md not found." });
+    }
+  } catch (error) {
+    res.status(500).json({ error: "Kernel failed" });
   }
 });
 
@@ -133,7 +195,7 @@ app.post("/api/chat", chatUpload.array("images"), (req, res) => {
     const filePath = path.join(REQUESTS_DIR, filename);
     fs.writeFileSync(filePath, content);
 
-    console.log(`📩 Received request: ${filename}`);
+    console.log(`📩 Real Neural Intake: ${filename}`);
 
     // Broadcast user message to current UI
     io.emit("user-message", {
@@ -141,42 +203,9 @@ app.post("/api/chat", chatUpload.array("images"), (req, res) => {
       timestamp: new Date().toISOString(),
     });
 
-    // --- SIMULATE BRAIN THINKING & RESPONDING ---
-    // This simulates an external agent picking up the file
-    setTimeout(() => {
-      const timestamp = new Date().toLocaleTimeString();
-      fs.appendFileSync(
-        THINKING_LOG,
-        `\n[${timestamp}] 🧠 Brain acknowledged: "${message.substring(
-          0,
-          30
-        )}..."\n`
-      );
-
-      setTimeout(() => {
-        fs.appendFileSync(
-          THINKING_LOG,
-          `🔍 Scanning product portfolio and stakeholders...\n`
-        );
-
-        setTimeout(() => {
-          fs.appendFileSync(
-            THINKING_LOG,
-            `✨ Generating strategic response...\n`
-          );
-
-          setTimeout(() => {
-            const responseFilename = `auto-response-${Date.now()}.md`;
-            const responseContent = `# 🧠 Brain Response\n\nI've analyzed your request: "${message}"\n\nBased on the current **ACTION_PLAN.md** and your **SETTINGS.md**, I recommend prioritizing this as **NOW (⚡)**.\n\nI have logged this in your inbox and updated the status panels.`;
-            fs.writeFileSync(
-              path.join(RESPONSES_DIR, responseFilename),
-              responseContent
-            );
-            console.log(`✅ Sent auto-response: ${responseFilename}`);
-          }, 1500);
-        }, 1000);
-      }, 800);
-    }, 500);
+    // --- REAL INTEGRATION ---
+    // The system now waits for an agent to process the file in 0. Incoming/staging/inbox/requests
+    // No more simulation.
 
     res.json({ success: true, file: filename });
   } catch (error) {

@@ -67,20 +67,6 @@ You aren't just talking to one AI. You have a mesh of specialized "experts" work
 
 ---
 
-## 📂 Simplified Organization (v2.4.0)
-
-### 📂 Folder Organization
-
-The brain is organized into a human-centric numbered hierarchy, designed for clear navigation:
-
-- **`0. Incoming/`**: The "Landing Zone." Where `#paste`, `#screenshot`, and raw clippings land for triage.
-- **`1. Company/`**: Strategic HQ. OKRs, North Star, Branding, and Corporate Strategy.
-- **`2. Products/`**: Portfolio view. Separate folders for each product line (e.g., `Mobile-App`).
-- **`3. Meetings/`**: External Memory. All transcripts, daily briefs, and recursive recaps.
-- **`4. People/`**: Relationship CRM. Dedicated dossiers per stakeholder/teammate.
-- **`5. Trackers/`**: The Engine. Master lists for Bugs, Boss Requests, Projects, and Delegated Tasks.
-- **`Beats-PM-System/`**: Technical Core. Contains all agents, logic, and scripts (Hidden from daily use). You rarely need to go in here; it's where the AI's logic lives.
-
 ---
 
 ## 🕹️ System Commands (Smart Routing)
@@ -120,10 +106,26 @@ The Brain uses **Zero-Friction Routing**. You don't need to know which agent is 
 | `#ux`             | Design Tasks         | Routes UI/UX experiments, mockups, or design debt to the UX tracker.                    |
 | `#eng`            | Tech Tasks           | Routes architecture questions, tech debt, or dev-ops items to the Engineering tracker.  |
 |                   |                      |                                                                                         |
-| `#update`         | Logic Sync           | Fetches the latest "AI Brain Mesh" logic and agent prompts from the remote repository.  |
+| `#update`         | Logic Sync           | Fetches latest brain mesh and runs `core_setup.py` to ensure platform parity.           |
 | `#help`           | User Guide           | Displays the full Command Menu and provides an onboarding assist.                       |
 
 ---
+
+## 🚀 Optional Power-Ups
+
+Enhance your Antigravity experience with dedicated extensions:
+
+### [Antigravity Plus](https://open-vsx.org/vscode/item?itemName=iml1s.antigravity-plus)
+
+**UI & Feature Enhancements.**
+
+A companion extension that adds extra productivity tools and interface improvements specifically for heavy Antigravity users.
+
+**Manual Installation**:
+
+```bash
+antigravity --install-extension iml1s.antigravity-plus
+```
 
 ---
 

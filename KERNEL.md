@@ -33,6 +33,11 @@ This keeps the initial context window lean and fast.
 
 ---
 
+3.  **Conductor-First Protocol (CRITICAL)**:
+    - **Rule**: Whenever a new document, spec, report, or tracker entry is created, the system MUST check `.gemini/templates/` first.
+    - **Execution**: Prefer `/conductor:[template]` logic over ad-hoc markdown generation.
+    - **Verification**: If a template exists for the intent (Bug, Feature, Strategy, Weekly, Transcript), you MUST use it. Failure to use the standardized template is a system violation.
+
 ## 🔄 Universal Routing Rules
 
 1.  **Direct the specific to the expert**: Don't try to parse a bug in the Meeting Synthesizer; extract it and hand it to the `Bug Chaser`.
@@ -52,17 +57,18 @@ This keeps the initial context window lean and fast.
 4.  **Escalation**: Any agent detecting "Urgent", "Production Down", or Boss Asks must **immediately** fan out to `Boss Tracker` and `Bug Chaser` (Critical).
 5.  **Data Integrity (Source Truth)**: When extracting a feature or protection logic from a conversation, **YOU MUST PRESERVE THE RAW TEXT**. Never summarize away the original context. Always append the verbatim source to the final artifact.
 6.  **Guidance**: If input is `#help`, "what can I do?", or user seems lost, route to `Requirements Translator` to display the **Command Menu** and read out the Next Steps from `ACTION_PLAN.md`.
-7.  **System Updates**: If input is `#update` or "update the system", execute `git pull` to fetch the latest brain mesh improvements and report the outcome.
-8.  **Succinct Context**: If input is `#day`, `#status`, `#latest`, `#info`, or "where was I at?", trigger `Daily Synthesizer`. **Output must be succinct, fluff-free, and table-based.**
-9.  **Hybrid Triage (The Parking Lot)**:
+7.  **System Updates**: If input is `#update` or "update the system", execute `git pull` followed by `python Beats-PM-System/system/scripts/core_setup.py` and `python Beats-PM-System/system/scripts/vibe_check.py` to ensure platform parity and report outcome.
+8.  **System Diagnostics**: If input is `#vibe` or "vibe check", execute `python Beats-PM-System/system/scripts/vibe_check.py` and report the status.
+9.  **Succinct Context**: If input is `#day`, `#status`, `#latest`, `#info`, or "where was I at?", trigger `Daily Synthesizer`. **Output must be succinct, fluff-free, and table-based.**
+10. **Hybrid Triage (The Parking Lot)**:
     - **Clear/Actionable**: Execute immediately (e.g., "Remind me to call Mom" -> logs task).
     - **Unclear/Random**: If input is a random thought, vague idea, or not immediately actionable, **DO NOT FORCE IT** or ask 20 questions. Instead, log it to `BRAIN_DUMP.md` and tell the user: "Parked in Brain Dump for later."
-10. **Memory Janitor Rule (Optimization)**:
+11. **Memory Janitor Rule (Optimization)**:
     - **Trigger**: When `STATUS.md` or any Active Tracker exceeds 500 lines.
     - **Action**: Move all "Completed" or "Done" items older than 7 days to `5. Trackers/archive/`.
     - **Optimization**: Run `python Beats-PM-System/system/scripts/vacuum.py` to auto-clean trackers.
     - **Goal**: Keep active context tokens low for maximum speed and accuracy.
-11. **Transcript Auto-Detection**: If user pastes a large block of text (>500 words) containing conversational patterns (e.g., speaker labels like "Name:", timestamps, multiple participants, call/meeting language), **automatically trigger Meeting Synthesizer** without requiring `#transcript`. Signs to detect:
+12. **Transcript Auto-Detection**: If user pastes a large block of text (>500 words) containing conversational patterns (e.g., speaker labels like "Name:", timestamps, multiple participants, call/meeting language), **automatically trigger Meeting Synthesizer** without requiring `#transcript`. Signs to detect:
     - Speaker labels (e.g., "John:", "Speaker 1:", "[00:05:32]")
     - Multiple back-and-forth exchanges
     - Meeting-related keywords ("meeting", "call", "sync", "let's discuss")
@@ -81,17 +87,17 @@ To handle multiple inputs (files, screenshots, text) for a single intent:
     - **Notes/Text**: Routed to Requirements Translator for processing
     - **Screenshots**: If clipboard contains image reference, triggers Visual Processor
 2.  **Auto-Detect (No Command)**: If user just pastes a large block (>500 words) with conversational patterns, AI auto-detects and processes without needing `#paste`.
-3.  **Staging for Files**: For actual files (screenshots, images), drop into `0. Incoming/` folder.
+3.  **Staging for Files**: For actual files (screenshots, images), drop into `0. Incoming/staging/` folder.
 4.  **Processing Trigger**:
     - An explicit `#process` command.
     - A message that provides context for the staged items (e.g., "Review these screenshots for bugs").
-5.  **Cleanup**: Once processed, items in `0. Incoming/` are moved to the appropriate directory.
+5.  **Cleanup**: Once processed, items in `0. Incoming/staging/` are moved to the appropriate directory in `2. Products/[Company]/[Product]/` or `0. Incoming/archive/`.
 
 ---
 
 ## 📸 Visual Processing Protocol
 
-When handling images/screenshots (`00-DROP-FILES-HERE-00/`, `0. Incoming/screenshots/` or pasted):
+When handling images/screenshots (`0. Incoming/staging/`, `0. Incoming/screenshots/` or pasted):
 
 1.  **Trigger**: Activate the **Visual Processor** agent.
 2.  **Analyze**: Determine if it's **Text** (Slack/Email), **Visual** (UI/Design), or **Data** (Charts).
