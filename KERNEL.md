@@ -2,20 +2,15 @@ zs# System Kernel (Universal Orchestration Protocol)
 
 > **SYSTEM PROMPT**: All agents listed below are part of a connected mesh. Any agent can call any other agent if the input requires it.
 
-## 🕸️ The Mesh
+## 🕸️ The Mesh (TOML-First Orchestration)
 
-| Agent                       | Capability             | Trigger When...                                          |
-| --------------------------- | ---------------------- | -------------------------------------------------------- |
-| **Task Manager**            | Task Lifecycle Owner   | Tasks need tracking, brain dump triage, or clarification |
-| **Requirements Translator** | Input Router           | New raw info arrives (text, images, files)               |
-| **Daily Synthesizer**       | The Pulse (Briefs)     | User asks for current status or `#day` / `#eod`          |
-| **Reqs Translator**         | The Filter (Intake)    | Any new unstructured input or `#paste` in `0. Incoming/` |
-| **Meeting Synthesizer**     | The Scribe (Strategy)  | Large text/transcripts pasted into `3. Meetings/`        |
-| **Bug Chaser**              | Quality Manager        | Bugs, errors, or "it's broken" in `5. Trackers/`         |
-| **Strategy Synthesizer**    | Pattern Recognizer     | Strategy items in `1. Company/` or `2. Products/`        |
-| **Visual Processor**        | The Eyes (OCR + Scene) | Images/diagrams in `0. Incoming/`                        |
-| **Delegation Manager**      | Accountability Expert  | Tasks assigned in `5. Trackers/delegated-tasks.md`       |
-| **Product Context**         | Knowledge Base         | Checks `2. Products/[Company]/[Product]/*.md`            |
+The PM Brain now uses **Tiered Discovery**. All agents and their skills are defined in `Beats-PM-System/system/agents/mesh.toml`.
+
+| Feature                 | Description                                                              |
+| ----------------------- | ------------------------------------------------------------------------ |
+| **Tiered Discovery**    | System auto-selects agents based on `skills` mapping in TOML.            |
+| **Multi-Agent TOML**    | Single source of truth for agent prompts, triggers, and boundary rules.  |
+| **Remote Skill Inject** | Agents can pull remote skills for specialized tasks (e.g., Browserbase). |
 
 ---
 
@@ -38,6 +33,23 @@ This keeps the initial context window lean and fast.
     - **Execution**: Prefer `/conductor:[template]` logic over ad-hoc markdown generation.
     - **Verification**: If a template exists for the intent (Bug, Feature, Strategy, Weekly, Transcript), you MUST use it. Failure to use the standardized template is a system violation.
 
+## 🛑 Boundary Rules (STOP_EXECUTION Protocol)
+
+To maintain data integrity, agents MUST abide by the following boundary checks. If a condition is not met, the agent MUST use `STOP_EXECUTION` and prompt the user.
+
+1.  **PRD Integrity Rule**:
+    - **Trigger**: Any attempt to generate or finalize a PRD (via `#prd` or `#feature`).
+    - **Check**: The PRD MUST have an assigned **Engineering Partner** (e.g., Mitesh) and a **Product Alias** (e.g., `mvp`, `ftue`).
+    - **Failure**: "Action Halted: PRD missing critical metadata (Eng Partner or Product Alias). Please specify before I continue."
+2.  **Company Anchor Rule**:
+    - **Trigger**: Any new project, product, or meeting.
+    - **Check**: MUST be anchored to a folder in `1. Company/[Company]`.
+    - **Failure**: "Action Halted: No Company Anchor found. Create `1. Company/[Company]/` first."
+3.  **Privacy Rule**:
+    - **Trigger**: `git stage`, `git push`.
+    - **Check**: No files from Folders 1-5 (except templates).
+    - **Failure**: Block the command and notify user.
+
 ## 🔄 Universal Routing Rules
 
 1.  **Direct the specific to the expert**: Don't try to parse a bug in the Meeting Synthesizer; extract it and hand it to the `Bug Chaser`.
@@ -46,7 +58,6 @@ This keeps the initial context window lean and fast.
     - If input is "#bug checkout failed" → Check `vault/products/*.md` for "checkout" keyword.
     - If found in "Mobile App", route to Bug Chaser with context: `Product: Mobile App`.
     - **Consultant Mode (v1.9.0)**:
-      - **Company Anchor Rule**: Any new project, product, or meeting MUST be anchored to a folder in `1. Company/[Company]`.
       - **Organic Creation**: If a [Company] isn't recognized, agents MUST create `1. Company/[Company]/PROFILE.md` before proceeding with technical specs.
     - **Strategic Extraction Protocol**: If input mentions "Roadmap", "Strategy", or "Features", the agents MUST use the standardized **"Concept / Requirements / User Journey / Questions & Tasks"** framework for all documentation. This is a system-wide standard for all products.
     - **Strategic Release Protocol**: When `#release` is triggered, the system MUST:

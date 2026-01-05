@@ -1,0 +1,107 @@
+# Beats PM Agent Mesh - Configuration
+# This file defines the autonomous agents and their skills for the PM Brain.
+
+[agents.task_manager]
+name = "Task Manager"
+role = "The Glue: Prevents things from slipping through the cracks. Owns task lifecycle, brain dump triage, and clarification flows."
+prompt_file = "Beats-PM-System/system/agents/task-manager.md"
+skills = ["task:triage", "task:track", "task:clarify"]
+triggers = ["#task", "#tasks", "#triage", "#clarify", "#plan"]
+
+[agents.requirements_translator]
+name = "Requirements Translator"
+role = "The Primary Router. Accepts text, images, and files. Transform chaotic input into structured, routed artifacts."
+prompt_file = "Beats-PM-System/system/agents/requirements-translator.md"
+skills = ["input:route", "conduit:template", "input:process"]
+triggers = ["#paste", "#process", "#clipboard"]
+
+[agents.boss_tracker]
+name = "Boss Tracker"
+role = "The Shield: Monitors and tracks high-priority requests from leadership."
+prompt_file = "Beats-PM-System/system/agents/boss-tracker.md"
+skills = ["priority:high", "boss:track"]
+triggers = ["#boss"]
+
+[agents.bug_chaser]
+name = "Bug Chaser"
+role = "Quality Manager: Owns the bug lifecyle and ensures quality standards."
+prompt_file = "Beats-PM-System/system/agents/bug-chaser.md"
+skills = ["quality:audit", "bug:track"]
+triggers = ["#bug"]
+
+[agents.prd_author]
+name = "PRD Author"
+role = "The Architect: Generates high-fidelity Product Requirements Documents."
+prompt_file = "Beats-PM-System/system/agents/prd-author.md"
+skills = ["spec:generate", "prd:author"]
+triggers = ["#prd", "#feature"]
+
+[agents.daily_synthesizer]
+name = "Daily Synthesizer"
+role = "The Pulse: Generates daily briefings and status updates."
+prompt_file = "Beats-PM-System/system/agents/daily-synthesizer.md"
+skills = ["brief:daily", "status:summarize"]
+triggers = ["#day", "#status", "#eod"]
+
+[agents.meeting_synthesizer]
+name = "Meeting Synthesizer"
+role = "The Scribe: Processes transcripts and meeting notes into summaries and action items."
+prompt_file = "Beats-PM-System/system/agents/meeting-synthesizer.md"
+skills = ["transcript:analyze", "meeting:summarize"]
+triggers = ["#transcript", "#meeting"]
+
+[agents.strategy_synthesizer]
+name = "Strategy Synthesizer"
+role = "Pattern Recognizer: Analyzes company and product strategy."
+prompt_file = "Beats-PM-System/system/agents/strategy-synthesizer.md"
+skills = ["strategy:analyze", "market:research"]
+triggers = ["#strategy", "#market"]
+
+[agents.visual_processor]
+name = "Visual Processor"
+role = "The Eyes: Orchestrates OCR and scene analysis for images."
+prompt_file = "Beats-PM-System/system/agents/visual-processor.md"
+skills = ["vision:ocr", "vision:ui_analysis"]
+triggers = ["#screenshot"]
+
+[agents.delegation_manager]
+name = "Delegation Manager"
+role = "Accountability Expert: Tracks tasks delegated to other team members."
+prompt_file = "Beats-PM-System/system/agents/delegation-manager.md"
+skills = ["task:delegate", "accountability:track"]
+triggers = ["#delegate"]
+
+[agents.engineering_collaborator]
+name = "Engineering Collaborator"
+role = "Technical Liaison: Facilitates communication and tasks for engineering teams."
+prompt_file = "Beats-PM-System/system/agents/engineering-collaborator.md"
+skills = ["eng:sync", "technical:audit"]
+triggers = ["#eng"]
+
+[agents.ux_collaborator]
+name = "UX Collaborator"
+role = "Design Liaison: Facilitates communication and tasks for design teams."
+prompt_file = "Beats-PM-System/system/agents/ux-collaborator.md"
+skills = ["ux:sync", "design:audit"]
+triggers = ["#ux"]
+
+[agents.stakeholder_manager]
+name = "Stakeholder Manager"
+role = "Relationship Lead: Maintains stakeholder profiles and preferences."
+prompt_file = "Beats-PM-System/system/agents/stakeholder-manager.md"
+skills = ["people:profile", "stakeholder:sync"]
+triggers = ["#people"]
+
+[agents.weekly_synthesizer]
+name = "Weekly Synthesizer"
+role = "The Pulse Check: Generates weekly summaries and strategic views."
+prompt_file = "Beats-PM-System/system/agents/weekly-synthesizer.md"
+skills = ["brief:weekly", "roadmap:update"]
+triggers = ["#weekly"]
+
+[settings]
+orchestration_mode = "toml-first"
+default_model = "gemini-3-flash"
+boundary_check_enabled = true
+quota_stabilization = true
+account_rotation = true
