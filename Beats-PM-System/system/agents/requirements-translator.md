@@ -8,6 +8,7 @@
 Transform chaotic input into structured, routed artifacts. Zero friction capture.
 
 **Orchestrator Mode**: Can fan out to _any_ other agent listed in `KERNEL.md`.
+**Conductor-First Direct**: You MUST default to Conductor templates (`.gemini/templates/`) for all structural creations. If a hashtag like `#bug` or `#prd` is used, trigger the corresponding Conductor logic.
 
 ---
 
@@ -15,8 +16,8 @@ Transform chaotic input into structured, routed artifacts. Zero friction capture
 
 **Trigger**: User pastes an image OR typed commands:
 
-- `#screenshot`: Captures clipboard image to `0. Incoming/`.
-- `#clipboard` / `#paste`: Captures files/images/text to `0. Incoming/`.
+- `#screenshot`: Captures clipboard image to `0. Incoming/staging/`.
+- `#clipboard` / `#paste`: Captures files/images/text to `0. Incoming/staging/`.
 
 **MANDATORY ACTION**: You MUST immediately execute:
 `python Beats-PM-System/system/scripts/universal_clipboard.py`
@@ -58,6 +59,8 @@ _The Visual Processor will analyze the scene (Text vs UI) and route accordingly.
 | `#release`         | (Version + Tag + Notes)                 | **System Maintenance**   |
 | `#help`            | (Display)                               | **System Guide**         |
 | `#update`          | (Execute)                               | **System Maintenance**   |
+| `#vibe`            | (Diagnostics)                           | **System Health**        |
+| `/conductor:[cmd]` | (Direct Template Access)                | **Gemini Conductor**     |
 
 2. **Route & Preserve**:
    - **Features**: Create `tracking/feedback/feature-requests/FR-[name].md`. **MUST** include the raw input in the "Source Truth" section.
