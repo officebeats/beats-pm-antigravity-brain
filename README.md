@@ -115,18 +115,6 @@ The Brain uses **Zero-Friction Routing**. You don't need to know which agent is 
 
 Enhance your Antigravity experience with dedicated extensions:
 
-### [Antigravity Plus](https://open-vsx.org/vscode/item?itemName=iml1s.antigravity-plus)
-
-**UI & Feature Enhancements.**
-
-A companion extension that adds extra productivity tools and interface improvements specifically for heavy Antigravity users.
-
-**Manual Installation**:
-
-```bash
-antigravity --install-extension iml1s.antigravity-plus
-```
-
 ### [Antigravity Cockpit](https://open-vsx.org/vscode/item?itemName=jlcodes.antigravity-cockpit)
 
 **Management Dashboard.**
@@ -137,6 +125,34 @@ A powerful dashboard for managing your PM brain, tracking metrics, and visualizi
 
 ```bash
 antigravity --install-extension jlcodes.antigravity-cockpit
+```
+
+### [Antigravity Auto-Accept](https://open-vsx.org/vscode/item?itemName=pesosz.antigravity-auto-accept)
+
+**Autonomous Execution.**
+
+Allows your Brain to execute standard system commands (like file moves or status checks) autonomously without requiring manual approval for every step.
+
+**Manual Installation**:
+
+```bash
+antigravity --install-extension pesosz.antigravity-auto-accept
+```
+
+### Mobile Remote Access
+
+**Cloudflare Tunneling.**
+
+Control your Brain from your phone using a secure, ephemeral tunnel. No account or port forwarding required. Simply hit "GO LIVE" in the Cockpit and scan the pairing code.
+
+**Prerequisite**:
+
+```bash
+# Windows
+winget install cloudflare.cloudflared
+
+# macOS
+brew install cloudflared
 ```
 
 ---

@@ -2,6 +2,8 @@ import React from "react";
 import { LayoutDashboard, Rocket, Layers, Ghost } from "lucide-react";
 import clsx from "clsx";
 
+import { RemoteControl } from "./RemoteControl";
+
 export const Sidebar: React.FC<{
   currentView: string;
   setView: (v: string) => void;
@@ -19,7 +21,7 @@ export const Sidebar: React.FC<{
               Beats
             </h1>
             <p className="text-xs text-clay-muted font-bold uppercase tracking-widest mt-1 opacity-60">
-              Brain Mesh v2.4
+              Brain Mesh v2.4.4
             </p>
           </div>
         </div>
@@ -48,7 +50,7 @@ export const Sidebar: React.FC<{
 
         {/* Footer Status */}
         <div className="mt-auto pt-6 border-t border-clay-accent/5">
-          <div className="bg-white/50 rounded-2xl p-4 flex items-center justify-between">
+          <div className="bg-white/50 rounded-2xl p-4 flex items-center justify-between mb-4">
             <div className="flex items-center space-x-3">
               <div className="relative">
                 <div className="w-3 h-3 rounded-full bg-clay-accent-success" />
@@ -59,9 +61,11 @@ export const Sidebar: React.FC<{
               </span>
             </div>
             <div className="text-[10px] font-black text-clay-accent px-2 py-1 bg-clay-accent/10 rounded-lg">
-              LIVE
+              LOCAL
             </div>
           </div>
+
+          <RemoteControl />
         </div>
       </div>
     </aside>
