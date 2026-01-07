@@ -19,7 +19,7 @@ export const Sidebar: React.FC<{
               Beats
             </h1>
             <p className="text-xs text-clay-muted font-bold uppercase tracking-widest mt-1 opacity-60">
-              Brain Mesh v2.5.0
+              Brain Mesh v2.5.1
             </p>
           </div>
         </div>
