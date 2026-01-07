@@ -5,6 +5,7 @@ import path from "path";
 import fs from "fs";
 import { createServer } from "http";
 import { Server } from "socket.io";
+import { TunnelManager } from "./tunnel";
 
 const app = express();
 const httpServer = createServer(app);
@@ -14,6 +15,8 @@ const io = new Server(httpServer, {
     methods: ["GET", "POST"],
   },
 });
+
+const tunnel = new TunnelManager();
 
 const PORT = 3000;
 
@@ -244,6 +247,29 @@ app.get("/api/history", (req, res) => {
   } catch (error) {
     res.status(500).json({ error: "Failed history" });
   }
+});
+
+// 5. Tunnel Control
+app.get("/api/tunnel/status", (req, res) => {
+  res.json(tunnel.getStatus());
+});
+
+app.post("/api/tunnel/start", async (req, res) => {
+  try {
+    const url = await tunnel.start(PORT);
+    io.emit("tunnel-status", { status: "live", url });
+    res.json({ success: true, url });
+  } catch (error: any) {
+    console.error("Tunnel failed:", error);
+    io.emit("tunnel-status", { status: "error", error: error.message });
+    res.status(500).json({ error: error.message });
+  }
+});
+
+app.post("/api/tunnel/stop", async (req, res) => {
+  await tunnel.stop();
+  io.emit("tunnel-status", { status: "off", url: null });
+  res.json({ success: true });
 });
 
 httpServer.listen(PORT, () => {

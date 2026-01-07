@@ -41,6 +41,7 @@ def main():
     check_cmd("git", "Git")
     check_cmd("gh", "GitHub CLI")
     check_cmd("npm.cmd" if system == "Windows" else "npm", "Node/NPM")
+    check_cmd("cloudflared", "Cloudflare Tunnel")
 
     # 2. Check File Structure
     print_cyan("\nCore Infrastructure:")
@@ -62,7 +63,7 @@ def main():
 
     # 4. Check Extensions
     print_cyan("\nOptional Power-Ups:")
-    check_extension("iml1s.antigravity-plus", "Antigravity Plus")
+    check_extension("pesosz.antigravity-auto-accept", "Antigravity Auto-Accept")
     check_extension("jlcodes.antigravity-cockpit", "Antigravity Cockpit")
 
     print_cyan("\n--- Check Complete ---")
