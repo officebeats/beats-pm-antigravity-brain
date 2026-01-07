@@ -83,7 +83,7 @@ def install_extension_headless(ext_name, ext_url, ext_id):
             
 def main():
     system = platform.system()
-    print_cyan(f"🧠 Hydrating Antigravity Brain v2.5.0 ({system})...")
+    print_cyan(f"🧠 Hydrating Antigravity Brain v2.5.1 ({system})...")
 
     # 1. Create Directories
     for d in DIRECTORIES:
