@@ -84,24 +84,44 @@ def check_critical_files():
             print_error(f"{filename}: CRITICAL MISSING")
 
 
-def check_skills_configuration():
-    """Check if the Skills directory and content exist."""
-    print_cyan("\nAI Agent Skills (v3.0.0):")
+def check_model_configuration():
+    """Check and update AI model configuration."""
+    print_cyan("\nAI Model Configuration:")
     
-    skills_dir = ".gemini/skills"
+    mesh_path = get_config('ai.mesh_config_path', 'Beats-PM-System/system/agents/mesh.toml')
+    latest_model = get_default_model()
     
-    if directory_exists(skills_dir):
-        print_success(f"Skills Directory: Found")
+    if not file_exists(mesh_path):
+        print_error(f"mesh.toml missing!")
+        return
+    
+    try:
+        content = read_file(mesh_path)
+        if content is None:
+            print_error(f"Failed to read mesh.toml")
+            return
         
-        # Check for core skills
-        core_skills = ['meeting-synth', 'bug-chaser', 'prd-author', 'task-manager', 'daily-synth']
-        for skill in core_skills:
-            if directory_exists(os.path.join(skills_dir, skill)):
-                print_success(f" Skill: {skill} (Loaded)")
+        # Check if model is up to date
+        if f'default_model = "{latest_model}"' in content:
+            print_success(f"Model: {latest_model} (Latest)")
+        else:
+            print_warning(f"Model is outdated. Updating to {latest_model}...")
+            
+            # Update the model configuration
+            new_content = ""
+            for line in content.splitlines():
+                if "default_model =" in line:
+                    new_content += f'default_model = "{latest_model}" # AUTO-UPDATE: Always set to latest available Flash\n'
+                else:
+                    new_content += line + "\n"
+            
+            if write_file(mesh_path, new_content):
+                print_success(f"Updated to {latest_model}")
             else:
-                print_warning(f" Skill: {skill} (MISSING)")
-    else:
-        print_error(f"Skills Directory Missing! (Run #update)")
+                print_error(f"Failed to update mesh.toml")
+                
+    except Exception as e:
+        print_error(f"Failed to check mesh.toml: {e}")
 
 
 def check_extensions():
@@ -129,7 +149,7 @@ def main():
     check_toolchain()
     check_file_structure()
     check_critical_files()
-    check_skills_configuration()
+    check_model_configuration()
     check_extensions()
     
     print_cyan("\n--- Check Complete ---")
