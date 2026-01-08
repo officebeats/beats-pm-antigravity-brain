@@ -69,6 +69,7 @@ __pycache__/
 /BRAIN_DUMP.md
 /DECISION_LOG.md
 /SESSION_MEMORY.md
+/tests/security_scan.sh
 
 # ----------------------------------------
 # 4. SYSTEM LOGIC (VERSIONED - KEEP THESE)
