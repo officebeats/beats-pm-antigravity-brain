@@ -71,7 +71,7 @@ To maintain data integrity, agents MUST abide by the following boundary checks. 
     - **Consultant Intent**: If a [Company] isn't recognized, create `1. Company/[Company]/PROFILE.md` first.
 4.  **Strategic Standards**: For any roadmap or planning content, use the **Concept / Requirements / User Journey / Outcomes** framework for documentation.
 5.  **Data Privacy**: All company-specific data and transcripts are strictly LOCAL. Never push Folders 1-5 to GitHub.
-6.  **Escalation**: Urgent requests or Boss Asks (Gabriel) must immediately activate `Boss Tracker` (Critical).
+6.  **Escalation**: Urgent requests or Boss Asks (Leadership) must immediately activate `Boss Tracker` (Critical).
 7.  **System Diagnostics**: Use `#vibe` to trigger `vibe_check.py`.
 8.  **Briefing**: Use `#day` or `#status` to activate the `Daily Synthesizer` for a table-based briefing.
 9.  **Parking Lot**: Log unclear or non-actionable thoughts to `BRAIN_DUMP.md`.
