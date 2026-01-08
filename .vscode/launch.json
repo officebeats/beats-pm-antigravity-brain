@@ -4,28 +4,28 @@
     {
       "name": "Launch Edge",
       "request": "launch",
-      "type": "pwa-msedge",
+      "type": "msedge",
       "url": "http://localhost:8080",
       "webRoot": "${workspaceFolder}"
     },
     {
       "name": "Launch Chrome",
       "request": "launch",
-      "type": "pwa-chrome",
+      "type": "chrome",
       "url": "http://localhost:8080",
       "webRoot": "${workspaceFolder}"
     },
     {
       "name": "Open Index.html (Edge)",
-      "type": "pwa-msedge",
+      "type": "msedge",
       "request": "launch",
-      "file": "${workspaceFolder}/2. Products/skypro/website_candidate/index.html"
+      "file": "${workspaceFolder}/2. Products/[Product]/website_candidate/index.html"
     },
     {
       "name": "Open Index.html (Chrome)",
-      "type": "pwa-chrome",
+      "type": "chrome",
       "request": "launch",
-      "file": "${workspaceFolder}/2. Products/skypro/website_candidate/index.html"
+      "file": "${workspaceFolder}/2. Products/[Product]/website_candidate/index.html"
     }
   ]
 }
