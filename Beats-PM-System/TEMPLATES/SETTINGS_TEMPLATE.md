@@ -16,7 +16,7 @@
 - **Owner**: [Your Name]
 - **Role**: [Principal PM / Director / Group PM]
 - **Timezone**: America/Chicago
-- **Version**: 1.7.0 (Architecture Transparency Framework)
+- **Version**: 3.0.0 (Skills Protocol)
 
 ---
 
@@ -167,4 +167,4 @@
 
 ---
 
-_Beats Product Management Antigravity Brain v2.3.0_
+_Beats Product Management Antigravity Brain v3.0.0_

@@ -20,7 +20,6 @@
 | **Agents** | LLM prompt files | `Beats-PM-System/system/agents/*.md` |
 | **Configuration** | User preferences | `SETTINGS.md` |
 | **Status Dashboard** | Current state | `STATUS.md` |
-| **Cockpit UI** | React + TypeScript + Vite | `Beats-PM-System/cockpit/` |
 
 ---
 

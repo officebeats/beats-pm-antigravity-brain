@@ -18,6 +18,9 @@ node_modules/
 .env.*
 package-lock.json
 *.log
+__pycache__/
+*.pyc
+*.bak
 
 # ----------------------------------------
 # 2. PROCESSED DATA FOLDERS (FULL PRIVACY)
@@ -59,10 +62,13 @@ package-lock.json
 # 3. USER CONFIGURATION (SENSITIVE)
 # ----------------------------------------
 # SETTINGS.md contains personal info (boss name, team, email).
-# Keep it local, share the template instead.
+# STATUS.md contains current project focus and bottlenecks.
 /SETTINGS.md
 /STATUS.md
 /ACTION_PLAN.md
+/BRAIN_DUMP.md
+/DECISION_LOG.md
+/SESSION_MEMORY.md
 
 # ----------------------------------------
 # 4. SYSTEM LOGIC (VERSIONED - KEEP THESE)

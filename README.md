@@ -53,13 +53,15 @@ Once the folder is open in Antigravity, just type or copy this into the chat:
 
 ---
 
-## ⚡ Gemini-Native Architecture (v2.7)
+---
+## ⚡ Gemini-Native Architecture (v3.0.0 - Skills Protocol)
 
-This edition is re-engineered to seamlessly leverage the **Latest Gemini Flash** models (currently `gemini-3-flash-preview`), ensuring maximum throughput and intelligence.
+This edition is re-engineered as a **Skills-First Orchestration** system. It leverages the latest **Gemini CLI Agent Skills** protocol for maximum efficiency, modularity, and speed.
 
-- **Parallel Fan-Out**: Agents now execute non-dependent tasks (e.g., logging a bug vs. scheduling a meeting) simultaneously.
-- **Conductor-First Protocol**: All artifacts (PRDs, Bugs, Strategy Memos) are generated via strict `.gemini/templates/` to ensure 100% consistency and zero formatting hallucinations.
-- **1M+ Token Context**: Strategy agents now ingest entire product folders in a single pass for deep pattern recognition.
+- **Dynamic Skill Activation**: Expertise is lazy-loaded on-demand. The system identifies which "Agent Skill" to activate based on your command, saving massive amounts of context tokens.
+- **Parallel Fan-Out**: Expert agents execute non-dependent tasks simultaneously using the `waitForPreviousTools: false` protocol.
+- **Conductor-First Protocol**: All artifacts (PRDs, Bugs, Strategy Memos) are generated via hierarchical `.gemini/templates/` managed by the Gemini CLI Conductor.
+- **Access Override Fallback**: High-performance local file access protocol ensures gitignored files are always readable by the AI agents.
 
 ---
 
@@ -393,7 +395,7 @@ This is an open-source project. Contributions are welcome! Please feel free to s
 
 ## 👤 Created By
 
-**Ernesto Rodriguez** — Product Management leader & AI enthusiast.
+**[Your Name]** — Product Management leader & AI enthusiast.
 
 <div align="center">
 
