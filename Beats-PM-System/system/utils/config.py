@@ -13,7 +13,7 @@ from pathlib import Path
 # Default configuration values
 DEFAULT_CONFIG = {
     'system': {
-        'version': '2.7.0',
+        'version': '2.8.0',
         'name': 'Beats PM System'
     },
     'paths': {
@@ -26,7 +26,6 @@ DEFAULT_CONFIG = {
         'company': '1. Company',
         'products': '2. Products',
         'templates': 'Beats-PM-System/TEMPLATES',
-        'agents': 'Beats-PM-System/system/agents',
         'scripts': 'Beats-PM-System/system/scripts',
         'utils': 'Beats-PM-System/system/utils'
     },
@@ -34,7 +33,6 @@ DEFAULT_CONFIG = {
         'kernel': 'KERNEL.md',
         'settings': 'SETTINGS.md',
         'readme': 'README.md',
-        'mesh_config': 'Beats-PM-System/system/agents/mesh.toml',
         'action_plan': 'ACTION_PLAN.md',
         'brain_dump': '0. Incoming/BRAIN_DUMP.md',
         'status': 'STATUS.md'
@@ -75,7 +73,6 @@ DEFAULT_CONFIG = {
     },
     'ai': {
         'default_model': 'gemini-3-flash-preview',
-        'mesh_config_path': 'Beats-PM-System/system/agents/mesh.toml'
     },
     'extensions': [
         {
