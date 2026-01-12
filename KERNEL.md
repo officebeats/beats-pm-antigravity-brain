@@ -212,4 +212,4 @@ if template_path:
 - **Health**: To diagnose issues, run `#vibe`.
 - **Architecture**: This KERNEL is the single source of truth for all Agent Orchestration.
 
-_End of KERNEL.md (v3.0.0)_
+_End of KERNEL.md (v3.2.0)_
