@@ -55,7 +55,7 @@ Once the folder is open in Antigravity, just type or copy this into the chat:
 
 ---
 
-## ⚡ Gemini-Native Architecture (v3.0.0 - Skills Protocol)
+## ⚡ Gemini-Native Architecture (v3.2.0 - Skills Protocol)
 
 This edition is re-engineered as a **Skills-First Orchestration** system. It leverages the latest **Gemini CLI Agent Skills** protocol for maximum efficiency, modularity, and speed.
 

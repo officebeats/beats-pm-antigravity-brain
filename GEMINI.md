@@ -15,11 +15,11 @@ You are assisting with the **Beats PM Antigravity Brain**, a file-based knowledg
 | `2. Products/` | PRDs, initiatives, product bugs |
 | `3. Meetings/` | Daily briefs, meeting notes |
 | `4. People/` | Stakeholder directory |
-| `5. Trackers/` | Bugs, boss-requests, projects |
+| `5. Trackers/` | All tracking files (Flattened Ledger) |
 
 ## Key Files
 
-- **KERNEL.md**: Universal orchestration rules (v3.0.0 - Skills Protocol).
+- **KERNEL.md**: Universal orchestration rules (v3.1.0 - Skills Protocol).
 - **SETTINGS.md**: User preferences (boss, team, products).
 - **STATUS.md**: Current state dashboard.
 
@@ -29,18 +29,21 @@ The system uses **Gemini CLI Agent Skills**. Expertise is activated on-demand fr
 
 | Command | Action |
 | :--- | :--- |
-| `#day` | Activate `daily-synthesizer` brief |
+| `#vibe` | Activate `core-utility` diagnostics |
+| `#vacuum` | Activate `core-utility` cleanup |
+| `#day` | Activate `daily-synth` brief |
 | `#boss` | Activate `boss-tracker` |
 | `#bug` | Activate `bug-chaser` |
 | `#task` | Activate `task-manager` |
-| `#transcript`| Activate `meeting-synthesizer` |
+| `#transcript`| Activate `meeting-synth` |
 | `#prd` | Activate `prd-author` |
-| `#strategy` | Activate `strategy-synthesizer` |
-| `#weekly` | Activate `weekly-synthesizer` |
-| `#eng` | Activate `engineering-collaborator` |
-| `#ux` | Activate `ux-collaborator` |
+| `#strategy` | Activate `strategy-synth` |
+| `#weekly` | Activate `weekly-synth` |
+| `#eng` | Activate `engineering-collab` |
+| `#ux` | Activate `ux-collab` |
 | `#delegate` | Activate `delegation-manager` |
-| `#stakeholder`| Activate `stakeholder-manager` |
+| `#stakeholder`| Activate `stakeholder-mgr` |
+| `#1on1` | Activate `crm` sync prep |
 | `#update` | Upgrade brain & latest gemini-cli |
 
 ## Behavior Rules
@@ -64,4 +67,4 @@ The system uses **Gemini CLI Agent Skills**. Expertise is activated on-demand fr
 
 ## Conductor Integration
 
-Context files in `.gemini/` define project architecture and templates. Use `/conductor:[template]` logic.
+Use hierarchical templates in `.gemini/templates/` (e.g., `/conductor:docs/prd`).
