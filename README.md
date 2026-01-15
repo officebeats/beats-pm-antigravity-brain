@@ -41,15 +41,15 @@ Download this project as a ZIP file and drag the extracted folder directly into 
 > git clone https://github.com/officebeats/beats-pm-antigravity-brain.git
 > ```
 
-### 🎯 Step 3: Run the Wizard
+### 🎯 Step 3: Run the Setup
 
-Once the folder is open in Antigravity, just type or copy this into the chat:
+Once the folder is open in Antigravity, just type:
 
 ```text
-#start
+/setup
 ```
 
-**Antigravity will handle the rest**, automatically setting up your team profile and securing your privacy permissions.
+**Antigravity will handle the rest**, automatically setting up your team profile, securing your privacy permissions, and running a system health check.
 
 ---
 
@@ -64,6 +64,7 @@ This edition is re-engineered as a **Skills-First Orchestration** system. It lev
 - **Parallel Fan-Out**: Expert agents execute non-dependent tasks simultaneously using the `waitForPreviousTools: false` protocol.
 - **Conductor-First Protocol**: All artifacts (PRDs, Bugs, Strategy Memos) are generated via hierarchical `.gemini/templates/` managed by the Gemini CLI Conductor.
 - **Access Override Fallback**: High-performance local file access protocol ensures gitignored files are always readable by the AI agents.
+- **Stateful Catch-Up Ingestion**: Optimized `#quill` and `#transcript` commands with automatic weekly anchors and last-sync tracking.
 
 ---
 
@@ -144,7 +145,8 @@ The Brain uses **Zero-Friction Routing**. You don't need to know which agent is 
 
 |        Command        | Focus              | What It Does                                                                 |
 | :-------------------: | :----------------- | :--------------------------------------------------------------------------- |
-| `#transcript [paste]` | Call Audio/Text    | Extracts action items, decisions, and roadmap concepts from raw transcripts. |
+|       `#quill`        | **Quill DB Sync**  | Stateful sync of latest transcripts since last run with automatic Monday catch-up.             |
+| `#transcript [paste]` | Call Audio/Text    | Extracts action items, decisions, and roadmap concepts from raw transcripts to `3. Meetings/`. |
 |  `#meeting [paste]`   | Hand-written Notes | Converts raw notes into structured artifacts with owners and deadlines.      |
 |   `#call [subject]`   | Sync Capture       | Quick capture protocol for phone calls or unscheduled sync messages.         |
 |   `#1on1 [person]`    | People Sync        | Templated sync for performance tracking and feedback loops.                  |
@@ -343,37 +345,25 @@ The Beats PM Brain uses a **mesh architecture** with specialized agents that com
 
 ```
 beats-pm-antigravity-brain/
-├── 0. Incoming/           # Drop zone for new items
-├── 1. Company/            # Company profiles and context
-├── 2. Products/           # Product specs and PRDs
-├── 3. Meetings/           # Meeting notes and transcripts
-├── 4. People/             # Stakeholder profiles
-├── 5. Trackers/           # All tracking files
-│   ├── bugs/             # Bug tracking
-│   ├── critical/         # Boss requests and escalations
-│   ├── feedback/         # User feedback
-│   ├── people/           # Eng/UX tasks
-│   ├── projects/         # Project tracking
-│   └── strategy/         # Strategy documents
-├── Beats-PM-System/
-│   ├── TEMPLATES/        # Document templates
-│   ├── docs/             # Documentation
-│   ├── examples/         # Example files
-│   └── system/
-│       ├── agents/       # Agent configurations
-│       ├── scripts/      # Utility scripts
-│       └── queue/        # Processing queues
-└── STATUS.md             # Current status dashboard
+├── 0. Incoming/           # Drop zone (screenshots, clips)
+├── 1. Company/            # Profiles + Strategy
+├── 2. Products/           # PRDs + Spec Work
+├── 3. Meetings/           # Transcripts + Reports
+├── 4. People/             # Stakeholder Directory
+├── 5. Trackers/           # Flattened Ledger (Master Trackers)
+├── .agent/skills/         # Gemini CLI Agent Skills
+├── .gemini/templates/     # Conductor Templates
+└── STATUS.md             # System Dashboard
 ```
 
 ### 🔌 Extending the System
 
 You can extend the system by:
 
-1. **Adding New Agents**: Create agent files in `Beats-PM-System/system/agents/`
-2. **Creating Templates**: Add templates to `Beats-PM-System/TEMPLATES/`
-3. **Writing Scripts**: Add utility scripts to `Beats-PM-System/system/scripts/`
-4. **Modifying Workflows**: Adjust agent behaviors by editing their configuration files
+1. **Adding New Skills**: Create skill folders in `.agent/skills/`
+2. **Creating Templates**: Add templates to `.gemini/templates/`
+3. **Writing Agents**: Add agent definitions to `Beats-PM-System/system/agents/`
+4. **Modifying Logic**: Adjust behavior via `system/utils/config.py`
 
 ### 🧪 System Testing (Regression Suite)
 
