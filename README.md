@@ -55,11 +55,12 @@ Once the folder is open in Antigravity, just type or copy this into the chat:
 
 ---
 
-## ⚡ Gemini-Native Architecture (v3.2.0 - Skills Protocol)
+## ⚡ Gemini-Native Architecture (v4.3.1 - Hydrated Protocol)
 
 This edition is re-engineered as a **Skills-First Orchestration** system. It leverages the latest **Gemini CLI Agent Skills** protocol for maximum efficiency, modularity, and speed.
 
-- **Dynamic Skill Activation**: Expertise is lazy-loaded on-demand. The system identifies which "Agent Skill" to activate based on your command, saving massive amounts of context tokens.
+- **Dynamic Skill Activation**: Expertise is lazy-loaded on-demand.
+ The system identifies which "Agent Skill" to activate based on your command, saving massive amounts of context tokens.
 - **Parallel Fan-Out**: Expert agents execute non-dependent tasks simultaneously using the `waitForPreviousTools: false` protocol.
 - **Conductor-First Protocol**: All artifacts (PRDs, Bugs, Strategy Memos) are generated via hierarchical `.gemini/templates/` managed by the Gemini CLI Conductor.
 - **Access Override Fallback**: High-performance local file access protocol ensures gitignored files are always readable by the AI agents.

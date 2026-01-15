@@ -8,7 +8,7 @@
 **Name**: Beats PM Antigravity Brain
 **Type**: Personal Knowledge Management System for Product Managers
 **Platform**: File-based Markdown system designed for LLM-powered agents
-**Version**: 1.9.0
+**Version**: 4.3.1
 
 ---
 

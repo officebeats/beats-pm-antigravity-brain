@@ -21,6 +21,10 @@ package-lock.json
 __pycache__/
 *.pyc
 *.bak
+.gemini/config.json
+.gemini/state/
+TEST-REPORT.md
+requirements.txt
 
 # ----------------------------------------
 # 2. PROCESSED DATA FOLDERS (FULL PRIVACY)
@@ -100,6 +104,9 @@ __pycache__/
 !/.gemini/
 !/.gemini/**
 /.gemini/session-memory.md
+/.gemini/config.json
+/.gemini/state/
+/.gemini/BRAIN_DUMP.md
 
 # ----------------------------------------
 # 6. LEGACY FOLDERS (SHOULD BE DELETED)

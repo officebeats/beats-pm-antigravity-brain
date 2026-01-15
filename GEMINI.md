@@ -25,7 +25,7 @@ You are assisting with the **Beats PM Antigravity Brain**, a file-based knowledg
 
 ## Agent Capabilities (Skills-Based)
 
-The system uses **Gemini CLI Agent Skills**. Expertise is activated on-demand from `.gemini/skills/`.
+The system uses **Gemini CLI Agent Skills**. Expertise is activated on-demand from `.agent/skills/`.
 
 | Command | Action |
 | :--- | :--- |
@@ -44,6 +44,9 @@ The system uses **Gemini CLI Agent Skills**. Expertise is activated on-demand fr
 | `#delegate` | Activate `delegation-manager` |
 | `#stakeholder`| Activate `stakeholder-mgr` |
 | `#1on1` | Activate `crm` sync prep |
+| `#simplify` | Activate `code-simplifier` |
+| `#refactor` | Activate `code-simplifier` |
+| `#cleanup` | Activate `code-simplifier` |
 | `#update` | Upgrade brain & latest gemini-cli |
 
 ## Behavior Rules
