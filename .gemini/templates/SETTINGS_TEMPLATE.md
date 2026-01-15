@@ -16,7 +16,7 @@
 - **Owner**: [Your Name]
 - **Role**: [Principal PM / Director / Group PM]
 - **Timezone**: America/Chicago
-- **Version**: 3.2.0 (Meeting Intelligence)
+- **Version**: 3.2.1 (Meeting Intelligence)
 
 ---
 
@@ -167,4 +167,4 @@
 
 ---
 
-_Beats Product Management Antigravity Brain v3.2.0_
+_Beats Product Management Antigravity Brain v3.2.1_

@@ -1,5 +1,5 @@
 """
-Vibe Check Script
+Vibe Check Script (v3.1.0)
 
 Validates the Beats PM System environment and configuration.
 Checks toolchain, file structure, critical files, and AI model configuration.
@@ -18,10 +18,10 @@ from utils.ui import (
 from utils.platform import get_system, get_python_executable, get_npm_executable
 from utils.filesystem import file_exists, directory_exists, read_file, write_file
 from utils.subprocess_helper import check_command_exists, check_extension_installed
-from utils.config import get_default_model, set_default_model, get_config
+from utils.config import get_default_model, get_config
 
 
-def check_toolchain() -> None:
+def check_toolchain():
     """Check if required development tools are installed."""
     print_cyan("\nToolchain:")
     
@@ -54,7 +54,7 @@ def check_toolchain() -> None:
         print_error(f"Node/NPM: Missing")
 
 
-def check_file_structure() -> None:
+def check_file_structure():
     """Check if required directory structure exists."""
     print_cyan("\nCore Infrastructure:")
     
@@ -67,14 +67,15 @@ def check_file_structure() -> None:
             print_warning(f"/{folder}: Missing (Run #update)")
 
 
-def check_critical_files() -> None:
+def check_critical_files():
     """Check if critical system files exist."""
     print_cyan("\nSystem Files:")
     
     critical_files = [
         get_config('files.kernel', 'KERNEL.md'),
         get_config('files.settings', 'SETTINGS.md'),
-        get_config('files.readme', 'README.md')
+        get_config('files.readme', 'README.md'),
+        get_config('files.status', 'STATUS.md')
     ]
     
     for filename in critical_files:
@@ -84,17 +85,20 @@ def check_critical_files() -> None:
             print_error(f"{filename}: CRITICAL MISSING")
 
 
-def check_skills_configuration() -> None:
+def check_skills_configuration():
     """Check if the Skills directory and content exist."""
-    print_cyan("\nAI Agent Skills (v3.0.0):")
+    print_cyan("\nAI Agent Skills (v3.1.0):")
     
-    skills_dir = ".agent/skills"
+    skills_dir = get_config('paths.skills', '.gemini/skills')
     
     if directory_exists(skills_dir):
         print_success(f"Skills Directory: Found")
         
         # Check for core skills
-        core_skills = ['meeting-synth', 'bug-chaser', 'prd-author', 'task-manager', 'daily-synth']
+        core_skills = [
+            'core-utility', 'crm', 'meeting-synth', 
+            'bug-chaser', 'prd-author', 'task-manager', 'daily-synth'
+        ]
         for skill in core_skills:
             if directory_exists(os.path.join(skills_dir, skill)):
                 print_success(f" Skill: {skill} (Loaded)")
@@ -104,33 +108,31 @@ def check_skills_configuration() -> None:
         print_error(f"Skills Directory Missing! (Run #update)")
 
 
-def check_extensions() -> None:
-    """Check if optional extensions are installed."""
-    print_cyan("\nOptional Power-Ups:")
+def check_trackers_flattening():
+    """Check if trackers have been flattened to the root of 5. Trackers/."""
+    print_cyan("\nFlattened Trackers:")
     
-    extensions = get_config('extensions', [])
+    trackers = get_config('trackers', {})
     
-    for ext in extensions:
-        ext_id = ext.get('id')
-        ext_name = ext.get('name', ext_id)
-        
-        if check_extension_installed(ext_id):
-            print_success(f"Ext: {ext_name}: Installed")
+    for name, path in trackers.items():
+        if file_exists(path):
+            print_success(f"{name}: Found at {path}")
         else:
-            print_warning(f"Ext: {ext_name}: Not Installed")
+            print_warning(f"{name}: Missing at {path}")
 
 
-def main() -> None:
+def main():
     """Main entry point for vibe check."""
     system = get_system()
-    print_cyan(f"--- Antigravity Vibe Check ({system}) ---")
+    version = get_config('system.version', '3.1.0')
+    print_cyan(f"--- Antigravity Vibe Check v{version} ({system}) ---")
     
     # Run all checks
     check_toolchain()
     check_file_structure()
     check_critical_files()
     check_skills_configuration()
-    check_extensions()
+    check_trackers_flattening()
     
     print_cyan("\n--- Check Complete ---")
 

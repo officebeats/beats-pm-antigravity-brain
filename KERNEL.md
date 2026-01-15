@@ -1,12 +1,12 @@
 # System Kernel (Universal Orchestration Protocol)
 
+**Version**: 4.3.1 (Hydrated)
+
 > **SYSTEM PROMPT**: All agents listed below are part of a connected mesh. Any agent can call any other agent if the input requires it.
 
-## 🕸️ The Mesh (Skills-First Orchestration)
+## 🕸️ The system uses **Skills-First Orchestration**. Expertise is activated on-demand from `.agent/skills/`. This avoids "Context Bloat" by only loading specific agent logic when relevant to the user's intent.
 
-The PM Brain now operates on the **Gemini CLI Skills Protocol**. Specialized logic is decoupled from the core kernel and stored as on-demand expertise.
-
-1.  **Skill Discovery**: System auto-discovers expertise from `.gemini/skills/`.
+1.  **Skill Discovery**: System auto-discovers expertise from `.agent/skills/`.
 2.  **Activation**: The model uses `activate_skill` to pull in instructions and resources.
 3.  **Efficiency**: This keeps the base context window minimal (low token usage) and maximizes processing speed by loading expertise only when needed.
 
@@ -28,6 +28,7 @@ The PM Brain now operates on the **Gemini CLI Skills Protocol**. Specialized log
 | **Stakeholder Mgr**  | `stakeholder-mgr`         | `#stakeholder`, `#update`, `#partner` |
 | **Delegation Mgr**   | `delegation-manager`      | `#delegate`, `#followup`, `#handoff`  |
 | **Req Translator**   | `requirements-translator` | `#concept`, `#ideation`, `#braindump` |
+| **Code Simplifier**  | `code-simplifier`         | `#simplify`, `#refactor`, `#cleanup`  |
 
 ---
 
@@ -75,8 +76,8 @@ To maintain data integrity, the agent MUST run the following checks. If any chec
 
 ## �� Universal Routing Rules
 
-1.  **Expert Activation**: When a specific intent (Bug, PRD, Meeting, Task) is detected, the system MUST activate the corresponding skill from `.gemini/skills/` using `activate_skill`.
-2.  **Parallel Execution**: If multiple intents are detected (e.g., a meeting mention a bug), activate all relevant skills simultaneously using parallel tool calls with `waitForPreviousTools: false`.
+1.  **Expert Activation**: When a specific intent (Bug, PRD, Meeting, Task, Refactor) is detected, the system MUST activate the corresponding skill from `.gemini/skills/` using `activate_skill`.
+2.  **Parallel Execution**: If multiple intents are detected (e.g., a meeting mentions a bug and requires a refactor), activate all relevant skills simultaneously using parallel tool calls with `waitForPreviousTools: false`.
 3.  **Context Resolution**:
     - **Product Discovery**: Before acting, search `vault/products/` or `2. Products/` to anchor the request to a specific product.
     - **Consultant Intent**: If a [Company] isn't recognized, create `1. Company/[Company]/PROFILE.md` first.
@@ -212,4 +213,4 @@ if template_path:
 - **Health**: To diagnose issues, run `#vibe`.
 - **Architecture**: This KERNEL is the single source of truth for all Agent Orchestration.
 
-_End of KERNEL.md (v3.2.0)_
+_End of KERNEL.md (v3.2.1)_

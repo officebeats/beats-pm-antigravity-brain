@@ -13,7 +13,7 @@ from unittest.mock import MagicMock
 # Setup paths
 ROOT_DIR = Path(__file__).parent.parent
 SYSTEM_DIR = ROOT_DIR / 'Beats-PM-System' / 'system'
-SKILLS_DIR = ROOT_DIR / '.gemini' / 'skills'
+SKILLS_DIR = ROOT_DIR / '.agent' / 'skills'
 TEMPLATES_DIR = ROOT_DIR / '.gemini' / 'templates'
 
 sys.path.insert(0, str(SYSTEM_DIR))

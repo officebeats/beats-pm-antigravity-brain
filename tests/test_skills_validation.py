@@ -13,7 +13,7 @@ from pathlib import Path
 
 # Setup paths
 ROOT_DIR = Path(__file__).parent.parent
-SKILLS_DIR = ROOT_DIR / ".gemini" / "skills"
+SKILLS_DIR = ROOT_DIR / ".agent" / "skills"
 
 # Skill inventory
 SKILLS = [

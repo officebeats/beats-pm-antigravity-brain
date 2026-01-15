@@ -55,7 +55,7 @@ class TestSystemStructure(unittest.TestCase):
             "KERNEL.md",
             "SETTINGS.md",
             ".gemini/skills",
-            "Beats-PM-System/requirements.txt"
+            "requirements.txt"
         ]
         
         missing = []
