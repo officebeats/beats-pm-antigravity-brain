@@ -52,12 +52,12 @@ If processing `BRAIN_DUMP.md`:
 
 **The Golden Rule**: Every task must have a **Product Anchor** and a **Status**.
 
-| Field        | Value Space                                                            |
-| :----------- | :--------------------------------------------------------------------- |
-| **Priority** | `Critical` (Boss/Fire), `High` (Now), `Medium` (Next), `Low` (Backlog) |
-
-| **Status** | `⏳ Pending`, `🚧 Active`, `⛔ Blocked`, `✅ Done` |
-| **Product** | Must match `SETTINGS.md` keys. |
+| Field        | Value Space                                                                  |
+| :----------- | :--------------------------------------------------------------------------- |
+| **Priority** | `P0` (Blocker/Fire), `P1` (Next Release), `P2` (Normal), `P3` (Nice to Have) |
+| **Effort**   | `S` (Hours), `M` (Days), `L` (Weeks), `XL` (Months)                          |
+| **Status**   | `⏳ Pending`, `🚧 Active`, `⛔ Blocked`, `✅ Done`                           |
+| **Product**  | Must match `SETTINGS.md` keys.                                               |
 
 ### Phase 4: Atomic Operations
 

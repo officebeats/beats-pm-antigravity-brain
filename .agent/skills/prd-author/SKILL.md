@@ -72,7 +72,19 @@ You MUST use the standard structure. Do not invent formats.
 
 ## 4. Success Metrics
 
-- [Metric 1] -> [Target]
+| Metric | Current Baseline | Target | Timeframe |
+| :----- | :--------------- | :----- | :-------- |
+| DAU    | 10k              | 15k    | Q3        |
+
+## 5. Risks & Mitigations (Pre-Mortem)
+
+- **Risk**: [What could go wrong?]
+- **Mitigation**: [How do we prevent it?]
+
+## 6. Dependencies & Rollout
+
+- **Dependencies**: [Legal, Ops, Marketing, specific API]
+- **GTM Strategy**: [Phased Rollout / Big Bang / Beta]
 ```
 
 ### Phase 4: Artifact Generation

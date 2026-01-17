@@ -4,6 +4,8 @@
 
 ### The Professional Second Brain for Product Managers
 
+**FAANG-Level Rigor. Strategy-First Execution. AI-Powered.**
+
 **Stop drowning in chaos. Capture everything. Let AI organize the rest.**
 
 [![Made for Antigravity](https://img.shields.io/badge/Made%20for-Antigravity-blueviolet?style=for-the-badge&logo=google)](https://antigravity.google/)
@@ -65,33 +67,32 @@ This edition is re-engineered as a **Skills-First Orchestration** system. It lev
 
 ---
 
-## 🤖 Meet Your AI Team
+## 🤖 Meet Your AI Team (Optimized for FAANG + MBB)
 
 You aren't just talking to one AI. You have a mesh of specialized "experts" working for you in the background. Each agent has a specific role and expertise.
 
-### 📋 Core Agents
+### 📋 Executive Agents
 
-|         Agent         | Role                         | What It Does                                                                                                |
-| :-------------------: | :--------------------------- | :---------------------------------------------------------------------------------------------------------- |
-|   **Boss Tracker**    | 🔥 Critical Priority Monitor | Never lets a boss request slip. All boss asks are Critical by default. Monitors deadlines and sends alerts. |
-|    **Bug Chaser**     | 🐛 Quality Control           | Follows up on bugs by SLA. Automatically triages issues into "Red", "Yellow", and "Green" priority levels.  |
-| **Daily Synthesizer** | 📅 Personal Assistant        | Prepares your `#morning`, `#lunch`, and `#eod` briefs using GPS-accelerated context lookup.                 |
-|   **Task Manager**    | 🧩 The Glue                  | Prevents things from slipping through cracks. Owns task lifecycle and enforces the `TASK_MASTER` ledger.    |
+|         Agent         | Role                   | What It Does                                                                                                          |
+| :-------------------: | :--------------------- | :-------------------------------------------------------------------------------------------------------------------- |
+|   **Boss Tracker**    | 🏛️ Executive Alignment | Actively manages up. Tracks **Sentiment** and enforces strict SLAs. Ensures no "Boss Ask" is dropped.                 |
+|  **Strategy Synth**   | ♟️ Strategy Director   | Enforces **MECE** logic and **SCQA** structure on all memos. Evaluates **7 Powers** (Moats) for every major decision. |
+| **Daily Synthesizer** | 📅 Chief of Staff      | Productivity Coach. Defines your **"Big Rocks"** (Top 3) for the day and protects your **Maker Time**.                |
 
-### 📝 Documentation Agents
+### 📝 Execution Agents
 
-|          Agent          | Role                        | What It Does                                                                                              |
-| :---------------------: | :-------------------------- | :-------------------------------------------------------------------------------------------------------- |
-|     **PRD Author**      | 📄 High-Fidelity Documenter | Translates strategy into technical blueprints. Creates "Dual-Audience" PRDs for executives and engineers. |
-| **Meeting Synthesizer** | 🗣️ Meeting Orchestrator     | Parses conversations, detects Product Context, and extracts Verbatim Quotes into the `quote-index`.       |
+|       Agent       | Role                 | What It Does                                                                                                 |
+| :---------------: | :------------------- | :----------------------------------------------------------------------------------------------------------- |
+| **Task Manager**  | 🧩 Execution Engine  | Manages the `TASK_MASTER` ledger. Uses **P0-P3** rigor and **T-Shirt Sizing** (S/M/L) for capacity planning. |
+|  **PRD Author**   | 📄 Product Architect | Writes Engineering Law. Enforces **Pre-Mortems**, **Success Metrics Tables**, and **Dependencies**.          |
+| **Meeting Synth** | 🗣️ Intelligence Unit | Enforces **BLUF** (Bottom Line Up Front). Tracks Decisions separately from **Parking Lot** items.            |
 
 ### 👥 Collaboration Agents
 
-|            Agent             | Role                   | What It Does                                                                      |
-| :--------------------------: | :--------------------- | :-------------------------------------------------------------------------------- |
-| **Engineering Collaborator** | 🔧 Tech Bridge         | Tracks spikes, questions, and architecture decisions. Bridges PM and engineering. |
-|     **UX Collaborator**      | 🎨 Experience Advocate | Tracks design tasks, surfaces needs from strategy, and enforces User Journeys.    |
-|   **Stakeholder Manager**    | 📢 The Diplomat        | Proactive stakeholder communication. Updates before they ask.                     |
+|        Agent        | Role               | What It Does                                                                                               |
+| :-----------------: | :----------------- | :--------------------------------------------------------------------------------------------------------- |
+| **Stakeholder Mgr** | 📢 The Diplomat    | Uses **DACI** (Driver, Approver, Contributor, Informed) framework to map influence and automate updates.   |
+|   **Bug Chaser**    | 🐛 Quality Control | Follows up on bugs by SLA. Automatically triages issues into "Red", "Yellow", and "Green" priority levels. |
 
 ---
 
@@ -101,13 +102,13 @@ The Brain uses **Zero-Friction Routing**. You don't need to know which agent is 
 
 ### 📅 Daily Briefing Commands
 
-|  Command   | Focus                | What It Does                                                              |
-| :--------: | :------------------- | :------------------------------------------------------------------------ |
-|   `#day`   | **The Master Brief** | Context-aware summary (Morning/Lunch/EOD) of what matters most right now. |
-| `#morning` | Morning Routine      | Your start-of-day punch list including Critical Boss requests.            |
-|  `#lunch`  | Mid-day Pivot        | A quick pulse check on blockers and afternoon priorities.                 |
-|   `#eod`   | Wrap Up              | "End of Day" summary and a preview of tomorrow's priorities.              |
-| `#status`  | Status Check         | Alias for `#day` - shows current status using `[Emoji] [Text]` format.    |
+|  Command   | Focus                | What It Does                                                           |
+| :--------: | :------------------- | :--------------------------------------------------------------------- |
+|   `#day`   | **The Master Brief** | Context-aware summary of **"Big Rocks"** vs. **Manager Time**.         |
+| `#morning` | Morning Routine      | Your start-of-day punch list including Critical Boss requests.         |
+|  `#lunch`  | Mid-day Pivot        | A quick pulse check on blockers and afternoon priorities.              |
+|   `#eod`   | Wrap Up              | "End of Day" summary and a preview of tomorrow's priorities.           |
+| `#status`  | Status Check         | Alias for `#day` - shows current status using `[Emoji] [Text]` format. |
 
 ### 📥 Capture & Import Commands
 
@@ -121,7 +122,7 @@ The Brain uses **Zero-Friction Routing**. You don't need to know which agent is 
 |       Command       | Focus           | What It Does                                                                |
 | :-----------------: | :-------------- | :-------------------------------------------------------------------------- |
 |  `#prd [subject]`   | Document Author | Translates strategy into a high-fidelity PRD (Executive Logic + Eng Specs). |
-|  `#feature [text]`  | Strategic Asks  | Documents a new feature request or strategic improvement with Source Truth. |
+| `#strategy [text]`  | Strategic Memos | Drafts a **MECE** strategic memo or roadmap using **SCQA**.                 |
 | `#braindump [text]` | Random Thoughts | Parks unstructured thoughts in `BRAIN_DUMP.md` for later triage.            |
 
 ### 🗣️ Meeting Commands
@@ -131,13 +132,7 @@ The Brain uses **Zero-Friction Routing**. You don't need to know which agent is 
 | `#transcript [paste]` | Call Audio/Text    | Extracts action items, decisions, and roadmap concepts from raw transcripts. |
 |  `#meeting [paste]`   | Hand-written Notes | Converts raw notes into structured artifacts with owners and deadlines.      |
 |   `#1on1 [person]`    | People Sync        | Templated sync for performance tracking and feedback loops.                  |
-
-### 🔧 Engineering Commands
-
-|    Command    | Focus           | What It Does                                                                           |
-| :-----------: | :-------------- | :------------------------------------------------------------------------------------- |
-| `#eng [text]` | Tech Tasks      | Routes architecture questions, tech debt, or dev-ops items to the Engineering tracker. |
-| `#eng spike`  | Technical Spike | Creates a dedicated investigation task.                                                |
+|        `#boss`        | Managing Up        | Logs a critical request from leadership and tracks sentiment.                |
 
 ### 🛠️ System Commands
 
