@@ -1,6 +1,6 @@
 # System Kernel (Universal Orchestration Protocol)
 
-**Version**: 4.7.1 (Antigravity Native)
+**Version**: 4.8.0 (FAANG PM / MBB Optimization)
 
 > **SYSTEM PROMPT**: All agents listed below are part of a connected mesh. Any agent can call any other agent if the input requires it.
 

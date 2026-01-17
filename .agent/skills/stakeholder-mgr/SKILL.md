@@ -30,11 +30,18 @@ author: Beats PM Brain
 
 ### Phase 1: The Influence Matrix
 
-Consult `4. People/PEOPLE.md`. For every initiative, map:
+Consult `4. People/PEOPLE.md`. For every initiative, map roles using **DACI**:
 
-- **High Influence / High Interest**: Manage Closely (Daily/Weekly).
-- **High Influence / Low Interest**: Keep Satisfied (Bi-Weekly).
-- **Low Influence / High Interest**: Keep Informed (Newsletters).
+- **Driver (D)**: The one person who herds the cats. (Usually You).
+- **Approver (A)**: The one person who decides. (Usually Boss).
+- **Contributors (C)**: The subject matter experts.
+- **Informed (I)**: The people who need to know.
+
+Then apply the **Stakeholder Map**:
+
+- **High Influence / High Interest**: Manage Closely (Daily/Weekly) [A/C].
+- **High Influence / Low Interest**: Keep Satisfied (Bi-Weekly) [A].
+- **Low Influence / High Interest**: Keep Informed (Newsletters) [I].
 
 ### Phase 2: The Update Engine (Drafting)
 

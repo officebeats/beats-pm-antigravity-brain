@@ -35,16 +35,15 @@ Before writing a word, verify alignment via `SETTINGS.md`:
 
 1.  **Objective**: What is the P0 Goal for this H1?
 2.  **Constraint**: What is the resource reality?
-3.  **Moat**: Does this increase our 7 Powers (e.g., Switching Costs, Network Effects)?
+3.  **Moat**: Explicitly check the **7 Powers** (Network Effects, Switching Costs, Scale Economies, Counter-Positioning, etc.).
 
-### Phase 2: The SCQA Framework (Executive Comms)
+### Phase 2: The Framework Selector
 
-Refuse to write "fluff". Use **SCQA** for all memos:
+Choose the right tool for the job:
 
-- **S (Situation)**: The unarguable facts.
-- **C (Complication)**: The friction or change in the market.
-- **Q (Question)**: What must we do?
-- **A (Answer)**: The Core Strategy (The Pivot).
+- **For Context/Memos**: Use **SCQA** (Situation, Complication, Question, Answer).
+- **For Quick Decisions**: Use **Driscoll’s Model** (What? So What? Now What?).
+- **For Logic**: Enforce **MECE** (Mutually Exclusive, Collectively Exhaustive).
 
 ### Phase 3: Roadmap Generation (The Horizons)
 

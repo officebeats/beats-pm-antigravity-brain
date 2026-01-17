@@ -58,13 +58,11 @@ You MUST use the standard template structure in `3. Meetings/reports/`:
 ```markdown
 # Meeting: [Title]
 
-> Date: YYYY-MM-DD | Type: [Type]
+> Date: YYYY-MM-DD | Type: [Type] | Attendees: [List]
 
-## ⚡ Executive Summary
+## ⚡ TL;DR (BLUF)
 
-- [Bullet 1: The big headline]
-- [Bullet 2: The friction]
-- [Bullet 3: The outcome]
+[Max 3 sentences: The core outcome. What did we decide? What is the risk?]
 
 ## 🏛️ Decisions
 
@@ -72,11 +70,15 @@ You MUST use the standard template structure in `3. Meetings/reports/`:
 | :---------- | :-------- | :---- |
 | Use Next.js | SEO perf  | @cto  |
 
+## 🅿️ Parking Lot (Discuss Later)
+
+- [Topic to be revisited]
+
 ## ✅ Action Items
 
 | Task   | Owner | Priority |
 | :----- | :---- | :------- |
-| [Task] | @name | High     |
+| [Task] | @name | P1       |
 ```
 
 ### Phase 4: Long Term Memory Commit
