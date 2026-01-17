@@ -13,7 +13,7 @@ author: Beats PM Brain
 
 ### Inputs
 
-- **Keywords**: `#ui`, `#frontend`, `#design-system`, `#animate`, `#component`
+- **Keywords**: `#ui`, `#frontend`, `#design-system`, `#animate`, `#component`, `#design`
 - **Context**: File Paths (`src/components/...`), Design Requirements (e.g., "Create a card with hover effect").
 
 ### Outputs
