@@ -82,4 +82,5 @@ Log visual bugs specifically:
 - **To `prd-author`**: Embed the User Journey into the Spec.
 - **To `visual-processor`**: If input is a screenshot of a UI.
 - **To `bug-chaser`**: If a design issue is a production bug.
+- **To `frontend-architect`**: For implementation of verified designs (the "Builder").
 - **To `task-manager`**: To track the "Create Mockups" task.

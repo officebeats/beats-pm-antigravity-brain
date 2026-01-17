@@ -78,3 +78,4 @@ Implement `it/test` blocks:
 - **To `bug-chaser`**: If testing reveals a logic bug in the source code.
 - **To `engineering-collab`**: For architectural questions hindering testing.
 - **To `ux-collab`**: If the UI behavior contradicts design intent.
+- **To `frontend-architect`**: If the component structure makes testing difficult (Refactor Request).

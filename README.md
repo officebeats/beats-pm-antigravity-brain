@@ -53,8 +53,6 @@ Once the folder is open in Antigravity, just type:
 
 ---
 
----
-
 ## ⚡ Gemini-Native Architecture (v4.4.1 - Centrifuge)
 
 This edition is re-engineered as a **Skills-First Orchestration** system. It leverages the latest **Gemini CLI Agent Skills** protocol for maximum efficiency, modularity, and speed.
@@ -100,6 +98,8 @@ You aren't just talking to one AI. You have a mesh of specialized "experts" work
 |     **UX Collaborator**      | 🎨 PM-UX Bridge          | Tracks design tasks, surfaces needs from strategy, and bridges PM and UX teams.              |
 |   **Stakeholder Manager**    | 📢 Communication Expert  | Proactive stakeholder communication. Updates before they ask.                                |
 |    **Delegation Manager**    | ✅ Accountability Expert | Tracks tasks assigned to others. Ensures no task handed off falls through cracks.            |
+|    **Frontend Architect**    | 💅 Pixel Perfectionist   | Enforces strict `ibelick/ui-skills` standards. Ensures Tailwind/Framer best practices.       |
+|     **Frontend Testing**     | 🧪 QA Sentinel           | Writes Jest/React Testing Library tests. Ensures clean unit/integration coverage.            |
 
 ### 🧠 Strategy Agents
 

@@ -90,5 +90,6 @@ Generate the `.md` file in `2. Products/[Company]/[Product]/PRDs/`:
 ## 3. Cross-Skill Routing
 
 - **To `engineering-collab`**: Once PRD is drafted, to request technical review.
-- **To `ux-collab`**: If UI/Mockups are needed.
+- **To `ux-collab`**: For user journey and wireframe definition.
+- **To `frontend-architect`**: If high-fidelity UI specifications are required.
 - **To `task-manager`**: To break down the PRD into epic/tasks after approval.
