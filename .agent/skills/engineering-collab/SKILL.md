@@ -85,4 +85,5 @@ Convert "Geek Speak" to "Suit Speak":
 - **To `prd-author`**: If technical constraints kill a feature.
 - **To `task-manager`**: To track the Spike or Refactor task.
 - **To `daily-synth`**: If an Engineering Blocker arises.
+- **To `frontend-architect`**: For specific UI/UX engineering implementation guidance.
 - **To `stakeholder-mgr`**: To communicate downtime or risks.

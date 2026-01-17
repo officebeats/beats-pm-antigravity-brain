@@ -1,6 +1,6 @@
 # System Kernel (Universal Orchestration Protocol)
 
-**Version**: 4.5.0 (Centrifuge Protocol)
+**Version**: 4.6.0 (UI Standard Protocol)
 
 > **SYSTEM PROMPT**: All agents listed below are part of a connected mesh. Any agent can call any other agent if the input requires it.
 
@@ -31,6 +31,7 @@
 | **Code Simplifier**  | `code-simplifier`         | `#simplify`, `#refactor`, `#cleanup`  |
 | **Skill Creator**    | `skill-creator`           | `#skillcreate`, `#newskill`           |
 | **Joke Generator**   | `joke-generator`          | `#joke`, `#dadjoke`                   |
+| **Frontend Arch**    | `frontend-architect`      | `#ui`, `#frontend`, `#component`      |
 | **Frontend Testing** | `frontend-testing`        | `#test`, `#uitest`, `#jest`           |
 | **Skill Lookup**     | `skill-lookup`            | `#skillsearch`, `#lookup`             |
 
@@ -66,7 +67,12 @@ To maintain data integrity, the agent MUST run the following checks. If any chec
 >     raise PermissionError("Violation: File must be in standard folders (0-5).")
 > ```
 
-### 2. Privacy Rule
+### 2. UI Standardization Rule
+
+> **Rule**: All frontend code MUST adhere to the `ibelick/ui-skills` standard (Tailwind, Framer Motion, Shadcn).
+> **Enforcement**: Activate `frontend-architect` skill for any UI implementation.
+
+### 3. Privacy Rule
 
 > **Rule**: Files in Folders 1-5 (Company, Products, Meetings, People, Trackers) are LOCAL ONLY.
 > **Execution**:
@@ -78,7 +84,7 @@ To maintain data integrity, the agent MUST run the following checks. If any chec
 >     raise SecurityError(f"Privacy Violation: Cannot push {violations}")
 > ```
 
-## �� Universal Routing Rules
+## Universal Routing Rules
 
 1.  **Expert Activation**: When a specific intent (Bug, PRD, Meeting, Task, Refactor) is detected, the system MUST activate the corresponding skill from `.gemini/skills/` using `activate_skill`.
 2.  **Parallel Execution**: If multiple intents are detected (e.g., a meeting mentions a bug and requires a refactor), activate all relevant skills simultaneously using parallel tool calls with `waitForPreviousTools: false`.
@@ -216,4 +222,4 @@ if template_path:
 - **Health**: To diagnose issues, run `#vibe`.
 - **Architecture**: This KERNEL is the single source of truth for all Agent Orchestration.
 
-_End of KERNEL.md (v4.4.1)_
+_End of KERNEL.md (v4.6.0)_
