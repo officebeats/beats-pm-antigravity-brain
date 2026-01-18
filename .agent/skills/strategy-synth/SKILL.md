@@ -1,13 +1,13 @@
 ---
 name: strategy-synthesizer
-description: The Pattern Recognizer. Analyzes company strategy, aligns tactical work with long-term OKRs, and produces executive-level memos.
+description: Synthesize strategy and goals.
 triggers:
-  - "#strategy"
-  - "#vision"
-  - "#roadmap"
-  - "#market"
-  - "#okr"
-version: 3.0.0 (Native)
+  - "/strategy"
+  - "/vision"
+  - "/roadmap"
+  - "/market"
+  - "/okr"
+version: 3.1.0 (Slash Command)
 author: Beats PM Brain
 ---
 
@@ -19,7 +19,7 @@ author: Beats PM Brain
 
 ### Inputs
 
-- **Triggers**: `#strategy`, `#roadmap`
+- **Triggers**: `/strategy`, `/roadmap`
 - **Context**: Date range (Quarter/Year), Company Mission.
 
 ### Tools

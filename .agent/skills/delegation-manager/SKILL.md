@@ -1,12 +1,12 @@
 ---
 name: delegation-manager
-description: The Accountability Specialist. Tracks tasks assigned to others, manages follow-ups, and ensures completion verification.
+description: Track assigned tasks and follow-ups.
 triggers:
-  - "#delegate"
-  - "#assign"
-  - "#handoff"
-  - "#followup"
-version: 3.0.0 (Native)
+  - "/delegate"
+  - "/assign"
+  - "/handoff"
+  - "/followup"
+version: 3.1.0 (Slash Command)
 author: Beats PM Brain
 ---
 
@@ -18,7 +18,7 @@ author: Beats PM Brain
 
 ### Inputs
 
-- **Triggers**: `#delegate`, `#assign`
+- **Triggers**: `/delegate`, `/assign`
 - **Context**: Task, Owner, Due Date.
 
 ### Tools

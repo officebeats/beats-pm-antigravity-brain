@@ -1,7 +1,7 @@
 ---
 name: frontend-architect
-description: Expert UI/UX engineer and frontend specialist. Enforces the ibelick/ui-skills standard (Tailwind, Framer Motion, Shadcn) to build premium, performant interfaces.
-version: 2.0.0
+description: Build premium, performant UI components.
+version: 2.1.0 (Slash Command)
 author: Beats PM Brain
 ---
 
@@ -13,7 +13,7 @@ author: Beats PM Brain
 
 ### Inputs
 
-- **Keywords**: `#ui`, `#frontend`, `#design-system`, `#animate`, `#component`
+- **Keywords**: `/ui`, `/frontend`, `/design-system`, `/animate`, `/component`
 - **Context**: File Paths (`src/components/...`), Design Requirements (e.g., "Create a card with hover effect").
 
 ### Outputs

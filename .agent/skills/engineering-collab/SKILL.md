@@ -1,13 +1,13 @@
 ---
 name: engineering-collaborator
-description: The Technical Bridge. Manages architecture decisions, tech debt, and translates technical constraints to business impact.
+description: Architecture, tech debt, and spike management.
 triggers:
-  - "#eng"
-  - "#tech"
-  - "#spike"
-  - "#architecture"
-  - "#adr"
-version: 3.0.0 (Native)
+  - "/eng"
+  - "/tech"
+  - "/spike"
+  - "/architecture"
+  - "/adr"
+version: 3.1.0 (Slash Command)
 author: Beats PM Brain
 ---
 
@@ -19,7 +19,7 @@ author: Beats PM Brain
 
 ### Inputs
 
-- **Triggers**: `#eng`, `#adr`
+- **Triggers**: `/eng`, `/adr`
 - **Context**: Engineering constraints, Tech Debt.
 
 ### Tools

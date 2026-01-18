@@ -125,36 +125,36 @@
 
 | Command     | Action             |
 | ----------- | ------------------ |
-| `#boss`     | Boss request       |
-| `#bug`      | Bug                |
-| `#task`     | Task               |
-| `#feature`  | Feature request    |
-| `#ux`       | UX task            |
-| `#eng`      | Engineering item   |
-| `#note`     | Note               |
-| `#strategy` | Strategy synthesis |
+| `/boss`     | Boss request       |
+| `/bug`      | Bug                |
+| `/task`     | Task               |
+| `/feature`  | Feature request    |
+| `/ux`       | UX task            |
+| `/eng`      | Engineering item   |
+| `/note`     | Note               |
+| `/strategy` | Strategy synthesis |
 
 ### Meeting/Notes (Parallel Agents)
 
 | Command       | Action           |
 | ------------- | ---------------- |
-| `#transcript` | Call transcripts |
-| `#meeting`    | Meeting notes    |
-| `#notes`      | Raw notes        |
-| `#call`       | Call capture     |
-| `#1on1`       | 1:1 notes        |
-| `#standup`    | Standup notes    |
+| `/transcript` | Call transcripts |
+| `/meeting`    | Meeting notes    |
+| `/notes`      | Raw notes        |
+| `/call`       | Call capture     |
+| `/1on1`       | 1:1 notes        |
+| `/standup`    | Standup notes    |
 
 ### Briefs
 
 | Command    | Action                           |
 | ---------- | -------------------------------- |
-| `#day`     | On-demand brief (adapts to time) |
-| `#morning` | Morning brief                    |
-| `#lunch`   | Midday brief                     |
-| `#eod`     | End of day brief                 |
-| `#weekly`  | Weekly summary                   |
-| `#monthly` | Monthly summary                  |
+| `/day`     | On-demand brief (adapts to time) |
+| `/morning` | Morning brief                    |
+| `/lunch`   | Midday brief                     |
+| `/eod`     | End of day brief                 |
+| `/weekly`  | Weekly summary                   |
+| `/monthly` | Monthly summary                  |
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: skill-creator
-description: The Meta-Architect of the Brain. Generates new AI agent skills based on the Gamma-Class v2.0 Schema. Use for #skillcreate to extend the system's capabilities.
-version: 2.0.0
+description: Generate new AI agent skills.
+version: 2.1.0 (Slash Command)
 author: Beats PM Brain
 ---
 
@@ -13,7 +13,7 @@ author: Beats PM Brain
 
 ### Inputs
 
-- **Keywords**: `#skillcreate`
+- **Keywords**: `/skillcreate`
 - **Arguments**: `[Skill Name]`, `[Description]`, `[Goal]`
 - **Context**: User Requirements, existing skills (for reference).
 

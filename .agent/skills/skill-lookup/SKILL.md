@@ -1,12 +1,12 @@
 ---
 name: skill-lookup
-description: The Librarian. Searches, inspects, and explains available AI skills using the native JSON index.
+description: Search and explain available skills.
 triggers:
-  - "#skillsearch"
-  - "#lookup"
-  - "#findskill"
-  - "#help"
-version: 3.0.0 (Native)
+  - "/skillsearch"
+  - "/lookup"
+  - "/findskill"
+  - "/help"
+version: 3.1.0 (Slash Command)
 author: Beats PM Brain
 ---
 
@@ -18,7 +18,7 @@ author: Beats PM Brain
 
 ### Inputs
 
-- **Triggers**: `#help`, `#lookup`
+- **Triggers**: `/help`, `/lookup`
 - **Context**: "How do I do X?"
 
 ### Tools

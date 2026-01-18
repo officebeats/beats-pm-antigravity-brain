@@ -1,13 +1,13 @@
 ---
 name: task-manager
-description: The Execution Engine. Manages the lifecycle of work from Brain Dump to Done. Owns the 'Single Source of Truth' (TASK_MASTER).
+description: Manage tasks and priorities.
 triggers:
-  - "#task"
-  - "#todo"
-  - "#triage"
-  - "#plan"
-  - "#organize"
-version: 3.0.0 (Native)
+  - "/task"
+  - "/todo"
+  - "/triage"
+  - "/plan"
+  - "/organize"
+version: 3.1.0 (Slash Command)
 author: Beats PM Brain
 ---
 
@@ -19,7 +19,7 @@ author: Beats PM Brain
 
 ### Inputs
 
-- **Triggers**: `#task`, `#triage`, `#plan`
+- **Triggers**: `/task`, `/triage`, `/plan`
 - **Context**: `BRAIN_DUMP.md` (Inbox), `TASK_MASTER.md` (Database).
 
 ### Tools
@@ -48,7 +48,7 @@ If processing `BRAIN_DUMP.md`:
     - **Task** -> Keep here.
 3.  **Action**: Move valid tasks to `TASK_MASTER.md` and **clear** them from `BRAIN_DUMP.md`.
 
-### Phase 3: The Ledger Protocol (`#task`, `#plan`)
+### Phase 3: The Ledger Protocol (`/task`, `/plan`)
 
 **The Golden Rule**: Every task must have a **Product Anchor** and a **Status**.
 

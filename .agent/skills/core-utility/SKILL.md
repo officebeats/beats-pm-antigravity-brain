@@ -1,7 +1,7 @@
 ---
 name: core-utility
-description: System maintenance, health checks, and environment setup. Use for #vibe, #update, and cleaning the system.
-version: 2.0.0
+description: System health and diagnostics.
+version: 2.1.0 (Slash Command)
 author: Beats PM Brain
 ---
 
@@ -13,7 +13,7 @@ author: Beats PM Brain
 
 ### Inputs
 
-- **Commands**: `#vibe`, `#update`, `#vacuum`, `#help`
+- **Commands**: `/vibe`, `/update`, `/vacuum`, `/help`
 - **Arguments**: Optional flags for specific checks or cleaning scopes.
 
 ### Outputs

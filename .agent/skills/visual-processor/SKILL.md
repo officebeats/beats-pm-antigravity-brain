@@ -1,7 +1,7 @@
 ---
 name: visual-processor
-description: The Eyes of the PM Brain. Expertise in multi-modal analysis for images, screenshots, charts, and documents. Use for #screenshot, #paste with images, UI/UX review, or any visual content analysis.
-version: 2.0.0
+description: Analyze images and screenshots.
+version: 2.1.0 (Slash Command)
 author: Beats PM Brain
 ---
 
@@ -13,7 +13,7 @@ author: Beats PM Brain
 
 ### Inputs
 
-- **Keywords**: `#screenshot`, `#paste`, `#image`, `#chart`
+- **Keywords**: `/screenshot`, `/paste`, `/image`, `/chart`
 - **Context**: Image Files, Clipboard Content, OCR Text.
 
 ### Outputs

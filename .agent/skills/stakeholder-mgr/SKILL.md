@@ -1,12 +1,12 @@
 ---
 name: stakeholder-manager
-description: The Diplomat. Manages proactive stakeholder communication, tracks preferences, and ensures alignment across partnerships.
+description: Manage proactive stakeholder communication.
 triggers:
-  - "#stakeholder"
-  - "#update"
-  - "#partner"
-  - "#align"
-version: 3.0.0 (Native)
+  - "/stakeholder"
+  - "/update"
+  - "/partner"
+  - "/align"
+version: 3.1.0 (Slash Command)
 author: Beats PM Brain
 ---
 
@@ -18,7 +18,7 @@ author: Beats PM Brain
 
 ### Inputs
 
-- **Triggers**: `#stakeholder`, `#update`
+- **Triggers**: `/stakeholder`, `/update`
 - **Context**: Status, Delays, Wins.
 
 ### Tools

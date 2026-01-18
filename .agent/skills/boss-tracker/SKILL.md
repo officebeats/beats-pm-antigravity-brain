@@ -1,12 +1,12 @@
 ---
 name: boss-tracker
-description: The Shield. Tracks high-priority requests from leadership with verbatim capture, SLA enforcement, and proactive status updates.
+description: Track high-priority leadership requests.
 triggers:
-  - "#boss"
-  - "#leadership"
-  - "#urgent"
-  - "#critical"
-version: 3.0.0 (Native)
+  - "/boss"
+  - "/leadership"
+  - "/urgent"
+  - "/critical"
+version: 3.1.0 (Slash Command)
 author: Beats PM Brain
 ---
 
@@ -18,7 +18,7 @@ author: Beats PM Brain
 
 ### Inputs
 
-- **Triggers**: `#boss`, `#urgent`
+- **Triggers**: `/boss`, `/urgent`
 - **Context**: Verbatim Quote, Speaker, Deadline.
 
 ### Tools

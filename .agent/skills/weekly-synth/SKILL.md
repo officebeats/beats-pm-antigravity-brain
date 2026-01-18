@@ -1,12 +1,12 @@
 ---
 name: weekly-synthesizer
-description: The Archivist. Generates weekly and monthly summaries with trajectory analysis, metrics, and executive-ready rollups.
+description: Generate weekly status summaries.
 triggers:
-  - "#weekly"
-  - "#monthly"
-  - "#rollup"
-  - "#retrospective"
-version: 3.0.0 (Native)
+  - "/weekly"
+  - "/monthly"
+  - "/rollup"
+  - "/retrospective"
+version: 3.1.0 (Slash Command)
 author: Beats PM Brain
 ---
 
@@ -18,7 +18,7 @@ author: Beats PM Brain
 
 ### Inputs
 
-- **Triggers**: `#weekly`, `#monthly`
+- **Triggers**: `/weekly`, `/monthly`
 - **Context**: Last 7 days of logs.
 
 ### Tools

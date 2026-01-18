@@ -1,7 +1,7 @@
 ---
 name: crm
-description: Expertise in managing project people, stakeholder preferences, and performance tracking. Use for #1on1, #stakeholder, and people-related tasks.
-version: 2.0.0
+description: Manage stakeholder relationships and 1:1s.
+version: 2.1.0 (Slash Command)
 author: Beats PM Brain
 ---
 
@@ -13,7 +13,7 @@ author: Beats PM Brain
 
 ### Inputs
 
-- **Keywords**: `#crm`, `#1on1`, `#person`, `#stakeholder`, `#whois`
+- **Keywords**: `/crm`, `/1on1`, `/person`, `/stakeholder`, `/whois`
 - **Arguments**: Name of person, topic for discussion.
 - **Context**: Upcoming meetings, recent interactions.
 
