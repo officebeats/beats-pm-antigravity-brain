@@ -1,7 +1,7 @@
 ---
 name: joke-generator
-description: A fun utility skill that provides dad jokes on demand. Use for #joke, #laugh, or #dadjoke.
-version: 2.0.0
+description: Dad jokes on demand.
+version: 2.1.0 (Slash Command)
 author: Beats PM Brain
 ---
 
@@ -13,7 +13,7 @@ author: Beats PM Brain
 
 ### Inputs
 
-- **Keywords**: `#joke`, `#dadjoke`, `#laugh`
+- **Keywords**: `/joke`, `/dadjoke`, `/laugh`
 - **Context**: User mood (optional).
 
 ### Outputs

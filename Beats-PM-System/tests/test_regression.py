@@ -141,7 +141,7 @@ class TestCommandRouting(unittest.TestCase):
                 if skill is None:
                     continue  # System command
                 path = SKILLS_DIR / skill / "SKILL.md"
-                self.assertTrue(path.exists(), f"#{command} → {skill} missing")
+                self.assertTrue(path.exists(), f"/{command} → {skill} missing")
     
     def test_command_count(self):
         """Should test at least 45 commands."""

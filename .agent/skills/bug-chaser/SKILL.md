@@ -1,13 +1,13 @@
 ---
 name: bug-chaser
-description: The Quality Gate. Manages the complete bug lifecycle from discovery to remediation with SLA tracking.
+description: Manage bug lifecycle and SLAs.
 triggers:
-  - "#bug"
-  - "#issue"
-  - "#defect"
-  - "#broken"
-  - "#crash"
-version: 3.0.0 (Native)
+  - "/bug"
+  - "/issue"
+  - "/defect"
+  - "/broken"
+  - "/crash"
+version: 3.1.0 (Slash Command)
 author: Beats PM Brain
 ---
 
@@ -19,7 +19,7 @@ author: Beats PM Brain
 
 ### Inputs
 
-- **Triggers**: `#bug`, `#defect`
+- **Triggers**: `/bug`, `/defect`
 - **Context**: Reproduction steps, severity, screenshots.
 
 ### Tools

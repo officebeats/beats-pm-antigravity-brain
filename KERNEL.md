@@ -201,6 +201,24 @@ The System should nudge the user intelligently based on context:
 
 ---
 
+## 🔗 Daisy-Chain Handover Protocol
+
+To enable seamless "Chain of Thought" workflows where the output of one skill triggers the next:
+
+> **Rule**: All Skills must define a clear **Output Contract**.
+
+1.  **Structured Handoff**: When a skill completes, it must provide a clear summary that serves as the `Input Context` for the next skill.
+2.  **Manifest File**: Complex operations (like PRD generation) must output a temporary `_manifest.json` or clearly labeled section in the artifact listing created files.
+    - _Example_: `[OUTPUT_MANIFEST]: {"primary": "path/to/prd.md", "supporting": ["path/to/diagram.mermaid"]}`
+3.  **Chain Syntax**:
+    - Users can chain commands: `#transcript -> #prd -> #task`
+    - The System interprets this as:
+      1.  Run `meeting-synth` (#transcript) -> Output: `meeting_notes.md`
+      2.  Run `prd-author` (#prd) with Input: `meeting_notes.md` -> Output: `spec.md`
+      3.  Run `task-manager` (#task) with Input: `spec.md` -> Output: `tasks.md`
+
+---
+
 ## 🎼 Gemini CLI Conductor-First Protocol
 
 **Rule**: The PM Brain operates on a **"Conductor-First-Always"** basis.
@@ -228,4 +246,4 @@ if template_path:
 - **Health**: To diagnose issues, run `#vibe`.
 - **Architecture**: This KERNEL is the single source of truth for all Agent Orchestration.
 
-_End of KERNEL.md (v4.7.0)_
+_End of KERNEL.md (v4.9.0)_

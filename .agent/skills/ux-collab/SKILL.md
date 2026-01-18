@@ -1,12 +1,12 @@
 ---
 name: ux-collaborator
-description: The Experience Advocate. Manages PM-UX collaboration, design handoffs, and user journey enforcement.
+description: Manage PM-UX collaboration.
 triggers:
-  - "#ux"
-  - "#design"
-  - "#wireframe"
-  - "#journey"
-version: 3.0.0 (Native)
+  - "/ux"
+  - "/design"
+  - "/wireframe"
+  - "/journey"
+version: 3.1.0 (Slash Command)
 author: Beats PM Brain
 ---
 
@@ -18,12 +18,12 @@ author: Beats PM Brain
 
 ### Inputs
 
-- **Triggers**: `#ux`, `#design`
+- **Triggers**: `/ux`, `/design`
 - **Context**: Figma links, Screenshots, User Flows.
 
 ### Tools
 
-- `view_file`: Read `PRDs`.
+- `view_file`: Read `2. Products/` (PRDs).
 - `turbo_dispatch`: Process visual assets.
 
 ## 2. Cognitive Protocol

@@ -57,7 +57,7 @@ Once the folder is open in Antigravity, just type:
 
 ## ⚡ Antigravity Native Architecture
 
-This edition is re-engineered as a **Skills-First Orchestration** system. It leverages the latest **Antigravity Native** protocol for O(1) efficiency and zero latency.
+This edition is re-engineered as a **Skills-First Orchestration** system. It leverages the latest **Antigravity Native** protocol for O(1) efficiency and zero latency. Designed for the **Gemini CLI Ecosystem**.
 
 - **Antigravity GPS Protocol**: O(1) content retrieval system. The agents never "crawl" files; they use a persistent index (`content_index.json`) to find documents instantly.
 - **Async Task Mesh**: Heavy operations (Vacuuming, Archiving, Re-indexing) are automatically offloaded to a background thread (`task_queue.py`), ensuring your terminal remains responsive.
@@ -104,43 +104,44 @@ The Brain uses **Zero-Friction Routing**. You don't need to know which agent is 
 
 |  Command   | Focus                | What It Does                                                           |
 | :--------: | :------------------- | :--------------------------------------------------------------------- |
-|   `#day`   | **The Master Brief** | Context-aware summary of **"Big Rocks"** vs. **Manager Time**.         |
-| `#morning` | Morning Routine      | Your start-of-day punch list including Critical Boss requests.         |
-|  `#lunch`  | Mid-day Pivot        | A quick pulse check on blockers and afternoon priorities.              |
-|   `#eod`   | Wrap Up              | "End of Day" summary and a preview of tomorrow's priorities.           |
-| `#status`  | Status Check         | Alias for `#day` - shows current status using `[Emoji] [Text]` format. |
+|   `/day`   | **The Master Brief** | Context-aware summary of **"Big Rocks"** vs. **Manager Time**.         |
+| `/morning` | Morning Routine      | Your start-of-day punch list including Critical Boss requests.         |
+|  `/lunch`  | Mid-day Pivot        | A quick pulse check on blockers and afternoon priorities.              |
+|   `/eod`   | Wrap Up              | "End of Day" summary and a preview of tomorrow's priorities.           |
+| `/status`  | Status Check         | Alias for `/day` - shows current status using `[Emoji] [Text]` format. |
+|  `/today`  | Daily View           | Displays "Today's List" (The Battlefield) for immediate execution.     |
 
 ### 📥 Capture & Import Commands
 
 |  Command   | Focus            | What It Does                                                                          |
 | :--------: | :--------------- | :------------------------------------------------------------------------------------ |
-|  `#paste`  | **Magic Import** | Pulls whatever is on your Clipboard (Files, Images, or Text) into the system.         |
-| `#process` | Logic Commit     | Tells agents to analyze, move, and organize everything currently in your "Drop Zone". |
+|  `/paste`  | **Magic Import** | Pulls whatever is on your Clipboard (Files, Images, or Text) into the system.         |
+| `/process` | Logic Commit     | Tells agents to analyze, move, and organize everything currently in your "Drop Zone". |
 
 ### 📄 Documentation Commands
 
-|       Command       | Focus           | What It Does                                                                |
-| :-----------------: | :-------------- | :-------------------------------------------------------------------------- |
-|  `#prd [subject]`   | Document Author | Translates strategy into a high-fidelity PRD (Executive Logic + Eng Specs). |
-| `#strategy [text]`  | Strategic Memos | Drafts a **MECE** strategic memo or roadmap using **SCQA**.                 |
-| `#braindump [text]` | Random Thoughts | Parks unstructured thoughts in `BRAIN_DUMP.md` for later triage.            |
+|   Command    | Focus           | What It Does                                                                |
+| :----------: | :-------------- | :-------------------------------------------------------------------------- |
+|    `/prd`    | Document Author | Translates strategy into a high-fidelity PRD (Executive Logic + Eng Specs). |
+| `/strategy`  | Strategic Memos | Drafts a **MECE** strategic memo or roadmap using **SCQA**.                 |
+| `/braindump` | Random Thoughts | Parks unstructured thoughts in `BRAIN_DUMP.md` for later triage.            |
 
 ### 🗣️ Meeting Commands
 
-|        Command        | Focus              | What It Does                                                                 |
-| :-------------------: | :----------------- | :--------------------------------------------------------------------------- |
-| `#transcript [paste]` | Call Audio/Text    | Extracts action items, decisions, and roadmap concepts from raw transcripts. |
-|  `#meeting [paste]`   | Hand-written Notes | Converts raw notes into structured artifacts with owners and deadlines.      |
-|   `#1on1 [person]`    | People Sync        | Templated sync for performance tracking and feedback loops.                  |
-|        `#boss`        | Managing Up        | Logs a critical request from leadership and tracks sentiment.                |
+|    Command    | Focus              | What It Does                                                                 |
+| :-----------: | :----------------- | :--------------------------------------------------------------------------- |
+| `/transcript` | Call Audio/Text    | Extracts action items, decisions, and roadmap concepts from raw transcripts. |
+|  `/meeting`   | Hand-written Notes | Converts raw notes into structured artifacts with owners and deadlines.      |
+|    `/1on1`    | People Sync        | Templated sync for performance tracking and feedback loops.                  |
+|    `/boss`    | Managing Up        | Logs a critical request from leadership and tracks sentiment.                |
 
 ### 🛠️ System Commands
 
 |  Command  | Focus       | What It Does                                                                   |
 | :-------: | :---------- | :----------------------------------------------------------------------------- |
-| `#update` | System Sync | Fetches latest brain mesh and runs `core_setup.py` to ensure platform parity.  |
-|  `#help`  | User Guide  | Displays the full Command Menu and provides an onboarding assist.              |
-|  `#vibe`  | Diagnostics | Runs system health diagnostics and saves report to `Beats-PM-System/reports/`. |
+| `/update` | System Sync | Fetches latest brain mesh and runs `core_setup.py` to ensure platform parity.  |
+|  `/help`  | User Guide  | Displays the full Command Menu and provides an onboarding assist.              |
+|  `/vibe`  | Diagnostics | Runs system health diagnostics and saves report to `Beats-PM-System/reports/`. |
 
 ---
 

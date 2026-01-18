@@ -1,12 +1,12 @@
 ---
 name: prd-author
-description: The Architect. Generates executive-ready, FAANG-quality Product Requirements Documents. Strict Conductor Template enforcement.
+description: Generate Product Requirement Documents.
 triggers:
-  - "#prd"
-  - "#spec"
-  - "#feature"
-  - "#requirements"
-version: 3.0.0 (Native)
+  - "/prd"
+  - "/spec"
+  - "/feature"
+  - "/requirements"
+version: 3.1.0 (Slash Command)
 author: Beats PM Brain
 ---
 
@@ -18,7 +18,7 @@ author: Beats PM Brain
 
 ### Inputs
 
-- **Triggers**: `#prd`, `#spec`
+- **Triggers**: `/prd`, `/spec`
 - **Context**: Idea, Strategy, or Transcript.
 
 ### Tools

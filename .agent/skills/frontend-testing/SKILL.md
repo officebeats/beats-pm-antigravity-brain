@@ -1,7 +1,7 @@
 ---
 name: frontend-testing
-description: Specialized skill for testing frontend components using industry standard best practices. Use for testing React/Next.js components, writing test cases, and verifying UI logic.
-version: 2.0.0
+description: Test React components and UI logic.
+version: 2.1.0 (Slash Command)
 author: Beats PM Brain
 ---
 
@@ -13,7 +13,7 @@ author: Beats PM Brain
 
 ### Inputs
 
-- **Keywords**: `#test`, `#frontend-test`, `#uitest`, `#jest`, `#cypress`
+- **Keywords**: `/test`, `/frontend-test`, `/uitest`, `/jest`, `/cypress`
 - **Context**: Component code (React/TS), User Stories (Acceptance Criteria).
 
 ### Outputs

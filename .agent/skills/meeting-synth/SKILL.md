@@ -1,13 +1,13 @@
 ---
 name: meeting-synthesizer
-description: The Intelligence Unit. Transforms chaotic conversations into structured Truth. Enforces Conductor Template usage and updates Long Term Memory.
+description: Process meeting transcripts into notes.
 triggers:
-  - "#transcript"
-  - "#meeting"
-  - "#call"
-  - "#notes"
-  - "#standup"
-version: 3.0.0 (Native)
+  - "/transcript"
+  - "/meeting"
+  - "/call"
+  - "/notes"
+  - "/standup"
+version: 3.1.0 (Slash Command)
 author: Beats PM Brain
 ---
 
@@ -19,7 +19,7 @@ author: Beats PM Brain
 
 ### Inputs
 
-- **Triggers**: `#transcript`, `#meeting`
+- **Triggers**: `/transcript`, `/meeting`
 - **Context**: Raw transcript text (Diarized or Messy).
 
 ### Tools
@@ -32,7 +32,7 @@ author: Beats PM Brain
 
 ### Phase 1: Context Hydration
 
-1.  **Identify Speakers**: Cross-reference `4. People/PEOPLE.md`. If unknown, flag for `#stakeholder` update.
+1.  **Identify Speakers**: Cross-reference `4. People/PEOPLE.md`. If unknown, flag for `/stakeholder` update.
 2.  **Identify Intent**:
     - **Standup** -> Blockers/Wins.
     - **Strategy** -> Decisions/Direction.

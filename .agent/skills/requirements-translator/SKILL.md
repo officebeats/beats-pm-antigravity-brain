@@ -1,7 +1,7 @@
 ---
 name: requirements-translator
-description: The Entry Point and Air Traffic Controller for the PM Brain. Transforms chaotic input (hashtags, raw text, voice notes) into structured, routed artifacts. Use for ambiguous input, #concept, #ideation, #braindump, or when intent is unclear.
-version: 2.0.0
+description: Transforms chaotic input into structured intent.
+version: 2.1.0 (Slash Command)
 author: Beats PM Brain
 ---
 
@@ -13,7 +13,7 @@ author: Beats PM Brain
 
 ### Inputs
 
-- **Keywords**: `#concept`, `#ideation`, `#braindump`, `#idea`, `#thought`
+- **Keywords**: `/concept`, `/ideation`, `/braindump`, `/idea`, `/thought`
 - **Context**: Freeform text, "stream of consciousness", raw notes without hashtags.
 
 ### Outputs
@@ -71,12 +71,14 @@ Extract structured entities regardless of intent:
 #### B. Ambiguous Staging (<70%)
 
 1.  **Format**: Create a `BRAIN_DUMP.md` entry:
+
     ```markdown
     ## [Timestamp]
 
     **Raw**: [Input]
     **Possible Intents**: [List]
     ```
+
 2.  **Prompt**: Ask user for clarification (e.g., "Is this a bug or a feature?").
 
 ### Step 5: Verification
