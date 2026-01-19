@@ -58,6 +58,10 @@ class Logger:
     def flush(self):
         self.terminal.flush()
         self.log_file.flush()
+    
+    @property
+    def encoding(self):
+        return "utf-8"
 
 def check_toolchain() -> None:
     """Check if required development tools are installed."""

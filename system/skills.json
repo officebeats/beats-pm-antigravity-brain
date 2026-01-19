@@ -59,14 +59,12 @@
       "/brief"
     ]
   },
-  "delegation-manager": {
-    "path": ".agent/skills/delegation-manager/SKILL.md",
-    "description": "Track assigned tasks and follow-ups.",
+  "data-analytics": {
+    "path": ".agent/skills/data-analytics/SKILL.md",
+    "description": "Execute SQL, analyze funnels, and define success metrics.",
     "triggers": [
-      "/delegate",
-      "/assign",
-      "/handoff",
-      "/followup"
+      "/data",
+      "/analyze"
     ]
   },
   "engineering-collaborator": {
@@ -89,11 +87,6 @@
       "/test-ui"
     ]
   },
-  "joke-generator": {
-    "path": ".agent/skills/joke-generator/SKILL.md",
-    "description": "Dad jokes on demand.",
-    "triggers": []
-  },
   "meeting-synthesizer": {
     "path": ".agent/skills/meeting-synth/SKILL.md",
     "description": "Process meeting transcripts into notes.",
@@ -105,11 +98,6 @@
       "/standup"
     ]
   },
-  "okr-manager": {
-    "path": ".agent/skills/okr-manager/SKILL.md",
-    "description": "The Strategy Executor. Manages the hierarchy of Annual Goals -> Quarterly Obj...",
-    "triggers": []
-  },
   "prd-author": {
     "path": ".agent/skills/prd-author/SKILL.md",
     "description": "Generate Product Requirement Documents.",
@@ -120,24 +108,12 @@
       "/requirements"
     ]
   },
-  "requirements-translator": {
-    "path": ".agent/skills/requirements-translator/SKILL.md",
-    "description": "Transforms chaotic input into structured intent.",
-    "triggers": []
-  },
-  "skill-creator": {
-    "path": ".agent/skills/skill-creator/SKILL.md",
-    "description": "Generate new AI agent skills.",
-    "triggers": []
-  },
-  "skill-lookup": {
-    "path": ".agent/skills/skill-lookup/SKILL.md",
-    "description": "Search and explain available skills.",
+  "product-marketer": {
+    "path": ".agent/skills/product-marketer/SKILL.md",
+    "description": "Draft launch plans, press releases, and value propositions.",
     "triggers": [
-      "/skillsearch",
-      "/lookup",
-      "/findskill",
-      "/help"
+      "/launch",
+      "/gtm"
     ]
   },
   "stakeholder-manager": {
@@ -162,29 +138,17 @@
       "/organize"
     ]
   },
-  "ux-collaborator": {
-    "path": ".agent/skills/ux-collab/SKILL.md",
-    "description": "Manage PM-UX collaboration.",
+  "ux-researcher": {
+    "path": ".agent/skills/ux-researcher/SKILL.md",
+    "description": "Synthesize user interviews, create personas, and run usability tests.",
     "triggers": [
-      "/ux",
-      "/design",
-      "/wireframe",
-      "/journey"
+      "/research",
+      "/interview"
     ]
   },
   "visual-processor": {
     "path": ".agent/skills/visual-processor/SKILL.md",
     "description": "Analyze images and screenshots.",
     "triggers": []
-  },
-  "weekly-synthesizer": {
-    "path": ".agent/skills/weekly-synth/SKILL.md",
-    "description": "Generate weekly status summaries.",
-    "triggers": [
-      "/weekly",
-      "/monthly",
-      "/rollup",
-      "/retrospective"
-    ]
   }
 }
