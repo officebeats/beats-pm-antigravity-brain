@@ -32,7 +32,7 @@ This isn't just a set of templates. It is a **fully autonomous "Virtual Team"** 
 2. **Download**: Click the green **Code** button (top right) -> **Download ZIP**.
 3. **Unzip**: Extract the folder to your Documents.
 4. **Load**: Open **Antigravity** and drag the unzipped folder into the window.
-5. **Start**: Type `/track` to see your dashboard.
+5. **Start**: Type `/setup` to initialize your brain.
 
 ### ⚡ For Engineers (Advanced)
 

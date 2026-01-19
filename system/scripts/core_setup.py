@@ -95,6 +95,10 @@ def copy_templates() -> None:
 
 def install_extensions() -> None:
     """Prompt user to install optional extensions."""
+    if "--headless" in sys.argv:
+        print_gray("[mode] Headless: Skipping extension prompts.")
+        return
+
     extensions = get_extensions()
     
     if not extensions:
