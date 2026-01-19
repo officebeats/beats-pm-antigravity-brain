@@ -7,7 +7,7 @@ triggers:
   - "/cleanup"
   - "/optimize"
   - "/profile"
-version: 2.1.0 (Native Optimized)
+version: 4.8.0-kit (Antigravity v2)
 author: Beats PM Brain
 ---
 

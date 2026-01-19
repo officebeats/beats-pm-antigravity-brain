@@ -1,10 +1,10 @@
 {
   "system": {
-    "version": "4.10.0",
-    "name": "Beats PM System"
+    "version": "4.8.0-kit",
+    "name": "Beats Product Management Antigravity Kit"
   },
   "paths": {
-    "root": null,
+    "root": "C:\\Users\\admin-beats\\OneDrive\\xo Vibe Coding xo\\beats-pm-antigravity-brain",
     "staging": "0. Incoming/staging",
     "trackers": "5. Trackers",
     "archive": "5. Trackers/archive",
@@ -13,11 +13,11 @@
     "company": "1. Company",
     "products": "2. Products",
     "templates": ".agent/templates",
-    "scripts": "Beats-PM-System/system/scripts",
-    "utils": "Beats-PM-System/system/utils"
+    "scripts": "system/scripts",
+    "utils": "system/utils"
   },
   "files": {
-    "kernel": "KERNEL.md",
+    "kernel": ".agent/rules/GEMINI.md",
     "settings": "SETTINGS.md",
     "readme": "README.md",
     "action_plan": "ACTION_PLAN.md",
@@ -39,13 +39,12 @@
   },
   "templates": {
     "settings": ".agent/templates/SETTINGS_TEMPLATE.md",
-    "bug_report": ".agent/templates/trackers/bug-report.md",
-    "boss_request": ".agent/templates/trackers/boss-request.md",
-    "meeting_notes": ".agent/templates/meetings/meeting-notes.md",
-    "feature_request": ".agent/templates/docs/feature-request.md",
-    "prd": ".agent/templates/docs/PRD_TEMPLATE.md",
-    "product_context": ".agent/templates/docs/product-context.md",
-    "1on1": ".agent/templates/meetings/1-on-1-notes.md"
+    "bug_report": ".agent/templates/bug-report.md",
+    "boss_request": ".agent/templates/boss-request.md",
+    "meeting_notes": ".agent/templates/meeting-notes.md",
+    "feature_request": ".agent/templates/feature-request.md",
+    "prd": ".agent/templates/PRD_TEMPLATE.md",
+    "product_context": ".agent/templates/product-context.md"
   },
   "trackers": {
     "bugs_master": "5. Trackers/BUG_TRACKER.md",
