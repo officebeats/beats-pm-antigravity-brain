@@ -24,23 +24,25 @@ This isn't just a set of templates. It is a **fully autonomous "Virtual Team"** 
 
 ---
 
-## 🚀 Quick Start (60 Seconds)
+## 🚀 Setup Guide
 
-### 1. Install
+### 🐣 For Humans (Simple)
 
-Download **[Google Antigravity](https://antigravity.google/)**.
+1. **Download**: Click the green **Code** button (top right) -> **Download ZIP**.
+2. **Unzip**: Extract the folder to your Documents.
+3. **Open**: Drag the folder into **VS Code** (or your editor).
+4. **Start**: Type `/track` to see your dashboard.
 
-### 2. Load
-
-Clone this repository directly into your Antigravity workspace:
+### ⚡ For Engineers (Advanced)
 
 ```bash
-/setup
+# Clone the repository
+git clone https://github.com/officebeats/beats-pm-antigravity-brain
+cd beats-pm-antigravity-brain
+
+# (Optional) Install Dependencies if you plan to extend it
+# npm install
 ```
-
-### 3. Command
-
-Type **`/track`** to see your battlefield.
 
 ---
 
