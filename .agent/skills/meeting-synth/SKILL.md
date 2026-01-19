@@ -32,7 +32,7 @@ author: Beats PM Brain
 
 ### Phase 1: Context Hydration
 
-1.  **Identify Speakers**: Cross-reference `4. People/PEOPLE.md`. If unknown, flag for `/stakeholder` update.
+1.  **Identify Speakers**: Cross-reference `4. People/PEOPLE.md`. If unknown or undiarized, infer from context or label "Speaker A/B".
 2.  **Identify Intent**:
     - **Standup** -> Blockers/Wins.
     - **Strategy** -> Decisions/Direction.

@@ -18,7 +18,7 @@ This workflow guides the **Staff PM** to handle the meeting lifecycle.
     - Output: A 3-bullet agenda.
 
 3.  **Process Mode**:
-    - **Input**: A new transcript file in `3. Meetings/transcripts/`.
+    - **Input**: A new transcript file (txt/md) in `0. Incoming/` or `3. Meetings/transcripts/`.
     - **Action**: Run `meeting-synth` skill.
     - **Extract**:
       - **Action Items** -> Add to `/track`.
