@@ -3,15 +3,13 @@
 <!-- HERO BANNER -->
 <img src="system/docs/assets/hero-banner.png" alt="Beats PM Antigravity Kit" width="100%"/>
 
-<br/><br/>
+<br/>
 
 # 🧠 Beats PM Antigravity Kit
 
 <h3><em>The AI Operating System That Thinks Like a Product Manager</em></h3>
 
 <p><strong>Paste anything. Get structured tasks. Zero manual tracking.</strong></p>
-
-<br/>
 
 <!-- BADGES -->
 <p>
@@ -23,8 +21,6 @@
   &nbsp;
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge&labelColor=1a1a2e" alt="License"/></a>
 </p>
-
-<br/>
 
 <!-- VALUE PROP PILLS -->
 <p>
@@ -40,7 +36,7 @@
 <!-- CTA BUTTONS -->
 <p>
   <a href="#-quick-start"><img src="https://img.shields.io/badge/🚀_Get_Started-in_60_seconds-00A651?style=for-the-badge" alt="Get Started"/></a>
-  &nbsp;&nbsp;
+  &nbsp;
   <a href="#-all-commands-press--to-see"><img src="https://img.shields.io/badge/📖_16_Commands-Press_/_to_see-555555?style=for-the-badge" alt="Commands"/></a>
 </p>
 
