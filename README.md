@@ -48,6 +48,27 @@
 
 ---
 
+## 🚀 Quick Start
+
+### 🐣 For Everyone (Simple)
+
+```bash
+1. Install Google Antigravity (https://github.com/anthropics/claude-code or Gemini CLI)
+2. Download this repo (Code → Download ZIP → Extract)
+3. Open Antigravity and drag the folder into the window
+4. Type: /setup
+```
+
+### ⚡ For Engineers (Advanced)
+
+```bash
+git clone https://github.com/officebeats/beats-pm-antigravity-brain
+cd beats-pm-antigravity-brain
+# Type /setup in your AI CLI to initialize
+```
+
+---
+
 ## 💡 Why This Exists
 
 **Product Management is drowning in noise.**
@@ -152,25 +173,6 @@ The AI reads your `SETTINGS.md` to understand:
 - **Your product keywords** → Associates items to the right product
 
 ---
-
-## 🚀 Quick Start
-
-### 🐣 For Everyone (Simple)
-
-```bash
-1. Install Google Antigravity (https://github.com/anthropics/claude-code or Gemini CLI)
-2. Download this repo (Code → Download ZIP → Extract)
-3. Open Antigravity and drag the folder into the window
-4. Type: /setup
-```
-
-### ⚡ For Engineers (Advanced)
-
-```bash
-git clone https://github.com/officebeats/beats-pm-antigravity-brain
-cd beats-pm-antigravity-brain
-# Type /setup in your AI CLI to initialize
-```
 
 ---
 
