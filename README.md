@@ -5,15 +5,15 @@
 
 <br/>
 
-# 🧠 Beats PM Antigravity Kit
+# 🧠 Beats PM Antigravity Kit (v6.6.0)
 
 <h3><em>The AI Operating System That Thinks Like a Product Manager</em></h3>
 
-<p><strong>Paste anything. Get structured tasks. Zero manual tracking.</strong></p>
+<p><strong>Paste anything. Get structured tasks. Zero manual tracking. 100% Local Privacy.</strong></p>
 
 <!-- BADGES -->
 <p>
-  <a href="https://github.com/officebeats/beats-pm-antigravity-brain/releases"><img src="https://img.shields.io/badge/v6.0.0-stable-00A651?style=for-the-badge&labelColor=1a1a2e" alt="Version"/></a>
+  <a href="https://github.com/officebeats/beats-pm-antigravity-brain/releases"><img src="https://img.shields.io/badge/v6.6.0-stable-00A651?style=for-the-badge&labelColor=1a1a2e" alt="Version"/></a>
   &nbsp;
   <a href="#"><img src="https://img.shields.io/badge/Powered%20by-Antigravity-00A651?style=for-the-badge&logo=google&logoColor=white&labelColor=1a1a2e" alt="Antigravity"/></a>
   &nbsp;
@@ -28,7 +28,7 @@
   &nbsp;•&nbsp;
   <img src="https://img.shields.io/badge/🔒_100%25_Local-Zero_Cloud_Storage-00A651?style=flat-square" alt="Privacy"/>
   &nbsp;•&nbsp;
-  <img src="https://img.shields.io/badge/💸_Free_Forever-Multi_Model_Rotation-00A651?style=flat-square" alt="Free"/>
+  <img src="https://img.shields.io/badge/💼_Exec_Assistant-Boss_Protocol_Included-00A651?style=flat-square" alt="Assist"/>
 </p>
 
 <br/>
@@ -37,18 +37,28 @@
 <p>
   <a href="#-quick-start"><img src="https://img.shields.io/badge/🚀_Get_Started-in_60_seconds-00A651?style=for-the-badge" alt="Get Started"/></a>
   &nbsp;
-  <a href="#-all-commands-press--to-see"><img src="https://img.shields.io/badge/📖_16_Commands-Press_/_to_see-555555?style=for-the-badge" alt="Commands"/></a>
+  <a href="#-the-workflow-collection"><img src="https://img.shields.io/badge/📖_20+_Commands-Press_/_to_see-555555?style=for-the-badge" alt="Commands"/></a>
 </p>
 
 </div>
 
 ---
 
-## 🚀 Quick Start
+## 🚀 What's New in v6.6.0: The "Boss Protocol"
+
+This release introduces a **Privacy-First Executive Assistant** layer designed for high-stakes leadership management.
+
+*   **`/boss` Workflow**: Prepares you for your 1:1 by synthesizing open action items, identifying stale workstreams, and drafting talking points.
+*   **Privacy Hardening**: Automatic PII scrubbing ensures sensitive names and company data never leak to git.
+*   **Stale Workstream Detection**: Proactively flags projects that haven't moved in >3 days *before* your boss asks.
+
+---
+
+## ⚡ Quick Start
 
 ### 🐣 For Everyone (Simple)
 
-**Step 1: Get the Tools (Antigravity First)**
+**Step 1: Get the Tools**
 
 Install your preferred AI assistant (Antigravity is primary; CLI tools are secondary):
 
@@ -93,48 +103,7 @@ This kit uses a **single source of truth** (`.agent/`) that automatically syncs 
     └── .kilocode/         ← Kilo Code reads this
 ```
 
-### Supported Tools
-
-| Tool                | Config Folder | Status             |
-| ------------------- | ------------- | ------------------ |
-| **Antigravity**     | `.agent/`     | ✅ Primary runtime |
-| **Gemini CLI**      | `.gemini/`    | ✅ Auto-configured |
-| **Claude Code**     | `.claude/`    | ✅ Auto-configured |
-| **Kilo Code (IDE)** | `.kilocode/`  | ✅ Auto-configured |
-
-### Setup by Tool
-
-<details>
-<summary><strong>🟢 Gemini CLI</strong></summary>
-
-1. Install: `npm install -g @google/gemini-cli`
-2. Authenticate: `gemini login`
-3. Navigate to this folder and type `gemini`
-4. The kit loads automatically via `.gemini/GEMINI.md`
-
-</details>
-
-<details>
-<summary><strong>🟣 Claude Code</strong></summary>
-
-1. Install: `npm install -g @anthropic-ai/claude-code`
-2. Authenticate: `claude login`
-3. Navigate to this folder and type `claude`
-4. The kit loads automatically via `.claude/CLAUDE.md`
-
-</details>
-
-<details>
-<summary><strong>🔵 Kilo Code (VS Code)</strong></summary>
-
-1. Install from [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=kilocode.kilo-code)
-2. Open this folder in VS Code
-3. Kilo Code reads `.kilocode/rules/` automatically
-4. Skills and workflows are pre-configured
-
-</details>
-
-> 💡 **Single Source of Truth**: Edit files in `.agent/` only. Changes sync to all tools automatically via symlinks.
+> 💡 **Single Source of Truth**: Edit files in `.agent/` only. Changes sync to all tools automatically.
 
 ---
 
@@ -175,112 +144,40 @@ The AI processes everything locally. Your company secrets, roadmaps, and stakeho
 
 ---
 
-## 💸 Free Forever (Multi-Model Architecture)
-
-Here's the secret: **You may never pay for AI again.**
-
-Antigravity supports multiple AI models with generous free tiers. This kit works identically across all of them.
-
-| Model              | Provider  | Free Tier (Est.) | Best For                |
-| :----------------- | :-------- | :--------------- | :---------------------- |
-| **Gemini 3 Flash** | Google    | High Daily Quota | Fast daily tasks        |
-| **Gemini 3 Pro**   | Google    | **Weekly Quota** | Complex PRDs & Strategy |
-| **Claude Sonnet**  | Anthropic | **Weekly Quota** | Balanced work           |
-| **Claude Opus**    | Anthropic | Limited Weekly   | Maximum quality         |
-
-_\*Both Google Antigravity and Anthropic have shifted to Weekly Quotas for their best models._
-
-### The Rotation Strategy
-
-**Never hit a wall.** Antigravity's multi-model support means you have a massive combined pool of intelligence.
-
-- **Primary Driver**: Use **Gemini 3 Flash** for your daily routine (`/day`, `/paste`, `/vibe`).
-- **Heavy Lifting**: Switch to **Gemini 3 Pro** or **Claude Sonnet** for deep work (`/create`, `/plan`).
-- **Weekly Rotation**: If you push one model hard during a "Sprint Week", simply rotate to another for the rest of the week to stay free.
-
-**Result**: A professional-grade AI PM assistant for **$0/month**.
-
-> 💡 **Pro Tip**: Use Flash for high-volume tasks. Save Pro/Opus for high-value reasoning.
-
----
-
-## 🎯 Built for Every PM
-
-| If You're...                            | This Kit Gives You...                                   |
-| :-------------------------------------- | :------------------------------------------------------ |
-| **A Startup PM** juggling chaos         | A single source of truth that auto-organizes everything |
-| **A FAANG PM** with exec visibility     | Amazon 6-Pager & Meta PRD templates, Boss Ask tracking  |
-| **An ex-MBB Consultant**                | Strategy frameworks built-in (MECE, SCQA, 7 Powers)     |
-| **A Growth PM** running experiments     | Data-driven PRD templates with success metrics          |
-| **A Platform PM** managing dependencies | Multi-company context tagging and stakeholder mapping   |
-
-**Same tool. Adapts to your rigor level.**
-
----
-
-## 🤖 Zero-Command Intelligence
-
-The magic isn't in learning commands—it's in **not needing them**.
-
-### What Happens When You `/paste`
-
-| You Paste...                     | AI Detects...               | Auto-Routes To...       |
-| :------------------------------- | :-------------------------- | :---------------------- |
-| "Can you fix the checkout bug?"  | **Bug**                     | `bugs-master.md`        |
-| Email from your VP               | **Boss Ask** (VIP detected) | `boss-requests.md` (P0) |
-| "We should probably look into X" | **Implicit Task**           | `TASK_MASTER.md`        |
-| "Decided to go with Option B"    | **Decision**                | `DECISION_LOG.md`       |
-| "Waiting on legal review"        | **Delegation**              | `DELEGATED_TASKS.md`    |
-| Random FYI with no action        | **Reference**               | `0. Incoming/fyi/`      |
-
-### Smart Context Recognition
-
-The AI reads your `SETTINGS.md` to understand:
-
-- **Who your boss is** → Escalates their requests automatically
-- **What companies you manage** → Tags items with `[Company A]`, `[Company B]`
-- **Your product keywords** → Associates items to the right product
-
----
-
----
-
-## 📖 All Commands (Press `/` to See)
+## 📖 The Workflow Collection
 
 Type `/` in the chat to see available commands. The AI auto-detects intent, but you can trigger workflows directly.
 
-### 🎯 The Diamond 6 (Core)
+### 👑 The "Executive Suite" (High-Value Actions)
 
-| Command   | What It Does                   | Example                      |
-| :-------- | :----------------------------- | :--------------------------- |
-| `/paste`  | Capture anything, auto-route   | Screenshot, email, Slack     |
-| `/day`    | Today's priorities (Big Rocks) | "What's critical today?"     |
-| `/week`   | Weekly tactical plan           | "Plan my week"               |
-| `/plan`   | Strategy, OKRs, roadmaps       | "Draft Q2 roadmap"           |
-| `/create` | Generate PRDs, specs, memos    | "Write a PRD for X"          |
-| `/meet`   | Meeting prep & transcripts     | "Prep me for 1:1 with Sarah" |
+| Command   | What It Does | Why Use It |
+| :-------- | :----------- | :--------- |
+| `/boss`   | **1:1 Prep Protocol** | Prepare for your boss meeting. Detects stale tasks & drafts talking points. |
+| `/now`    | **Executive Focus** | "What do I do RIGHT NOW?" Filters P0 items and creates a battlefield view. |
+| `/week`   | **Weekly Planner** | Anchors your week around the Boss 1:1. Prioritizes "Big Rocks." |
+| `/pi`     | **Quarterly Planning** | Orchestrates 3-day PI Planning events. |
+| `/plan`   | **Strategy War Room** | Draft Roadmaps, OKRs, and Decision Logs. |
 
-### ⚡ Quick Actions
+### 🛠️ The "Tactical Engine" (Daily Drivers)
 
-| Command  | What It Does                       |
-| :------- | :--------------------------------- |
-| `/setup` | Initialize your brain (first-time) |
-| `/vibe`  | System health check                |
-| `/pulse` | Context-aware nudges               |
-| `/help`  | Full user manual                   |
+| Command   | What It Does |
+| :-------- | :----------- |
+| `/paste`  | **Magic Capture**. Paste anything, route to trackers automatically. |
+| `/create` | **Doc Factory**. Draft PRDs, Specs, & Memos from context. |
+| `/meet`   | **Meeting Syntax**. Process transcripts into Action Items & Decisions. |
+| `/stitch` | **UI Generation**. Create visual prototypes alongside PRDs. |
+| `/review` | **Quality Control**. Code review, Doc review, Release prep. |
+| `/draft`  | **Rapid Drafting**. Create placeholder docs that evolve. |
 
-### 🛠️ Power User
+### ⚡ System Utilities
 
-| Command   | What It Does                        |
-| :-------- | :---------------------------------- |
-| `/prep`   | 30-second cheat sheet for any topic |
-| `/review` | Quality check PRDs or code          |
-| `/draft`  | Create placeholder doc that evolves |
-| `/sprint` | Generate dev sprint backlog         |
-| `/data`   | Data analysis & SQL help            |
-| `/launch` | GTM planning                        |
-
-> 💡 **You don't need to memorize these.** Just describe what you want—the AI figures it out.
+| Command   | What It Does |
+| :-------- | :----------- |
+| `/setup`  | Initialize your brain (first-time). |
+| `/vibe`   | System health check & diagnostics. |
+| `/pulse`  | Context-aware nudges ("You're overloaded"). |
+| `/vacuum` | System optimization & archival. |
+| `/help`   | Full user manual. |
 
 ---
 
@@ -292,13 +189,13 @@ This kit uses the **Antigravity Modular Architecture**—the same pattern used i
 
 ```
 ┌─────────────────────────────────────────────┐
-│  📋 WORKFLOWS (16)                          │
+│  📋 WORKFLOWS (24)                          │
 │  Playbooks triggered by /commands           │
-│  → /paste, /day, /create, /meet...          │
+│  → /boss, /now, /create, /meet...           │
 ├─────────────────────────────────────────────┤
-│  🧠 SKILLS (18)                             │
+│  🧠 SKILLS (26)                             │
 │  Modular AI expertise, loaded on-demand     │
-│  → inbox-processor, prd-author, boss-tracker│
+│  → boss-tracker, risk-guardian, stitch...   │
 ├─────────────────────────────────────────────┤
 │  🤖 AGENTS (7)                              │
 │  Virtual team personas with behaviors       │
@@ -306,40 +203,15 @@ This kit uses the **Antigravity Modular Architecture**—the same pattern used i
 └─────────────────────────────────────────────┘
 ```
 
-### 18 Skills (AI Expertise)
+### 🧠 26 Skills (AI Expertise)
 
-| Skill                    | Purpose                       |
-| :----------------------- | :---------------------------- |
-| `inbox-processor`        | Aggressive task extraction    |
-| `daily-synth`            | Daily brief with Big Rocks    |
-| `task-manager`           | Priority & staleness tracking |
-| `boss-tracker`           | VIP escalation & SLAs         |
-| `meeting-synth`          | Transcript → Actions          |
-| `prd-author`             | FAANG-standard PRDs           |
-| `chief-strategy-officer` | Roadmaps & 7 Powers           |
-| `context-retriever`      | History recall                |
-| `stakeholder-mgr`        | Relationship health           |
-| `bug-chaser`             | Bug lifecycle                 |
-| `data-analytics`         | SQL & metrics                 |
-| `ux-researcher`          | Personas                      |
-| `product-marketer`       | Launch plans                  |
-| `engineering-collab`     | Tech debt                     |
-| `code-simplifier`        | Refactoring                   |
-| `visual-processor`       | Image analysis                |
-| `frontend-engineer`      | UI components                 |
-| `core-utility`           | System diagnostics            |
-
-### 7 Virtual Agents
-
-| Agent              | Role                              |
-| :----------------- | :-------------------------------- |
-| **CPO**            | Portfolio strategy, multi-company |
-| **Staff PM**       | Execution, Working Backwards      |
-| **Strategist**     | MECE, SCQA, 7 Powers              |
-| **Data Scientist** | Metrics, A/B tests                |
-| **UX Researcher**  | Personas, interviews              |
-| **Tech Lead**      | Feasibility, architecture         |
-| **GTM Lead**       | Launch, marketing                 |
+| Skill Category | Skills included |
+| :------------- | :-------------- |
+| **Execution** | `inbox-processor`, `task-manager`, `meeting-synth`, `daily-synth`, `weekly-synth` |
+| **Leadership** | `boss-tracker`, `stakeholder-mgr`, `chief-strategy-officer`, `okr-manager` |
+| **Product** | `prd-author`, `product-marketer`, `requirements-translator`, `ux-researcher` |
+| **Engineering** | `engineering-collab`, `code-simplifier`, `bug-chaser`, `frontend-engineer` |
+| **System** | `core-utility`, `vacuum-protocol`, `risk-guardian`, `visual-processor`, `stitch` |
 
 ---
 
@@ -357,22 +229,13 @@ beats-pm-antigravity-brain/
 ├── .agent/                # ⭐ SOURCE OF TRUTH
 │   ├── agents/            # Virtual Team Personas
 │   ├── rules/GEMINI.md    # Core Rules File
-│   ├── skills/            # 18 Modular Skills
+│   ├── skills/            # 26 Modular Skills
 │   ├── templates/         # FAANG Document Templates
-│   └── workflows/         # 16 Playbooks
+│   └── workflows/         # 24 Playbooks
 │
 ├── .gemini/               # Gemini CLI (symlinks to .agent/)
-│   ├── GEMINI.md          → .agent/rules/GEMINI.md
-│   └── settings.json      # Gemini CLI config
-│
 ├── .claude/               # Claude Code (symlinks to .agent/)
-│   ├── CLAUDE.md          → .agent/rules/GEMINI.md
-│   └── commands/          → .agent/workflows/
-│
 ├── .kilocode/             # Kilo Code (symlinks to .agent/)
-│   ├── rules/             → .agent/rules/
-│   ├── skills/            → .agent/skills/
-│   └── workflows/         → .agent/workflows/
 │
 ├── system/                # Python Scripts & Utils
 ├── SETTINGS.md            # Your Configuration
