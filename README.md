@@ -5,7 +5,7 @@
 
 <br/>
 
-# 🧠 Beats PM Antigravity Kit (v6.6.0)
+# 🧠 Beats PM Antigravity Kit
 
 <h3><em>The AI Operating System That Thinks Like a Product Manager</em></h3>
 
@@ -13,8 +13,6 @@
 
 <!-- BADGES -->
 <p>
-  <a href="https://github.com/officebeats/beats-pm-antigravity-brain/releases"><img src="https://img.shields.io/badge/v6.6.0-stable-00A651?style=for-the-badge&labelColor=1a1a2e" alt="Version"/></a>
-  &nbsp;
   <a href="#"><img src="https://img.shields.io/badge/Powered%20by-Antigravity-00A651?style=for-the-badge&logo=google&logoColor=white&labelColor=1a1a2e" alt="Antigravity"/></a>
   &nbsp;
   <a href="https://github.com/officebeats/beats-pm-antigravity-brain/stargazers"><img src="https://img.shields.io/github/stars/officebeats/beats-pm-antigravity-brain?style=for-the-badge&logo=github&labelColor=1a1a2e&color=E6B422" alt="Stars"/></a>
@@ -44,9 +42,9 @@
 
 ---
 
-## 🚀 What's New in v6.6.0: The "Boss Protocol"
+## 🚀 Key Capabilities: The "Boss Protocol"
 
-This release introduces a **Privacy-First Executive Assistant** layer designed for high-stakes leadership management.
+This kit includes a **Privacy-First Executive Assistant** layer designed for high-stakes leadership management.
 
 *   **`/boss` Workflow**: Prepares you for your 1:1 by synthesizing open action items, identifying stale workstreams, and drafting talking points.
 *   **Privacy Hardening**: Automatic PII scrubbing ensures sensitive names and company data never leak to git.
