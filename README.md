@@ -64,8 +64,6 @@ Install your preferred AI assistant (Antigravity is primary; CLI tools are secon
 | ------------------- | ------------------------------------------------------------------------------------------- | -------------------- |
 | **Antigravity**     | [Download App](https://antigravity.google/)                                                 | In-app auth          |
 | **Gemini CLI**      | `npm install -g @google/gemini-cli`                                                         | `gemini login`       |
-| **Claude Code**     | `npm install -g @anthropic-ai/claude-code`                                                  | `claude login`       |
-| **Kilo Code (IDE)** | [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=kilocode.kilo-code) | Configure in VS Code |
 
 **Step 2: Get the Brain**
 
