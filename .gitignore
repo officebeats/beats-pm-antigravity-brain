@@ -139,3 +139,19 @@ requirements.txt
 /system/queue/pending/**
 /system/test_logs/**
 /system/debug_logs/**
+
+# ----------------------------------------
+# 7. LOCAL-ONLY TOOLS (PRIVACY)
+# ----------------------------------------
+# Career Kit (Job Hunt Engine) - Private Use Only
+/6. Career/**
+
+# Specific Career Agents/Skills - Keep Local
+.agent/agents/career-coach.md
+.agent/agents/talent-scout.md
+.agent/agents/resume-architect.md
+.agent/skills/cover-letter-writer/
+.agent/skills/company-profiler/
+.agent/skills/interview-simulator/
+.agent/workflows/apply.md
+.agent/workflows/prep.md
