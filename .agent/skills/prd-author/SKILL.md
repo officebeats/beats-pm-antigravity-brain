@@ -59,7 +59,7 @@ _If any are missing, ASK the user first. Do not hallucinate requirements._
 - **Assumptions & Risks** documented.
 - **Decision Log** entry created for major tradeoffs.
 
-### Phase 3: The Conductor Template
+### Phase 3: The Conductor Template (V4.0)
 
 You MUST use the standard structure. Do not invent formats.
 
@@ -68,45 +68,43 @@ You MUST use the standard structure. Do not invent formats.
 
 > Status: Draft | Owner: @me | Priority: P1
 
-## 1. The Problem (The Why)
-
-[Crisp definition of user pain]
+## 1. Glossary & Context
+[Define all acronyms: e.g. ONC, EHR, PII. Explain the "Why Now" with industry or compliance context.]
 
 ## 2. The Solution (The What)
-
-[High-level functional description]
+[High-level functional description. Use ACTIVE voice.]
 
 ## 3. User Stories (The How)
+[Strictly Use Tables for Scannability]
+| Actor | Action | Outcome | Priority |
+| :--- | :--- | :--- | :--- |
 
-| Actor | Action       | Outcome   | Priority |
-| :---- | :----------- | :-------- | :------- |
-| User  | Click Button | See Modal | P0       |
+## 4. Acceptance Criteria (Definition of Done)
+[Functional and non-functional requirements that MUST be met for release.]
+- **UI**: [Specifics on layout/labels]
+- **API**: [Latency/Response requirements]
+- **Security**: [Auth/Auth requirements]
 
-## 4. Success Metrics
+## 5. Operational Workflow & SLAs
+- **Owner**: [Person or Team]
+- **SLA**: [Triage/Resolution time]
+- **Handoff**: [Tooling: Jira, Salesforce, Email]
 
-| Metric | Current Baseline | Target | Timeframe |
-| :----- | :--------------- | :----- | :-------- |
-| DAU    | 10k              | 15k    | Q3        |
+## 6. Security & Audit Specifics
+- **Authorization**: [Who can perform this?]
+- **Audit Scheme**: [Specify exact log fields/retention]
 
-## 5. Risks & Mitigations (Pre-Mortem)
+## 7. Risks & Mitigations (Pre-Mortem)
 
-- **Risk**: [What could go wrong?]
-- **Mitigation**: [How do we prevent it?]
+## 8. User Flow (ASCII or Mermaid)
 
-## 6. Dependencies & Rollout
-
-- **Dependencies**: [Legal, Ops, Marketing, specific API]
-- **GTM Strategy**: [Phased Rollout / Big Bang / Beta]
+## 9. Conclusion & Next Steps
+[Explicit handoff tasks for Design/Eng/Legal.]
 ```
 
-### Phase 4: Artifact Generation
-
-1.  **Path**: `2. Products/[Product]/specs/PRD-[Name].md`.
-2.  **Score**: Append a **RICE Score** (Reach, Impact, Confidence, Effort) to the footer.
-3.  **Handoff**: Explicitly list "Open Questions" for Engineering.
-
-## 3. Output Rules
+### Phase 4: Output Rules
 
 1.  **Ambiguity is Failure**: "Make it fast" is bad. "Load in <200ms" is good.
-2.  **Engineering Ready**: Could a dev build this without talking to you?
-3.  **Visuals**: Use `[Placeholder: Diagram of X]` to signal where designs go.
+2.  **Engineering Ready**: A dev should be able to build this without a sync.
+3.  **No Acronyms Left Behind**: Every industry/system term must be defined in the Glossary.
+4.  **Active Voice Only**: Shift "The form will be submitted" to "The system submits the form."

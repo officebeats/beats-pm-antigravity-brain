@@ -30,5 +30,14 @@ Execute the full Centrifuge Protocol to keep the brain lean, private, and organi
 | **Warm** | 7-30 Days | `3. Meetings/summaries/` |
 | **Cold** | 30+ Days  | `archive/`               |
 
+## 5. Repo Structure Cleanup
+
+- **Action**: Remove structural debris:
+  - Empty duplicate directories
+  - Legacy archive folder
+  - Old test scripts
+  - Generated caches (regenerates as needed)
+- **Logic**: Keeps repo lean without breaking functionality
+
 > [!NOTE]
 > Running this workflow automatically moves completed items (`- [x]`) from your active trackers to the yearly archive.

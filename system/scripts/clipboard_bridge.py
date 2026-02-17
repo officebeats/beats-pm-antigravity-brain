@@ -24,6 +24,26 @@ INCOMING_DIR = BRAIN_ROOT / "0. Incoming"
 RAW_DIR = INCOMING_DIR / "raw"
 STAGING_DIR = INCOMING_DIR / "staging"
 
+
+def validate_dependencies():
+    """Validate and install required dependencies."""
+    try:
+        from PIL import ImageGrab
+    except ImportError:
+        print("  ⚠️ Pillow not installed. Installing...")
+        try:
+            subprocess.check_call([
+                sys.executable, "-m", "pip", "install",
+                "--break-system-packages", "Pillow>=11.0.0"
+            ])
+            print("  ✅ Pillow installed successfully")
+        except subprocess.CalledProcessError:
+            print("  ❌ Failed to install Pillow")
+            print("  Please install manually: pip3 install --break-system-packages Pillow")
+            return False
+    return True
+
+
 # Ensure directories exist
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 STAGING_DIR.mkdir(parents=True, exist_ok=True)
@@ -245,6 +265,10 @@ def save_files(file_paths):
 
 def main():
     print("--- 📋 Clipboard Bridge (/paste) ---")
+    
+    # Validate dependencies
+    if not validate_dependencies():
+        return
     
     # 1. Try to get FILES first (most specific)
     files = get_files_from_clipboard()

@@ -1,83 +1,104 @@
 ---
 name: visual-processor
-description: Analyze images and screenshots.
-version: 2.1.0 (Slash Command)
+description: Extract text and context from images for PM analysis.
+triggers:
+  - "/paste"
+  - "/dump"
+  - "image analysis"
+  - "/screenshot"
+version: 2.0.0
 author: Beats PM Brain
 ---
 
 # Visual Processor Skill
 
-> **Role**: You are the **Eyes** of the Antigravity PM Brain. You translate pixels into meaning. Whether it's a UI bug, a whiteboard diagram, or a competitive screenshot, you extract the intent and route it to the right brain center.
+> **Role**: Extract actionable information from images, screenshots, and visual artifacts for product management workflows.
 
-## 1. Interface Definition
+## Capabilities
 
-### Inputs
+### OCR & Text Extraction
 
-- **Keywords**: `/screenshot`, `/paste`, `/image`, `/chart`
-- **Context**: Image Files, Clipboard Content, OCR Text.
+- Extract all visible text from images
+- Recognize UI labels, buttons, error messages, form fields
+- Preserve layout context (e.g., "button next to X")
 
-### Outputs
+### Visual Analysis
 
-- **Primary Artifact**: `0. Incoming/staging/[Date]_[Type].png`
-- **Secondary Artifact**: Markdown Description of Content.
-- **Console**: Analysis Summary.
+- Identify UI bugs (misaligned elements, broken layouts)
+- Detect error states, empty states, loading states
+- Recognize diagrams, flowcharts, wireframes, mockups
+- Extract data tables, charts, graphs
 
-### Tools
+### Context Extraction
 
-- `view_file`: To read image files (if binary reading supported).
-- `run_command`: To move/rename files.
-- `write_to_file`: To save analysis notes.
+- Identify application/platform from UI
+- Detect user flows and navigation paths
+- Spot accessibility issues (color contrast, text size)
+- Note design inconsistencies
 
-## 2. Cognitive Protocol (Chain-of-Thought)
+## Extraction Rules
 
-### Step 1: Context Loading
+### For Screenshots
 
-- **Detect**: Is this a UI, a Chart, a Doc, or a Photo?
-- **Rename**: Move from temp name to semantic name (e.g., `2024-01-20_LoginError.png`).
-- **Store**: Place in `0. Incoming/staging/`.
+1. **Extract all text** → Process with inbox-processor
+2. **Identify UI elements**:
+   - Buttons: "[Button: Submit]"
+   - Inputs: "[Input: Email field]"
+   - Labels: "[Label: User Name]"
+3. **Flag bugs**:
+   - Broken layouts → "UI bug: Misaligned elements"
+   - Missing content → "UI bug: Empty state expected content"
+   - Error messages → Extract error text for bug report
 
-### Step 2: Parallel Analysis Mesh
+### For Diagrams/Specs
 
-**Rule**: Extract all modalities simultaneously to reduce latency.
+1. **Describe diagram type**: Flowchart, Sequence Diagram, Wireframe
+2. **Extract labels** → Potential feature names
+3. **Identify flows** → Potential user stories
+4. **Save as reference** → `0. Incoming/fyi/[Date]_[Topic].md`
 
-1.  **OCR**: Extract all visible text.
-2.  **UI Detection**: Identify components (Buttons, Modals, Nav).
-3.  **Logic Map**: Infer the flow or state change implied.
+### For Tables/Charts
 
-### Step 3: Execution Strategy
+1. **Extract data points** → Save to markdown table
+2. **Describe chart type** → Bar chart, Line chart, Pie chart
+3. **Extract insights** → Potential metrics/KPIs
 
-#### A. The UI Auditor (Screenshots)
+## Output Format
 
-If it's a UI:
+```markdown
+# Image Analysis: [Filename]
 
-- **Identify Screen**: "This is the Settings Page."
-- **Spot Issues**: "The 'Save' button is misaligned."
-- **Route**: To `ux-collab` or `bug-chaser`.
+## Visual Elements
+- [UI element 1]
+- [UI element 2]
+- [UI element 3]
 
-#### B. The Data Analyst (Charts)
+## Extracted Text
+[All visible text from image]
 
-If it's a Chart:
+## Issues Identified
+- [Bug 1]
+- [Bug 2]
+- [Inconsistency 1]
 
-- **Axes**: X=Time, Y=Revenue.
-- **Trend**: "Upward slope, 20% growth."
-- **Route**: To `strategy-synth`.
+## Recommendations
+- [Action item 1]
+- [Action item 2]
 
-#### C. The Whiteboard Reader (Diagrams)
+## Reference
+Image saved to: `0. Incoming/fyi/[Date]_[Filename]`
+```
 
-If it's a Sketch:
+## Limitations
 
-- **Entities**: "User", "Server", "DB".
-- **Relationships**: Arrows indicating flow.
-- **Route**: To `engineering-collab` or `requirements-translator`.
+- Requires text-detectable images
+- Handwriting may have accuracy issues
+- Complex diagrams may need manual review
 
-### Step 4: Verification
-
-- **Privacy**: Does this contain PII? (Blur mentally).
-- **Quality**: Is it readable? (If not, ask for re-upload).
-
-## 3. Cross-Skill Routing
+## Cross-Skill Routing
 
 - **To `bug-chaser`**: "Here is the screenshot of the crash."
 - **To `ux-collab`**: "Here is the competitive analysis screenshot."
 - **To `meeting-synth`**: "Here is the whiteboard from the meeting."
 - **To `task-manager`**: "Turn this sticky note photo into tasks."
+- **To `inbox-processor`**: Process extracted text for task/bug classification

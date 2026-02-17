@@ -98,6 +98,24 @@ Generate a structured 1:1 Prep Document:
 *Items that are overdue or blocked that your boss should know about:*
 
 1.  [Risk 1] - **Mitigation**: [What you're doing about it]
+
+---
+
+## 💬 Draft Slack Message (Friday EOD)
+
+*Copy/Paste this if you miss the sync or want to send a summary:*
+
+Hey [Boss], wanted to drop a quick update so we end the week strong:
+
+1. **[Top Priority Category]**:
+    a. [Update 1]
+    b. [Update 2]
+2. **[Secondary Priority]**:
+    a. [Update 1]
+3. **[Other Ask]**:
+    a. [Update 1]
+
+Have a good weekend!
 ```
 
 ## 5. Output Location

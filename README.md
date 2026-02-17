@@ -35,7 +35,7 @@
 <p>
   <a href="#-quick-start"><img src="https://img.shields.io/badge/🚀_Get_Started-in_60_seconds-00A651?style=for-the-badge" alt="Get Started"/></a>
   &nbsp;
-  <a href="#-the-workflow-collection"><img src="https://img.shields.io/badge/📖_20+_Commands-Press_/_to_see-555555?style=for-the-badge" alt="Commands"/></a>
+  <a href="#-the-workflow-collection"><img src="https://img.shields.io/badge/📖_22_Workflows-Press_/_to_see-555555?style=for-the-badge" alt="Commands"/></a>
 </p>
 
 </div>
@@ -75,7 +75,8 @@ Install your preferred AI assistant (Antigravity is primary; CLI tools are secon
 
 1. Open your AI tool (terminal or VS Code).
 2. Navigate to the extracted folder.
-3. Type `/setup` and hit Enter.
+3. **Antigravity**: Type `/` to see the interactive menu, or `/setup` directly
+4. **CLI tools**: Type `/setup` (or `#setup` for Gemini CLI)
 
 ### ⚡ For Engineers (Advanced)
 
@@ -89,7 +90,7 @@ cd beats-pm-antigravity-brain
 
 ## 🔧 Works With Your Favorite AI Tool
 
-This kit uses a **single source of truth** (`.agent/`) that automatically syncs to all three major AI coding assistants via symlinks.
+This kit uses a **single source of truth** (`.agent/`) that automatically syncs to all major AI tools via symlinks.
 
 ```
 .agent/                    ← SOURCE OF TRUTH (edit here)
@@ -100,6 +101,17 @@ This kit uses a **single source of truth** (`.agent/`) that automatically syncs 
 ```
 
 > 💡 **Single Source of Truth**: Edit files in `.agent/` only. Changes sync to all tools automatically.
+
+### Command Support by Tool
+
+| Tool | Interactive Menu | Commands | Notes |
+|------|------------------|----------|-------|
+| **Antigravity** | ✅ Type `/` to see all options | 22 workflows | Full menu support - primary runtime |
+| **Claude Code** | ❌ Manual typing only | Type `/vacuum`, `/boss`, etc. | Commands must be typed manually |
+| **Kilo Code** | ❌ Manual typing only | Type `/vacuum`, `/boss`, etc. | Commands must be typed manually |
+| **Gemini CLI** | ❌ Manual typing only | Type `#vacuum`, `#boss`, etc. | Commands must be typed manually |
+
+> ⚠️ **Antigravity is the primary runtime** - it offers the interactive workflow menu. CLI tools require manual command entry.
 
 ---
 
@@ -142,7 +154,11 @@ The AI processes everything locally. Your company secrets, roadmaps, and stakeho
 
 ## 📖 The Workflow Collection
 
-Type `/` in the chat to see available commands. The AI auto-detects intent, but you can trigger workflows directly.
+**In Antigravity**: Type `/` in the chat to see all available commands in an interactive menu.
+
+**In CLI tools**: Type the command name directly (e.g., `/vacuum`, `/boss`, `/now`).
+
+The AI auto-detects intent, but you can always trigger workflows manually.
 
 ### 👑 The "Executive Suite" (High-Value Actions)
 

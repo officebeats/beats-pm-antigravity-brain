@@ -7,6 +7,7 @@ Optimized for speed and long-term retrieval.
 
 import sys
 import time
+import shutil
 from datetime import datetime
 from pathlib import Path
 from typing import List, Tuple
@@ -237,6 +238,112 @@ def clean_skeleton():
     
     return issues_found
 
+def clean_repo_structure():
+    """
+    Remove known structural cleanup items:
+    - Empty duplicate kilocode directories
+    - Legacy archive folder
+    - Old test script
+    - Old migration/utility scripts
+    - Old debug logs
+    - Generated cache files (regenerates content_index.json)
+    """
+    print("\n--- 🏗️  Repo Structure Cleanup ---")
+    items_removed = 0
+    
+    # 1. Empty duplicate kilocode directories
+    kilocode_dupes = [
+        BRAIN_ROOT / ".kilocode" / "skills 2",
+        BRAIN_ROOT / ".kilocode" / "templates 2", 
+        BRAIN_ROOT / ".kilocode" / "workflows 2"
+    ]
+    for d in kilocode_dupes:
+        if d.exists() and d.is_dir():
+            try:
+                contents = list(d.iterdir())
+                if len(contents) == 0:
+                    d.rmdir()
+                    items_removed += 1
+                    print(f"  🗑️  Removed empty dir: {d.name}")
+                else:
+                    print(f"  ⚠️  Skipped non-empty dir: {d.name}")
+            except Exception as e:
+                print(f"  ⚠️  Failed to remove {d.name}: {e}")
+    
+    # 2. Legacy archive folder (with _legacy files)
+    archive_legacy = BRAIN_ROOT / "archive"
+    if archive_legacy.exists():
+        try:
+            shutil.rmtree(archive_legacy)
+            items_removed += 1
+            print(f"  🗑️  Removed legacy archive folder")
+        except Exception as e:
+            print(f"  ⚠️  Failed to remove archive: {e}")
+    
+    # 3. Old test script
+    old_test_script = BRAIN_ROOT / "tests" / "security_scan.sh"
+    if old_test_script.exists():
+        try:
+            old_test_script.unlink()
+            items_removed += 1
+            print(f"  🗑️  Removed: tests/security_scan.sh")
+        except Exception as e:
+            print(f"  ⚠️  Failed to remove security_scan.sh: {e}")
+    
+    # 4. Old migration/utility scripts
+    old_scripts = [
+        SYSTEM_ROOT / "migrate_task_schema.py",
+        SYSTEM_ROOT / "sort_task_master.py",
+        SYSTEM_ROOT / "vacuum_tasks.py"
+    ]
+    for script in old_scripts:
+        if script.exists():
+            try:
+                script.unlink()
+                items_removed += 1
+                print(f"  🗑️  Removed: {script.name}")
+            except Exception as e:
+                print(f"  ⚠️  Failed to remove {script.name}: {e}")
+    
+    # 5. Old debug logs
+    debug_logs_dir = SYSTEM_ROOT / "debug_logs"
+    if debug_logs_dir.exists():
+        try:
+            shutil.rmtree(debug_logs_dir)
+            items_removed += 1
+            print(f"  🗑️  Removed: system/debug_logs/")
+        except Exception as e:
+            print(f"  ⚠️  Failed to remove debug_logs: {e}")
+    
+    # 6. Generated cache files
+    cache_files = [
+        SYSTEM_ROOT / "content_index.json",
+        SYSTEM_ROOT / "context_cache.json"
+    ]
+    for cf in cache_files:
+        if cf.exists():
+            try:
+                cf.unlink()
+                items_removed += 1
+                print(f"  🗑️  Removed cache: {cf.name}")
+            except Exception as e:
+                print(f"  ⚠️  Failed to remove {cf.name}: {e}")
+    
+    # 7. Regenerate content_index.json for Antigravity
+    try:
+        from system.scripts import gps_indexer
+        gps_indexer.scan_files()
+        print(f"  🔄 Regenerated: content_index.json")
+    except Exception as e:
+        print(f"  ⚠️  Failed to regenerate content_index.json: {e}")
+    
+    if items_removed > 0:
+        print(f"  ✅ Removed {items_removed} items")
+    else:
+        print("  ✅ Repo structure already clean")
+    
+    return items_removed
+
 def check_system_access():
     """
     Validation: Ensure the System (Python) can access the GitIgnored "Dark Matter".
@@ -367,6 +474,9 @@ def main():
     
     # 4. Skeleton Cleanup (Senior Engineer Audit)
     clean_skeleton()
+
+    # 5. Repo Structure Cleanup
+    clean_repo_structure()
 
     # Privacy & Access Checks
     check_system_access()
