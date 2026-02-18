@@ -1,0 +1,37 @@
+---
+description: Run a sprint or PI retrospective with structured format and action tracking.
+---
+
+# /retro — Retrospective Workflow
+
+## Prerequisites
+- Load `retrospective` skill from `.agent/skills/retrospective/SKILL.md`
+- Activate **Program Manager** agent
+
+## Steps
+
+1. **Ask Format**: Ask the user which retro format they prefer:
+   - 4Ls (Liked/Learned/Lacked/Longed For) — *default*
+   - Start-Stop-Continue
+   - Sailboat
+   - Mad-Sad-Glad
+   - 5 Whys (for incident postmortems)
+
+2. **Gather Context**: Read `5. Trackers/TASK_MASTER.md` to summarize what was delivered this sprint/PI.
+
+3. **Capture Input**: 
+   - If user provides a transcript → extract retro items automatically
+   - If no transcript → prompt for items in each category
+
+4. **Generate Retro Report**: 
+   - Use template from `.agent/templates/meetings/retrospective.md`
+   - Identify top 3 themes
+   - Define maximum 3 action items with Owner + Due Date + DoD
+
+5. **Pattern Detection**: Scan `3. Meetings/retros/` for recurring themes from previous retros.
+
+6. **Route Actions**: 
+   - Append action items to `5. Trackers/TASK_MASTER.md` with `[RETRO]` tag
+   - Log any process decisions to `5. Trackers/DECISION_LOG.md`
+
+7. **Save**: Write retro to `3. Meetings/retros/YYYY-MM-DD_[Sprint/PI]_retro.md`

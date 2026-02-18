@@ -50,15 +50,15 @@ python -m unittest system.tests.test_vacuum.TestVacuum.test_vacuum_tracker_file
 
 ```
 ┌─────────────────────────────────────────────┐
-│  WORKFLOWS (24)                             │
+│  WORKFLOWS (31)                             │
 │  Playbooks triggered by /commands           │
 │  Location: .agent/workflows/                │
 ├─────────────────────────────────────────────┤
-│  SKILLS (26)                                │
+│  SKILLS (38)                                │
 │  Modular AI expertise, loaded on-demand     │
 │  Location: .agent/skills/                   │
 ├─────────────────────────────────────────────┤
-│  AGENTS (7)                                 │
+│  AGENTS (11)                                │
 │  Virtual team personas with behaviors       │
 │  Location: .agent/agents/                   │
 └─────────────────────────────────────────────┘

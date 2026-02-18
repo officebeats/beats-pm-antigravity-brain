@@ -1,6 +1,6 @@
 # GEMINI.md - Maestro Configuration
 
-**Version 6.5.0** - Beats PM Antigravity Kit
+**Version 7.0.0** - Beats PM Antigravity Kit
 
 This file defines the Operating System for the Product Management Brain.
 
@@ -94,15 +94,20 @@ When creating a PRD or Feature Spec for a _user-facing_ feature, the agent SHOUL
 
 Before ANY action, classify the request:
 
-| Request Type  | Trigger                           | Required Action                    |
-| :------------ | :-------------------------------- | :--------------------------------- |
-| **STRATEGY**  | "plan", "roadmap", "vision"       | Activate **CPO** or **Strategist** |
-| **EXECUTION** | "track", "task", "jira", "ticket" | Activate **Staff PM**              |
-| **CREATION**  | "draft", "write", "spec", "prd"   | Activate **Staff PM** (`/create`)  |
-| **MEETING**   | "transcript", "notes", "agenda"   | Activate **Staff PM** (`/meet`)    |
-| **ANALYSIS**  | "data", "metrics", "growth"       | Activate **Data Scientist**        |
-| **RESEARCH**  | "user", "interview", "persona"    | Activate **UX Researcher**         |
-| **LAUNCH**    | "gtm", "marketing", "release"     | Activate **GTM Lead**              |
+| Request Type     | Trigger                                        | Required Action                        |
+| :--------------- | :--------------------------------------------- | :------------------------------------- |
+| **STRATEGY**     | "plan", "roadmap", "vision"                    | Activate **CPO** or **Strategist**     |
+| **EXECUTION**    | "track", "task", "jira", "ticket"              | Activate **Staff PM**                  |
+| **CREATION**     | "draft", "write", "spec", "prd"                | Activate **Staff PM** (`/create`)      |
+| **MEETING**      | "transcript", "notes", "agenda"                | Activate **Staff PM** (`/meet`)        |
+| **ANALYSIS**     | "data", "metrics", "growth"                    | Activate **Data Scientist**            |
+| **RESEARCH**     | "user", "interview", "persona"                 | Activate **UX Researcher**             |
+| **LAUNCH**       | "gtm", "marketing", "release"                  | Activate **GTM Lead**                  |
+| **PROGRAM**      | "dependency", "release plan", "retro", "ship"  | Activate **Program Manager**           |
+| **DISCOVERY**    | "discover", "hypothesis", "experiment", "ost"  | Activate **Staff PM** (`/discover`)    |
+| **PRIORITIZE**   | "prioritize", "rank", "score", "RICE", "kano"  | Activate **Staff PM** (`/prioritize`)  |
+| **COMPETE**      | "competitive", "battlecard", "market intel"    | Activate **Strategist** (`/compete`)   |
+| **COMMUNICATE**  | "draft email", "escalate", "status update"     | Activate **Staff PM** (`/communicate`) |
 
 ---
 
@@ -153,16 +158,20 @@ Before ANY action, classify the request:
 
 ## TIER 1: CORE PLAYBOOKS
 
-| Playbook      | Purpose                 | Output                                |
-| :------------ | :---------------------- | :------------------------------------ |
-| **`/track`**  | **Battlefield View**    | Table of P0/P1 Tasks + Boss Asks      |
-| **`/create`** | **Document Factory**    | PRD, One-Pager, or Strategy Memo      |
-| **`/plan`**   | **Strategic War Room**  | Roadmap, OKRs, Decision Log           |
-| **`/meet`**   | **Meeting Synthesis**   | Action Items, Decisions, Notes        |
-| **`/review`** | **Quality Control**     | UX Audit, Spec Review, Code Review    |
-| **`/launch`** | **GTM Strategy**        | Launch Checklist, Marketing Assets    |
-| **`/data`**   | **Analytics**           | SQL Queries, Success Metrics, Funnels |
-| **`/vacuum`** | **System Optimization** | Archive Tasks, Cleanup, & Audit       |
+| Playbook          | Purpose                    | Output                                |
+| :---------------- | :------------------------- | :------------------------------------ |
+| **`/track`**      | **Battlefield View**       | Table of P0/P1 Tasks + Boss Asks      |
+| **`/create`**     | **Document Factory**       | PRD, One-Pager, or Strategy Memo      |
+| **`/plan`**       | **Strategic War Room**     | Roadmap, OKRs, Decision Log           |
+| **`/meet`**       | **Meeting Synthesis**      | Action Items, Decisions, Notes        |
+| **`/review`**     | **Quality Control**        | UX Audit, Spec Review, Code Review    |
+| **`/launch`**     | **GTM Strategy**           | Launch Checklist, Marketing Assets    |
+| **`/data`**       | **Analytics**              | SQL Queries, Success Metrics, Funnels |
+| **`/vacuum`**     | **System Optimization**    | Archive Tasks, Cleanup, & Audit       |
+| **`/retro`**      | **Retrospective**          | Action Items, Patterns, Retro Report  |
+| **`/compete`**    | **Competitive Intel**      | Battlecard, Parity Matrix, SWOT       |
+| **`/discover`**   | **Product Discovery**      | OST, Assumptions, Experiments         |
+| **`/prioritize`** | **Backlog Scoring**        | RICE/ICE/Kano Scorecard               |
 
 ---
 
@@ -184,15 +193,47 @@ beats-pm-antigravity-brain/
 
 ## 🧩 THE VIRTUAL TEAM (Roles)
 
-| Agent                     | Focus                | Key Skills                                                       |
-| :------------------------ | :------------------- | :--------------------------------------------------------------- |
-| **Chief Product Officer** | Strategy & Org       | `chief-strategy-officer`, `boss-tracker`, `vacuum-protocol`      |
-| **Staff PM**              | Execution & Delivery | `task-manager`, `prd-author`, `meeting-synth`, `vacuum-protocol` |
-| **Product Strategist**    | Market & Vision      | `chief-strategy-officer`, `okr-manager`                          |
-| **Tech Lead**             | Feasibility & Eng    | `engineering-collab`, `code-simplifier`, `vacuum-protocol`       |
-| **Data Scientist**        | Quant Insights       | `data-analytics`                                                 |
-| **UX Researcher**         | Qual Insights        | `ux-researcher`                                                  |
-| **GTM Lead**              | Launch & Growth      | `product-marketer`                                               |
+| Agent                     | Focus                   | Key Skills                                                                      |
+| :------------------------ | :---------------------- | :------------------------------------------------------------------------------ |
+| **Chief Product Officer** | Strategy & Org          | `chief-strategy-officer`, `boss-tracker`, `vacuum-protocol`                     |
+| **Staff PM**              | Execution & Delivery    | `task-manager`, `prd-author`, `meeting-synth`, `discovery-coach`, `prioritization-engine`, `communication-crafter` |
+| **Product Strategist**    | Market & Vision         | `chief-strategy-officer`, `okr-manager`, `competitive-intel`                    |
+| **Program Manager**       | Governance & Releases   | `dependency-tracker`, `release-manager`, `retrospective`, `task-manager`, `risk-guardian` |
+| **Tech Lead**             | Feasibility & Eng       | `engineering-collab`, `code-simplifier`, `vacuum-protocol`                      |
+| **Data Scientist**        | Quant Insights          | `data-analytics`                                                                |
+| **UX Researcher**         | Qual Insights           | `ux-researcher`                                                                 |
+| **GTM Lead**              | Launch & Growth         | `product-marketer`                                                              |
+
+---
+
+## TIER 2: ADVANCED PROTOCOLS (v7.0)
+
+### 1. Evidence-Based Decision Protocol
+
+Every strategic decision MUST cite one of:
+
+- **Quantitative Data**: Metrics, experiments, dashboards.
+- **Qualitative Signal**: User quotes, research insights, verbatim feedback.
+- **Expert Judgment**: With explicit assumptions documented in `DECISION_LOG.md`.
+
+> Decisions based on "gut feel" or "I think" without supporting evidence must be flagged and escalated for validation.
+
+### 2. Continuous Discovery Mandate
+
+For features classified as **High Uncertainty** (new market, new user segment, unvalidated problem):
+
+1.  **MUST** use Opportunity Solution Tree (`/discover`) before writing PRD.
+2.  **MUST** log top 3 assumptions with evidence grade (Strong/Moderate/Weak/Assumed).
+3.  **MUST** define Pivot/Persevere criteria before engineering commitment.
+4.  **MUST** run at least one experiment to validate the riskiest assumption.
+
+### 3. Prioritization Discipline
+
+When backlog exceeds 20 items or stakeholders disagree on priority:
+
+1.  **MUST** use a structured framework (`/prioritize`) — default to RICE.
+2.  **MUST** document scoring criteria and weights BEFORE scoring items.
+3.  **MUST** publish the scored backlog to stakeholders for alignment.
 
 ---
 
