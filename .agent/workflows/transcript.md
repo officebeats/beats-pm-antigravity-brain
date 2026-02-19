@@ -8,7 +8,7 @@ description: Process all Quill meetings from the last 10 business days.
 2. **CLI Fallback (Secondary)**:
    - Run the targeted transcript fetcher.
    - // turbo
-   - `python3 system/scripts/transcript_fetcher.py`
+   - `python3 system/scripts/quill_mcp_client.py || python3 system/scripts/transcript_fetcher.py`
 
 3. **Parallel Identification**:
    - Scan `0. Incoming/` for new transcript files.
