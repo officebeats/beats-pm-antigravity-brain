@@ -11,15 +11,15 @@ from pathlib import Path
 from unittest.mock import MagicMock
 
 # Setup paths
-# Setup paths
-ROOT_DIR = Path(__file__).resolve().parent.parent.parent
-SYSTEM_DIR = ROOT_DIR / 'Beats-PM-System' / 'system'
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent   # beats-pm-antigravity-brain/
+SYSTEM_DIR = ROOT_DIR / 'system'                           # system/
 SKILLS_DIR = ROOT_DIR / '.agent' / 'skills'
 TEMPLATES_DIR = ROOT_DIR / '.agent' / 'templates'
 
+# Add system/ to path so 'from scripts import ...' and 'from utils import ...' resolve
 sys.path.insert(0, str(SYSTEM_DIR))
 
-# Mock utils dependencies
+# Mock utils dependencies before importing scripts
 if 'utils' not in sys.modules:
     sys.modules['utils'] = MagicMock()
     sys.modules['utils.ui'] = MagicMock()
@@ -41,7 +41,7 @@ REQUIRED_FOLDERS = [
 SKILLS = [
     "boss-tracker", "bug-chaser", "daily-synth", "delegation-manager",
     "engineering-collab", "meeting-synth", "prd-author", "requirements-translator",
-    "stakeholder-mgr", "chief-strategy-officer", "task-manager", "ux-collab",
+    "stakeholder-mgr", "chief-strategy-officer", "task-manager", "ux-collaborator",
     "visual-processor", "weekly-synth", "code-simplifier"
 ]
 
@@ -56,7 +56,9 @@ CORE_SCRIPTS = [
     "kernel_utils.py", "queue_worker.py", "dispatch.py"
 ]
 
-CRITICAL_FILES = ["KERNEL.md", "SETTINGS.md", "README.md"]
+# KERNEL.md was renamed to GEMINI.md; SETTINGS.md is local-only (gitignored)
+CRITICAL_FILES = [".agent/rules/GEMINI.md", "README.md"]
+
 
 # Command → Skill mapping (exhaustive from README.md)
 COMMAND_SKILL_MAP = [
@@ -76,10 +78,10 @@ COMMAND_SKILL_MAP = [
     # Strategy
     ("strategy", "chief-strategy-officer"), ("strategy pulse", "chief-strategy-officer"),
     ("strategy theme", "chief-strategy-officer"), ("strategy opportunities", "chief-strategy-officer"),
-    # Design
-    ("ux", "ux-collab"), ("ux discovery", "ux-collab"),
-    ("ux wireframe", "ux-collab"), ("ux mockup", "ux-collab"),
-    ("ux prototype", "ux-collab"),
+    # Design (ux-collaborator is the correct directory name)
+    ("ux", "ux-collaborator"), ("ux discovery", "ux-collaborator"),
+    ("ux wireframe", "ux-collaborator"), ("ux mockup", "ux-collaborator"),
+    ("ux prototype", "ux-collaborator"),
     # Engineering
     ("eng", "engineering-collab"), ("eng spike", "engineering-collab"),
     ("eng question", "engineering-collab"), ("eng discuss", "engineering-collab"),
@@ -89,7 +91,7 @@ COMMAND_SKILL_MAP = [
     ("clarify", "task-manager"), ("triage", "task-manager"), ("plan", "task-manager"),
     # Reporting
     ("weekly", "weekly-synth"), ("monthly", "weekly-synth"),
-    # Additional from KERNEL.md
+    # Additional from GEMINI.md
     ("boss", "boss-tracker"), ("bug", "bug-chaser"),
     ("delegate", "delegation-manager"), ("stakeholder", "stakeholder-mgr"),
     ("simplify", "code-simplifier"), ("refactor", "code-simplifier"),
@@ -105,7 +107,7 @@ COMMAND_SKILL_MAP = [
 
 class TestDirectoryStructure(unittest.TestCase):
     """Verify the 0-5 folder structure exists."""
-    
+
     def test_required_folders_exist(self):
         for folder in REQUIRED_FOLDERS:
             with self.subTest(folder=folder):
@@ -114,7 +116,7 @@ class TestDirectoryStructure(unittest.TestCase):
 
 class TestSkillsInventory(unittest.TestCase):
     """Verify all Skills from README exist."""
-    
+
     def test_all_skills_exist(self):
         for skill in SKILLS:
             with self.subTest(skill=skill):
@@ -124,7 +126,7 @@ class TestSkillsInventory(unittest.TestCase):
 
 class TestTemplatesInventory(unittest.TestCase):
     """Verify all Templates from README exist."""
-    
+
     def test_all_templates_exist(self):
         for template in TEMPLATES:
             with self.subTest(template=template):
@@ -133,7 +135,7 @@ class TestTemplatesInventory(unittest.TestCase):
 
 class TestCommandRouting(unittest.TestCase):
     """Verify all commands route to valid skills."""
-    
+
     def test_all_commands_route_correctly(self):
         """Every command must route to an existing skill or be a system command."""
         for command, skill in COMMAND_SKILL_MAP:
@@ -142,7 +144,7 @@ class TestCommandRouting(unittest.TestCase):
                     continue  # System command
                 path = SKILLS_DIR / skill / "SKILL.md"
                 self.assertTrue(path.exists(), f"/{command} → {skill} missing")
-    
+
     def test_command_count(self):
         """Should test at least 45 commands."""
         self.assertGreaterEqual(len(COMMAND_SKILL_MAP), 45)
@@ -150,7 +152,7 @@ class TestCommandRouting(unittest.TestCase):
 
 class TestKernelUtils(unittest.TestCase):
     """Verify kernel utility functions work correctly."""
-    
+
     def test_anchor_rule_valid(self):
         """Anchor rule should allow standard folder paths."""
         valid = ["1. Company/Acme/PROFILE.md", "2. Products/App/PRD.md",
@@ -159,21 +161,21 @@ class TestKernelUtils(unittest.TestCase):
         for path in valid:
             with self.subTest(path=path):
                 self.assertTrue(kernel_utils.check_anchor_rule(path))
-    
+
     def test_anchor_rule_invalid(self):
         """Anchor rule should block non-standard paths."""
         invalid = ["RandomFolder/file.md", "6. Other/file.md"]
         for path in invalid:
             with self.subTest(path=path):
                 self.assertFalse(kernel_utils.check_anchor_rule(path))
-    
+
     def test_privacy_rule(self):
         """Privacy rule should detect protected folder leaks."""
         files = ["README.md", "1. Company/secret.md", "5. Trackers/bugs.md"]
         passed, violations = kernel_utils.check_privacy_rule(files)
         self.assertFalse(passed)
         self.assertEqual(len(violations), 2)
-    
+
     def test_template_mapping(self):
         """All documented intents should map to templates."""
         intents = ["bug", "fix", "feature", "spec", "transcript", "strategy", "weekly"]
@@ -184,7 +186,7 @@ class TestKernelUtils(unittest.TestCase):
 
 class TestSystemScripts(unittest.TestCase):
     """Verify all system scripts exist."""
-    
+
     def test_core_scripts_exist(self):
         scripts_dir = SYSTEM_DIR / "scripts"
         for script in CORE_SCRIPTS:
@@ -194,7 +196,7 @@ class TestSystemScripts(unittest.TestCase):
 
 class TestCriticalFiles(unittest.TestCase):
     """Verify critical system files exist."""
-    
+
     def test_critical_files_exist(self):
         for filename in CRITICAL_FILES:
             with self.subTest(file=filename):
@@ -203,11 +205,11 @@ class TestCriticalFiles(unittest.TestCase):
 
 class TestAsyncQueue(unittest.TestCase):
     """Verify async queue system works."""
-    
+
     def test_queue_directories_exist(self):
         from scripts import queue_worker
         queue_worker.setup_directories()
-        
+
         for d in [queue_worker.PENDING_DIR, queue_worker.PROCESSING_DIR,
                   queue_worker.COMPLETED_DIR, queue_worker.FAILED_DIR]:
             with self.subTest(dir=d):

@@ -11,11 +11,13 @@ import time
 from datetime import datetime, timedelta
 from pathlib import Path
 
-# Add system path
-# Add system path
-repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-system_path = os.path.join(repo_root, "system")
-sys.path.insert(0, system_path)
+# Add system/ to path so 'import scripts.vacuum' resolves to system/scripts/vacuum.py
+# __file__      = system/tests/test_vacuum.py
+# 1st dirname   = system/tests
+# 2nd dirname   = system    ← CORRECT; no need to append "system" again
+_TESTS_DIR = os.path.dirname(os.path.abspath(__file__))
+_SYSTEM_DIR = os.path.dirname(_TESTS_DIR)
+sys.path.insert(0, _SYSTEM_DIR)
 
 # Mock config and utils before importing vacuum
 from unittest.mock import MagicMock, patch

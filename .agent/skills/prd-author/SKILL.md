@@ -59,6 +59,29 @@ _If any are missing, ASK the user first. Do not hallucinate requirements._
 - **Assumptions & Risks** documented.
 - **Decision Log** entry created for major tradeoffs.
 
+### Phase 2.6: Prioritization Scoring (RICE / MoSCoW)
+
+Before generating a PRD, score the feature using **RICE** (Reach, Impact, Confidence, Effort):
+
+| Dimension | Definition | Example |
+|:----------|:-----------|:--------|
+| **Reach** | # users impacted per quarter | 5,000 users |
+| **Impact** | Effect on goal (3=massive, 2=high, 1=med, 0.5=low) | 2 |
+| **Confidence** | Certainty level (100%=high, 80%, 50%) | 80% |
+| **Effort** | Person-months to ship | 2 |
+| **RICE Score** | (Reach × Impact × Confidence) / Effort | 4,000 |
+
+Also apply **MoSCoW** classification to every user story:
+
+| Label | Meaning |
+|:------|:--------|
+| **Must Have** | Non-negotiable for launch. Blocking. |
+| **Should Have** | High value; include if capacity allows. |
+| **Could Have** | Nice-to-have; defer to follow-up. |
+| **Won't Have** | Explicitly out of scope (this cycle). |
+
+> Include a **Success Metrics** table with baseline, target, and measurement method for the primary metric.
+
 ### Phase 3: The Conductor Template (V4.0)
 
 You MUST use the standard structure. Do not invent formats.

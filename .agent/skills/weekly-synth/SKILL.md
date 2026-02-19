@@ -1,15 +1,14 @@
+---
 name: weekly-synth
 description: Weekly and monthly rollups with accomplishments and risks.
 triggers:
-
-- "/week"
-- "/weekly"
-- "/month"
-- "/monthly"
-- "/report"
-  version: 2.0.0 (Executive Level)
-  author: Beats PM Brain
-
+  - "/week"
+  - "/weekly"
+  - "/month"
+  - "/monthly"
+  - "/report"
+version: 2.0.0 (Executive Level)
+author: Beats PM Brain
 ---
 
 # Weekly Synth Skill

@@ -15,8 +15,9 @@ from typing import Any, Dict, Optional
 
 # Path setup using pathlib
 CURRENT_FILE = Path(__file__).resolve()
-ROOT_DIR = CURRENT_FILE.parent.parent.parent.parent
-QUEUE_DIR = ROOT_DIR / "Beats-PM-System/system/queue"
+SYSTEM_ROOT = CURRENT_FILE.parent.parent      # system/
+BRAIN_ROOT = SYSTEM_ROOT.parent               # beats-pm-antigravity-brain/
+QUEUE_DIR = SYSTEM_ROOT / "queue"
 PENDING_DIR = QUEUE_DIR / "pending"
 
 

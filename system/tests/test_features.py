@@ -8,12 +8,13 @@ from pathlib import Path
 
 # Handle imports
 CURRENT_FILE = Path(__file__).resolve()
-TESTS_DIR = CURRENT_FILE.parent
-SYSTEM_ROOT = TESTS_DIR.parent # Beats-PM-System
-ROOT_DIR = SYSTEM_ROOT.parent # beats-pm-antigravity-brain
+TESTS_DIR = CURRENT_FILE.parent           # system/tests/
+SYSTEM_ROOT = TESTS_DIR.parent            # system/
+ROOT_DIR = SYSTEM_ROOT.parent             # beats-pm-antigravity-brain/
+SYSTEM_DIR = SYSTEM_ROOT                  # alias for backward compat in tests
 
-SYSTEM_DIR = SYSTEM_ROOT / 'system'
-sys.path.insert(0, str(SYSTEM_DIR))
+# Insert system/ so 'from scripts import ...' resolves to system/scripts/
+sys.path.insert(0, str(SYSTEM_ROOT))
 
 # Mock utils 
 if 'utils' not in sys.modules:
@@ -54,7 +55,7 @@ class TestFeatureParity(unittest.TestCase):
             "strategy": "chief-strategy-officer",
             
             # Design
-            "ux": "ux-collab",
+            "ux": "ux-collaborator",
             
             # Eng
             "eng": "engineering-collab",

@@ -422,6 +422,50 @@ def check_git_safety():
     except Exception as e:
         print(f"  ⚠️ Could not run git check: {e}")
 
+def manage_tiered_memory() -> None:
+    """
+    Implement Hot/Warm/Cold tiered memory management for meetings.
+
+    Tiers:
+        Hot  (Active)    → MEETINGS_DIR/transcripts/  (< 30 days)
+        Warm (Recent)    → MEETINGS_DIR/summaries/    (7–30 days)
+        Cold (Archived)  → MEETINGS_DIR/archive/      (> 30 days)
+
+    Files older than 30 days in transcripts/ are moved to archive/.
+    """
+    import time as _time
+
+    transcripts_dir = MEETINGS_DIR / "transcripts"
+    archive_dir = MEETINGS_DIR / "archive"
+
+    # Ensure directories exist
+    transcripts_dir.mkdir(parents=True, exist_ok=True)
+    archive_dir.mkdir(parents=True, exist_ok=True)
+
+    now = _time.time()
+    threshold_seconds = 30 * 24 * 60 * 60  # 30 days in seconds
+
+    moved: List[Path] = []
+    for file_path in list(transcripts_dir.iterdir()):
+        if not file_path.is_file():
+            continue
+        age_seconds = now - file_path.stat().st_mtime
+        if age_seconds > threshold_seconds:
+            destination = archive_dir / file_path.name
+            shutil.move(str(file_path), str(destination))
+            moved.append(file_path)
+
+    if moved:
+        print(f"  🧊 Moved {len(moved)} old transcript(s) to Cold Storage (archive/).")
+    else:
+        print("  ✅ No transcripts eligible for archiving.")
+
+
+def archive_transcripts() -> None:
+    """Alias for manage_tiered_memory(), called from queue job handlers."""
+    manage_tiered_memory()
+
+
 def main():
     ensure_dirs()
     print("--- 🧹 System Vacuum Protocol ---")

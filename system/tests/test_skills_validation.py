@@ -15,7 +15,7 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 SKILLS_DIR = ROOT_DIR / ".agent" / "skills"
 
-# Skill inventory
+# Skill inventory — use correct directory names (ux-collab was renamed to ux-collaborator)
 SKILLS = [
     "requirements-translator",
     "daily-synth",
@@ -27,7 +27,7 @@ SKILLS = [
     "meeting-synth",
     "stakeholder-mgr",
     "engineering-collab",
-    "ux-collab",
+    "ux-collaborator",
     "delegation-manager",
     "chief-strategy-officer",
     "weekly-synth",

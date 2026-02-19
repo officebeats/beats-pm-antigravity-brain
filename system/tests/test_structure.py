@@ -13,15 +13,11 @@ import json
 # Add system path
 from pathlib import Path
 CURRENT_FILE = Path(__file__).resolve()
-REPO_ROOT = CURRENT_FILE.parent.parent.parent
-SYSTEM_DIR = REPO_ROOT / "Beats-PM-System" / "system"
+REPO_ROOT = CURRENT_FILE.parent.parent.parent   # beats-pm-antigravity-brain/
+SYSTEM_DIR = REPO_ROOT / "system"               # system/
 sys.path.insert(0, str(SYSTEM_DIR))
 
-# Import real config module
-# We need to make sure utils is importable.
-# The folder structure is Beats-PM-System/system/utils/config.py
-# So if we are in 'system', we import 'utils.config'.
-
+# Import real config module — system/utils/config.py importable as 'utils.config'
 from utils import config
 
 class TestSystemStructure(unittest.TestCase):
@@ -49,12 +45,12 @@ class TestSystemStructure(unittest.TestCase):
         self.assertEqual(len(missing), 0, f"Missing required directories: {missing}")
         
     def test_critical_files_exist(self):
-        """Verify KERNEL, SETTINGS, and Skills exist."""
+        """Verify GEMINI (rules), and Skills exist."""
+        # SETTINGS.md is local-only (gitignored) — not checked here.
+        # KERNEL.md was renamed to .agent/rules/GEMINI.md.
         crit_files = [
-            "KERNEL.md",
-            "SETTINGS.md",
+            ".agent/rules/GEMINI.md",
             ".agent/skills",
-            "requirements.txt"
         ]
         
         missing = []

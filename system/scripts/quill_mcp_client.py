@@ -13,12 +13,19 @@ import xml.etree.ElementTree as ET
 import re
 from pathlib import Path
 
-# Path settings
-BRAIN_DIR = Path("/Users/ernesto/Library/Mobile Documents/com~apple~CloudDocs/Vibe-Coding/beats-pm-antigravity-brain")
+# Path settings — dynamic resolution; no hardcoded personal paths
+CURRENT_FILE = Path(__file__).resolve()
+SYSTEM_ROOT = CURRENT_FILE.parent.parent    # system/
+BRAIN_DIR = SYSTEM_ROOT.parent              # beats-pm-antigravity-brain/
 INCOMING_DIR = BRAIN_DIR / "0. Incoming"
-TRANSCRIPT_ARCHIVE_DIR = BRAIN_DIR / "3. Meetings/transcripts"
-REPORT_DIR = BRAIN_DIR / "3. Meetings/reports"
-MCP_BRIDGE_PATH = "/Users/ernesto/Library/Application Support/Quill/mcp-stdio-bridge.js"
+TRANSCRIPT_ARCHIVE_DIR = BRAIN_DIR / "3. Meetings" / "transcripts"
+REPORT_DIR = BRAIN_DIR / "3. Meetings" / "reports"
+
+# Quill MCP bridge — falls back to user-configured env var for portability
+_DEFAULT_QUILL_BRIDGE = (
+    Path.home() / "Library" / "Application Support" / "Quill" / "mcp-stdio-bridge.js"
+)
+MCP_BRIDGE_PATH = str(os.environ.get("QUILL_MCP_BRIDGE", str(_DEFAULT_QUILL_BRIDGE)))
 
 DAYS_TO_FETCH = 10
 

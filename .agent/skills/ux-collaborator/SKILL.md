@@ -1,15 +1,14 @@
+---
 name: ux-collaborator
 description: Coordinate UX workstreams, research asks, and design debt.
 triggers:
-
-- "/ux"
-- "/design"
-- "/wireframe"
-- "/mockup"
-- "/audit"
-  version: 2.0.0 (Stitch Integrated)
-  author: Beats PM Brain
-
+  - "/ux"
+  - "/design"
+  - "/wireframe"
+  - "/mockup"
+  - "/audit"
+version: 2.0.0 (Stitch Integrated)
+author: Beats PM Brain
 ---
 
 # UX Collaborator Skill

@@ -1,14 +1,13 @@
+---
 name: delegation-manager
 description: Track delegated tasks and prevent accountability gaps.
 triggers:
-
-- "/delegate"
-- "/delegation"
-- "/followup"
-- "/nag"
-  version: 2.0.0 (Person-Aware)
-  author: Beats PM Brain
-
+  - "/delegate"
+  - "/delegation"
+  - "/followup"
+  - "/nag"
+version: 2.0.0 (Person-Aware)
+author: Beats PM Brain
 ---
 
 # Delegation Manager Skill

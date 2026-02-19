@@ -42,9 +42,36 @@
       "/profile"
     ]
   },
+  "communication-crafter": {
+    "path": ".agent/skills/communication-crafter/SKILL.md",
+    "description": "Draft executive updates, stakeholder emails, escalations, and Slack summaries with tone calibration.",
+    "triggers": [
+      "/draft-email",
+      "/escalate",
+      "/status-update",
+      "/recap",
+      "/communicate"
+    ]
+  },
+  "company-profiler": {
+    "path": ".agent/skills/company-profiler/SKILL.md",
+    "description": "Conducts deep-dive research to create a strategic dossier on a target company.",
+    "triggers": []
+  },
+  "competitive-intel": {
+    "path": ".agent/skills/competitive-intel/SKILL.md",
+    "description": "Structured competitive analysis using Porter's 5 Forces, feature parity, and battlecards.",
+    "triggers": [
+      "/compete",
+      "/competitive",
+      "/battlecard",
+      "/market-intel",
+      "/swot"
+    ]
+  },
   "context-retriever": {
     "path": ".agent/skills/context-retriever/SKILL.md",
-    "description": "The \"Recall Engine\". Fetches history, decisions, and tasks related to a perso...",
+    "description": "The \"Recall Engine\". Fetches history, decisions, and tasks related to a person or topic.",
     "triggers": [
       "/prep",
       "/recall",
@@ -54,6 +81,11 @@
   "core-utility": {
     "path": ".agent/skills/core-utility/SKILL.md",
     "description": "System health and diagnostics.",
+    "triggers": []
+  },
+  "cover-letter-writer": {
+    "path": ".agent/skills/cover-letter-writer/SKILL.md",
+    "description": "Generates tailored, narrative-driven cover letters based on Resume and Job Description.",
     "triggers": []
   },
   "daily-synth": {
@@ -73,8 +105,47 @@
     "description": "Execute SQL, analyze funnels, and define success metrics.",
     "triggers": [
       "/data",
-      "/analyze"
+      "/analyze",
+      "/metrics",
+      "/experiment",
+      "/funnel"
     ]
+  },
+  "delegation-manager": {
+    "path": ".agent/skills/delegation-manager/SKILL.md",
+    "description": "Track delegated tasks and prevent accountability gaps.",
+    "triggers": [
+      "/delegate",
+      "/delegation",
+      "/followup",
+      "/nag"
+    ]
+  },
+  "dependency-tracker": {
+    "path": ".agent/skills/dependency-tracker/SKILL.md",
+    "description": "Map, score, and visualize cross-team dependencies for programs and releases.",
+    "triggers": [
+      "/depend",
+      "/dependency",
+      "/critical-path",
+      "/blocked"
+    ]
+  },
+  "discovery-coach": {
+    "path": ".agent/skills/discovery-coach/SKILL.md",
+    "description": "Run structured product discovery using Opportunity Solution Trees, assumption mapping, and experiment design.",
+    "triggers": [
+      "/discover",
+      "/hypothesis",
+      "/experiment",
+      "/ost",
+      "/assumption"
+    ]
+  },
+  "document-exporter": {
+    "path": ".agent/skills/document-exporter/SKILL.md",
+    "description": "Convert standard Markdown documents into high-fidelity PDF, HTML, or DOCX formats with embedded assets.",
+    "triggers": []
   },
   "engineering-collab": {
     "path": ".agent/skills/engineering-collab/SKILL.md",
@@ -96,14 +167,27 @@
       "/test-ui"
     ]
   },
+  "frontend-specialist": {
+    "path": ".agent/skills/frontend-specialist/SKILL.md",
+    "description": "Master of UI/UX, React, TypeScript, and modern CSS.",
+    "triggers": [
+      "/ux",
+      "/frontend-build"
+    ]
+  },
   "inbox-processor": {
     "path": ".agent/skills/inbox-processor/SKILL.md",
-    "description": "The \"Black Hole\" for chaos. Aggressively extracts tasks from raw input and ro...",
+    "description": "The \"Black Hole\" for chaos. Aggressively extracts tasks from raw input and routes them to the ledger.",
     "triggers": [
       "/paste",
       "/inbox",
       "/capture"
     ]
+  },
+  "interview-simulator": {
+    "path": ".agent/skills/interview-simulator/SKILL.md",
+    "description": "Conducting interactive mock interviews with real-time feedback.",
+    "triggers": []
   },
   "meeting-synth": {
     "path": ".agent/skills/meeting-synth/SKILL.md",
@@ -116,6 +200,15 @@
       "/standup"
     ]
   },
+  "okr-manager": {
+    "path": ".agent/skills/okr-manager/SKILL.md",
+    "description": "Define, track, and review OKRs with Antigravity-first planning.",
+    "triggers": [
+      "/okr",
+      "/goal",
+      "/objective"
+    ]
+  },
   "prd-author": {
     "path": ".agent/skills/prd-author/SKILL.md",
     "description": "Generate Product Requirement Documents.",
@@ -126,12 +219,64 @@
       "/requirements"
     ]
   },
+  "prioritization-engine": {
+    "path": ".agent/skills/prioritization-engine/SKILL.md",
+    "description": "Score and rank backlogs using RICE, ICE, MoSCoW, Kano, and weighted scoring.",
+    "triggers": [
+      "/prioritize",
+      "/rank",
+      "/score",
+      "/rice",
+      "/kano"
+    ]
+  },
   "product-marketer": {
     "path": ".agent/skills/product-marketer/SKILL.md",
     "description": "Draft launch plans, press releases, and value propositions.",
     "triggers": [
       "/launch",
-      "/gtm"
+      "/gtm",
+      "/position",
+      "/battlecard",
+      "/release-notes"
+    ]
+  },
+  "release-manager": {
+    "path": ".agent/skills/release-manager/SKILL.md",
+    "description": "Coordinate product releases with readiness gates, rollout plans, and post-launch monitoring.",
+    "triggers": [
+      "/ship",
+      "/rollout",
+      "/release-plan",
+      "/go-live"
+    ]
+  },
+  "requirements-translator": {
+    "path": ".agent/skills/requirements-translator/SKILL.md",
+    "description": "Translate raw input into structured requirements and route to correct artifacts.",
+    "triggers": [
+      "/requirements",
+      "/translate",
+      "/specify"
+    ]
+  },
+  "retrospective": {
+    "path": ".agent/skills/retrospective/SKILL.md",
+    "description": "Facilitate sprint and PI retrospectives with structured formats and action tracking.",
+    "triggers": [
+      "/retro",
+      "/retrospective",
+      "/postmortem",
+      "/reflect"
+    ]
+  },
+  "risk-guardian": {
+    "path": ".agent/skills/risk-guardian/SKILL.md",
+    "description": "Systematic risk analysis for docs and plans.",
+    "triggers": [
+      "/risk",
+      "/premortem",
+      "/audit"
     ]
   },
   "stakeholder-mgr": {
@@ -145,35 +290,12 @@
       "/update"
     ]
   },
-  "key-result-tracker": {
-    "path": ".agent/skills/key-result-tracker/SKILL.md",
-    "description": "Track OKRs and key results with owners, targets, and status.",
+  "stitch": {
+    "path": ".agent/skills/stitch/SKILL.md",
+    "description": "Official interface for the Stitch AI UI/UX design tool via MCP.",
     "triggers": [
-      "/okr",
-      "/krs",
-      "/keyresults",
-      "/key-results"
-    ]
-  },
-  "ux-collaborator": {
-    "path": ".agent/skills/ux-collaborator/SKILL.md",
-    "description": "Coordinate UX workstreams, research asks, and design debt.",
-    "triggers": [
-      "/ux",
-      "/design",
-      "/wireframe",
-      "/mockup",
-      "/prototype"
-    ]
-  },
-  "weekly-synth": {
-    "path": ".agent/skills/weekly-synth/SKILL.md",
-    "description": "Weekly and monthly rollups with accomplishments and risks.",
-    "triggers": [
-      "/week",
-      "/weekly",
-      "/month",
-      "/monthly"
+      "/stitch",
+      "/design"
     ]
   },
   "task-manager": {
@@ -187,17 +309,61 @@
       "/organize"
     ]
   },
+  "ux-collaborator": {
+    "path": ".agent/skills/ux-collaborator/SKILL.md",
+    "description": "Coordinate UX workstreams, research asks, and design debt.",
+    "triggers": [
+      "/ux",
+      "/design",
+      "/wireframe",
+      "/mockup",
+      "/audit"
+    ]
+  },
   "ux-researcher": {
     "path": ".agent/skills/ux-researcher/SKILL.md",
     "description": "Synthesize user interviews, create personas, and run usability tests.",
     "triggers": [
       "/research",
-      "/interview"
+      "/interview",
+      "/persona",
+      "/journey",
+      "/usability"
     ]
+  },
+  "vacuum-protocol": {
+    "path": ".agent/skills/vacuum-protocol/SKILL.md",
+    "description": "System optimization, task archiving, and hierarchical integrity auditing.",
+    "triggers": [
+      "/vacuum",
+      "/archive",
+      "/clean",
+      "/cleanup"
+    ]
+  },
+  "visual-architect": {
+    "path": ".agent/skills/visual-architect/SKILL.md",
+    "description": "Expert in visualizing concepts through code. Generates Mermaid.js diagrams, ASCII art, and HTML/CSS prototypes.",
+    "triggers": []
   },
   "visual-processor": {
     "path": ".agent/skills/visual-processor/SKILL.md",
-    "description": "Analyze images and screenshots.",
-    "triggers": []
+    "description": "Extract text and context from images for PM analysis.",
+    "triggers": [
+      "/paste",
+      "/dump",
+      "/screenshot"
+    ]
+  },
+  "weekly-synth": {
+    "path": ".agent/skills/weekly-synth/SKILL.md",
+    "description": "Weekly and monthly rollups with accomplishments and risks.",
+    "triggers": [
+      "/week",
+      "/weekly",
+      "/month",
+      "/monthly",
+      "/report"
+    ]
   }
 }

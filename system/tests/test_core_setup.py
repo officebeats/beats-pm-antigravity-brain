@@ -4,8 +4,13 @@ from unittest.mock import patch, MagicMock, call
 import sys
 import os
 
-# Add system directory to path for imports
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "system"))
+# Add system/ directory to path so 'from scripts import ...' resolves to system/scripts/
+# __file__ = system/tests/test_core_setup.py
+# parent  = system/tests/
+# parent  = system/   ← this is what we insert
+_TESTS_DIR = os.path.dirname(os.path.abspath(__file__))
+_SYSTEM_DIR = os.path.dirname(_TESTS_DIR)
+sys.path.insert(0, _SYSTEM_DIR)
 
 
 # Clean up sys.modules to avoid pollution from other tests
