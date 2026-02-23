@@ -1,3 +1,5 @@
+# 🧠 Beats PM Antigravity Kit
+
 <div align="center">
 
 <!-- HERO BANNER -->
@@ -6,7 +8,7 @@
 
 <br/>
 
-# 🧠 Beats PM Antigravity Kit
+
 
 <h3><em>The AI Operating System That Thinks Like a Product Manager</em></h3>
 
