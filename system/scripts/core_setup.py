@@ -114,9 +114,13 @@ def install_extensions() -> None:
             print_gray(f"[skip] {ext_name} (Already installed)")
             continue
             
-        response = input(f"  [?] Would you like to install {ext_name}? (y/n): ").strip().lower()
-        if response == 'y':
+        if ext.get('required', False):
+            print_cyan(f"  [!] Required extension: {ext_name}")
             install_extension(ext_id, ext_name, ext.get('url'))
+        else:
+            response = input(f"  [?] Would you like to install {ext_name}? (y/n): ").strip().lower()
+            if response == 'y':
+                install_extension(ext_id, ext_name, ext.get('url'))
 
 
 def run_vibe_check() -> None:
