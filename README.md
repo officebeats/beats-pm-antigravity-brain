@@ -93,6 +93,30 @@ Open your AI tool in the root folder and type `/setup` (or `#setup` in Gemini CL
 
 ---
 
+## 🤯 In Action: Real PM Use Cases
+
+_Still wondering how to use this? Here are three ways to save 10 hours this week:_
+
+### Scenario A: The Messy Brain Dump
+
+You just got out of a chaotic 45-minute unstructured discovery call. You have a messy page of notes, random feature ideas, and a bug a customer mentioned.
+**The Action:** Copy the raw text. Type `/paste`.
+**The Magic:** The `Staff PM` agent automatically reads your clipboard, parses the chaos, formally logs the bug into `bugs-master.md`, identifies your feature ideas and routes them to `opportunity-solution-tree.md`, and drafts the thank-you email.
+
+### Scenario B: The Friday "Managing Up" Crisis
+
+It's 10:00 AM on Friday. You have your 1:1 with your SVP of Product in 2 hours and have no idea what to say.
+**The Action:** Type `/boss`.
+**The Magic:** The `CPO` agent reads all transcripts from meetings with that SVP, checks your `TASK_MASTER.md`, flags that you haven't updated the "Q3 Roadmap" task in 4 days, and generates a structured talking-points cheat sheet telling you _exactly_ what to report on to look like a rockstar.
+
+### Scenario C: The Feature Kickoff
+
+You need to write a PRD for a new "Single Sign-On" feature but you're staring at a blank page.
+**The Action:** Type `/create`.
+**The Magic:** The agent asks what you want to build. You say "SSO". It pulls the `FAANG PRD Template`, leverages the `prd-author` skill to write the strategic background, and triggers the `Frontend Specialist` agent to use the `stitch` and `shadcn-ui` skills to automatically generate the React UI wireframes for you.
+
+---
+
 ## 🧬 Inside the Engine: The Three-Tier "Gold Standard" Architecture
 
 We recently engaged in a massive system overhaul to match the strict `mgechev/skills-best-practices` doctrine used by top-tier engineering organizations.
