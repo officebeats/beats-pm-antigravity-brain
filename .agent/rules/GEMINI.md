@@ -10,7 +10,7 @@ This file defines the Operating System for the Product Management Brain.
 
 **Primary Runtime:** Google Antigravity (native agent mesh, parallel fan-out, deep file access).
 
-**Secondary Runtime:** CLI tools (Gemini CLI, Claude Code) with graceful degradation.
+**Secondary Runtime:** CLI tools (Gemini CLI, Claude Code, Kilocode CLI) with graceful degradation.
 
 ### Capability Notes
 
@@ -52,126 +52,52 @@ Agent activated → Check frontmatter "skills:" field in `.agent/agents/`
 
 ---
 
-## 🚀 TIER 0.5: AGENTIC PROTOCOL (Antigravity V2)
+## 🚀 TIER 0.5: THREE-TIER ARCHITECTURE (Gold Standard)
 
-> This tier defines the agent's behavior when running in **Antigravity's native agentic mode**.
+The Antigravity Kit is strictly organized into three separate layers to maximize parallel execution and preserve zero-shot context windows.
 
-### 1. State Machine Protocol
+### 1. Identity Layer (`.agent/agents/`)
 
-For any task classified as "Deep Work" (creation, planning, complex research), the agent MUST:
+**Who does the work.** These are persona instances (e.g., `CPO`, `Staff PM`, `Tech Lead`).
 
-1.  **ENTER PLANNING**: Call `task_boundary` with `Mode: PLANNING`. Create `implementation_plan.md` in the artifacts directory.
-2.  **TRANSITION TO EXECUTION**: After user approval, switch `Mode: EXECUTION`. Use `task.md` for progress tracking.
-3.  **FINALIZE WITH VERIFICATION**: Switch `Mode: VERIFICATION`. Create `walkthrough.md` with visual proof (screenshots, recordings).
+- They define decision logic, escalation paths, and negative triggers.
+- They contain a `skills:` YAML array that strictly bounds what they are allowed to execute.
 
-### 2. Parallelism Mandate (CRITICAL)
+### 2. Orchestration Layer (`.agent/workflows/`)
 
-**Rule**: Maximize parallel tool calls. Never make sequential calls for independent operations.
+**What sequence is triggered.** These are the lean `/slash` commands that user invokes.
 
-| Scenario               | Sequential (BAD)             | Parallel (GOOD)                               |
-| :--------------------- | :--------------------------- | :-------------------------------------------- |
-| Multi-file audit       | Read file A, then B, then C  | Read files A, B, C simultaneously             |
-| Research + Template    | Search, wait, then read file | `grep_search` + `view_file` in single turn    |
-| Multi-skill activation | Load skill 1, then skill 2   | `view_file` for both `SKILL.md`s in one block |
+- They do **NOT** contain templates, procedural logic, or execution instructions.
+- They solely _chain_ agents and skills together (e.g. "Trigger Staff PM, invoke `meeting-synth`, extract open items").
 
-### 3. Visual Excellence Protocol
+### 3. Capability Layer (`.agent/skills/`)
 
-**Rule**: All PRDs, Roadmaps, and Walkthroughs MUST include visual elements.
+**How the work is done.** These are the atomic verbs of the system.
 
-- **Mermaid Diagrams**: Required for any workflow, architecture, or flowchart.
-- **Tables**: Required for feature lists, milestones, and comparisons.
-- **Carousels**: Required in `walkthrough.md` to display related screenshots or code snippets.
-- **GitHub Alerts**: Use `[!IMPORTANT]`, `[!TIP]`, `[!WARNING]` to highlight key decisions.
+- They follow the strict `mgechev` standard: heavily restricted `SKILL.md` (< 500 lines) with subdirectories for `assets/` (templates), `references/` (schemas), and `scripts/` (tooling).
+- Templates are ONLY loaded Just-In-Time explicitly by the skill.
 
-### 4. Stitch-First Design (OPTIONAL)
+## 🗳️ UNIVERSAL SYSTEM ROUTING
 
-When creating a PRD or Feature Spec for a _user-facing_ feature, the agent SHOULD:
+Before ANY action, classify the request against the 15 verified core playbooks:
 
-1.  Ask the user if they want a UI mockup generated.
-2.  If yes, invoke the `/stitch` workflow to produce a visual prototype alongside the document.
-
-## 🗳️ REQUEST CLASSIFIER
-
-Before ANY action, classify the request:
-
-| Request Type     | Trigger                                        | Required Action                        |
-| :--------------- | :--------------------------------------------- | :------------------------------------- |
-| **STRATEGY**     | "plan", "roadmap", "vision"                    | Activate **CPO** or **Strategist**     |
-| **EXECUTION**    | "track", "task", "jira", "ticket"              | Activate **Staff PM**                  |
-| **CREATION**     | "draft", "write", "spec", "prd"                | Activate **Staff PM** (`/create`)      |
-| **MEETING**      | "transcript", "notes", "agenda"                | Activate **Staff PM** (`/meet`)        |
-| **ANALYSIS**     | "data", "metrics", "growth"                    | Activate **Data Scientist**            |
-| **RESEARCH**     | "user", "interview", "persona"                 | Activate **UX Researcher**             |
-| **LAUNCH**       | "gtm", "marketing", "release"                  | Activate **GTM Lead**                  |
-| **PROGRAM**      | "dependency", "release plan", "retro", "ship"  | Activate **Program Manager**           |
-| **DISCOVERY**    | "discover", "hypothesis", "experiment", "ost"  | Activate **Staff PM** (`/discover`)    |
-| **PRIORITIZE**   | "prioritize", "rank", "score", "RICE", "kano"  | Activate **Staff PM** (`/prioritize`)  |
-| **COMPETE**      | "competitive", "battlecard", "market intel"    | Activate **Strategist** (`/compete`)   |
-| **COMMUNICATE**  | "draft email", "escalate", "status update"     | Activate **Staff PM** (`/communicate`) |
-
----
-
-## TIER 0: UNIVERSAL RULES (Always Active)
-
-### 1. Conductor-First Protocol
-
-**Rule**: Whenever creating a document (PRD, Spec, Memo), check `.agent/templates/` first.
-
-- **Execution**: Prefer using a standardized template over ad-hoc generation.
-
-### 2. Antigravity GPS Protocol
-
-**Rule**: Never crawl the file system.
-
-- **Action**: Read `system/content_index.json` to find files.
-
-> **Runtime Exception**: Antigravity-native system scripts may scan known intake folders (e.g., `0. Incoming/`) for capture workflows. This is allowed as internal tooling.
-
-### 3. Tiered Memory Management
-
-- **Hot**: Active Projects (Root / 2. Products)
-- **Warm**: Recent Meetings (3. Meetings/transcripts)
-- **Cold**: Archive (5. Trackers/archive)
-
----
-
-### 4. Hierarchical Integrity Protocol (MANDATORY)
-
-**Rule**: No loose files are permitted at the root of Folders 1, 2, or 4.
-
-- **Structure**: `[Folder]/[Company]/[Product]/[Asset].md`
-- **Exemptions**: `PROFILE.md` or `stakeholders.md` may exist at the `[Company]` root, but all initiative-specific docs MUST be nested into a product folder.
-- **Enforcement**: Non-compliant files will be flagged by `#vacuum`.
-
----
-
-### 5. Routing Precedence (Canonical)
-
-1. **Boss Ask** → `5. Trackers/critical/boss-requests.md`
-2. **Bug** → `5. Trackers/bugs/bugs-master.md`
-3. **Task** → `5. Trackers/TASK_MASTER.md`
-4. **Decision** → `5. Trackers/DECISION_LOG.md`
-5. **Delegated** → `5. Trackers/DELEGATED_TASKS.md`
-6. **FYI/Reference** → `0. Incoming/fyi/`
-
----
-
-## TIER 1: CORE PLAYBOOKS
-
-| Playbook          | Purpose                    | Output                                |
-| :---------------- | :------------------------- | :------------------------------------ |
-| **`/track`**      | **Battlefield View**       | Table of P0/P1 Tasks + Boss Asks      |
-| **`/create`**     | **Document Factory**       | PRD, One-Pager, or Strategy Memo      |
-| **`/plan`**       | **Strategic War Room**     | Roadmap, OKRs, Decision Log           |
-| **`/meet`**       | **Meeting Synthesis**      | Action Items, Decisions, Notes        |
-| **`/review`**     | **Quality Control**        | UX Audit, Spec Review, Code Review    |
-| **`/launch`**     | **GTM Strategy**           | Launch Checklist, Marketing Assets    |
-| **`/data`**       | **Analytics**              | SQL Queries, Success Metrics, Funnels |
-| **`/vacuum`**     | **System Optimization**    | Archive Tasks, Cleanup, & Audit       |
-| **`/retro`**      | **Retrospective**          | Action Items, Patterns, Retro Report  |
-| **`/compete`**    | **Competitive Intel**      | Battlecard, Parity Matrix, SWOT       |
-| **`/discover`**   | **Product Discovery**      | OST, Assumptions, Experiments         |
-| **`/prioritize`** | **Backlog Scoring**        | RICE/ICE/Kano Scorecard               |
+| Playbook          | Purpose                                 | Agent Triggered                      |
+| :---------------- | :-------------------------------------- | :----------------------------------- |
+| **`/boss`**       | Prepare for Friday 1:1 sync             | `CPO` → `boss-tracker`               |
+| **`/day`**        | Daily briefing and synthesis            | `CPO` → `daily-synth`                |
+| **`/track`**      | Battlefield View (Tasks + Bugs)         | `Staff PM` → `task-manager`          |
+| **`/meet`**       | Synthesize transcript to Action Items   | `Staff PM` → `meeting-synth`         |
+| **`/create`**     | Document Factory (PRD, Spec, One-Pager) | `Staff PM` → `prd-author`            |
+| **`/plan`**       | Strategic War Room (Roadmaps, OKRs)     | `Strategist` → `okr-manager`         |
+| **`/retro`**      | Action-driven Retrospective             | `Program Manager` → `retrospective`  |
+| **`/vacuum`**     | System Optimization & File Archive      | `CPO` → `vacuum-protocol`            |
+| **`/fan-out`**    | Complex Parallel Agent Dispatch         | `CPO` → Orchestrator                 |
+| **`/sprint`**     | Sprint Plan Generation                  | `Program Manager` → `sprint-plan`    |
+| **`/discover`**   | Product Discovery & OST Mapping         | `Staff PM` → `discovery-coach`       |
+| **`/prioritize`** | Backlog Scoring (RICE, etc)             | `Staff PM` → `prioritization-engine` |
+| **`/paste`**      | Capture clipboard to triage             | `Staff PM` → `inbox-processor`       |
+| **`/review`**     | Code/Spec/Design Quality Control        | `Tech Lead`                          |
+| **`/help`**       | User Manual & System Docs               | _System_                             |
 
 ---
 
@@ -193,16 +119,16 @@ beats-pm-antigravity-brain/
 
 ## 🧩 THE VIRTUAL TEAM (Roles)
 
-| Agent                     | Focus                   | Key Skills                                                                      |
-| :------------------------ | :---------------------- | :------------------------------------------------------------------------------ |
-| **Chief Product Officer** | Strategy & Org          | `chief-strategy-officer`, `boss-tracker`, `vacuum-protocol`                     |
-| **Staff PM**              | Execution & Delivery    | `task-manager`, `prd-author`, `meeting-synth`, `discovery-coach`, `prioritization-engine`, `communication-crafter` |
-| **Product Strategist**    | Market & Vision         | `chief-strategy-officer`, `okr-manager`, `competitive-intel`                    |
-| **Program Manager**       | Governance & Releases   | `dependency-tracker`, `release-manager`, `retrospective`, `task-manager`, `risk-guardian` |
-| **Tech Lead**             | Feasibility & Eng       | `engineering-collab`, `code-simplifier`, `vacuum-protocol`                      |
-| **Data Scientist**        | Quant Insights          | `data-analytics`                                                                |
-| **UX Researcher**         | Qual Insights           | `ux-researcher`                                                                 |
-| **GTM Lead**              | Launch & Growth         | `product-marketer`                                                              |
+| Agent                     | Focus                 | Key Skills                                                                                                         |
+| :------------------------ | :-------------------- | :----------------------------------------------------------------------------------------------------------------- |
+| **Chief Product Officer** | Strategy & Org        | `chief-strategy-officer`, `boss-tracker`, `vacuum-protocol`                                                        |
+| **Staff PM**              | Execution & Delivery  | `task-manager`, `prd-author`, `meeting-synth`, `discovery-coach`, `prioritization-engine`, `communication-crafter` |
+| **Product Strategist**    | Market & Vision       | `chief-strategy-officer`, `okr-manager`, `competitive-intel`                                                       |
+| **Program Manager**       | Governance & Releases | `dependency-tracker`, `release-manager`, `retrospective`, `task-manager`, `risk-guardian`                          |
+| **Tech Lead**             | Feasibility & Eng     | `engineering-collab`, `code-simplifier`, `vacuum-protocol`                                                         |
+| **Data Scientist**        | Quant Insights        | `data-analytics`                                                                                                   |
+| **UX Researcher**         | Qual Insights         | `ux-researcher`                                                                                                    |
+| **GTM Lead**              | Launch & Growth       | `product-marketer`                                                                                                 |
 
 ---
 

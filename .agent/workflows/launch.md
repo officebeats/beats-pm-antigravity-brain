@@ -2,6 +2,10 @@
 description: Launch a product.
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
+
 # /launch - Go-to-Market Strategy
 
 **Trigger**: User types `/launch` or asks for a GTM plan.

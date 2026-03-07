@@ -2,6 +2,10 @@
 description: Manage the battlefield. Tasks, Bugs, and Boss Asks.
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
+
 # ⚔️ Task & Execution Playbook
 
 This workflow guides the **Staff PM** to manage daily execution.

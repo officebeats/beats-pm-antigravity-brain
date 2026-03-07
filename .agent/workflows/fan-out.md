@@ -2,6 +2,10 @@
 description: Fan-out a complex PM task to multiple specialized agents in parallel, then synthesize results.
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
+
 # /fan-out — Multi-Agent Parallel Dispatch Workflow
 
 **Trigger**: `/fan-out [task description]` or when a task requires multiple domain perspectives simultaneously.
@@ -114,31 +118,7 @@ Apply the synthesized output using standard routing:
 
 ## Output Format
 
-```markdown
-# 🤖 Agent Fan-Out Report — [TASK TYPE]
-
-> **Generated**: [timestamp]
-> **Agents**: N  |  **Duration**: Xms
-
-**Task Context**: [description]
-
-## Agent Results
-
-| Agent | Status | Skills Loaded | Duration |
-|-------|--------|---------------|----------|
-| staff-pm | ✅ success | task-manager, prd-author | 42ms |
-| ux-researcher | ✅ success | ux-researcher, discovery-coach | 38ms |
-| tech-lead | ✅ success | engineering-collab | 31ms |
-
-## Skills Activated (N)
-- `prd-author`
-- `ux-researcher`
-- `engineering-collab`
-...
-
-## 🚀 Next Steps
-[Explicit handoff tasks with owners and dates]
-```
+``> **Output Formatting**: Read the template at .agent/skills/core-utility/assets/fan_out_synthesis_template.md and use it to format your output.``
 
 ---
 

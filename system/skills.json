@@ -44,7 +44,7 @@
   },
   "communication-crafter": {
     "path": ".agent/skills/communication-crafter/SKILL.md",
-    "description": "Draft executive updates, stakeholder emails, escalations, and Slack summaries with tone calibration.",
+    "description": "Draft executive updates, stakeholder emails, escalations, and Slack summaries...",
     "triggers": [
       "/draft-email",
       "/escalate",
@@ -60,7 +60,7 @@
   },
   "competitive-intel": {
     "path": ".agent/skills/competitive-intel/SKILL.md",
-    "description": "Structured competitive analysis using Porter's 5 Forces, feature parity, and battlecards.",
+    "description": "Structured competitive analysis using Porter's 5 Forces, feature parity, and ...",
     "triggers": [
       "/compete",
       "/competitive",
@@ -71,7 +71,7 @@
   },
   "context-retriever": {
     "path": ".agent/skills/context-retriever/SKILL.md",
-    "description": "The \"Recall Engine\". Fetches history, decisions, and tasks related to a person or topic.",
+    "description": "The \"Recall Engine\". Fetches history, decisions, and tasks related to a perso...",
     "triggers": [
       "/prep",
       "/recall",
@@ -85,7 +85,7 @@
   },
   "cover-letter-writer": {
     "path": ".agent/skills/cover-letter-writer/SKILL.md",
-    "description": "Generates tailored, narrative-driven cover letters based on Resume and Job Description.",
+    "description": "Generates tailored, narrative-driven cover letters based on Resume and Job De...",
     "triggers": []
   },
   "daily-synth": {
@@ -133,7 +133,7 @@
   },
   "discovery-coach": {
     "path": ".agent/skills/discovery-coach/SKILL.md",
-    "description": "Run structured product discovery using Opportunity Solution Trees, assumption mapping, and experiment design.",
+    "description": "Run structured product discovery using Opportunity Solution Trees, assumption...",
     "triggers": [
       "/discover",
       "/hypothesis",
@@ -144,7 +144,7 @@
   },
   "document-exporter": {
     "path": ".agent/skills/document-exporter/SKILL.md",
-    "description": "Convert standard Markdown documents into high-fidelity PDF, HTML, or DOCX formats with embedded assets.",
+    "description": "Convert standard Markdown documents into high-fidelity PDF, HTML, or DOCX for...",
     "triggers": []
   },
   "engineering-collab": {
@@ -177,7 +177,7 @@
   },
   "inbox-processor": {
     "path": ".agent/skills/inbox-processor/SKILL.md",
-    "description": "The \"Black Hole\" for chaos. Aggressively extracts tasks from raw input and routes them to the ledger.",
+    "description": "The \"Black Hole\" for chaos. Aggressively extracts tasks from raw input and ro...",
     "triggers": [
       "/paste",
       "/inbox",
@@ -243,7 +243,7 @@
   },
   "release-manager": {
     "path": ".agent/skills/release-manager/SKILL.md",
-    "description": "Coordinate product releases with readiness gates, rollout plans, and post-launch monitoring.",
+    "description": "Coordinate product releases with readiness gates, rollout plans, and post-lau...",
     "triggers": [
       "/ship",
       "/rollout",
@@ -262,7 +262,7 @@
   },
   "retrospective": {
     "path": ".agent/skills/retrospective/SKILL.md",
-    "description": "Facilitate sprint and PI retrospectives with structured formats and action tracking.",
+    "description": "Facilitate sprint and PI retrospectives with structured formats and action tr...",
     "triggers": [
       "/retro",
       "/retrospective",
@@ -279,7 +279,7 @@
       "/audit"
     ]
   },
-  "stakeholder-mgr": {
+  "stakeholder-manager": {
     "path": ".agent/skills/stakeholder-mgr/SKILL.md",
     "description": "Manage relationships, 1:1s, and stakeholder communication.",
     "triggers": [
@@ -343,7 +343,7 @@
   },
   "visual-architect": {
     "path": ".agent/skills/visual-architect/SKILL.md",
-    "description": "Expert in visualizing concepts through code. Generates Mermaid.js diagrams, ASCII art, and HTML/CSS prototypes.",
+    "description": "Expert in visualizing concepts through code. Generates Mermaid.js diagrams, A...",
     "triggers": []
   },
   "visual-processor": {
@@ -352,6 +352,7 @@
     "triggers": [
       "/paste",
       "/dump",
+      "image analysis",
       "/screenshot"
     ]
   },

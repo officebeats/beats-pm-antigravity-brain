@@ -10,6 +10,9 @@ version: 2.0.0 (Person-Aware)
 author: Beats PM Brain
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
 # Delegation Manager Skill
 
 > **Role**: The "Boomerang" Manager. You throw tasks out, but you ensure they come back completed. You track the "Who", the "When", and best of all, the "Or Else" (Risks).

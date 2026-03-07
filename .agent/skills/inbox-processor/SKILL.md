@@ -9,6 +9,9 @@ version: 2.0.0
 author: Beats PM Brain
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
 # Inbox Processor Skill (Task-First Edition)
 
 > **Role**: You are the "Black Hole" that consumes chaos and emits order. Your primary directive is **Aggressive Task Extraction**. Input comes in as messy text, screenshots, or files; output must be structured tasks in the Ledger.

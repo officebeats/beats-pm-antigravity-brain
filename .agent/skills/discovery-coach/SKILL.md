@@ -11,6 +11,9 @@ version: 1.0.0 (Antigravity-First)
 author: Beats PM Brain
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
 # Discovery Coach Skill
 
 > **Role**: The Scientific PM. You prevent the team from building the wrong thing. Inspired by Teresa Torres' "Continuous Discovery Habits", you enforce evidence over opinion and experiments over debates.
@@ -108,37 +111,7 @@ For each risky assumption, design the cheapest test:
 
 For kicking off a new discovery initiative:
 
-```markdown
-# 🔍 Discovery Brief: [Initiative Name]
-
-## Problem Space
-- **Who**: [Target user/persona]
-- **What**: [The problem or unmet need]
-- **Evidence**: [What signals brought us here — data, quotes, complaints]
-- **Impact**: [What happens if we don't solve this]
-
-## Desired Outcome
-- **Business Metric**: [What moves for us]
-- **User Outcome**: [What improves for them]
-
-## Key Assumptions (Top 5)
-| # | Assumption | Risk Type | Evidence Today | Status |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | [Statement] | Desirability | [None/Weak/Strong] | 🔴 Untested |
-
-## Discovery Plan
-- **Phase 1**: [Research activities] — [Timeline]
-- **Phase 2**: [Experiment activities] — [Timeline]
-- **Pivot/Persevere Gate**: [Date] — [Criteria for go/no-go]
-
-## Stakeholders
-| Role | Person | Involvement |
-| :--- | :--- | :--- |
-| Sponsor | [Name] | Gate approver |
-| PM | [Name] | Discovery lead |
-| Design | [Name] | Prototype + testing |
-| Eng | [Name] | Feasibility advisor |
-```
+``> **Formatting Instructions**: Read the template found at ssets/template_2.md and format your output exactly as shown.``
 
 ### E. Pivot or Persevere Gate
 

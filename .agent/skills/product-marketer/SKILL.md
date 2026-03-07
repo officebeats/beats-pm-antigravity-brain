@@ -1,150 +1,97 @@
 ---
 name: product-marketer
-description: Draft launch plans, press releases, and value propositions.
-triggers:
-  - "/launch"
-  - "/gtm"
-  - "/position"
-  - "/battlecard"
-  - "/release-notes"
-version: 2.0.0 (Production-Grade)
-author: Beats PM Brain
+description: "Create a go-to-market strategy covering marketing channels, messaging, success metrics, and launch timeline. Use when planning a product launch, creating a GTM plan from scratch, or defining a launch strategy for a new market."
 ---
 
-# Product Marketer Skill
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
 
-> **Role**: The Storyteller who ships. You don't just build — you launch. You ensure the market knows, the sales team is armed, and the customer feels the value before they even click.
+# GTM Strategy
 
-## 1. Runtime Capability
+## Overview
+Create a comprehensive go-to-market strategy for a product launch. This skill covers marketing channels, messaging development, success metrics definition, and launch planning.
 
-- **Antigravity**: Parallel drafting of launch plan, internal enablement, and external messaging.
-- **CLI**: Sequential drafting with prompts for missing positioning inputs.
+## When to Use
+- Planning a product launch
+- Creating a GTM plan from scratch
+- Defining a launch strategy for a new market
+- Developing product-to-market fit strategy
+- Preparing a product go-live roadmap
 
-## 2. Native Interface
+## How It Works
 
-- **Inputs**: `/launch`, `/gtm`, `/position`, `/battlecard`, `/release-notes`
-- **Context**: `2. Products/[Product]/`, `1. Company/PROFILE.md`, `SETTINGS.md`
-- **Tools**: `view_file`, `write_to_file`
+### Step 1: Gather Research Data
+The system will help you load and analyze early research about your product and target market. Provide:
+- Product description and key features
+- Target market segment details
+- Market research or validation data
+- Competitive landscape information
+- Any available customer interviews or survey data
 
-## 3. Cognitive Protocol
+### Step 2: Define Marketing Channels
+Evaluate which channels best reach your target audience:
+- Digital marketing channels (paid search, social media, display)
+- Content and inbound channels (blog, SEO, thought leadership)
+- Sales and outbound channels (direct outreach, partnerships)
+- Community and grassroots channels
+- Product-led and viral channels
 
-### A. Positioning Framework (`/position`)
+### Step 3: Develop Messaging
+Create audience-specific messaging that resonates:
+- Core value proposition for target segment
+- Key differentiators and competitive advantages
+- Pain point validation and solution mapping
+- Proof points and social proof strategies
+- Channel-specific messaging variations
 
-Use **April Dunford's "Obviously Awesome"** method:
+### Step 4: Define Success Metrics
+Establish measurable KPIs to track launch success:
+- Awareness metrics (impressions, reach, brand recall)
+- Engagement metrics (CTR, cost per engagement, time on site)
+- Conversion metrics (signups, demos requested, trials started)
+- Revenue metrics (MRR, customer acquisition cost, lifetime value)
+- Market metrics (market share, segment penetration)
 
-1.  **Competitive Alternatives**: What would the customer do if your product didn't exist?
-2.  **Unique Attributes**: What features/capabilities do ONLY you have?
-3.  **Value**: What benefit do those attributes enable? (Functional + Emotional)
-4.  **Target Segment**: Who cares the most about that value?
-5.  **Market Category**: What frame of reference helps the customer understand you?
+### Step 5: Create Launch Plan
+Build a phased launch timeline:
+- Pre-launch preparation (messaging, channels, timeline)
+- Launch day activities and announcements
+- Post-launch momentum (content, partnerships, communities)
+- Measurement and optimization cadence
+- Success criteria and go/no-go decision points
 
-Output:
-```markdown
-## Positioning Statement
+## Input Format
+Use $ARGUMENTS to pass:
+- Product name and description
+- Target market segment
+- Research data or file path
+- Launch timeline and constraints
+- Budget or resource limitations
 
-For [Target Segment] who [Need/Pain],
-[Product] is a [Market Category] that [Key Benefit].
-Unlike [Competitive Alternative],
-we [Unique Differentiator].
-```
+## Output
+A structured GTM strategy document including:
+- Recommended marketing channels with justification
+- Channel-specific messaging and positioning
+- Launch timeline with key milestones
+- KPI targets and measurement framework
+- Risk mitigation strategies
+- 90-day execution roadmap
 
-### B. Messaging Matrix
+## Framework
+This skill applies Product Compass GTM strategy methodology, focusing on market selection, channel fit, and message-market fit for sustainable product growth.
 
-Build an Audience × Value grid:
+## Tips
+- Start with your most confident customer segment
+- Validate assumptions through customer interviews before full launch
+- Focus on a few channels excellently rather than many channels poorly
+- Establish baseline metrics before launch to measure impact
+- Plan for feedback loops and optimization
 
-| Audience | Pain Point | Value Prop | Proof Point | CTA |
-| :--- | :--- | :--- | :--- | :--- |
-| End User | [Pain] | [Benefit] | [Data/Quote] | [Action] |
-| Admin/Buyer | [Pain] | [Benefit] | [Data/Quote] | [Action] |
-| Executive | [Pain] | [Benefit] | [Data/Quote] | [Action] |
+---
 
-**Rules**:
-- **Benefit > Feature**: Not "AI-powered search" but "Find answers 3x faster."
-- **Proof > Claim**: Back every value prop with data, a customer quote, or a case study.
+### Further Reading
 
-### C. Launch Playbook (`/launch`)
-
-#### T-Minus Countdown
-
-| Phase | Timeline | Gate | Activities |
-| :--- | :--- | :--- | :--- |
-| **Alpha** | T-30 | Internal QA Pass | Internal dogfood, bug bash, feature freeze |
-| **Beta** | T-14 | Beta Criteria Met | External beta group, feedback collection, docs draft |
-| **Pre-Launch** | T-7 | Go/No-Go Decision | Final QA, support trained, comms approved, legal cleared |
-| **Launch Day** | T-0 | Ship It 🚢 | Deploy, announce, monitor dashboards |
-| **Post-Launch** | T+7 | Health Check | Metrics review, hot-fixes, customer feedback synthesis |
-
-#### Readiness Checklist
-
-- [ ] **Engineering**: Feature code-complete, tested, feature-flagged
-- [ ] **QA**: Regression passed, edge cases documented
-- [ ] **Documentation**: Help center articles published, API docs updated
-- [ ] **Support**: Team briefed, runbook created, escalation path defined
-- [ ] **Sales**: Battlecard distributed, demo script ready
-- [ ] **Legal**: Terms updated, privacy review complete
-- [ ] **Marketing**: Blog post drafted, email campaign queued, social assets ready
-- [ ] **Exec**: Leadership aligned, sign-off received
-
-### D. Competitive Battlecard (`/battlecard`)
-
-Generate a sales-ready competitive reference:
-
-```markdown
-# ⚔️ Battlecard: [Product] vs [Competitor]
-
-## Quick Comparison
-| Dimension | Us | Them |
-| :--- | :--- | :--- |
-| [Capability 1] | ✅ [Detail] | ❌ [Detail] |
-
-## Win Themes
-1. [Why we win — backed by proof]
-
-## Loss Themes
-1. [Why we lose — with mitigation]
-
-## Objection Handling
-| Objection | Response |
-| :--- | :--- |
-| "They have X" | "Yes, but we offer Y which delivers Z" |
-
-## Landmines (Questions to Ask the Prospect)
-- "How does [Competitor] handle [Known Weakness]?"
-```
-
-### E. Release Notes Generator (`/release-notes`)
-
-1.  **Source**: Pull from resolved tasks/bugs in `TASK_MASTER.md` and `bugs-master.md` for the release window.
-2.  **Structure**:
-    - **User-Facing** (external): Benefit-first language, grouped by theme.
-    - **Technical** (internal): Detailed changes for engineering/support.
-3.  **Format**:
-
-```markdown
-# Release Notes — v[X.Y.Z] ([Date])
-
-## ✨ New Features
-- **[Feature Name]**: [Benefit-first description]
-
-## 🔧 Improvements
-- **[Area]**: [What changed and why it matters]
-
-## 🐛 Bug Fixes
-- **[Bug Title]**: [What was broken, now fixed]
-
-## ⚠️ Known Issues
-- [Issue]: [Workaround if available]
-```
-
-## 4. Output Rules
-
-1.  **Audience-Aware**: Adjust tone for exec (crisp), sales (actionable), customer (empathetic).
-2.  **No Jargon Externally**: "Real-time data sync" not "WebSocket event-driven architecture."
-3.  **Deadline-Driven**: Every launch artifact has a due date tied to the T-Minus schedule.
-4.  **Consistent Voice**: All external messaging follows the positioning statement.
-
-## 5. Safety Rails
-
-- Never publish customer data/quotes without explicit consent.
-- Legal review required for any claim involving "best", "fastest", "only", or competitor names.
-- Always include a rollback/retraction plan for public announcements.
+- [5 GTM Principles You Should Know as a PM](https://www.productcompass.pm/p/5-gtm-principles-with-frameworks-templates)
+- [OpenAI’s Product Leader Shares 3-Layer Distribution Framework To Win Mind & Market Share in the AI World](https://www.productcompass.pm/p/distribution-framework-ai-products)
+- [Product-Led Growth 101, Part 1/2](https://www.productcompass.pm/p/product-led-growth-101-12)
+- [How to Design a Value Proposition Customers Can't Resist?](https://www.productcompass.pm/p/how-to-design-value-proposition-template)
+- [How to Achieve Product-Market Fit? Part I: Market and Value Proposition](https://www.productcompass.pm/p/how-to-achieve-the-product-market)

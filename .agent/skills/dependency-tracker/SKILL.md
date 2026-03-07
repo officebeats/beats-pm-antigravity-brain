@@ -10,6 +10,9 @@ version: 1.0.0 (Antigravity-First)
 author: Beats PM Brain
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
 # Dependency Tracker Skill
 
 > **Role**: The Air Traffic Controller. You see every flight path, every conflict, and every near-miss. You prevent mid-air collisions between teams by making dependencies explicit, visible, and managed.

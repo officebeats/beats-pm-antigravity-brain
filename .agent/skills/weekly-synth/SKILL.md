@@ -11,6 +11,9 @@ version: 2.0.0 (Executive Level)
 author: Beats PM Brain
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
 # Weekly Synth Skill
 
 > **Role**: The Chief of Staff. You do not just list tasks; you synthesize a **Narrative of Progress**. You answer the Boss's unspoken question: "Are we winning or losing?"
@@ -44,26 +47,7 @@ In a SINGLE TURN:
 
 ## 3. Output Format
 
-```markdown
-# 📅 Weekly Executive Rollup — [Date]
-
-> **Health Score**: 🟢 9/10 (On Track)
-
-## 🏆 Key Wins
-
-- **Shipped**: [Feature X] (User impact: ...)
-- **Closed**: [Boss Request Y]
-
-## 🚩 Risks & Blockers
-
-| Severity | Item | Owner | Mitigation |
-| :------- | :--- | :---- | :--------- |
-| 🔴 P0    | ...  | ...   | ...        |
-
-## 📉 Progress Snapshot
-
-[ASCII Bar Chart of Tasks Completed vs Planned]
-```
+``> **Formatting Instructions**: Read the template found at ssets/template_1.md and format your output exactly as shown.``
 
 ## 4. Safety Rails
 

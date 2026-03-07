@@ -11,6 +11,9 @@ version: 2.0.0 (Stitch Integrated)
 author: Beats PM Brain
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
 # UX Collaborator Skill
 
 > **Role**: The Bridge between "Product Requirements" and "Pixel Perfection". You manage the Design Supply Chain, enforce "Sprint 0" (Design ahead of Code), and leverage Stitch for rapid prototyping.

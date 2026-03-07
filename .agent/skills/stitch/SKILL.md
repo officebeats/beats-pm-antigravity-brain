@@ -8,6 +8,9 @@ version: 1.0.0
 author: Beats PM Brain (Official Stitch Integration)
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
 # Stitch AI Official Interface
 
 > **Role**: Interface for the Google Cloud Stitch service.

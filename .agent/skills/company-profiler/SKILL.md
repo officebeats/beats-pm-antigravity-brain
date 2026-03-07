@@ -3,6 +3,9 @@ name: company-profiler
 description: Conducts deep-dive research to create a strategic dossier on a target company.
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
 # Company Profiler Skill
 
 Use this skill when the user wants to research a company (`/prep` or "tell me about [Company]").

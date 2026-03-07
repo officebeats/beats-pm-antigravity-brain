@@ -1,55 +1,26 @@
 ---
 name: vacuum-protocol
-description: System optimization, task archiving, and hierarchical integrity auditing.
-triggers:
-  - "/vacuum"
-  - "/archive"
-  - "/clean"
-  - "/cleanup"
-version: 1.0.0 (Native Optimized)
-author: Beats PM Brain
+description: "Execute the full Centrifuge Protocol to keep the brain lean, private, and organized. Use when the user requests system optimization, task archiving, hierarchical integrity auditing, or explicitly triggers /vacuum, /archive, or /cleanup. Do NOT use to archive active code or configurations."
 ---
+
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
 
 # Vacuum Protocol Skill
 
-> **Role**: System Optimizer & Data Archivist. You maintain the "Centrifuge Protocol" to ensure the brain remains lean, private, and organized.
+## Core Protocol
 
-## 1. Native Interface
+You operate under the `System Optimizer` identity. Your sole purpose is to process the local runtime environment to ensure maximum performance while maintaining strict privacy boundaries.
 
-- **Inputs**: `/vacuum`, `/archive`.
-- **Primary Source**: `system/scripts/vacuum.py`.
-- **Tools**: `run_command` (Python script).
+1.  **Identity Load**: Read `references/rules.md` (if it exists) to verify base exclusions. (Note: currently defer to `.gitignore` status).
+2.  **Audit & Cleanup Execution**: Execute the python script located at `scripts/vacuum.py` using `python .agent/skills/vacuum-protocol/scripts/vacuum.py`. Wait for the script to finish running.
+3.  **Transcripts Processing**: Ensure that any un-synthesized transcripts located in `0. Incoming/` or `3. Meetings/transcripts` are routed to the `meeting-synth` skill.
+4.  **Archive Phase**: Scan `5. Trackers/` for any lines starting with `- [x]`. Programmatically append these to `5. Trackers/archive/`.
+5.  **Status Reporting**: Output a summary table showing:
+    - How many items were archived.
+    - Which files were cleaned up.
+    - The boolean PASS/FAIL states for Integrity, Privacy, and Access sweeps.
 
-### Runtime Capability
+## Execution Blockers to Avoid
 
-- **Antigravity**: Parallel archiving and integrity audits across multiple trackers.
-- **CLI**: Batch processing with final status summary.
-
-## 2. Cognitive Protocol
-
-### A. Archive Phase (`/archive`)
-
-1.  **Extract**: Identify all completed items (`- [x]`) in active tracker files.
-2.  **Move**: Append completed items to yearly archive files in `5. Trackers/archive/`.
-3.  **Index**: Update the `Global Archive Index` (`archive/INDEX.md`) with a summary entry.
-
-### B. Cleanup Phase (`/clean`)
-
-1.  **Logs**: Purge temporary files and keep only the last 5 vibe reports in `system/reports/`.
-2.  **Transcripts**: Move transcripts older than 7 days to cold storage.
-
-### C. Audit Phase (`/vacuum`)
-
-1.  **Integrity**: Scan Folders 1, 2, and 4 for hierarchical violations (loose files outside product folders).
-2.  **Privacy**: Cross-reference staged/untracked files against privacy rules to ensure no "Dark Matter" (Folders 1-5) is leaked.
-3.  **Access**: Verify system read/write permissions for all tier-0 folders.
-
-## 3. Output
-
-- **Summary Table**: Display items moved, files cleaned, and audit results.
-- **Health Badge**: `✅ Optimized` if all protocols pass.
-
-## 4. Operational Guardrails
-
-- NEVER delete active content; only move to `archive`.
-- ALWAYS verify `.gitignore` status for Folders 1-5 before proceeding.
+- NEVER delete active content from the track or logs; strictly use system-level `archive_` behaviors.
+- ALWAYS verify `.gitignore` integrity to ensure Folders 1-5 remain protected.

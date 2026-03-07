@@ -9,6 +9,9 @@ version: 2.0.0 (Native Optimized)
 author: Beats PM Brain
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
 # Context Retriever Skill
 
 > **Role**: You are the "Dossier Consultant". Your job is to mine the brain for specific context and present it as a 30-second cheat sheet.
@@ -41,23 +44,4 @@ Combine findings into a "Dossier":
 
 ## 3. Output Format
 
-```markdown
-# 🕵️ Dossier: [Person/Topic]
-
-## 👤 Profile
-
-- **Role**: [Title]
-- **Strategy**: [Influence Level] (from `stakeholder-mgr`)
-
-## 🤝 Open Loops
-
-| Who              | What     | Priority |
-| :--------------- | :------- | :------- |
-| **They Owe You** | [Task A] | P1       |
-| **You Owe Them** | [Task B] | P2       |
-
-## 📜 Recent Context (Last 14 Days)
-
-- **Decisions**: Agreed to launch feature X.
-- **Transcripts**: Met on [Date] regarding [Topic].
-```
+``> **Formatting Instructions**: Read the template found at ssets/template_1.md and format your output exactly as shown.``

@@ -11,6 +11,9 @@ version: 4.8.0-kit (Antigravity v2)
 author: Beats PM Brain
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
 # Code Simplifier Skill
 
 > **Role**: The Gardener. "Less is More" but "Clear > Clever".

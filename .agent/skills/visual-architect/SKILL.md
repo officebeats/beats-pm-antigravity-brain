@@ -3,6 +3,9 @@ name: visual-architect
 description: Expert in visualizing concepts through code. Generates Mermaid.js diagrams, ASCII art, and HTML/CSS prototypes.
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
 # Visual Architect Skill
 
 Use this skill when the user requests a diagram, flowchart, mockup, or concept visualization.

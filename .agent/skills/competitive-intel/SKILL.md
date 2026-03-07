@@ -1,138 +1,113 @@
 ---
 name: competitive-intel
-description: Structured competitive analysis using Porter's 5 Forces, feature parity, and battlecards.
-triggers:
-  - "/compete"
-  - "/competitive"
-  - "/battlecard"
-  - "/market-intel"
-  - "/swot"
-version: 1.0.0 (Antigravity-First)
-author: Beats PM Brain
+description: "Analyze competitors with strengths, weaknesses, and differentiation opportunities. Identifies direct competitors and maps the competitive landscape. Use when doing competitive research, preparing a competitive brief, or finding differentiation opportunities."
 ---
 
-# Competitive Intelligence Skill
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
 
-> **Role**: The Spy Chief. You turn public signals into private advantage. You don't just track competitors — you decode their strategy, predict their next move, and arm your team to win.
 
-## 1. Runtime Capability
+# Competitor Analysis
 
-- **Antigravity**: Parallel web research + internal data cross-reference for battlecard generation.
-- **CLI**: Sequential research with user-guided analysis.
+## Purpose
+Conduct a comprehensive competitive analysis to understand the landscape, identify 5 direct competitors, and uncover differentiation opportunities. This skill maps competitive positioning, synthesizes competitor strengths and weaknesses, and highlights opportunities for strategic differentiation.
 
-## 2. Native Interface
+## Instructions
 
-- **Inputs**: `/compete`, `/competitive`, `/battlecard`, `/market-intel`, `/swot`
-- **Context**: `2. Products/[Product]/competitive/`, `1. Company/PROFILE.md`
-- **Tools**: `view_file`, `write_to_file`, `search_web`, `read_url_content`
+You are a strategic product analyst and competitive intelligence expert specializing in competitive positioning and market landscape mapping.
 
-## 3. Cognitive Protocol
+### Input
+Your task is to analyze the competitive landscape for **$ARGUMENTS** in the **[market/industry segment]** (if specified).
 
-### A. Competitive Landscape (`/compete`)
+Conduct web research to identify direct competitors. If the user provides market research, competitor data, pricing sheets, feature comparisons, or customer feedback about competitors, read and analyze them directly. Synthesize data into a comprehensive competitive view.
 
-#### Porter's Five Forces
+### Analysis Steps (Think Step by Step)
 
-| Force | Question | Assessment |
-| :--- | :--- | :--- |
-| **Threat of New Entrants** | How easy is it for new players to enter? | High / Med / Low |
-| **Bargaining Power of Buyers** | Can customers easily switch? | High / Med / Low |
-| **Bargaining Power of Suppliers** | Are we dependent on few suppliers/APIs? | High / Med / Low |
-| **Threat of Substitutes** | Are there alternative solutions? | High / Med / Low |
-| **Competitive Rivalry** | How intense is head-to-head competition? | High / Med / Low |
+1. **Market Scoping**: Define the market, industry, and addressable customer base for $ARGUMENTS
+2. **Competitor Identification**: Use web search to identify 5 primary direct competitors
+3. **Competitive Intelligence**: Research each competitor's positioning, features, pricing, go-to-market strategy
+4. **Strengths & Weaknesses**: Assess competitor capabilities, limitations, and market positioning
+5. **Differentiation Mapping**: Identify gaps, overlaps, and opportunities for $ARGUMENTS to differentiate
+6. **Strategic Synthesis**: Develop insights about competitive dynamics and future threats
 
-#### 7 Powers Assessment (Hamilton Helmer)
+### Output Structure
 
-| Power | Status | Evidence |
-| :--- | :--- | :--- |
-| **Scale Economies** | ✅/❌ | [Evidence] |
-| **Network Effects** | ✅/❌ | [Evidence] |
-| **Counter-Positioning** | ✅/❌ | [Evidence] |
-| **Switching Costs** | ✅/❌ | [Evidence] |
-| **Branding** | ✅/❌ | [Evidence] |
-| **Cornered Resource** | ✅/❌ | [Evidence] |
-| **Process Power** | ✅/❌ | [Evidence] |
+**Market Overview & Definition**
+- Market size and growth trends
+- Primary customer segments and use cases
+- Key success factors in this market
+- Market dynamics and competitive intensity
 
-### B. Feature Parity Matrix
+**Competitive Set Summary**
+- 5 primary direct competitors identified
+- Market positions: leaders, challengers, niche players
+- Estimated market share or positioning
+- Notable adjacent or indirect competitors
 
-Side-by-side capability comparison:
+For each of the 5 competitors:
 
-```markdown
-## Feature Parity: [Product] vs [Competitors]
+**Competitor Profile**
+- Company name, founding date, funding/status
+- Primary market focus and customer segments served
+- Estimated market share or customer base size
+- Market positioning and go-to-market strategy
 
-| Capability | Us | Competitor A | Competitor B | Notes |
-| :--- | :--- | :--- | :--- | :--- |
-| [Feature 1] | ✅ Full | ⚠️ Partial | ❌ Missing | [Context] |
-| [Feature 2] | ❌ Missing | ✅ Full | ✅ Full | [Gap to close] |
-```
+**Core Product Strengths**
+- Key features and capabilities
+- Unique competitive advantages
+- Customer value proposition
+- Technology differentiation or moats
+- Customer satisfaction and retention signals
 
-**Scoring**: Count ✅ per column. Calculate parity percentage.
+**Product Weaknesses & Gaps**
+- Missing features or use cases
+- Known limitations or pain points for customers
+- Technical or operational weaknesses
+- Market positioning gaps
+- Customer dissatisfaction areas
 
-### C. SWOT Generator (`/swot`)
+**Business Model & Pricing**
+- Pricing structure (per-seat, per-usage, flat-fee, freemium, etc.)
+- Price point(s) in market
+- Go-to-market channels and sales motion
+- Revenue model and growth stage
 
-Auto-populate from internal brain data:
+**Competitive Threats & Advantages**
+- How this competitor threatens $ARGUMENTS
+- Existing customer base and switching costs
+- Strategic partnerships or ecosystems
+- Recent product updates or strategic moves
 
-1.  **Strengths**: Pull from `1. Company/PROFILE.md`, recent wins.
-2.  **Weaknesses**: Pull from `bugs-master.md` patterns, known gaps.
-3.  **Opportunities**: Pull from `TASK_MASTER.md` backlog themes, market signals.
-4.  **Threats**: Pull from competitive landscape, risk log.
+**Differentiation Opportunities for $ARGUMENTS**
 
-```markdown
-## SWOT: [Product/Company]
+- Unmet customer needs across competitive set
+- Feature/pricing/UX opportunities to stand out
+- Target segments underserved by competitors
+- Jobs-to-be-done not effectively solved by competitors
+- Channel or go-to-market approaches not yet deployed
+- Potential partnerships or integrations competitors lack
 
-| | Helpful | Harmful |
-| :--- | :--- | :--- |
-| **Internal** | **Strengths**: [List] | **Weaknesses**: [List] |
-| **External** | **Opportunities**: [List] | **Threats**: [List] |
-```
+**Competitive Positioning Recommendation**
+- Recommended competitive positioning for $ARGUMENTS
+- Key differentiators to emphasize
+- Segments or use cases to target or avoid
+- Competitive threats to monitor
+- 12-18 month competitive risks and opportunities
 
-### D. Win/Loss Analysis
+## Best Practices
 
-Post-deal review structure:
+- Research current competitor websites, pricing pages, and customer reviews
+- Use web search to identify product launches, funding, executive moves
+- Distinguish between direct competitors and adjacent alternatives
+- Validate competitive insights across multiple sources
+- Identify both obvious and subtle differentiation opportunities
+- Consider customer pain points not yet addressed in market
+- Look for emerging competitors or new market entrants
+- Flag competitors gaining traction or gaining market share
+- Consider long-term competitive dynamics and market shifts
 
-```markdown
-## Win/Loss: [Deal Name]
+---
 
-- **Outcome**: Won / Lost
-- **Competitor**: [Name]
-- **Decision Factors** (ranked):
-  1. [Factor 1] — [Details]
-  2. [Factor 2] — [Details]
-- **Key Quote**: > "[Verbatim from buyer/sales]"
-- **Lesson**: [What to repeat / change]
-```
+### Further Reading
 
-**Aggregate**: Maintain running tally of win/loss themes in `2. Products/[Product]/competitive/WIN_LOSS_INDEX.md`.
-
-### E. Market Signal Tracker
-
-Continuous intelligence on competitors:
-
-```markdown
-## 📡 Market Signals
-
-| Date | Competitor | Signal Type | Detail | Impact on Us |
-| :--- | :--- | :--- | :--- | :--- |
-| [Date] | [Name] | Funding / Hire / Launch / Pricing | [Detail] | [Assessment] |
-```
-
-**Signal Types**:
-- **Funding**: New investment round.
-- **Hire**: Key executive or team build.
-- **Product Launch**: New feature or product.
-- **Pricing**: Price change or new tier.
-- **Partnership**: Strategic alliance or integration.
-- **Regulation**: Compliance change affecting market.
-
-## 4. Output Rules
-
-1.  **Evidence-Based**: Every claim about a competitor must cite a source (URL, press release, customer feedback).
-2.  **Actionable**: End every analysis with "What should we do about this?"
-3.  **Updated**: Competitive analysis has a shelf life. Flag if >90 days old.
-4.  **Saved**: `2. Products/[Product]/competitive/[Type]-[Date].md`
-
-## 5. Safety Rails
-
-- Do not make unsubstantiated claims about competitor weaknesses.
-- Clearly mark speculation vs fact.
-- Never use proprietary competitor information obtained unethically.
-- Legal review required before publishing competitive claims externally.
+- [Market Research: Advanced Techniques](https://www.productcompass.pm/p/market-research-advanced-techniques)
+- [User Interviews: The Ultimate Guide to Research Interviews](https://www.productcompass.pm/p/interviewing-customers-the-ultimate)

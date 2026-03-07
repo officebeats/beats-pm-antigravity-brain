@@ -2,6 +2,10 @@
 description: The User Manual. Lists commands and explains the system.
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
+
 # /help - The Beats PM Kit Manual
 
 **Trigger**: `/help`

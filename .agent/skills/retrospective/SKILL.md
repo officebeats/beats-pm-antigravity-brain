@@ -1,166 +1,79 @@
 ---
 name: retrospective
-description: Facilitate sprint and PI retrospectives with structured formats and action tracking.
-triggers:
-  - "/retro"
-  - "/retrospective"
-  - "/postmortem"
-  - "/reflect"
-version: 1.0.0 (Antigravity-First)
-author: Beats PM Brain
+description: "Facilitate a structured sprint retrospective — what went well, what didn't, and prioritized action items with owners and deadlines. Use when running a retrospective, reflecting on a sprint, creating action items from team feedback, or learning how to run effective retros."
 ---
 
-# Retrospective Skill
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
 
-> **Role**: The Growth Engine. Retrospectives are not optional therapy sessions — they are the mechanism by which teams get better. You ensure every retro produces actions, every action is tracked, and patterns are spotted before they become crises.
 
-## 1. Runtime Capability
+## Sprint Retrospective Facilitator
 
-- **Antigravity**: Parallel extraction of themes from input + cross-reference with previous retros.
-- **CLI**: Guided facilitation prompts with sequential capture.
+Run a structured retrospective that surfaces insights and produces actionable improvements.
 
-## 2. Native Interface
+### Context
 
-- **Inputs**: `/retro`, `/retrospective`, `/postmortem`
-- **Context**: `3. Meetings/retros/`, `5. Trackers/TASK_MASTER.md`
-- **Tools**: `view_file`, `write_to_file`, `grep_search`
+You are facilitating a retrospective for **$ARGUMENTS**.
 
-## 3. Cognitive Protocol
+If the user provides files (sprint data, velocity charts, team feedback, or previous retro notes), read them first.
 
-### A. Format Selection
+### Instructions
 
-**Ask the user** which format to use. Recommend based on context:
+1. **Choose a retro format** based on context (or let the user pick):
 
-| Format | Best For | Structure |
-| :--- | :--- | :--- |
-| **4Ls** | General sprint retros | Liked / Learned / Lacked / Longed For |
-| **Start-Stop-Continue** | Quick tactical retros | Start doing / Stop doing / Keep doing |
-| **Sailboat** | Vision-oriented teams | Wind (helps) / Anchor (holds back) / Rocks (risks) / Island (goal) |
-| **Mad-Sad-Glad** | Emotionally charged sprints | What made you Mad / Sad / Glad |
-| **5 Whys** | Incident postmortems | Root cause analysis chain |
-| **Timeline** | Complex PI retros | Chronological event review |
+   **Format A — Start / Stop / Continue**:
+   - **Start**: What should we begin doing?
+   - **Stop**: What should we stop doing?
+   - **Continue**: What's working well that we should keep?
 
-### B. Facilitation Protocol
+   **Format B — 4Ls (Liked / Learned / Lacked / Longed For)**:
+   - **Liked**: What did the team enjoy?
+   - **Learned**: What new knowledge was gained?
+   - **Lacked**: What was missing?
+   - **Longed For**: What do we wish we had?
 
-1.  **Set the Stage** (2 min):
-    - Read sprint/PI summary from `5. Trackers/TASK_MASTER.md`.
-    - State the Prime Directive: "Regardless of what we discover, we understand and truly believe that everyone did the best job they could, given what they knew at the time, their skills and abilities, the resources available, and the situation at hand."
-2.  **Gather Data** (10 min):
-    - Prompt for input in the chosen format.
-    - If working from a transcript, auto-extract statements into categories.
-3.  **Generate Insights** (5 min):
-    - Group related items into themes.
-    - Identify the top 3 themes by frequency/impact.
-4.  **Decide What to Do** (5 min):
-    - For each top theme, define exactly ONE action item.
-    - Action items MUST have: Owner, Due Date, Definition of Done.
-5.  **Close** (2 min):
-    - Rate the retro (1-5 usefulness).
-    - Reminder: "A retro without action items is just venting."
+   **Format C — Sailboat**:
+   - **Wind (propels us)**: What's driving us forward?
+   - **Anchor (holds us back)**: What's slowing us down?
+   - **Rocks (risks)**: What dangers lie ahead?
+   - **Island (goal)**: Where are we trying to get to?
 
-### C. Pattern Detection (Cross-Retro Analysis)
+2. **If the user provides raw feedback** (e.g., sticky notes, survey responses, Slack messages):
+   - Group similar items into themes
+   - Identify the most frequently mentioned topics
+   - Note sentiment patterns (frustration, energy, confusion)
 
-1.  **Scan**: Read previous retros from `3. Meetings/retros/`.
-2.  **Detect**: Flag themes that appear in ≥2 consecutive retros.
-3.  **Escalate**: Recurring themes get elevated to team-level systemic issues.
-4.  **Output**:
+3. **Analyze the sprint performance**:
+   - Sprint goal: achieved or not?
+   - Velocity vs. commitment (over-committed? under-committed?)
+   - Blockers encountered and how they were resolved
+   - Collaboration patterns (what worked, what didn't)
 
-```markdown
-## 🔄 Recurring Patterns
+4. **Generate prioritized action items**:
 
-| Theme | Occurrences | First Seen | Action Taken? |
-| :--- | :--- | :--- | :--- |
-| [Theme] | 3 retros | [Date] | ❌ Not addressed |
-```
+   | Priority | Action Item | Owner | Deadline | Success Metric |
+   |---|---|---|---|---|
+   | 1 | [Specific, actionable improvement] | [Name/Role] | [Date] | [How we'll know it worked] |
 
-### D. Action Item Routing
+   - Limit to 2-3 action items (more won't get done)
+   - Each must be specific, assignable, and measurable
+   - Reference previous retro actions if available — were they completed?
 
-All retro action items are automatically routed:
-- **Task**: Append to `5. Trackers/TASK_MASTER.md` with tag `[RETRO]`.
-- **Process Change**: Log to `5. Trackers/DECISION_LOG.md`.
-- **Tool Request**: Route to `engineering-collab`.
-- **People Issue**: Route to `stakeholder-mgr` (sensitive — no names in tracker).
+5. **Create the retro summary**:
+   ```
+   ## Sprint [X] Retrospective — [Date]
 
-### E. Improvement Velocity Tracker
+   ### Sprint Performance
+   - Goal: [Achieved / Partially / Missed]
+   - Committed: [X pts] | Completed: [Y pts]
 
-Track whether retro actions actually get completed:
+   ### Key Themes
+   1. [Theme] — [summary]
 
-```markdown
-## 📈 Retro Action Completion Rate
+   ### Action Items
+   1. [Action] — [Owner] — [By date]
 
-| Sprint/PI | Actions Generated | Actions Completed | Rate |
-| :--- | :--- | :--- | :--- |
-| Sprint 12 | 3 | 2 | 67% |
-| Sprint 11 | 4 | 1 | 25% ← ⚠️ |
-```
+   ### Carry-over from Last Retro
+   - [Previous action] — [Status: Done / In Progress / Not Started]
+   ```
 
-**Target**: ≥75% completion rate. Below 50% = escalate as systemic issue.
-
-## 4. Output Format
-
-### Sprint Retro
-
-```markdown
-# 🔄 Retrospective: [Sprint/PI Name]
-
-> **Date**: [Date] | **Facilitator**: [Name] | **Format**: [4Ls/SSC/etc.]
-> **Participants**: [List]
-
-## 👍 [Category 1] (e.g., Liked / Start / Wind)
-- [Item 1]
-- [Item 2]
-
-## 👎 [Category 2] (e.g., Lacked / Stop / Anchor)
-- [Item 1]
-- [Item 2]
-
-## 💡 [Category 3] (e.g., Learned / Continue / Island)
-- [Item 1]
-
-## 🎯 Top Themes
-1. **[Theme A]**: [1-sentence summary]
-2. **[Theme B]**: [1-sentence summary]
-
-## ✅ Action Items
-
-| Action | Owner | Due | DoD | Status |
-| :--- | :--- | :--- | :--- | :--- |
-| [Action] | @name | [Date] | [Criteria] | 🟡 Open |
-```
-
-### Incident Postmortem (5 Whys)
-
-```markdown
-# 🔍 Postmortem: [Incident Title]
-
-> **Date**: [Date] | **Severity**: [P0/P1] | **Duration**: [Time]
-
-## Timeline
-| Time | Event |
-| :--- | :--- |
-| [Time] | [What happened] |
-
-## 5 Whys
-1. Why? → [Answer]
-2. Why? → [Answer]
-3. Why? → [Answer]
-4. Why? → [Answer]
-5. Why? → **Root Cause**: [Answer]
-
-## Action Items
-[Same table as above]
-```
-
-## 5. Output Rules
-
-1.  **Maximum 3 Action Items**: More than 3 = nothing gets done. Force prioritize.
-2.  **No Blaming**: Frame issues as systemic, not personal.
-3.  **Time-Boxed**: Retro itself should take ≤30 minutes.
-4.  **Saved**: `3. Meetings/retros/YYYY-MM-DD_[Sprint/PI]_retro.md`
-
-## 6. Safety Rails
-
-- Never skip the action item step. A retro without actions is a waste.
-- Flag if the same person owns >2 retro actions (overload risk).
-- Anonymize sensitive team dynamics before saving to file.
-- Require retro at least once per sprint/PI (flag if >3 weeks since last retro).
+Save as markdown. Keep the tone constructive — the goal is improvement, not blame.

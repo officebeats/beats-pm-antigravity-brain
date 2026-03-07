@@ -2,6 +2,10 @@
 description: Score and rank a backlog using RICE, ICE, MoSCoW, Kano, or weighted scoring.
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
+
 # /prioritize — Backlog Prioritization Workflow
 
 ## Prerequisites

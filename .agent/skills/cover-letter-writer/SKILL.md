@@ -3,6 +3,9 @@ name: cover-letter-writer
 description: Generates tailored, narrative-driven cover letters based on Resume and Job Description.
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
 # Cover Letter Writer Skill
 
 Use this skill when the user needs to apply for a role. Do not use generic templates.

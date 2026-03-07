@@ -2,6 +2,10 @@
 description: Run a sprint or PI retrospective with structured format and action tracking.
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
+
 # /retro — Retrospective Workflow
 
 ## Prerequisites

@@ -3,6 +3,9 @@ name: interview-simulator
 description: Conducting interactive mock interviews with real-time feedback.
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
 # Interview Simulator Skill
 
 Use this skill when the user wants to practice for an interview (`/prep` or "mock interview").

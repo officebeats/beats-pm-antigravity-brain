@@ -102,19 +102,36 @@ CLASSIFIER_ROUTES: List[Tuple[Tuple[str, ...], List[str]]] = [
 
 def classify_task(task_description: str) -> List[str]:
     """
-    Determine which agents should handle a task based on keywords.
+    Determine which agents should handle a task.
+    Legacy: Uses keyword matching (CLASSIFIER_ROUTES).
+    Avant-Garde (Vortex Engine): Uses semantic embeddings for high-fidelity routing.
 
     Args:
         task_description: Free-form task description string.
 
     Returns:
-        List of agent names (may be empty if no match).
+        List of agent names.
     """
     text = task_description.lower()
+    
+    # Priority 1: Keyword exact matches (High confidence overrides)
     for keywords, agents in CLASSIFIER_ROUTES:
         if any(kw in text for kw in keywords):
             return agents
-    return ["staff-pm"]  # Default fallback
+            
+    # Priority 2: Vortex Semantic Routing (The new baseline)
+    try:
+        import sys
+        # Ensure system/ parent is in path for imports
+        if str(SYSTEM_ROOT) not in sys.path:
+            sys.path.append(str(SYSTEM_ROOT))
+            
+        from utils.semantic_router import get_vortex_router
+        router = get_vortex_router()
+        return router.route_query(task_description)
+    except Exception as e:
+        # Fallback to Staff PM if router fails
+        return ["staff-pm"]
 
 
 # ---------------------------------------------------------------------------

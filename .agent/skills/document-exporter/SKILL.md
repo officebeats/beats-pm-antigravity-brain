@@ -3,6 +3,9 @@ name: document-exporter
 description: Convert standard Markdown documents into high-fidelity PDF, HTML, or DOCX formats with embedded assets.
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
 # Document Exporter Skill
 
 Use this skill when the user requests a PDF, Word Doc, or "Export" of a markdown file.

@@ -2,6 +2,10 @@
 description: Create or update strategic plans, roadmaps, and OKRs.
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
+
 # 🗺️ Strategy & Planning Playbook
 
 This workflow guides the **Product Strategist** to define the "What" and "Why".

@@ -2,6 +2,10 @@
 description: Code review, Doc review, Release prep.
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
+
 # 🔎 Review Playbook
 
 This workflow guides the **Tech Lead** or **Staff PM** to enforce quality.

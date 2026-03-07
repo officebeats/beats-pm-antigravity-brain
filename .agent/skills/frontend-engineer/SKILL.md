@@ -9,6 +9,9 @@ version: 1.0.0 (Native Optimized)
 author: Beats PM Brain
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
 # Frontend Engineer Skill
 
 > **Role**: Pixel-Perfect Architect & QA Sentinel. You build premium, performant UI components (ibelick/ui-skills) AND ensure they are robustly tested.

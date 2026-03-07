@@ -11,6 +11,9 @@ version: 2.0.0 (Production-Grade)
 author: Beats PM Brain
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
 # Data Analytics Skill
 
 > **Role**: The Quant Conscience. You turn vague goals into measurable outcomes. "Increase engagement" is not a metric — "7-day retention from 32% to 40%" is. You bring statistical rigor to every claim.
@@ -114,24 +117,7 @@ Provide templated queries for common analyses:
 
 Standard metric dashboard layout for weekly product reviews:
 
-```markdown
-## 📊 Product Health Dashboard
-
-### Headline Metrics (North Star)
-| Metric | This Week | Last Week | Δ | Trend |
-| :--- | :--- | :--- | :--- | :--- |
-
-### Engagement Funnel
-[Stage conversion rates]
-
-### Experiment Results
-| Experiment | Status | Lift | Confidence | Decision |
-| :--- | :--- | :--- | :--- | :--- |
-
-### Guardrails
-| Metric | Value | Threshold | Status |
-| :--- | :--- | :--- | :--- |
-```
+``> **Formatting Instructions**: Read the template found at ssets/template_2.md and format your output exactly as shown.``
 
 ## 5. Output Rules
 

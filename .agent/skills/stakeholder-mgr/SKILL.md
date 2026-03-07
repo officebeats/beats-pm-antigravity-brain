@@ -1,5 +1,5 @@
 ---
-name: stakeholder-manager
+name: stakeholder-mgr
 description: Manage relationships, 1:1s, and stakeholder communication.
 triggers:
   - "/stakeholder"
@@ -10,6 +10,9 @@ triggers:
 version: 4.0.0 (Native Unified)
 author: Beats PM Brain
 ---
+
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
 
 # Stakeholder Manager Skill
 

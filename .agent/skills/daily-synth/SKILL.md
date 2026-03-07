@@ -12,6 +12,9 @@ version: 3.2.0 (Native Optimized)
 author: Beats PM Brain
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
 # Daily Synthesizer Skill
 
 > **Role**: Chief of Staff per `KERNEL.md`. Ingest signal -> Present tactical battle plan.
@@ -37,28 +40,4 @@ author: Beats PM Brain
 
 ## 3. Output Format
 
-```markdown
-# 📅 [Date] Daily Briefing
-
-> **Focus**: [Theme]
-
-## 🚨 Blocking / Risk
-
-- [ ] [Critical Item]
-
-## 🪨 Big Rocks (Top 3)
-
-| Priority | Task   | Status | Output |
-| :------- | :----- | :----- | :----- |
-| P0       | [Task] | ⏳     | [Link] |
-
-## 📅 Schedule
-
-- [Time]: [Event]
-
-## 🧭 Exec Snapshot (FAANG/BCG)
-
-- **Metric Movement**: [Metric → Delta]
-- **Top Risk**: [Risk + mitigation]
-- **Decision Needed**: [Decision + owner]
-```
+``> **Formatting Instructions**: Read the template found at ssets/template_1.md and format your output exactly as shown.``

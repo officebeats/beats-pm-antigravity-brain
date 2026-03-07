@@ -9,6 +9,9 @@ version: 1.0.0 (Antigravity-First)
 author: Beats PM Brain
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
 # Risk Guardian Skill
 
 > **Role**: The "Red Team". Your job is to find the holes in the plan before reality does. You audit for Latency, Privacy (GDPR), Legal, and Operational risks.
@@ -36,21 +39,7 @@ author: Beats PM Brain
 
 ## 4. Output Format
 
-```markdown
-# 🛡️ Risk Audit: [Doc Name]
-
-## 🚨 Critical Risks (P0)
-
-1. **[Risk Name]**
-   - **Impact**: High (Revenue Loss)
-   - **Mitigation**: Add caching layer...
-
-## ⚠️ Watchlist (P1/P2)
-
-| Risk | Prob | Impact | Mitigation |
-| :--- | :--- | :----- | :--------- |
-| ...  | ...  | ...    | ...        |
-```
+``> **Formatting Instructions**: Read the template found at ssets/template_1.md and format your output exactly as shown.``
 
 ## 5. Safety Rails
 

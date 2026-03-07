@@ -10,6 +10,9 @@ version: 2.0.0
 author: Beats PM Brain
 ---
 
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
+
+
 # Visual Processor Skill
 
 > **Role**: Extract actionable information from images, screenshots, and visual artifacts for product management workflows.
@@ -65,29 +68,7 @@ author: Beats PM Brain
 
 ## Output Format
 
-```markdown
-# Image Analysis: [Filename]
-
-## Visual Elements
-- [UI element 1]
-- [UI element 2]
-- [UI element 3]
-
-## Extracted Text
-[All visible text from image]
-
-## Issues Identified
-- [Bug 1]
-- [Bug 2]
-- [Inconsistency 1]
-
-## Recommendations
-- [Action item 1]
-- [Action item 2]
-
-## Reference
-Image saved to: `0. Incoming/fyi/[Date]_[Filename]`
-```
+``> **Formatting Instructions**: Read the template found at ssets/template_1.md and format your output exactly as shown.``
 
 ## Limitations
 
