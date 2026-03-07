@@ -119,7 +119,7 @@ You need to write a PRD for a new "Single Sign-On" feature but you're staring at
 
 ## 🧬 Inside the Engine: The Three-Tier "Gold Standard" Architecture
 
-We recently engaged in a massive system overhaul to match the strict `mgechev/skills-best-practices` doctrine used by top-tier engineering organizations.
+We recently engaged in a massive system overhaul based on frameworks and best practices used by top-tier engineering organizations.
 
 The Beats PM Kit operates on a hyper-efficient 3-Layer architecture:
 
