@@ -97,6 +97,7 @@ Before ANY action, classify the request against the 15 verified core playbooks:
 | **`/prioritize`** | Backlog Scoring (RICE, etc)             | `Staff PM` → `prioritization-engine` |
 | **`/paste`**      | Capture clipboard to triage             | `Staff PM` → `inbox-processor`       |
 | **`/review`**     | Code/Spec/Design Quality Control        | `Tech Lead`                          |
+| **`/regression`** | Run full CI tests on Antigravity Kit    | `QA Engineer` → `system-validation`  |
 | **`/help`**       | User Manual & System Docs               | _System_                             |
 
 ---
