@@ -456,7 +456,7 @@ def manage_tiered_memory() -> None:
             moved.append(file_path)
 
     if moved:
-        print(f"  🧊 Moved {len(moved)} old transcript(s) to Cold Storage (archive/).")
+        print(f"  [Cold Storage] Moved {len(moved)} old transcript(s) to archive/.")
     else:
         print("  ✅ No transcripts eligible for archiving.")
 

@@ -19,7 +19,6 @@ You are assisting with the **Beats PM Antigravity Brain**, a file-based knowledg
 
 ## Key Files
 
-- **KERNEL.md**: Universal orchestration rules (v4.7.0 - Skills Protocol).
 - **SETTINGS.md**: User preferences (boss, team, products).
 - **STATUS.md**: Current state dashboard.
 
@@ -51,7 +50,7 @@ The system uses **Gemini CLI Agent Skills**. Expertise is activated on-demand fr
 
 ## Behavior Rules
 
-1.  **Lazy-Load**: Only read `KERNEL.md`, `SETTINGS.md`, `STATUS.md` on startup. Load skills and data on-demand.
+1.  **Lazy-Load**: Only read `GEMINI.md`, `SETTINGS.md`, `STATUS.md` on startup. Load skills and data on-demand.
 2.  **Parallel Execution**: Run multiple tools/skills simultaneously using `waitForPreviousTools: false`.
 3.  **Succinct Output**: Tables over prose. No fluff.
 4.  **Source Preservation**: Always preserve raw source text when extracting insights.

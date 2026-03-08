@@ -90,6 +90,7 @@ def migration_scan():
     # 1. Deprecated Files to Remove (Safe to delete)
     deprecated = [
         "KERNEL.md",           # Now in .agent/rules/GEMINI.md
+        "AGENTS.md",           # Legacy
         "SESSION_MEMORY.md",   # Unused
         ".gitkeep",            # Root clutter
         "temp_copy.py",

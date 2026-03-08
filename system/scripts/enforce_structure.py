@@ -50,7 +50,7 @@ MIGRATION_MAP: Dict[str, str] = {
 }
 
 IGNORE_LIST = [
-    "README.md", "KERNEL.md", "SETTINGS.md", "STATUS.md", "GEMINI.md", "SESSION_MEMORY.md",
+    "README.md", "SETTINGS.md", "STATUS.md", "GEMINI.md", "SESSION_MEMORY.md",
     "requirements.txt", ".gitignore", ".gitattributes", ".antigravityignore",
     "package.json", "package-lock.json"
 ]

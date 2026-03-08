@@ -1,16 +1,16 @@
 ---
-name: meeting-synth
-description: AI meeting assistant for synthesizing meeting transcripts, action items, and summaries.
+name: tutorial-engineer
+description: A team of AI agents designed to teach programming, concepts, and write tutorials.
 ---
 
-# AI Meeting Agent
+# AI Teaching Agent Team
 
-**AI meeting assistant for synthesizing meeting transcripts, action items, and summaries.**
+**A team of AI agents designed to teach programming, concepts, and write tutorials.**
 
 This skill leverages an advanced Python-based AI Agent or Multi-Agent Team located in the `scripts/` directory.
 
 ## Instructions
-1. Use this skill whenever the user triggers the associated playbook or asks for meeting-synth.
+1. Use this skill whenever the user triggers the associated playbook or asks for tutorial-engineer.
 2. Navigate to `scripts/` inside this skill's directory.
 3. Review the `requirements.txt` and python script to understand how to invoke the agent (e.g. via `streamlit run` or `python`).
 4. Execute the agent script to perform the requested tasks.

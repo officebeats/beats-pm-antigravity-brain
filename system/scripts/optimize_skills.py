@@ -3,7 +3,7 @@ Skill Optimizer & Indexer (Centrifuge Protocol)
 
 1. Migrates SKILL.md files to include 'triggers' in YAML frontmatter.
 2. Generates 'skills.json' for fast lookup (Native Antigravity Mode).
-3. REMOVES routing table from KERNEL.md to prevent Context Bloat.
+3. REMOVES routing table from GEMINI.md to prevent Context Bloat.
 """
 
 import os
@@ -20,7 +20,7 @@ SYSTEM_ROOT = CURRENT_FILE.parent.parent  # system/
 BRAIN_ROOT = SYSTEM_ROOT.parent           # beats-pm-antigravity-brain/
 SKILLS_DIR = BRAIN_ROOT / ".agent/skills"
 SKILLS_JSON = SYSTEM_ROOT / "skills.json"
-KERNEL_FILE = BRAIN_ROOT / ".agent/rules/GEMINI.md"
+GEMINI_FILE = BRAIN_ROOT / ".agent/rules/GEMINI.md"
 
 def parse_frontmatter(content: str) -> Dict[str, Any]:
     """Extract YAML frontmatter from markdown."""
@@ -42,7 +42,7 @@ def extract_keywords_from_body(content: str) -> List[str]:
     return []
 
 def index_skills():
-    """Generate skills.json AND clean KERNEL.md."""
+    """Generate skills.json AND clean GEMINI.md."""
     index = {}
     
     if not SKILLS_DIR.exists():
@@ -85,9 +85,9 @@ def index_skills():
     with open(SKILLS_JSON, "w", encoding="utf-8") as f:
         json.dump(index, f, indent=2)
     
-    # 3. Clean KERNEL.md (Context Bloat Removal)
-    if KERNEL_FILE.exists():
-        with open(KERNEL_FILE, "r", encoding="utf-8") as f:
+    # 3. Clean GEMINI.md (Context Bloat Removal)
+    if GEMINI_FILE.exists():
+        with open(GEMINI_FILE, "r", encoding="utf-8") as f:
             kernel_content = f.read()
         
         # We look for the "Core Skills Inventory" section and replace it with a minimal pointer.
@@ -102,11 +102,11 @@ def index_skills():
         if pattern.search(kernel_content):
             new_kernel = pattern.sub(f"\\1{lean_content}\\3", kernel_content)
             
-            with open(KERNEL_FILE, "w", encoding="utf-8") as f:
+            with open(GEMINI_FILE, "w", encoding="utf-8") as f:
                 f.write(new_kernel)
-            print(f"✅ Removed Skill Table from KERNEL.md (Native Optimization)")
+            print(f"✅ Removed Skill Table from GEMINI.md (Native Optimization)")
         else:
-            print("🔹 KERNEL.md is already clean.")
+            print("🔹 GEMINI.md is already clean.")
 
     print(f"\n✅ Index Generated: {SKILLS_JSON}")
     print(f"Total Skills: {len(index)}")
