@@ -32,6 +32,7 @@ The system uses **Gemini CLI Agent Skills**. Expertise is activated on-demand fr
 | `#vacuum`      | Activate `core-utility` cleanup     |
 | `#day`         | Activate `daily-synth` brief        |
 | `#boss`        | Activate `boss-tracker`             |
+| `#reflect`     | Activate `memory-consolidator`      |
 | `#bug`         | Activate `bug-chaser`               |
 | `#task`        | Activate `task-manager`             |
 | `#transcript`  | Activate `meeting-synth`            |

@@ -39,3 +39,7 @@ description: Run a sprint or PI retrospective with structured format and action 
    - Log any process decisions to `5. Trackers/DECISION_LOG.md`
 
 7. **Save**: Write retro to `3. Meetings/retros/YYYY-MM-DD_[Sprint/PI]_retro.md`
+
+8. **Memory Consolidation**: 
+   - Execute the `memory-consolidator` skill, specifically searching for trends that survived across multiple sprints by comparing this retro with past retros in `3. Meetings/retros/`.
+   - Update `STATUS.md` and `STRATEGIC_INSIGHTS.md` following the consolidator template rules.

@@ -522,6 +522,15 @@ def main():
     # 5. Repo Structure Cleanup
     clean_repo_structure()
 
+    # 6. Deep Memory Consolidation
+    print("\n--- 🧠 Deep Memory Consolidation ---")
+    try:
+        subprocess.run([sys.executable, str(BRAIN_ROOT / ".agent" / "skills" / "memory-consolidator" / "scripts" / "consolidate.py"), "--hours", "168"], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"  ⚠️ Consolidation process encountered an error: {e}")
+    except Exception as e:
+        print(f"  ⚠️ Could not execute memory consolidation: {e}")
+
     # Privacy & Access Checks
     check_system_access()
     check_git_safety()
