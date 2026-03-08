@@ -67,6 +67,23 @@ Folders 1-5 are `.gitignored` by default. Even if you push to GitHub, your priva
 
 ---
 
+## 💤 Deep Memory Consolidation (The "Sleep State")
+
+*Inspired by the [GCP Always-On Memory Agent](https://github.com/GoogleCloudPlatform/generative-ai/tree/main/gemini/agents/always-on-memory-agent), but built entirely on first-principles flat-file markdown.*
+
+Most AI agents have amnesia. They process information when asked, then forget everything. The Beats PM Kit solves this by simulating the human brain's natural sleep state.
+
+Instead of a bulky vector database, our native **`memory-consolidator`** skill awakens in the background to analyze files you've modified recently. 
+
+It actively reads unconsolidated memories (recent transcripts, tasks, issues), identifies overlapping concepts (e.g., an issue in a bug tracker secretly relating to a decision made in a product transcript), and extracts bold meta-insights.
+
+**How it works seamlessly:**
+- **On-Demand:** Type `/reflect` to trigger exhaustive correlation over the last 48 hours to find hidden systemic risks.
+- **Workflow Injected:** The AI silently consolidates memories in the background immediately after you conclude a `/day`, `/weekly`, or `/retro` routine.
+- **The Output:** Deep cross-cutting synthesis is written permanently to your `5. Trackers/STRATEGIC_INSIGHTS.md` ledger, while top headlines are prepended to your root `STATUS.md` dashboard for high-visibility orientation.
+
+---
+
 ## ⚡ Quick Start: 60 Seconds to Superhuman PMing
 
 ### Step 1: Install the Tools
