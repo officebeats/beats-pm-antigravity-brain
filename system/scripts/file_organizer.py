@@ -114,5 +114,9 @@ def main():
         print(f"     🏷️  Category: {category}")
         print()
 
+def scan_and_process():
+    """Alias for vacuum integration."""
+    main()
+
 if __name__ == "__main__":
     main()
