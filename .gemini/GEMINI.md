@@ -1,1 +1,1 @@
-.agent/rules/GEMINI.md
+../.agent/rules/GEMINI.md
