@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const TASK_MASTER_PATH = "/Users/ernesto/Library/Mobile Documents/com~apple~CloudDocs/Vibe-Coding/beats-pm-antigravity-brain/5. Trackers/TASK_MASTER.md";
+const TASK_MASTER_PATH = path.resolve(process.cwd(), '../../5. Trackers/TASK_MASTER.md');
 
 export async function POST(request) {
   try {

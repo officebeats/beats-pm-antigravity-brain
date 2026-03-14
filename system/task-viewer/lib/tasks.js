@@ -2,8 +2,8 @@ import fs from 'fs';
 import path from 'path';
 
 export async function getTasks() {
-  // Use absolute path to the task master file
-  const filePath = "/Users/ernesto/Library/Mobile Documents/com~apple~CloudDocs/Vibe-Coding/beats-pm-antigravity-brain/5. Trackers/TASK_MASTER.md";
+  // Use relative path to the task master file from the app root
+  const filePath = path.resolve(process.cwd(), '../../5. Trackers/TASK_MASTER.md');
   
   try {
     const content = fs.readFileSync(filePath, 'utf8');

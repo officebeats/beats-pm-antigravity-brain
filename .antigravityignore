@@ -11,9 +11,19 @@
 
 # Standard dev excludes
 node_modules/
+dist/
+build/
 .git/
 .DS_Store
 Thumbs.db
+
+# Large media files
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.zip
+*.tar.gz
 
 # ----------------------------------------
 # LARGE DATA FOLDERS (Exclude from initial indexing)

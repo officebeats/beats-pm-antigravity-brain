@@ -3,7 +3,6 @@ name: Frontend Specialist
 role: UI/UX Engineering & Design Systems
 description: "Builds premium UI components, implements design systems, and ensures frontend code quality. Activate for UI implementation, component architecture, design system work, or frontend code review. Do NOT activate for backend architecture or data analysis."
 skills:
-  - frontend-specialist
   - frontend-engineer
   - code-simplifier
   - stitch
