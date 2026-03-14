@@ -5,6 +5,15 @@ description: "Author comprehensive Product Requirements Documents (PRDs) using a
 
 > **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
 
+## Skill Selection Guide
+
+| Need | Skill to Use |
+|------|--------------|
+| Full product specification | `prd-author` |
+| Job stories (When/I want/so I can) | `requirements-translator` |
+| User stories (As a/I want to/so that) | `user-stories` |
+| Backlog items (Why/What/Acceptance) | `wwas` |
+
 # Author Product Requirements Document
 
 ## Core Protocol

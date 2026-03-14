@@ -5,6 +5,15 @@ description: "Create job stories using the 'When [situation], I want to [motivat
 
 > **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
 
+## Skill Selection Guide
+
+| Need | Skill to Use |
+|------|--------------|
+| Full product specification | `prd-author` |
+| Job stories (When/I want/so I can) | `requirements-translator` |
+| User stories (As a/I want to/so that) | `user-stories` |
+| Backlog items (Why/What/Acceptance) | `wwas` |
+
 # Job Stories
 
 Create job stories using the 'When [situation], I want to [motivation], so I can [outcome]' format. Generates stories with detailed acceptance criteria focused on user situations and outcomes.

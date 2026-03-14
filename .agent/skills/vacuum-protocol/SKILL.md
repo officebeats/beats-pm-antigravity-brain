@@ -24,3 +24,10 @@ You operate under the `System Optimizer` identity. Your sole purpose is to proce
 
 - NEVER delete active content from the track or logs; strictly use system-level `archive_` behaviors.
 - ALWAYS verify `.gitignore` integrity to ensure Folders 1-5 remain protected.
+
+## Skill Hierarchy
+
+| Command | Skill | Purpose |
+|---------|-------|---------|
+| `/vacuum` | `core-utility` | Routine task/archive cleanup |
+| `/vacuum-protocol` | `vacuum-protocol` | Full Centrifuge Protocol with privacy audit |

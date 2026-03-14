@@ -5,6 +5,15 @@ description: "Create user stories following the 3 C's (Card, Conversation, Confi
 
 > **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
 
+## Skill Selection Guide
+
+| Need | Skill to Use |
+|------|--------------|
+| Full product specification | `prd-author` |
+| Job stories (When/I want/so I can) | `requirements-translator` |
+| User stories (As a/I want to/so that) | `user-stories` |
+| Backlog items (Why/What/Acceptance) | `wwas` |
+
 # User Stories
 
 Create user stories following the 3 C's (Card, Conversation, Confirmation) and INVEST criteria. Generates stories with descriptions, design links, and acceptance criteria.

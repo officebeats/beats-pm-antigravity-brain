@@ -27,8 +27,10 @@ author: Beats PM Brain
 
 ### Tools
 
-- `run_command`: necessary for executing python scripts (`vibe_check.py`, `core_setup.py`, `vacuum.py`).
-- `view_file`: for inspecting config and system state.
+- `run_command`: executes python scripts via system interpreter
+- `view_file`: for inspecting config and system state
+
+> **Unified Vacuum System**: The `core-utility` skill delegates to `system/scripts/vacuum.py` which provides the comprehensive archival implementation. All vacuum/cleanup requests flow through this single entry point.
 
 ## 2. Cognitive Protocol (Chain-of-Thought)
 
@@ -65,9 +67,11 @@ Determine the administrative action:
 
 #### C. Maintenance Protocol (/vacuum)
 
-1.  **Scan**: Identify "Done" tasks > 7 days old.
-2.  **Scan**: Identify "Cold" transcripts > 365 days old.
-3.  **Execute**: Run `scripts/vacuum.py` to move items to `archive/`.
+1.  **Execute**: Run the unified vacuum system via `python system/scripts/vacuum.py`
+2.  **Scan**: Identify "Done" tasks > 7 days old
+3.  **Scan**: Identify "Cold" transcripts > 365 days old
+4.  **Archive**: Move completed items to `5. Trackers/archive/`
+5.  **Report**: Display summary of items archived
 
 ### Step 4: Verification
 

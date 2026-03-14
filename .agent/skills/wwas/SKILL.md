@@ -5,6 +5,15 @@ description: "Create product backlog items in Why-What-Acceptance format — ind
 
 > **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
 
+## Skill Selection Guide
+
+| Need | Skill to Use |
+|------|--------------|
+| Full product specification | `prd-author` |
+| Job stories (When/I want/so I can) | `requirements-translator` |
+| User stories (As a/I want to/so that) | `user-stories` |
+| Backlog items (Why/What/Acceptance) | `wwas` |
+
 # Why-What-Acceptance (WWA)
 
 Create product backlog items in Why-What-Acceptance format. Produces independent, valuable, testable items with strategic context.
