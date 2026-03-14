@@ -16,9 +16,9 @@
 
 <p>
   <img src="https://img.shields.io/badge/Powered%20by-Antigravity-00A651?style=for-the-badge&logo=google&logoColor=white&labelColor=1a1a2e" alt="Antigravity Framework"/>
-  &nbsp;
+   
   <a href="https://github.com/officebeats/beats-pm-antigravity-brain/stargazers"><img src="https://img.shields.io/github/stars/officebeats/beats-pm-antigravity-brain?style=for-the-badge&logo=github&labelColor=1a1a2e&color=E6B422" alt="GitHub Stars"/></a>
-  &nbsp;
+   
   <img src="https://img.shields.io/badge/Architected_for-MAANG_Leaders-4285F4?style=for-the-badge&labelColor=1a1a2e" alt="FAANG Ready"/>
 </p>
 
@@ -26,11 +26,11 @@
 
 <p>
   <img src="https://img.shields.io/badge/🚀_Execution-107%2B_PM_Skills-00A651?style=flat-square" alt="107+ AI Skills"/>
-  &nbsp;•&nbsp;
+   • 
   <img src="https://img.shields.io/badge/🔒_100%25_Local-Zero_Cloud_Storage-00A651?style=flat-square" alt="Privacy First"/>
-  &nbsp;•&nbsp;
+   • 
   <img src="https://img.shields.io/badge/💼_Exec_Layer-The_Boss_Protocol-00A651?style=flat-square" alt="The Boss Protocol"/>
-  &nbsp;•&nbsp;
+   • 
   <img src="https://img.shields.io/badge/🤖_Agents-11_Specialist_Personas-00A651?style=flat-square" alt="11 Agents"/>
 </p>
 
@@ -70,23 +70,6 @@ Folders 1-5 are `.gitignored` by default. Even if you push to GitHub, your priva
 
 ---
 
-## 💤 Deep Memory Consolidation (The "Sleep State")
-
-*Inspired by the [GCP Always-On Memory Agent](https://github.com/GoogleCloudPlatform/generative-ai/tree/main/gemini/agents/always-on-memory-agent), but built entirely on first-principles flat-file markdown.*
-
-Most AI agents have amnesia. They process information when asked, then forget everything. The Beats PM Kit solves this by simulating the human brain's natural sleep state.
-
-Instead of a bulky vector database, our native **`memory-consolidator`** skill awakens in the background to analyze files you've modified recently.
-
-It actively reads unconsolidated memories (recent transcripts, tasks, issues), identifies overlapping concepts (e.g., an issue in a bug tracker secretly relating to a decision made in a product transcript), and extracts bold meta-insights.
-
-**How it works seamlessly:**
-
-- **On-Demand:** Type `/reflect` to trigger exhaustive correlation over the last 48 hours to find hidden systemic risks.
-- **Workflow Injected:** The AI silently consolidates memories in the background immediately after you conclude a `/day`, `/weekly`, or `/retro` routine.
-- **The Output:** Deep cross-cutting synthesis is written permanently to your `5. Trackers/STRATEGIC_INSIGHTS.md` ledger, while top headlines are prepended to your root `STATUS.md` dashboard for high-visibility orientation.
-
----
 
 ## ⚡ Quick Start
 
@@ -94,20 +77,20 @@ It actively reads unconsolidated memories (recent transcripts, tasks, issues), i
 
 The kit supports **4 AI runtimes**. Pick one (or use multiple):
 
-| Runtime                       | Install                                    | Notes                                    |
-| :---------------------------- | :----------------------------------------- | :--------------------------------------- |
+| Runtime                             | Install                                  | Notes                                   |
+| :---------------------------------- | :--------------------------------------- | :-------------------------------------- |
 | **Antigravity** (Recommended) | [Download App](https://antigravity.google/) | Native parallel agents, best experience |
-| **Gemini CLI**                | `npm install -g @google/gemini-cli`       | Terminal-first workflow                  |
-| **Claude Code**               | [Install](https://claude.ai/code)          | Via `.claude/` adapter                   |
-| **KiloCode**                  | VS Code Extension                          | Via `.kilocode/` adapter                 |
+| **Gemini CLI**                | `npm install -g @google/gemini-cli`    | Terminal-first workflow                 |
+| **Claude Code**               | [Install](https://claude.ai/code)           | Via `.claude/` adapter                |
+| **KiloCode**                  | VS Code Extension                        | Via `.kilocode/` adapter              |
 
 > **Cross-CLI Sync:** Run `python system/scripts/sync_cli_adapters.py` to keep agents, skills, and workflows synchronized across all runtimes.
 
-### Step 2: Get the Brain
+### Step 2: Get the Kit
 
 ```bash
-git clone https://github.com/officebeats/beats-pm-antigravity-brain
-cd beats-pm-antigravity-brain
+git clone https://github.com/officebeats/beats-pm-kit
+cd beats-pm-kit
 ```
 
 ### Step 3: Launch
@@ -148,46 +131,46 @@ The Beats PM Kit operates on a hyper-efficient 3-Layer architecture:
 
 The _Identity_ layer. Who is doing the work?
 
-| Agent                    | Focus                 | Methodology                  |
-| :----------------------- | :-------------------- | :--------------------------- |
-| **Staff PM**             | Execution & Delivery  | BaseCamp Shape Up            |
-| **Chief Product Officer**| Strategy & Org        | Good Strategy / Bad Strategy |
-| **Product Strategist**   | Market & Vision       | 7 Powers                     |
-| **UX Researcher**        | Qual Insights         | Continuous Discovery         |
-| **GTM Lead**             | Launch & Growth       | Obviously Awesome            |
-| **Tech Lead**            | Feasibility & Eng     | System Architecture          |
-| **Frontend Specialist**  | UI/UX Engineering     | React / Shadcn-UI            |
-| **Program Manager**      | Governance & Releases | Dependency & Risk Tracking   |
-| **Data Scientist**       | Quant Insights        | Metrics & Analytics          |
-| **QA Engineer**          | Quality Assurance     | System Validation            |
-| **Career Coach**         | Growth & Development  | Career Strategy              |
+| Agent                           | Focus                 | Methodology                  |
+| :------------------------------ | :-------------------- | :--------------------------- |
+| **Staff PM**              | Execution & Delivery  | BaseCamp Shape Up            |
+| **Chief Product Officer** | Strategy & Org        | Good Strategy / Bad Strategy |
+| **Product Strategist**    | Market & Vision       | 7 Powers                     |
+| **UX Researcher**         | Qual Insights         | Continuous Discovery         |
+| **GTM Lead**              | Launch & Growth       | Obviously Awesome            |
+| **Tech Lead**             | Feasibility & Eng     | System Architecture          |
+| **Frontend Specialist**   | UI/UX Engineering     | React / Shadcn-UI            |
+| **Program Manager**       | Governance & Releases | Dependency & Risk Tracking   |
+| **Data Scientist**        | Quant Insights        | Metrics & Analytics          |
+| **QA Engineer**           | Quality Assurance     | System Validation            |
+| **Career Coach**          | Growth & Development  | Career Strategy              |
 
 ### 🎯 2. The Core Playbooks (20+ Orchestration Workflows)
 
 The _Routing_ layer. Lean shortcuts to trigger complex operations:
 
-| Command             | Purpose                                     |
-| :------------------ | :------------------------------------------ |
-| `/boss`             | The 1:1 "Managing Up" Prep                  |
-| `/bug`              | Bug lifecycle & SLA management              |
-| `/create`           | Generate PRDs, Specs, and One-Pagers        |
-| `/data`             | Data analysis & funnel queries              |
-| `/day`              | Daily briefing & planning                   |
-| `/discover`         | Build Opportunity Solution Trees            |
-| `/fan-out`          | Parallel multi-agent dispatch               |
-| `/feature-kickoff`  | Chain PRD → Tasks → Sprint Plan             |
-| `/help`             | User manual & system docs                   |
-| `/kingmode`         | ULTRATHINK deep-reasoning protocol          |
-| `/launch`           | Product launch strategy & execution         |
-| `/paste`            | Clipboard → structured intake               |
-| `/plan`             | Strategic roadmaps & OKRs                   |
-| `/prioritize`       | Backlog scoring via RICE / Kano / MoSCoW    |
-| `/reflect`          | Deep memory consolidation                   |
-| `/regression`       | Full CI tests on the Antigravity Kit        |
-| `/retro`            | Sprint / PI retrospective                   |
-| `/review`           | Code / Spec / Design quality control        |
-| `/sprint`           | Sprint backlog generation                   |
-| `/track`            | Battlefield View of P0 Tasks & Bugs         |
+| Command              | Purpose                                  |
+| :------------------- | :--------------------------------------- |
+| `/boss`            | The 1:1 "Managing Up" Prep               |
+| `/bug`             | Bug lifecycle & SLA management           |
+| `/create`          | Generate PRDs, Specs, and One-Pagers     |
+| `/data`            | Data analysis & funnel queries           |
+| `/day`             | Daily briefing & planning                |
+| `/discover`        | Build Opportunity Solution Trees         |
+| `/fan-out`         | Parallel multi-agent dispatch            |
+| `/feature-kickoff` | Chain PRD → Tasks → Sprint Plan        |
+| `/help`            | User manual & system docs                |
+| `/kingmode`        | ULTRATHINK deep-reasoning protocol       |
+| `/launch`          | Product launch strategy & execution      |
+| `/paste`           | Clipboard → structured intake           |
+| `/plan`            | Strategic roadmaps & OKRs                |
+| `/prioritize`      | Backlog scoring via RICE / Kano / MoSCoW |
+| `/reflect`         | Deep memory consolidation                |
+| `/regression`      | Full CI tests on the Antigravity Kit     |
+| `/retro`           | Sprint / PI retrospective                |
+| `/review`          | Code / Spec / Design quality control     |
+| `/sprint`          | Sprint backlog generation                |
+| `/track`           | Battlefield View of P0 Tasks & Bugs      |
 
 ### 🚀 3. The Capability Engine (107+ Atomic Skills)
 
@@ -236,13 +219,13 @@ beats-pm-antigravity-brain/
 
 The kit uses a **single source of truth** (`.agent/`) with adapters for each runtime:
 
-| Feature                | Antigravity | Gemini CLI | Claude Code | KiloCode |
-| :--------------------- | :---------: | :--------: | :---------: | :------: |
-| Agent Personas         | ✅          | ✅         | ✅          | ✅       |
-| Slash Commands         | ✅          | ✅ (`#`)   | ✅          | ✅       |
-| Parallel Fan-Out       | ✅ Native   | ⚠️ Sequential | ⚠️ Sequential | ⚠️ Sequential |
-| Skills (107+)          | ✅          | ✅         | ✅          | ✅       |
-| Templates              | ✅          | ✅         | ✅          | ✅       |
+| Feature          | Antigravity |   Gemini CLI   |   Claude Code   |    KiloCode    |
+| :--------------- | :---------: | :-------------: | :-------------: | :-------------: |
+| Agent Personas   |     ✅     |       ✅       |       ✅       |       ✅       |
+| Slash Commands   |     ✅     |   ✅ (`#`)   |       ✅       |       ✅       |
+| Parallel Fan-Out |  ✅ Native  | ⚠️ Sequential | ⚠️ Sequential | ⚠️ Sequential |
+| Skills (107+)    |     ✅     |       ✅       |       ✅       |       ✅       |
+| Templates        |     ✅     |       ✅       |       ✅       |       ✅       |
 
 > **Note:** Gemini CLI uses `#hash` prefix instead of `/slash` (e.g., `#boss` instead of `/boss`). Run `sync_cli_adapters.py` after updates to keep adapters in sync.
 
