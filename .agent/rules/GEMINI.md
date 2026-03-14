@@ -1,8 +1,23 @@
 # GEMINI.md - Maestro Configuration
 
-**Version 7.0.0** - Beats PM Antigravity Kit
+**Version 9.7.0** - Beats PM Antigravity Kit
 
 This file defines the Operating System for the Product Management Brain.
+
+---
+
+## 🔄 STARTUP: Update Check (FIRST ACTION EVERY SESSION)
+
+**On the FIRST user message of every new session**, silently run:
+
+```bash
+python system/scripts/update_checker.py
+```
+
+- If an update is available, show the user the update banner and suggest running `/update`.
+- If up to date, proceed silently — do NOT tell the user "you're up to date" unless they asked.
+- If the check fails (no network, no gh CLI), skip silently and proceed.
+- **This check runs ONCE per session, not on every message.**
 
 ---
 
