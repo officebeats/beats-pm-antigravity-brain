@@ -53,3 +53,8 @@ In a SINGLE TURN:
 
 - **No Fluff**: Bullet points must be outcome-oriented ("Reduced latency", not "Worked on latency").
 - **Source Truth**: Link every claim to a file/task ID.
+
+## Boundary
+
+- **This skill handles**: Multi-day strategic rollups — weekly wins, risks, confidence scores, and monthly trends.
+- **NOT for**: Single-day tactical planning (use `daily-synth`). Individual meeting transcript synthesis (use `meeting-synth`).

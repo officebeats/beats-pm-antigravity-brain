@@ -1,20 +1,40 @@
 ---
 name: meeting-synth
-description: AI meeting assistant for synthesizing meeting transcripts, action items, and summaries.
+description: "Synthesize a single meeting transcript into structured action items, decisions, and follow-ups. Use when processing a meeting recording, cleaning up transcript notes, or extracting commitments from a conversation."
+triggers:
+  - "/meet"
+  - "/transcript"
+version: 3.0.0 (Native Optimized)
+author: Beats PM Brain
 ---
 
-# AI Meeting Agent
+> **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
 
-**AI meeting assistant for synthesizing meeting transcripts, action items, and summaries.**
+# Meeting Synthesizer Skill
 
-This skill leverages an advanced Python-based AI Agent or Multi-Agent Team located in the `scripts/` directory.
+> **Role**: Extract signal from noise. One meeting → structured output.
 
-## Instructions
-1. Use this skill whenever the user triggers the associated playbook or asks for meeting-synth.
-2. Navigate to `scripts/` inside this skill's directory.
-3. Review the `requirements.txt` and python script to understand how to invoke the agent (e.g. via `streamlit run` or `python`).
-4. Execute the agent script to perform the requested tasks.
+## 1. Native Interface
 
-## Protocol constraints
-- Do not hallucinate capabilities. Rely on the underlying python agent.
-- Keep output concise and delegate complex reasoning to the agent in `scripts/`.
+- **Inputs**: `/meet`, `/transcript`. Raw transcript text or file path.
+- **Tools**: `view_file` (transcript files), `grep_search`, `run_command`.
+
+## 2. Cognitive Protocol
+
+1. **Ingest**: Read the transcript from `3. Meetings/transcripts/` or `0. Incoming/`.
+2. **Extract**:
+   - **Decisions Made**: What was agreed on.
+   - **Action Items**: Who does what by when (`Owner + Due Date`).
+   - **Open Questions**: Unresolved topics needing follow-up.
+   - **Key Quotes**: Verbatim stakeholder statements worth preserving.
+3. **Route**: Write action items to `5. Trackers/TASK_MASTER.md`. Flag Boss Asks to `5. Trackers/critical/boss-requests.md`.
+4. **Archive**: Move processed transcript to `3. Meetings/summaries/`.
+
+## 3. Output Format
+
+``> **Formatting Instructions**: Read the template found at assets/template_1.md and format your output exactly as shown.``
+
+## Boundary
+
+- **This skill handles**: Single meeting transcript → structured summary with action items.
+- **NOT for**: Daily tactical planning (use `daily-synth`). Weekly/monthly rollups across multiple meetings (use `weekly-synth`).

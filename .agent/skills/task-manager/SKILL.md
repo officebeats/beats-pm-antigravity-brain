@@ -30,7 +30,7 @@ author: Beats PM Brain
 
 ## 2. Cognitive Protocol
 
-### A. Parallel Triage (`#triage` → `/triage`)
+### A. Parallel Triage (`/triage` → `/triage`)
 
 1.  **Parse**: Split chaotic `BRAIN_DUMP.md`.
 2.  **Parallel Routing**:
@@ -64,3 +64,7 @@ author: Beats PM Brain
 
 - If `BRAIN_DUMP.md` not found, use context.
 - Default to `5. Trackers` if routing fails.
+
+## 5. Cross-Skill Routing
+
+- **To `core-utility`**: For vacuum/cleanup of completed tasks, delegate to `core-utility` skill which maintains the centralized vacuum script.

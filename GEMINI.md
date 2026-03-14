@@ -28,26 +28,26 @@ The system uses **Gemini CLI Agent Skills**. Expertise is activated on-demand fr
 
 | Command        | Action                              |
 | :------------- | :---------------------------------- |
-| `#vibe`        | Activate `core-utility` diagnostics |
-| `#vacuum`      | Activate `core-utility` cleanup     |
-| `#day`         | Activate `daily-synth` brief        |
-| `#boss`        | Activate `boss-tracker`             |
-| `#reflect`     | Activate `memory-consolidator`      |
-| `#bug`         | Activate `bug-chaser`               |
-| `#task`        | Activate `task-manager`             |
-| `#transcript`  | Activate `meeting-synth`            |
-| `#prd`         | Activate `prd-author`               |
-| `#strategy`    | Activate `strategy-synth`           |
-| `#weekly`      | Activate `weekly-synth`             |
-| `#eng`         | Activate `engineering-collab`       |
-| `#ux`          | Activate `ux-collab`                |
-| `#delegate`    | Activate `delegation-manager`       |
-| `#stakeholder` | Activate `stakeholder-mgr`          |
-| `#1on1`        | Activate `crm` sync prep            |
-| `#simplify`    | Activate `code-simplifier`          |
-| `#refactor`    | Activate `code-simplifier`          |
-| `#cleanup`     | Activate `code-simplifier`          |
-| `#update`      | Upgrade brain & latest gemini-cli   |
+| `/vibe`        | Activate `core-utility` diagnostics |
+| `/vacuum`      | Activate `core-utility` cleanup     |
+| `/day`         | Activate `daily-synth` brief        |
+| `/boss`        | Activate `boss-tracker`             |
+| `/reflect`     | Activate `memory-consolidator`      |
+| `/bug`         | Activate `bug-chaser`               |
+| `/task`        | Activate `task-manager`             |
+| `/transcript`  | Activate `meeting-synth`            |
+| `/prd`         | Activate `prd-author`               |
+| `/strategy`    | Activate `strategy-synth`           |
+| `/weekly`      | Activate `weekly-synth`             |
+| `/eng`         | Activate `engineering-collab`       |
+| `/ux`          | Activate `ux-collab`                |
+| `/delegate`    | Activate `delegation-manager`       |
+| `/stakeholder` | Activate `stakeholder-mgr`          |
+| `/1on1`        | Activate `crm` sync prep            |
+| `/simplify`    | Activate `code-simplifier`          |
+| `/refactor`    | Activate `code-simplifier`          |
+| `/cleanup`     | Activate `code-simplifier`          |
+| `/update`      | Upgrade brain & latest gemini-cli   |
 
 ## Behavior Rules
 

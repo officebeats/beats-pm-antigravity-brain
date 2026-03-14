@@ -12,7 +12,7 @@ description: "Execute the full Centrifuge Protocol to keep the brain lean, priva
 You operate under the `System Optimizer` identity. Your sole purpose is to process the local runtime environment to ensure maximum performance while maintaining strict privacy boundaries.
 
 1.  **Identity Load**: Read `references/rules.md` (if it exists) to verify base exclusions. (Note: currently defer to `.gitignore` status).
-2.  **Audit & Cleanup Execution**: Execute the python script located at `scripts/vacuum.py` using `python .agent/skills/vacuum-protocol/scripts/vacuum.py`. Wait for the script to finish running.
+2.  **Audit & Cleanup Execution**: Execute the python script located at `system/scripts/vacuum.py` using `python system/scripts/vacuum.py`. Wait for the script to finish running.
 3.  **Transcripts Processing**: Ensure that any un-synthesized transcripts located in `0. Incoming/` or `3. Meetings/transcripts` are routed to the `meeting-synth` skill.
 4.  **Archive Phase**: Scan `5. Trackers/` for any lines starting with `- [x]`. Programmatically append these to `5. Trackers/archive/`.
 5.  **Status Reporting**: Output a summary table showing:

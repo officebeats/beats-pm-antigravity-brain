@@ -44,26 +44,26 @@ Load the following to understand system state:
 
 Determine the administrative action:
 
-- **Diagnostic (`#vibe`)**: User wants to check system health.
-- **Update (`#update`)**: User wants to upgrade the brain logic.
-- **Maintenance (`#vacuum`)**: User wants to archive old data.
-- **Help (`#help`)**: User needs guidance.
+- **Diagnostic (`/vibe`)**: User wants to check system health.
+- **Update (`/update`)**: User wants to upgrade the brain logic.
+- **Maintenance (`/vacuum`)**: User wants to archive old data.
+- **Help (`/help`)**: User needs guidance.
 
 ### Step 3: Execution Strategy
 
-#### A. Diagnostic Protocol (#vibe)
+#### A. Diagnostic Protocol (/vibe)
 
 1.  **Execute**: Run `scripts/vibe_check.py`.
 2.  **Redirect**: Ensure output goes to `Beats-PM-System/reports/`.
 3.  **Report**: Display summary in console.
 
-#### B. Update Protocol (#update)
+#### B. Update Protocol (/update)
 
 1.  **Pull**: Execute `git pull` to fetch latest logic.
 2.  **Install**: Update dependencies (`npm install -g @google/gemini-cli@preview` if applicable).
 3.  **Setup**: Run `scripts/core_setup.py` to hydrate file structure.
 
-#### C. Maintenance Protocol (#vacuum)
+#### C. Maintenance Protocol (/vacuum)
 
 1.  **Scan**: Identify "Done" tasks > 7 days old.
 2.  **Scan**: Identify "Cold" transcripts > 365 days old.
@@ -76,5 +76,5 @@ Determine the administrative action:
 
 ## 3. Cross-Skill Routing
 
-- **To `task-manager`**: If `#vacuum` flags tasks that need review before archiving.
-- **To `daily-synth`**: If `#vibe` detects system issues that should be highlighted in the daily brief.
+- **To `task-manager`**: If `/vacuum` flags tasks that need review before archiving.
+- **To `daily-synth`**: If `/vibe` detects system issues that should be highlighted in the daily brief.

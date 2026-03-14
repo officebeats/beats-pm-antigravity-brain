@@ -125,7 +125,7 @@ beats-pm-antigravity-brain/
 | **Chief Product Officer** | Strategy & Org        | `chief-strategy-officer`, `boss-tracker`, `vacuum-protocol`                                                        |
 | **Staff PM**              | Execution & Delivery  | `task-manager`, `prd-author`, `meeting-synth`, `discovery-coach`, `prioritization-engine`, `communication-crafter` |
 | **Product Strategist**    | Market & Vision       | `chief-strategy-officer`, `okr-manager`, `competitive-intel`                                                       |
-| **Program Manager**       | Governance & Releases | `dependency-tracker`, `release-manager`, `retrospective`, `task-manager`, `risk-guardian`                          |
+| **Program Manager**       | Governance & Releases | `dependency-tracker`, `release-manager`, `retrospective`, `risk-guardian`                                          |
 | **Tech Lead**             | Feasibility & Eng     | `engineering-collab`, `code-simplifier`, `vacuum-protocol`                                                         |
 | **Data Scientist**        | Quant Insights        | `data-analytics`                                                                                                   |
 | **UX Researcher**         | Qual Insights         | `ux-researcher`                                                                                                    |

@@ -6,7 +6,6 @@ skills:
   - dependency-tracker
   - release-manager
   - retrospective
-  - task-manager
   - risk-guardian
 ---
 

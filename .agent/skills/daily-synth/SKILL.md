@@ -41,3 +41,8 @@ author: Beats PM Brain
 ## 3. Output Format
 
 ``> **Formatting Instructions**: Read the template found at ssets/template_1.md and format your output exactly as shown.``
+
+## Boundary
+
+- **This skill handles**: Single-day tactical planning — morning priorities, midday pivots, EOD audits.
+- **NOT for**: Weekly/monthly rollups (use `weekly-synth`). Meeting transcript synthesis (use `meeting-synth`).
