@@ -44,33 +44,6 @@
 
 ---
 
-## 🌪️ Why Product Managers Need This
-
-**Product Management is broken.**
-As a PM, your day is fragmented across Slack threads, Zoom transcripts, Jira tickets, and stakeholder emails. Context is constantly lost.
-
-This kit is an **Agentic Operating System** built specifically for Product Managers. It leverages **Google Antigravity's** parallel agent execution to parse chaos into strategy.
-
-- **The Black Hole Inbox:** Copy anything to your clipboard. Type `/paste`. Watch the AI detect the content, extract tasks/bugs, and route them to the proper tracker.
-- **The Meeting Synthesizer:** Type `/meet`. The AI reads your transcripts, extracts unspoken action items, and generates structured notes.
-- **The "Boss Protocol":** Type `/boss`. The system cross-references your active tasks with your boss's recent requests, flags stale workstreams, and drafts your Friday 1:1 talking points so you never get caught off guard.
-- **The ULTRATHINK Protocol:** Type `/kingmode`. Engages maximum-depth reasoning for avant-garde frontend architecture and design decisions.
-
-### 🔒 100% Local. Enterprise-Grade Privacy.
-
-| Your Data           | Where It Lives                   | Cloud Access |
-| :------------------ | :------------------------------- | :----------- |
-| Company strategy    | `1. Company/` on YOUR machine  | ❌ Never     |
-| PRDs & specs        | `2. Products/` on YOUR machine | ❌ Never     |
-| Meeting transcripts | `3. Meetings/` on YOUR machine | ❌ Never     |
-| Task trackers       | `5. Trackers/` on YOUR machine | ❌ Never     |
-
-**No cloud sync. No telemetry. No API calls with your trade secrets.**
-Folders 1-5 are `.gitignored` by default. Even if you push to GitHub, your private data stays on your machine.
-
----
-
-
 ## ⚡ Quick Start
 
 ### Step 1: Install Your Runtime
@@ -96,6 +69,32 @@ cd beats-pm-kit
 ### Step 3: Launch
 
 Open your AI tool in the root folder and type `/setup` to initialize your personal tracking topology.
+
+---
+
+## 🌪️ Why Product Managers Need This
+
+**Product Management is broken.**
+As a PM, your day is fragmented across Slack threads, Zoom transcripts, Jira tickets, and stakeholder emails. Context is constantly lost.
+
+This kit is an **Agentic Operating System** built specifically for Product Managers. It leverages **Google Antigravity's** parallel agent execution to parse chaos into strategy.
+
+- **The Black Hole Inbox:** Copy anything to your clipboard. Type `/paste`. Watch the AI detect the content, extract tasks/bugs, and route them to the proper tracker.
+- **The Meeting Synthesizer:** Type `/meet`. The AI reads your transcripts, extracts unspoken action items, and generates structured notes.
+- **The "Boss Protocol":** Type `/boss`. The system cross-references your active tasks with your boss's recent requests, flags stale workstreams, and drafts your Friday 1:1 talking points so you never get caught off guard.
+- **The ULTRATHINK Protocol:** Type `/kingmode`. Engages maximum-depth reasoning for avant-garde frontend architecture and design decisions.
+
+### 🔒 100% Local. Enterprise-Grade Privacy.
+
+| Your Data           | Where It Lives                   | Cloud Access |
+| :------------------ | :------------------------------- | :----------- |
+| Company strategy    | `1. Company/` on YOUR machine  | ❌ Never     |
+| PRDs & specs        | `2. Products/` on YOUR machine | ❌ Never     |
+| Meeting transcripts | `3. Meetings/` on YOUR machine | ❌ Never     |
+| Task trackers       | `5. Trackers/` on YOUR machine | ❌ Never     |
+
+**No cloud sync. No telemetry. No API calls with your trade secrets.**
+Folders 1-5 are `.gitignored` by default. Even if you push to GitHub, your private data stays on your machine.
 
 ---
 
@@ -215,19 +214,34 @@ beats-pm-antigravity-brain/
 
 ---
 
-## 🖥️ CLI Compatibility
+## 🖥️ Runtime Compatibility
 
-The kit uses a **single source of truth** (`.agent/`) with adapters for each runtime:
+The kit is built on a **single source of truth** (`.agent/`) with adapters for each runtime. **Antigravity is the gold standard** — other runtimes work but with tradeoffs.
 
-| Feature          | Antigravity |   Gemini CLI   |   Claude Code   |    KiloCode    |
-| :--------------- | :---------: | :-------------: | :-------------: | :-------------: |
-| Agent Personas   |     ✅     |       ✅       |       ✅       |       ✅       |
-| Slash Commands   |     ✅     |   ✅ (`#`)   |       ✅       |       ✅       |
-| Parallel Fan-Out |  ✅ Native  | ⚠️ Sequential | ⚠️ Sequential | ⚠️ Sequential |
-| Skills (107+)    |     ✅     |       ✅       |       ✅       |       ✅       |
-| Templates        |     ✅     |       ✅       |       ✅       |       ✅       |
+### Why Antigravity is the Recommended Runtime
 
-> **Note:** Gemini CLI uses `#hash` prefix instead of `/slash` (e.g., `#boss` instead of `/boss`). Run `sync_cli_adapters.py` after updates to keep adapters in sync.
+| Capability | Antigravity | Gemini CLI | Claude Code | KiloCode |
+| :--- | :---: | :---: | :---: | :---: |
+| **Parallel Fan-Out** | ✅ Native multi-agent | ❌ Sequential only | ❌ Sequential only | ❌ Sequential only |
+| **Agent Personas (11)** | ✅ Full mesh | ✅ | ✅ | ✅ |
+| **Skills (107+)** | ✅ Instant JIT load | ✅ | ✅ | ✅ |
+| **Slash Commands (20+)** | ✅ `/command` | ✅ `#command` | ✅ `/command` | ✅ `/command` |
+| **Clipboard Ingest** | ✅ Native | ⚠️ Script fallback | ⚠️ Script fallback | ⚠️ Script fallback |
+| **Deep File Access** | ✅ Native | ✅ | ✅ | ✅ |
+| **Context Window** | ✅ Optimized | ⚠️ Standard | ⚠️ Standard | ⚠️ Standard |
+| **Speed** | ⚡ Fastest | 🟡 Good | 🟡 Good | 🟡 Good |
+
+> **What "Parallel Fan-Out" means:** When you run `/fan-out`, Antigravity dispatches multiple specialist agents simultaneously (e.g., CPO + Staff PM + Tech Lead analyzing the same problem from different angles). Other runtimes process these agents one-at-a-time, making complex workflows 3-5x slower.
+
+### Cross-Runtime Sync
+
+All runtimes share the same `.agent/` directory. After making changes to agents, skills, or workflows:
+
+```bash
+python system/scripts/sync_cli_adapters.py
+```
+
+This keeps `.claude/`, `.kilocode/`, and `.gemini/` adapters in perfect sync with the source of truth.
 
 ---
 
