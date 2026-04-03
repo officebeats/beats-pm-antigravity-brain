@@ -63,12 +63,6 @@
       "id": "pesosz.antigravity-auto-accept",
       "name": "Antigravity Auto-Accept (Autonomous Execution)",
       "url": null
-    },
-    {
-      "id": "kanezal.better-antigravity",
-      "name": "Better Antigravity (Advanced Grammar & Logic)",
-      "url": null,
-      "required": true
     }
   ]
 }
