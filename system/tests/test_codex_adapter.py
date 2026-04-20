@@ -24,6 +24,15 @@ class TestCodexAdapter(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
+        generated_files = [
+            ROOT_DIR / "AGENTS.md",
+            ROOT_DIR / "CODEX_COMMANDS.md",
+            ROOT_DIR / "CODEX_PROMPT.md",
+            ROOT_DIR / ".codex" / "rules.md",
+        ]
+        if any(not path.exists() for path in generated_files):
+            sync_cli_adapters.main()
+
         cls.workflow_meta = sync_cli_adapters.get_workflow_descriptions()
         cls.workflow_names = [name for name, _ in cls.workflow_meta]
         cls.command_index = (ROOT_DIR / "CODEX_COMMANDS.md").read_text(encoding="utf-8")

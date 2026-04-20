@@ -28,9 +28,9 @@ Only load the minimum required SKILL.md files.
 Write durable output back into the repo.
 ```
 
-If you want a reusable copy-paste version in the repo root, use [CODEX_PROMPT.md](/Users/ernesto.rodriguez/Library/Mobile Documents/com~apple~CloudDocs/Vibe-Coding/beats-pm-kit/CODEX_PROMPT.md).
+If you want a reusable copy-paste version in the repo root, use [CODEX_PROMPT.md](../../CODEX_PROMPT.md).
 
-Codex slash-command routing is documented explicitly in [CODEX_COMMANDS.md](/Users/ernesto.rodriguez/Library/Mobile Documents/com~apple~CloudDocs/Vibe-Coding/beats-pm-kit/CODEX_COMMANDS.md).
+Codex slash-command routing is documented explicitly in [CODEX_COMMANDS.md](../../CODEX_COMMANDS.md).
 
 ### Step 3: Work in Repo-Native Mode
 
