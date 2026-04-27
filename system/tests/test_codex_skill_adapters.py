@@ -69,6 +69,20 @@ class TestCodexSkillAdapters(unittest.TestCase):
             self.assertIn("state-changing", content)
             self.assertIn("If the repo is dirty or not on main", content)
 
+    def test_generated_transcript_skill_mentions_pipeline_contract(self):
+        """The /transcript adapter should advertise the deterministic pipeline."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            sync_codex_skill_adapters.sync_promoted_skills(output_dir=tmpdir, root=ROOT_DIR)
+            skill_md = Path(tmpdir) / "beats-transcript" / "SKILL.md"
+            content = skill_md.read_text(encoding="utf-8")
+
+            self.assertIn("system/scripts/transcript_pipeline.py", content)
+            self.assertIn("3. Meetings/summaries", content)
+            self.assertIn("3. Meetings/reports", content)
+            self.assertIn("## Execution Contract", content)
+            self.assertIn("prepare --business-days 10 --json", content)
+            self.assertIn("validate --run-id <RUN_ID> --json", content)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -103,8 +103,26 @@
         "promotion": "skill",
         "skill_name": "beats-transcript",
         "supporting_files": [
+          "system/scripts/transcript_pipeline.py",
+          "system/scripts/beats.py",
           ".agent/skills/meeting-synth/SKILL.md",
-          "3. Meetings/transcripts"
+          ".agent/skills/task-manager/SKILL.md",
+          "3. Meetings/transcripts",
+          "3. Meetings/summaries",
+          "3. Meetings/reports",
+          "5. Trackers/TASK_MASTER.md",
+          "1. Company/ways-of-working.md"
+        ],
+        "optional_files": [
+          "4. People",
+          "2. Products/partners"
+        ],
+        "execution_contract": [
+          "Run `python3 system/scripts/transcript_pipeline.py prepare --business-days 10 --json` before synthesis.",
+          "Process only packet files listed in the prepare output; do not broad-scan transcripts for work selection.",
+          "Use hybrid appendix summaries: source path, transcript SHA256, run id, key evidence, and Routed Updates; do not append full raw transcript by default.",
+          "Run `python3 system/scripts/transcript_pipeline.py validate --run-id <RUN_ID> --json` after summaries and durable updates are written.",
+          "Run `python3 system/scripts/transcript_pipeline.py recent --limit 5 --md` for the final compact meeting output."
         ]
       }
     },
