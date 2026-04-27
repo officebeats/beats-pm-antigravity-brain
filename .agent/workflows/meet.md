@@ -4,7 +4,9 @@ description: Synthesize meeting transcripts into action items, decisions, and su
 
 > **Compatibility Directive**: This component is optimized primarily for the Google Antigravity runtime, but gracefully degrades to support Gemini CLI, Claude Code, and Kilocode CLI.
 
-## Workflow: `/meet` (aliases: `/transcript`, `#transcript`, `#meet`)
+## Workflow: `/meet` (aliases: `#meet`)
+
+For bulk Quill import or `/transcript`, use `.agent/workflows/transcript.md` and `system/scripts/transcript_pipeline.py`. This `/meet` workflow is for a specific pasted transcript or explicitly selected meeting file.
 
 **Agent**: Staff PM → `meeting-synth` skill
 
@@ -17,12 +19,20 @@ Detect which input method the user is using:
 1. **Quill paste detected** → User pastes text with Quill structure (sections like "Summary", "Key takeaways", "Followups", structured bullets with speaker names) → Auto-detect, skip to Step 2B.
 2. **Raw transcript paste** → User pastes raw transcript text → Proceed to Step 3.
 3. **Provide file path** → User gives a specific file → Read it → Proceed to Step 3.
-4. **Process latest** → Search `3. Meetings/transcripts/` (MaxDepth 1, last 5 business days) → Show user the file list, confirm selection → Proceed to Step 3.
+4. **Process latest** → Prefer running `/transcript` prepare and selecting from generated packets. If a single-file `/meet` is explicitly requested, search `3. Meetings/transcripts/` (MaxDepth 1, last 5 business days) → Show user the file list, confirm selection → Proceed to Step 3.
 
 > ⚠️ **Do NOT** recursively scan `0. Incoming/` or project root. Only search `3. Meetings/transcripts/` with bounded depth.
 > ⚠️ **Do NOT** ask the user which method they prefer if they already pasted content. Auto-detect and process.
 
 ### Step 2A: Bounded File Discovery (only if Step 1 option 4)
+
+For bulk Quill processing, run:
+
+```bash
+python3 system/scripts/transcript_pipeline.py prepare --business-days 10 --json
+```
+
+Then process the generated packet(s). Use manual transcript listing only for one-off `/meet` work.
 
 // turbo
 ```bash

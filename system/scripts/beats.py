@@ -17,11 +17,9 @@ SCRIPT_COMMANDS = {
     "guard": ["python3", "system/scripts/adapter_guard.py", "--mode", "fix"],
     "hooks": ["python3", "system/scripts/install_git_hooks.py"],
     "health": ["python3", "system/scripts/context_health.py"],
-    "transcript": [
-        ["python3", "system/scripts/quill_mcp_client.py"],
-        ["python3", "system/scripts/transcript_fetcher.py"],
-        ["python3", "system/scripts/transcript_intake.py"],
-    ],
+    "chat-intake": ["python3", "system/scripts/chat_intake_state.py"],
+    "atlassian-context": ["python3", "system/scripts/atlassian_context_state.py"],
+    "transcript": ["python3", "system/scripts/transcript_pipeline.py"],
     "outlook": ["python3", "system/scripts/outlook_bridge.py"],
     "teams": ["python3", "system/scripts/teams_bridge.py"],
     "vibe": ["python3", "system/scripts/vibe_check.py"],
@@ -41,6 +39,19 @@ def run_cmd(cmd):
         return 1
     result = subprocess.run(cmd, cwd=ROOT, check=False)
     return result.returncode
+
+
+def collect_extra_args(args):
+    """Support both legacy --args and modern `--` passthrough."""
+    extra_args = []
+    legacy_args = getattr(args, "args", "")
+    if legacy_args:
+        extra_args.extend(shlex.split(legacy_args))
+    passthrough = list(getattr(args, "passthrough", []) or [])
+    if passthrough and passthrough[0] == "--":
+        passthrough = passthrough[1:]
+    extra_args.extend(passthrough)
+    return extra_args
 
 
 def resolve_workflow(command_text):
@@ -73,6 +84,11 @@ def main():
         help="Script-backed utility or workflow hint",
     )
     parser.add_argument("--args", help="Additional arguments for script-backed commands", default="")
+    parser.add_argument(
+        "passthrough",
+        nargs=argparse.REMAINDER,
+        help="Additional script args after --, e.g. beats.py teams -- --json",
+    )
     args = parser.parse_args()
 
     if args.command == "resolve":
@@ -83,21 +99,21 @@ def main():
         print(workflow_path.relative_to(ROOT))
         return 0
 
+    if args.command == "transcript":
+        command_config = SCRIPT_COMMANDS[args.command]
+        extra_args = collect_extra_args(args)
+        if extra_args and extra_args[0] in {"-h", "--help"}:
+            return run_cmd(command_config + extra_args)
+        if extra_args and extra_args[0] in {"prepare", "validate", "recent"}:
+            return run_cmd(command_config + extra_args)
+        return run_cmd(command_config + ["prepare"] + extra_args)
+
     if args.command in WORKFLOW_HINTS:
         print_workflow_hint(args.command)
         return 0
 
     command_config = SCRIPT_COMMANDS[args.command]
-    extra_args = shlex.split(args.args)
-
-    if args.command == "transcript":
-        exit_code = 0
-        for cmd in command_config:
-            full_cmd = cmd + extra_args
-            exit_code = run_cmd(full_cmd)
-            if exit_code != 0:
-                return exit_code
-        return exit_code
+    extra_args = collect_extra_args(args)
 
     full_cmd = command_config + extra_args
     return run_cmd(full_cmd)
